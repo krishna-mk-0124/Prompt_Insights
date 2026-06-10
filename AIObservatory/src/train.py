@@ -32,7 +32,9 @@ def run_training():
         print("Required columns ('truncated_prompt', 'subcategory_id') are missing from the data.")
         return
 
-    X = df["truncated_prompt"].fillna("")
+    from .preprocess import preprocess_prompt
+    print("Applying preprocessing (noise reduction & normalization) to training data...")
+    X = df["truncated_prompt"].fillna("").apply(preprocess_prompt)
     y = df["subcategory_id"]
     
     print(f"Loaded {len(df)} labeled samples. Building pipeline...")
