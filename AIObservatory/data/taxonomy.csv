@@ -1,0 +1,201 @@
+category_id,category_name,subcategory_id,subcategory_name
+0,Technology & Engineering Support,0,Troubleshoot application runtime errors
+0,Technology & Engineering Support,1,Debug backend service logic
+0,Technology & Engineering Support,2,Implement new application feature
+0,Technology & Engineering Support,3,Review and optimize source code
+0,Technology & Engineering Support,4,Refactor legacy system components
+0,Technology & Engineering Support,5,Design microservice architecture solution
+0,Technology & Engineering Support,6,API integration implementation guidance
+0,Technology & Engineering Support,7,Database query performance tuning
+0,Technology & Engineering Support,8,Cloud infrastructure configuration guidance
+0,Technology & Engineering Support,9,CI/CD pipeline setup support
+0,Technology & Engineering Support,10,Logging and observability enhancement
+0,Technology & Engineering Support,11,Unit testing strategy guidance
+0,Technology & Engineering Support,12,Security vulnerability remediation advice
+0,Technology & Engineering Support,13,System design tradeoff evaluation
+0,Technology & Engineering Support,14,Data model design support
+0,Technology & Engineering Support,15,SDK or library usage clarification
+0,Technology & Engineering Support,16,Version upgrade impact assessment
+0,Technology & Engineering Support,17,Production incident root cause analysis
+0,Technology & Engineering Support,18,Code migration between languages
+0,Technology & Engineering Support,19,Technical documentation clarification request
+1,Data & Analytics,20,Analyze business performance metrics
+1,Data & Analytics,21,Interpret quantitative analysis findings
+1,Data & Analytics,22,Build executive analytics summary
+1,Data & Analytics,23,Create dashboard narrative explanation
+1,Data & Analytics,24,SQL query logic troubleshooting
+1,Data & Analytics,25,Data transformation logic support
+1,Data & Analytics,26,KPI definition clarification request
+1,Data & Analytics,27,Forecast trend modeling assistance
+1,Data & Analytics,28,Statistical method explanation
+1,Data & Analytics,29,A/B test result interpretation
+1,Data & Analytics,30,Cohort analysis guidance
+1,Data & Analytics,31,Data visualization best practices
+1,Data & Analytics,32,Excel formula logic correction
+1,Data & Analytics,33,Financial impact analysis support
+1,Data & Analytics,34,Risk exposure quantification
+1,Data & Analytics,35,Data reconciliation investigation
+1,Data & Analytics,36,Model output interpretation support
+1,Data & Analytics,37,Reporting automation logic guidance
+1,Data & Analytics,38,Business case financial modeling
+1,Data & Analytics,39,Analytical methodology comparison
+2,Business Communication,40,Generate professional email response
+2,Business Communication,41,Draft executive status update
+2,Business Communication,42,Write stakeholder escalation message
+2,Business Communication,43,Refine clarity and tone
+2,Business Communication,44,Summarize meeting discussion notes
+2,Business Communication,45,Create leadership communication brief
+2,Business Communication,46,Draft cross-functional alignment message
+2,Business Communication,47,Respond to customer complaint
+2,Business Communication,48,Compose policy announcement message
+2,Business Communication,49,Draft performance review feedback
+2,Business Communication,50,Rewrite content for professionalism
+2,Business Communication,51,Create follow-up communication draft
+2,Business Communication,52,Escalation summary for leadership
+2,Business Communication,53,Draft vendor negotiation message
+2,Business Communication,54,Executive briefing narrative creation
+2,Business Communication,55,Internal change management message
+2,Business Communication,56,Incident communication draft
+2,Business Communication,57,Client-facing explanation message
+2,Business Communication,58,Strategic initiative announcement draft
+2,Business Communication,59,Project milestone update message
+3,Risk Compliance & Governance,60,Clarify regulatory compliance requirement
+3,Risk Compliance & Governance,61,Policy interpretation and explanation
+3,Risk Compliance & Governance,62,Risk scenario assessment support
+3,Risk Compliance & Governance,63,Control gap identification guidance
+3,Risk Compliance & Governance,64,Internal audit response drafting
+3,Risk Compliance & Governance,65,Compliance documentation summarization
+3,Risk Compliance & Governance,66,Archer process documentation clarification
+3,Risk Compliance & Governance,67,Governance framework comparison
+3,Risk Compliance & Governance,68,Regulatory impact analysis explanation
+3,Risk Compliance & Governance,69,Data privacy requirement clarification
+3,Risk Compliance & Governance,70,Incident response documentation support
+3,Risk Compliance & Governance,71,Operational risk evaluation guidance
+3,Risk Compliance & Governance,72,Third-party risk assessment support
+3,Risk Compliance & Governance,73,SOX control interpretation
+3,Risk Compliance & Governance,74,Model risk documentation assistance
+3,Risk Compliance & Governance,75,AML compliance clarification
+3,Risk Compliance & Governance,76,Financial regulatory requirement summary
+3,Risk Compliance & Governance,77,Policy gap remediation recommendation
+3,Risk Compliance & Governance,78,Control testing narrative drafting
+3,Risk Compliance & Governance,79,Risk mitigation plan articulation
+4,Strategy & Decision Support,80,Evaluate solution alternatives objectively
+4,Strategy & Decision Support,81,Recommend strategic course of action
+4,Strategy & Decision Support,82,SWOT analysis development
+4,Strategy & Decision Support,83,Business case argument structuring
+4,Strategy & Decision Support,84,Cost-benefit analysis reasoning
+4,Strategy & Decision Support,85,Long-term roadmap planning support
+4,Strategy & Decision Support,86,Competitive positioning assessment
+4,Strategy & Decision Support,87,Tradeoff analysis explanation
+4,Strategy & Decision Support,88,Organizational design recommendation
+4,Strategy & Decision Support,89,Portfolio prioritization guidance
+4,Strategy & Decision Support,90,Investment justification articulation
+4,Strategy & Decision Support,91,Decision criteria structuring
+4,Strategy & Decision Support,92,Market opportunity evaluation
+4,Strategy & Decision Support,93,Scenario planning framework development
+4,Strategy & Decision Support,94,Change strategy articulation
+4,Strategy & Decision Support,95,Risk-adjusted decision modeling
+4,Strategy & Decision Support,96,AI adoption strategy discussion
+4,Strategy & Decision Support,97,Operational efficiency strategy proposal
+4,Strategy & Decision Support,98,Product strategy alignment review
+4,Strategy & Decision Support,99,Strategic narrative refinement
+5,Process & Operational Guidance,100,Provide step-by-step procedural guidance
+5,Process & Operational Guidance,101,Explain workflow or process mapping
+5,Process & Operational Guidance,102,SOP drafting assistance
+5,Process & Operational Guidance,103,Process optimization recommendation
+5,Process & Operational Guidance,104,Operational bottleneck identification
+5,Process & Operational Guidance,105,Escalation process clarification
+5,Process & Operational Guidance,106,Incident handling procedure outline
+5,Process & Operational Guidance,107,Onboarding process documentation support
+5,Process & Operational Guidance,108,Service management workflow guidance
+5,Process & Operational Guidance,109,Automation opportunity identification
+5,Process & Operational Guidance,110,Cross-team handoff clarification
+5,Process & Operational Guidance,111,Operational readiness checklist creation
+5,Process & Operational Guidance,112,SLA interpretation explanation
+5,Process & Operational Guidance,113,Ticket routing logic guidance
+5,Process & Operational Guidance,114,Change management process summary
+5,Process & Operational Guidance,115,Process control documentation support
+5,Process & Operational Guidance,116,Governance approval workflow explanation
+5,Process & Operational Guidance,117,RACI matrix clarification
+5,Process & Operational Guidance,118,Documentation standardization support
+5,Process & Operational Guidance,119,Continuous improvement framework guidance
+6,Content & Presentation Development,120,Create presentation slide content
+6,Content & Presentation Development,121,Executive summary document drafting
+6,Content & Presentation Development,122,Rewrite content for clarity
+6,Content & Presentation Development,123,Develop structured briefing document
+6,Content & Presentation Development,124,Create training material outline
+6,Content & Presentation Development,125,Condense long content summary
+6,Content & Presentation Development,126,Expand bullet points into narrative
+6,Content & Presentation Development,127,ATS-optimized resume formatting
+6,Content & Presentation Development,128,Proposal document structuring
+6,Content & Presentation Development,129,Whitepaper drafting assistance
+6,Content & Presentation Development,130,Visual storytelling narrative support
+6,Content & Presentation Development,131,Slide headline refinement
+6,Content & Presentation Development,132,Content simplification for audience
+6,Content & Presentation Development,133,Transform notes into presentation
+6,Content & Presentation Development,134,Executive two-page summary drafting
+6,Content & Presentation Development,135,Create comparison table narrative
+6,Content & Presentation Development,136,Professional biography writing
+6,Content & Presentation Development,137,Internal wiki documentation drafting
+6,Content & Presentation Development,138,Talking points preparation
+6,Content & Presentation Development,139,Technical concept simplification
+7,Knowledge & Concept Clarification,140,Explain technical implementation concept
+7,Knowledge & Concept Clarification,141,Define terminology or framework
+7,Knowledge & Concept Clarification,142,Compare conceptual approaches
+7,Knowledge & Concept Clarification,143,Simplify complex subject explanation
+7,Knowledge & Concept Clarification,144,Industry best practice overview
+7,Knowledge & Concept Clarification,145,Financial concept explanation
+7,Knowledge & Concept Clarification,146,AI model functionality explanation
+7,Knowledge & Concept Clarification,147,Cloud computing concept clarification
+7,Knowledge & Concept Clarification,148,Software design pattern explanation
+7,Knowledge & Concept Clarification,149,Banking product explanation
+7,Knowledge & Concept Clarification,150,Risk modeling concept explanation
+7,Knowledge & Concept Clarification,151,Data science technique clarification
+7,Knowledge & Concept Clarification,152,Architecture pattern comparison
+7,Knowledge & Concept Clarification,153,Regulatory concept simplification
+7,Knowledge & Concept Clarification,154,Agile methodology explanation
+7,Knowledge & Concept Clarification,155,DevOps practice clarification
+7,Knowledge & Concept Clarification,156,Machine learning fundamentals explanation
+7,Knowledge & Concept Clarification,157,Observability concept clarification
+7,Knowledge & Concept Clarification,158,Security protocol explanation
+7,Knowledge & Concept Clarification,159,Payment ecosystem explanation
+8,AI & Automation Enablement,160,Prompt engineering improvement guidance
+8,AI & Automation Enablement,161,AI use case brainstorming
+8,AI & Automation Enablement,162,Automation workflow design
+8,AI & Automation Enablement,163,LLM evaluation criteria development
+8,AI & Automation Enablement,164,AI risk assessment discussion
+8,AI & Automation Enablement,165,AI governance framework explanation
+8,AI & Automation Enablement,166,AI model comparison analysis
+8,AI & Automation Enablement,167,Productivity automation recommendation
+8,AI & Automation Enablement,168,ChatGPT adoption strategy support
+8,AI & Automation Enablement,169,AI feature business justification
+8,AI & Automation Enablement,170,Automation ROI articulation
+8,AI & Automation Enablement,171,Intelligent process automation guidance
+8,AI & Automation Enablement,172,GenAI experimentation planning
+8,AI & Automation Enablement,173,AI compliance consideration review
+8,AI & Automation Enablement,174,AI implementation roadmap support
+8,AI & Automation Enablement,175,AI capability education content
+8,AI & Automation Enablement,176,AI limitation explanation
+8,AI & Automation Enablement,177,AI operationalization strategy
+8,AI & Automation Enablement,178,Model explainability clarification
+8,AI & Automation Enablement,179,Enterprise AI scaling considerations
+9,General Productivity & Work Support,180,Brainstorm ideas for project
+9,General Productivity & Work Support,181,Clarify ambiguous task requirement
+9,General Productivity & Work Support,182,Improve wording of sentence
+9,General Productivity & Work Support,183,Reorganize information logically
+9,General Productivity & Work Support,184,Time management planning support
+9,General Productivity & Work Support,185,Convert notes into action items
+9,General Productivity & Work Support,186,Generate checklist structure
+9,General Productivity & Work Support,187,Translate content between languages
+9,General Productivity & Work Support,188,Simplify message for audience
+9,General Productivity & Work Support,189,Create structured outline draft
+9,General Productivity & Work Support,190,Summarize long text quickly
+9,General Productivity & Work Support,191,Improve professional phrasing
+9,General Productivity & Work Support,192,Create template format
+9,General Productivity & Work Support,193,Convert unstructured text structured
+9,General Productivity & Work Support,194,Quick comparison of options
+9,General Productivity & Work Support,195,Draft placeholder content
+9,General Productivity & Work Support,196,Improve bullet point clarity
+9,General Productivity & Work Support,197,Provide example scenario explanation
+9,General Productivity & Work Support,198,Fix grammar and tone
+9,General Productivity & Work Support,199,General clarification request
