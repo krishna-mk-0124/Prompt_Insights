@@ -68,8 +68,14 @@ def run_hybrid_discovery():
     df["processed_text"] = processed_texts
     
     print("\n[Phase 2/4] Zero-Shot Vectorization (TF-IDF)")
+    from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+    
+    # Block common noise tokens that hijack the unsupervised clusters
+    custom_noise = ['st', 'oo', 'hi', 'hello', 'hey', 'test', 'com', 'www', 'http', 'https', 'nd', 'rd', 'th', 'pls', 'please']
+    extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
+    
     # We fit TFIDF on the corpus containing BOTH the taxonomy and the user prompts
-    vectorizer = TfidfVectorizer(max_features=10000, stop_words='english', ngram_range=(1, 2))
+    vectorizer = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2))
     
     corpus = tax_df["processed_desc"].tolist() + df["processed_text"].tolist()
     tfidf_all = vectorizer.fit_transform(corpus)
