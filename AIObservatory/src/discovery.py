@@ -19,7 +19,7 @@ def clean_and_truncate(text):
 
 def run_discovery():
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
-    input_file = os.path.join(data_dir, "english_prompts.csv")
+    input_file = os.path.join(data_dir, "english_prompts.txt")
     output_path = os.path.join(data_dir, "discovered_topics.csv")
     
     print(f"Reading from {input_file}...")

@@ -16,22 +16,27 @@ def detect_language(text):
 
 def route_languages():
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
-    input_file = os.path.join(data_dir, "prompt_sample.csv")
     
+    # Check for text file first, then fallback to csv
+    input_file = os.path.join(data_dir, "prompt_sample.txt")
     if not os.path.exists(input_file):
-        print(f"File not found: {input_file}")
-        return
+        input_file = os.path.join(data_dir, "prompt_sample.csv")
+        if not os.path.exists(input_file):
+            print(f"File not found: prompt_sample.txt or prompt_sample.csv in {data_dir}")
+            return
         
-    print("Loading prompt_sample.csv...")
-    # Attempt to read headers, fallback if no headers
+    print(f"Loading {input_file}...")
+    
+    # Read raw lines to avoid pandas splitting on commas inside the text
     try:
-        df = pd.read_csv(input_file)
-        # If it's a single column without header, pandas treats the first row as header.
-        # Check if the column name looks like a prompt instead of 'prompt_text'
-        if len(df.columns) == 1 and len(str(df.columns[0]).split()) > 3:
-             df = pd.read_csv(input_file, header=None, names=["prompt_text"])
-        elif len(df.columns) == 1:
-             df.columns = ["prompt_text"]
+        with open(input_file, "r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f if line.strip()]
+            
+        # If the first line is a CSV header like 'prompt_text', skip it
+        if lines and "prompt" in lines[0].lower() and len(lines[0].split()) == 1:
+            lines = lines[1:]
+            
+        df = pd.DataFrame({"prompt_text": lines})
     except Exception as e:
         print(f"Error reading {input_file}: {e}")
         return
@@ -43,13 +48,17 @@ def route_languages():
     english_df = df[df["language"] == "en"].copy()
     non_english_df = df[df["language"] != "en"].copy()
     
-    english_file = os.path.join(data_dir, "english_prompts.csv")
-    non_english_file = os.path.join(data_dir, "non_english_prompts.csv")
+    english_file = os.path.join(data_dir, "english_prompts.txt")
+    non_english_file = os.path.join(data_dir, "non_english_prompts.txt")
     
-    # Save the output (drop the language column from the English output to maintain schema)
-    english_df[["prompt_text"]].to_csv(english_file, index=False)
-    # Keep the language column in the non-English output so we know what they are
-    non_english_df.to_csv(non_english_file, index=False)
+    # Save as raw text to avoid CSV quoting/header issues
+    with open(english_file, "w", encoding="utf-8") as f:
+        for prompt in english_df["prompt_text"]:
+            f.write(f"{prompt}\n")
+            
+    with open(non_english_file, "w", encoding="utf-8") as f:
+        for idx, row in non_english_df.iterrows():
+            f.write(f"[{row['language']}] {row['prompt_text']}\n")
     
     print(f"Routing complete!")
     print(f"- English prompts saved to: {english_file} ({len(english_df)} rows)")
