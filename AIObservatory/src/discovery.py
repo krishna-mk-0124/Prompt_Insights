@@ -18,15 +18,16 @@ def clean_and_truncate(text):
     return text
 
 def run_discovery():
-    data_path = os.path.join("data", "prompt_sample")
-    output_path = os.path.join("data", "discovered_topics.csv")
+    data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
+    input_file = os.path.join(data_dir, "english_prompts.csv")
+    output_path = os.path.join(data_dir, "discovered_topics.csv")
     
-    print(f"Reading from {data_path}...")
-    if not os.path.exists(data_path):
-        print(f"File {data_path} not found. Ensure the file exists before running.")
+    print(f"Reading from {input_file}...")
+    if not os.path.exists(input_file):
+        print(f"File not found: {input_file}. Please run src/language_router.py first.")
         return
 
-    with open(data_path, "r", encoding="utf-8") as f:
+    with open(input_file, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip()]
 
     print(f"Loaded {len(lines)} raw lines.")
