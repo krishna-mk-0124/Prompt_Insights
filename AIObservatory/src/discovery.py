@@ -130,10 +130,15 @@ def run_discovery():
                 "sample_fragment": sample_fragment
             })
             
-    results_df = pd.DataFrame(cluster_results)
-    os.makedirs("data", exist_ok=True)
-    results_df.to_csv(output_path, index=False)
-    print(f"Done! Found {len(results_df)} dense clusters. Results saved to {output_path}")
+    summary_df = pd.DataFrame(cluster_results)
+    summary_df.to_csv(output_path, index=False)
+    
+    # Save the full mapping of every prompt to its assigned cluster so it can be used for training
+    full_output_path = os.path.join(data_dir, "full_clustered_prompts.csv")
+    df[["raw_text", "cluster"]].to_csv(full_output_path, index=False)
+    
+    print(f"\nDone! Found {len(summary_df)} dense clusters. Summaries saved to {output_path}")
+    print(f"Full prompt mapping saved to {full_output_path}")
 
 if __name__ == "__main__":
     run_discovery()
