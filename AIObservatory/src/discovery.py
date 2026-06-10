@@ -74,7 +74,7 @@ def run_discovery():
     X_reduced = pipeline.fit_transform(df["processed_text"])
     
     print("Clustering...")
-    hdbscan = HDBSCAN(min_cluster_size=100, min_samples=5)
+    hdbscan = HDBSCAN(min_cluster_size=100, min_samples=5, n_jobs=-1)
     labels = hdbscan.fit_predict(X_reduced)
     df["cluster"] = labels
     
