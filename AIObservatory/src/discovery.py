@@ -1,4 +1,5 @@
 import os
+import sys
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -8,137 +9,116 @@ from sklearn.cluster import MiniBatchKMeans
 from .preprocess import preprocess_prompt
 
 def clean_and_truncate(text):
-    if pd.isna(text) or not isinstance(text, str):
-        return None
+    text = str(text)
     words = text.split()
-    if len(words) < 8:
-        return None
-    if len(words) > 500:
-        return " ".join(words[:250] + words[-250:])
+    if len(words) > 50:
+        return " ".join(words[:50])
     return text
+
+def extract_top_keywords(tfidf_matrix, vectorizer, cluster_labels, num_clusters, top_n=2):
+    feature_names = np.array(vectorizer.get_feature_names_out())
+    cluster_names = {}
+    for i in range(num_clusters):
+        cluster_indices = np.where(cluster_labels == i)[0]
+        if len(cluster_indices) == 0:
+            cluster_names[i] = "empty_cluster"
+            continue
+        cluster_tfidf = tfidf_matrix[cluster_indices]
+        mean_tfidf = np.asarray(cluster_tfidf.mean(axis=0)).flatten()
+        top_indices = mean_tfidf.argsort()[-top_n:][::-1]
+        cluster_names[i] = "_".join(feature_names[top_indices])
+    return cluster_names
 
 def run_discovery():
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
     input_file = os.path.join(data_dir, "english_prompts.txt")
-    output_path = os.path.join(data_dir, "discovered_topics.csv")
     
-    print(f"Reading from {input_file}...")
     if not os.path.exists(input_file):
-        print(f"File not found: {input_file}. Please run src/language_router.py first.")
-        return
-
+        print(f"Error: {input_file} not found. Run language_router.py first.")
+        sys.exit(1)
+        
+    print(f"Loading texts from {input_file}...")
     with open(input_file, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip()]
-
-    print(f"Loaded {len(lines)} raw lines.")
+        
+    df = pd.DataFrame({"raw_text": lines})
+    print(f"Loaded {len(df)} English prompts. Beginning Auto-Hierarchical mapping...")
     
-    print(f"\n[Phase 1/3] Preprocessing {len(lines)} prompts...")
-    processed_lines = []
-    total = len(lines)
-    for i, line in enumerate(lines):
+    print("\n[Phase 1/4] Pre-processing & Truncating (Max 50 words)")
+    df["truncated_prompt"] = df["raw_text"].apply(clean_and_truncate)
+    
+    processed_texts = []
+    total = len(df)
+    for i, text in enumerate(df["truncated_prompt"]):
         if i % 25000 == 0 and i > 0:
             print(f"  -> Processed {i:,} / {total:,} prompts ({(i/total)*100:.1f}%)")
+        processed_texts.append(preprocess_prompt(text))
+    df["processed_text"] = processed_texts
+    
+    print("\n[Phase 2/4] Vectorization (TF-IDF)")
+    vectorizer = TfidfVectorizer(max_features=10000, stop_words='english', ngram_range=(1, 2))
+    tfidf_matrix = vectorizer.fit_transform(df["processed_text"])
+    
+    print("\n[Phase 3/4] Dimensionality Reduction (SVD)")
+    svd = TruncatedSVD(n_components=150, random_state=42)
+    X_reduced = svd.fit_transform(tfidf_matrix)
+    
+    print("\n[Phase 4/4] Level 1 Clustering: 10 Main Categories")
+    kmeans_main = MiniBatchKMeans(n_clusters=10, random_state=42, batch_size=10000, n_init='auto')
+    main_labels = kmeans_main.fit_predict(X_reduced)
+    df["category_id"] = main_labels
+    
+    main_category_names = extract_top_keywords(tfidf_matrix, vectorizer, main_labels, 10, top_n=2)
+    df["auto_category_name"] = df["category_id"].map(main_category_names)
+    
+    print("\n[Phase 4/4] Level 2 Clustering: 20 Subcategories per Main Category")
+    taxonomy_mapping = []
+    df["subcategory_id"] = -1
+    df["auto_subcategory_name"] = ""
+    
+    for cat_id in range(10):
+        cat_name = main_category_names[cat_id]
+        print(f"  -> Slicing Main Category {cat_id} ({cat_name}) into 20 subcategories...")
+        cat_mask = df["category_id"] == cat_id
+        if not cat_mask.any(): continue
         
-        cleaned = clean_and_truncate(line)
-        preprocessed = preprocess_prompt(cleaned)
-        processed_lines.append(preprocessed)
-    print(f"  -> Processed {total:,} / {total:,} prompts (100.0%)")
-    
-    df = pd.DataFrame({"raw_text": lines, "processed_text": processed_lines})
-    df = df.dropna(subset=["processed_text"]).reset_index(drop=True)
-    
-    print(f"Kept {len(df)} lines after cleaning.")
-    
-    if len(df) == 0:
-        print("No data left after cleaning.")
-        return
-
-    # Feature extraction
-    print("Extracting features...")
-    word_vectorizer = TfidfVectorizer(
-        analyzer="word",
-        ngram_range=(1, 2),
-        sublinear_tf=True,
-        max_features=20000
-    )
-    char_vectorizer = TfidfVectorizer(
-        analyzer="char_wb",
-        ngram_range=(3, 5),
-        sublinear_tf=True,
-        max_features=20000
-    )
-    
-    vectorizer = FeatureUnion([
-        ("word", word_vectorizer),
-        ("char", char_vectorizer)
-    ])
-    
-    pipeline = Pipeline([
-        ("features", vectorizer),
-        ("svd", TruncatedSVD(n_components=150, random_state=42))
-    ])
-    
-    print(f"\n[Phase 2/3] Extracting Features and Running SVD (Single Core)")
-    print("  -> This is a mathematical matrix operation and may take 5-10 minutes. Please wait...")
-    X_reduced = pipeline.fit_transform(df["processed_text"])
-    
-    print(f"\n[Phase 3/3] Clustering with MiniBatchKMeans (Fast High-Dimensional Clustering)")
-    print(f"  -> Slicing {len(df)} points into 200 distinct geometric clusters. This should take under 30 seconds...")
-    kmeans = MiniBatchKMeans(n_clusters=200, random_state=42, batch_size=10000, n_init='auto')
-    labels = kmeans.fit_predict(X_reduced)
-    df["cluster"] = labels
-    
-    # Output clusters, extract top keywords
-    print("Extracting top keywords per cluster...")
-    cluster_results = []
-    
-    # We will use a separate TfidfVectorizer just on words to find keywords per cluster
-    keyword_vectorizer = TfidfVectorizer(stop_words="english", max_features=10000)
-    
-    for cluster_id in sorted(df["cluster"].unique()):
-        if cluster_id == -1:
-            continue # Skip noise
-            
-        cluster_data = df[df["cluster"] == cluster_id]
-        combined_text = " ".join(cluster_data["processed_text"].tolist())
+        cat_indices = np.where(cat_mask)[0]
+        cat_X_reduced = X_reduced[cat_indices]
+        cat_tfidf = tfidf_matrix[cat_indices]
         
-        # We need at least one document for vectorizer, but since it's combined, it's 1 document
-        # Wait, tfidf across all clusters combined is better to penalize common words
-        pass
-
-    # Better approach for keywords: TF-IDF per cluster treating each cluster as a document
-    # Group documents by cluster
-    docs_per_cluster = df[df["cluster"] != -1].groupby("cluster")["processed_text"].apply(lambda x: " ".join(x)).reset_index()
-    if not docs_per_cluster.empty:
-        tfidf = TfidfVectorizer(stop_words="english", max_features=5000)
-        X_cluster_tfidf = tfidf.fit_transform(docs_per_cluster["processed_text"])
-        feature_names = np.array(tfidf.get_feature_names_out())
+        n_clusters_sub = min(20, len(cat_indices))
+        kmeans_sub = MiniBatchKMeans(n_clusters=n_clusters_sub, random_state=42, batch_size=min(10000, len(cat_indices)), n_init='auto')
+        sub_labels = kmeans_sub.fit_predict(cat_X_reduced)
         
-        for i, row in docs_per_cluster.iterrows():
-            cluster_id = row["cluster"]
-            # Get top 10 keywords
-            tfidf_scores = X_cluster_tfidf[i].toarray().flatten()
-            top_10_idx = tfidf_scores.argsort()[-10:][::-1]
-            top_10_keywords = [feature_names[idx] for idx in top_10_idx]
+        sub_names = extract_top_keywords(cat_tfidf, vectorizer, sub_labels, n_clusters_sub, top_n=2)
+        
+        for local_sub_id in range(n_clusters_sub):
+            global_sub_id = (cat_id * 20) + local_sub_id
             
-            sample_fragment = df[df["cluster"] == cluster_id]["processed_text"].iloc[0][:150] + "..."
+            sub_mask = sub_labels == local_sub_id
+            global_indices = cat_indices[sub_mask]
             
-            cluster_results.append({
-                "cluster_id": cluster_id,
-                "size": len(df[df["cluster"] == cluster_id]),
-                "top_10_keywords": ", ".join(top_10_keywords),
-                "sample_fragment": sample_fragment
+            df.loc[global_indices, "subcategory_id"] = global_sub_id
+            df.loc[global_indices, "auto_subcategory_name"] = sub_names[local_sub_id]
+            
+            taxonomy_mapping.append({
+                "category_id": cat_id,
+                "auto_category_name": cat_name,
+                "subcategory_id": global_sub_id,
+                "auto_subcategory_name": sub_names[local_sub_id]
             })
             
-    summary_df = pd.DataFrame(cluster_results)
-    summary_df.to_csv(output_path, index=False)
+    print("\n[Exporting Automations]")
+    taxonomy_df = pd.DataFrame(taxonomy_mapping)
+    tax_path = os.path.join(data_dir, "taxonomy_mapping.csv")
+    taxonomy_df.to_csv(tax_path, index=False)
     
-    # Save the full mapping of every prompt to its assigned cluster so it can be used for training
-    full_output_path = os.path.join(data_dir, "full_clustered_prompts.csv")
-    df[["raw_text", "cluster"]].to_csv(full_output_path, index=False)
+    full_path = os.path.join(data_dir, "fully_automated_dataset.csv")
+    df[["raw_text", "truncated_prompt", "category_id", "auto_category_name", "subcategory_id", "auto_subcategory_name"]].to_csv(full_path, index=False)
     
-    print(f"\nDone! Found {len(summary_df)} dense clusters. Summaries saved to {output_path}")
-    print(f"Full prompt mapping saved to {full_output_path}")
+    print(f"\nDone! Automatically generated {len(taxonomy_df)} taxonomy combinations.")
+    print(f"1. Taxonomy Mapping saved to {tax_path}")
+    print(f"2. Fully Labeled Dataset saved to {full_path}")
 
 if __name__ == "__main__":
     run_discovery()
