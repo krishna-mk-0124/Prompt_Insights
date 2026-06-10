@@ -49,6 +49,10 @@ def run_hybrid_discovery():
     # Preprocess taxonomy definitions
     tax_df["processed_desc"] = tax_df["combined_desc"].apply(preprocess_prompt)
     
+    # Apply Hidden Taxonomy Enrichment
+    from .enrichment import enrich_taxonomy
+    tax_df = enrich_taxonomy(tax_df)
+    
     print(f"Loading texts from {input_file}...")
     with open(input_file, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip()]
@@ -77,7 +81,7 @@ def run_hybrid_discovery():
     # We fit TFIDF on the corpus containing BOTH the taxonomy and the user prompts
     vectorizer = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2))
     
-    corpus = tax_df["processed_desc"].tolist() + df["processed_text"].tolist()
+    corpus = tax_df["enriched_desc"].tolist() + df["processed_text"].tolist()
     tfidf_all = vectorizer.fit_transform(corpus)
     
     X_tax = tfidf_all[:len(tax_df)]
