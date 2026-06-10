@@ -1,0 +1,92 @@
+import json
+import os
+
+# Expanded multilingual dictionary across major business languages
+# Maps foreign corporate/finance terms to English
+expanded_dict = {
+    # Spanish
+    "contraseña": "password", "tarjeta": "card", "corporativa": "corporate", 
+    "informe": "report", "transacciones": "transaction", "comerciante": "merchant", 
+    "tipo de cambio": "exchange rate", "liquidaciones": "settlements", "internacionales": "international", 
+    "beneficios": "benefits", "disputa": "dispute", "cargo": "charge", 
+    "cuenta": "account", "pautas": "guidelines", "cumplimiento": "compliance", 
+    "reembolso": "refund", "sala": "lounge", "límites": "limits", "riesgo": "risk", 
+    "panel": "dashboard", "error": "error", "acceder": "access", "factura": "invoice",
+    "pago": "payment", "estado de cuenta": "statement", "saldo": "balance", "tarifa": "fee",
+    "viaje": "travel", "gasto": "expense", "autorización": "authorization", "rechazo": "decline",
+    "perdida": "lost", "robada": "stolen", "fraude": "fraud", "pin": "pin",
+
+    # French
+    "mot de passe": "password", "carte": "card", "d'entreprise": "corporate",
+    "rapport": "report", "transaction": "transaction", "commerçant": "merchant",
+    "taux de change": "exchange rate", "règlements": "settlements", "international": "international",
+    "avantages": "benefits", "litige": "dispute", "frais": "fee", "compte": "account",
+    "directives": "guidelines", "conformité": "compliance", "remboursement": "refund",
+    "salon": "lounge", "limites": "limits", "risque": "risk", "tableau de bord": "dashboard",
+    "erreur": "error", "accès": "access", "facture": "invoice", "paiement": "payment",
+    "relevé": "statement", "solde": "balance", "voyage": "travel", "dépense": "expense",
+    "autorisation": "authorization", "déclin": "decline", "perdu": "lost", "volé": "stolen",
+    "fraude": "fraud",
+
+    # German
+    "passwort": "password", "karte": "card", "firmen": "corporate",
+    "bericht": "report", "transaktion": "transaction", "händler": "merchant",
+    "wechselkurs": "exchange rate", "abrechnungen": "settlements", "international": "international",
+    "vorteile": "benefits", "streitigkeit": "dispute", "gebühr": "fee", "konto": "account",
+    "richtlinien": "guidelines", "einhaltung": "compliance", "rückerstattung": "refund",
+    "lounge": "lounge", "grenzen": "limits", "risiko": "risk", "dashboard": "dashboard",
+    "fehler": "error", "zugriff": "access", "rechnung": "invoice", "zahlung": "payment",
+    "kontoauszug": "statement", "guthaben": "balance", "reise": "travel", "ausgabe": "expense",
+    "genehmigung": "authorization", "ablehnung": "decline", "verloren": "lost", "gestohlen": "stolen",
+    "betrug": "fraud",
+
+    # Portuguese
+    "senha": "password", "cartão": "card", "corporativo": "corporate",
+    "relatório": "report", "transação": "transaction", "comerciante": "merchant",
+    "taxa de câmbio": "exchange rate", "liquidações": "settlements", "internacional": "international",
+    "benefícios": "benefits", "disputa": "dispute", "cobrança": "charge", "conta": "account",
+    "diretrizes": "guidelines", "conformidade": "compliance", "reembolso": "refund",
+    "sala vip": "lounge", "limites": "limits", "risco": "risk", "painel": "dashboard",
+    "erro": "error", "acesso": "access", "fatura": "invoice", "pagamento": "payment",
+    "extrato": "statement", "saldo": "balance", "taxa": "fee", "viagem": "travel",
+    "despesa": "expense", "autorização": "authorization", "recusa": "decline", "perdido": "lost",
+    "roubado": "stolen", "fraude": "fraud",
+
+    # Chinese (Simplified)
+    "密码": "password", "卡": "card", "公司": "corporate", "报告": "report", 
+    "交易": "transaction", "商户": "merchant", "汇率": "exchange rate", "结算": "settlements", 
+    "国际": "international", "福利": "benefits", "争议": "dispute", "扣款": "charge", 
+    "账户": "account", "指南": "guidelines", "合规": "compliance", "退款": "refund", 
+    "休息室": "lounge", "限制": "limits", "风险": "risk", "仪表板": "dashboard", 
+    "错误": "error", "访问": "access", "发票": "invoice", "付款": "payment",
+    "对账单": "statement", "余额": "balance", "费用": "fee", "旅行": "travel",
+    "支出": "expense", "授权": "authorization", "拒绝": "decline", "丢失": "lost",
+    "被盗": "stolen", "欺诈": "fraud",
+
+    # Japanese
+    "パスワード": "password", "カード": "card", "コーポレート": "corporate", "レポート": "report", 
+    "取引": "transaction", "加盟店": "merchant", "為替レート": "exchange rate", "決済": "settlements", 
+    "国際": "international", "特典": "benefits", "異議": "dispute", "請求": "charge", 
+    "アカウント": "account", "ガイドライン": "guidelines", "コンプライアンス": "compliance", 
+    "返金": "refund", "ラウンジ": "lounge", "制限": "limits", "リスク": "risk", 
+    "ダッシュボード": "dashboard", "エラー": "error", "アクセス": "access", "請求書": "invoice",
+    "支払い": "payment", "明細書": "statement", "残高": "balance", "手数料": "fee",
+    "旅行": "travel", "経費": "expense", "承認": "authorization", "拒否": "decline",
+    "紛失": "lost", "盗難": "stolen", "詐欺": "fraud",
+    
+    # Korean
+    "비밀번호": "password", "카드": "card", "기업": "corporate", "보고서": "report",
+    "거래": "transaction", "가맹점": "merchant", "환율": "exchange rate", "결제": "settlements",
+    "국제": "international", "혜택": "benefits", "분쟁": "dispute", "청구": "charge",
+    "계정": "account", "가이드라인": "guidelines", "규정 준수": "compliance", "환불": "refund",
+    "라운지": "lounge", "한도": "limits", "위험": "risk", "대시보드": "dashboard",
+    "오류": "error", "액세스": "access", "송장": "invoice", "지불": "payment",
+    "명세서": "statement", "잔액": "balance", "수수료": "fee", "여행": "travel",
+    "경비": "expense", "승인": "authorization", "거절": "decline", "분실": "lost",
+    "도난": "stolen", "사기": "fraud"
+}
+
+with open("src/corporate_dictionary.json", "w", encoding="utf-8") as f:
+    json.dump(expanded_dict, f, ensure_ascii=False, indent=4)
+
+print(f"Created expanded dictionary with {len(expanded_dict)} entries.")

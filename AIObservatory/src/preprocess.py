@@ -1,81 +1,16 @@
 import re
+import json
+import os
 
-# A poor man's multilingual keyword normalization dictionary
-# Maps common corporate terms in Spanish, Japanese, Chinese, etc. to English
-KEYWORD_MAPPING = {
-    # Spanish
-    "contraseña": "password",
-    "tarjeta": "card",
-    "corporativa": "corporate",
-    "informe": "report",
-    "transacciones": "transaction",
-    "comerciante": "merchant",
-    "tipo": "rate",
-    "cambio": "exchange",
-    "liquidaciones": "settlements",
-    "internacionales": "international",
-    "beneficios": "benefits",
-    "disputa": "dispute",
-    "cargo": "charge",
-    "cuenta": "account",
-    "pautas": "guidelines",
-    "cumplimiento": "compliance",
-    "reembolso": "refund",
-    "sala": "lounge",
-    "límites": "limits",
-    "riesgo": "risk",
-    "panel": "dashboard",
-    "error": "error",
-    "acceder": "access",
-    
-    # Chinese (Simplified)
-    "密码": "password",
-    "卡": "card",
-    "公司": "corporate",
-    "报告": "report",
-    "交易": "transaction",
-    "商户": "merchant",
-    "汇率": "exchange rate",
-    "结算": "settlements",
-    "国际": "international",
-    "福利": "benefits",
-    "争议": "dispute",
-    "扣款": "charge",
-    "账户": "account",
-    "指南": "guidelines",
-    "合规": "compliance",
-    "退款": "refund",
-    "休息室": "lounge",
-    "限制": "limits",
-    "风险": "risk",
-    "仪表板": "dashboard",
-    "错误": "error",
-    "访问": "access",
-
-    # Japanese
-    "パスワード": "password",
-    "カード": "card",
-    "コーポレート": "corporate",
-    "レポート": "report",
-    "取引": "transaction",
-    "加盟店": "merchant",
-    "為替レート": "exchange rate",
-    "決済": "settlements",
-    "国際": "international",
-    "特典": "benefits",
-    "異議": "dispute",
-    "請求": "charge",
-    "アカウント": "account",
-    "ガイドライン": "guidelines",
-    "コンプライアンス": "compliance",
-    "返金": "refund",
-    "ラウンジ": "lounge",
-    "制限": "limits",
-    "リスク": "risk",
-    "ダッシュボード": "dashboard",
-    "エラー": "error",
-    "アクセス": "access"
-}
+# Load expanded multilingual dictionary
+# Maps foreign corporate/finance terms to English
+dict_path = os.path.join(os.path.dirname(__file__), "corporate_dictionary.json")
+try:
+    with open(dict_path, "r", encoding="utf-8") as f:
+        KEYWORD_MAPPING = json.load(f)
+except FileNotFoundError:
+    print(f"Warning: {dict_path} not found. Keyword normalization will be skipped.")
+    KEYWORD_MAPPING = {}
 
 # Regex to strip conversational fluff
 STOP_PHRASES = [
