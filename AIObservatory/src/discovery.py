@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import FeatureUnion, Pipeline
 from sklearn.decomposition import TruncatedSVD
-from sklearn.cluster import HDBSCAN
+from sklearn.cluster import MiniBatchKMeans
 from .preprocess import preprocess_prompt
 
 def clean_and_truncate(text):
@@ -82,11 +82,10 @@ def run_discovery():
     print("  -> This is a mathematical matrix operation and may take 5-10 minutes. Please wait...")
     X_reduced = pipeline.fit_transform(df["processed_text"])
     
-    print(f"\n[Phase 3/3] Clustering with HDBSCAN (Single Core)")
-    print(f"  -> Clustering {len(df)} points. This is a monolithic operation and may take 30-60 minutes.")
-    print("  -> Please do not kill the process; it is running normally...")
-    hdbscan = HDBSCAN(min_cluster_size=100, min_samples=5)
-    labels = hdbscan.fit_predict(X_reduced)
+    print(f"\n[Phase 3/3] Clustering with MiniBatchKMeans (Fast High-Dimensional Clustering)")
+    print(f"  -> Slicing {len(df)} points into 200 distinct geometric clusters. This should take under 30 seconds...")
+    kmeans = MiniBatchKMeans(n_clusters=200, random_state=42, batch_size=10000, n_init='auto')
+    labels = kmeans.fit_predict(X_reduced)
     df["cluster"] = labels
     
     # Output clusters, extract top keywords
