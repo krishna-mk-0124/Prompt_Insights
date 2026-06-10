@@ -34,7 +34,16 @@ def run_training():
 
     from .preprocess import preprocess_prompt
     print("Applying preprocessing (noise reduction & normalization) to training data...")
-    X = df["truncated_prompt"].fillna("").apply(preprocess_prompt)
+    
+    processed_x = []
+    total = len(df)
+    for i, text in enumerate(df["truncated_prompt"].fillna("")):
+        if i % 10000 == 0 and i > 0:
+            print(f"  -> Preprocessed {i:,} / {total:,} training prompts ({(i/total)*100:.1f}%)")
+        processed_x.append(preprocess_prompt(text))
+    print(f"  -> Preprocessed {total:,} / {total:,} training prompts (100.0%)")
+    
+    X = pd.Series(processed_x)
     y = df["subcategory_id"]
     
     print(f"Loaded {len(df)} labeled samples. Building pipeline...")

@@ -41,8 +41,16 @@ def route_languages():
         print(f"Error reading {input_file}: {e}")
         return
 
-    print("Detecting languages (this may take a moment)...")
-    df["language"] = df["prompt_text"].apply(detect_language)
+    print("Detecting languages (this may take several minutes)...")
+    languages = []
+    total = len(df)
+    for i, text in enumerate(df["prompt_text"]):
+        if i % 10000 == 0 and i > 0:
+            print(f"  -> Routed {i:,} / {total:,} prompts ({(i/total)*100:.1f}%)")
+        languages.append(detect_language(text))
+    
+    df["language"] = languages
+    print(f"  -> Routed {total:,} / {total:,} prompts (100.0%)")
     
     # Isolate English
     english_df = df[df["language"] == "en"].copy()
