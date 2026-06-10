@@ -32,11 +32,17 @@ def run_discovery():
 
     print(f"Loaded {len(lines)} raw lines.")
     
-    # Clean and truncate
-    processed_lines = [clean_and_truncate(line) for line in lines]
-    
-    print("Applying multilingual keyword normalization and noise reduction...")
-    processed_lines = [preprocess_prompt(line) if line else None for line in processed_lines]
+    print(f"\n[Phase 1/3] Preprocessing {len(lines)} prompts...")
+    processed_lines = []
+    total = len(lines)
+    for i, line in enumerate(lines):
+        if i % 25000 == 0 and i > 0:
+            print(f"  -> Processed {i:,} / {total:,} prompts ({(i/total)*100:.1f}%)")
+        
+        cleaned = clean_and_truncate(line)
+        preprocessed = preprocess_prompt(cleaned)
+        processed_lines.append(preprocessed)
+    print(f"  -> Processed {total:,} / {total:,} prompts (100.0%)")
     
     df = pd.DataFrame({"raw_text": lines, "processed_text": processed_lines})
     df = df.dropna(subset=["processed_text"]).reset_index(drop=True)
@@ -72,10 +78,14 @@ def run_discovery():
         ("svd", TruncatedSVD(n_components=150, random_state=42))
     ])
     
+    print(f"\n[Phase 2/3] Extracting Features and Running SVD (Single Core)")
+    print("  -> This is a mathematical matrix operation and may take 5-10 minutes. Please wait...")
     X_reduced = pipeline.fit_transform(df["processed_text"])
     
-    print("Clustering...")
-    hdbscan = HDBSCAN(min_cluster_size=100, min_samples=5, n_jobs=-1)
+    print(f"\n[Phase 3/3] Clustering with HDBSCAN (Single Core)")
+    print(f"  -> Clustering {len(df)} points. This is a monolithic operation and may take 30-60 minutes.")
+    print("  -> Please do not kill the process; it is running normally...")
+    hdbscan = HDBSCAN(min_cluster_size=100, min_samples=5)
     labels = hdbscan.fit_predict(X_reduced)
     df["cluster"] = labels
     
