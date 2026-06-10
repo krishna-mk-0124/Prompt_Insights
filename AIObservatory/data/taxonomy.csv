@@ -199,3 +199,203 @@ category_id,category_name,subcategory_id,subcategory_name
 9,General Productivity & Work Support,197,Provide example scenario explanation
 9,General Productivity & Work Support,198,Fix grammar and tone
 9,General Productivity & Work Support,199,General clarification request
+10,Platform & Infrastructure Engineering,200,Kubernetes deployment troubleshooting
+10,Platform & Infrastructure Engineering,201,Cloud environment configuration guidance
+10,Platform & Infrastructure Engineering,202,Infrastructure as code design
+10,Platform & Infrastructure Engineering,203,CI/CD pipeline failure analysis
+10,Platform & Infrastructure Engineering,204,Terraform module implementation support
+10,Platform & Infrastructure Engineering,205,Network load balancer configuration
+10,Platform & Infrastructure Engineering,206,DNS and routing issue debugging
+10,Platform & Infrastructure Engineering,207,Cloud cost optimization strategy
+10,Platform & Infrastructure Engineering,208,Observability stack implementation
+10,Platform & Infrastructure Engineering,209,Logging framework configuration support
+10,Platform & Infrastructure Engineering,210,Service mesh architecture discussion
+10,Platform & Infrastructure Engineering,211,API gateway configuration troubleshooting
+10,Platform & Infrastructure Engineering,212,Infrastructure scalability planning
+10,Platform & Infrastructure Engineering,213,Container orchestration optimization
+10,Platform & Infrastructure Engineering,214,Secret management implementation guidance
+10,Platform & Infrastructure Engineering,215,SSL/TLS configuration debugging
+10,Platform & Infrastructure Engineering,216,Multi-region failover architecture
+10,Platform & Infrastructure Engineering,217,DevOps automation enhancement
+10,Platform & Infrastructure Engineering,218,Infrastructure security hardening
+10,Platform & Infrastructure Engineering,219,Performance tuning for services
+11,Financial Analysis & Cost Management,220,Expense variance root cause analysis
+11,Financial Analysis & Cost Management,221,Budget forecasting model design
+11,Financial Analysis & Cost Management,222,Financial ratio interpretation
+11,Financial Analysis & Cost Management,223,Revenue growth trend assessment
+11,Financial Analysis & Cost Management,224,Cost allocation methodology clarification
+11,Financial Analysis & Cost Management,225,Profitability driver evaluation
+11,Financial Analysis & Cost Management,226,Unit economics calculation support
+11,Financial Analysis & Cost Management,227,Margin analysis explanation
+11,Financial Analysis & Cost Management,228,Break-even modeling guidance
+11,Financial Analysis & Cost Management,229,Tax impact estimation discussion
+11,Financial Analysis & Cost Management,230,Pricing strategy financial modeling
+11,Financial Analysis & Cost Management,231,Cost-benefit justification drafting
+11,Financial Analysis & Cost Management,232,Financial scenario sensitivity analysis
+11,Financial Analysis & Cost Management,233,Capital expenditure evaluation
+11,Financial Analysis & Cost Management,234,Operating cost reduction strategy
+11,Financial Analysis & Cost Management,235,Financial performance benchmarking
+11,Financial Analysis & Cost Management,236,ROI calculation support
+11,Financial Analysis & Cost Management,237,Cash flow projection explanation
+11,Financial Analysis & Cost Management,238,Depreciation methodology clarification
+11,Financial Analysis & Cost Management,239,Revenue recognition guidance
+12,Customer Experience & Servicing Strategy,240,Customer journey optimization discussion
+12,Customer Experience & Servicing Strategy,241,Service quality performance review
+12,Customer Experience & Servicing Strategy,242,Contact handling time reduction
+12,Customer Experience & Servicing Strategy,243,Complaint resolution process improvement
+12,Customer Experience & Servicing Strategy,244,Voice of customer analysis
+12,Customer Experience & Servicing Strategy,245,Customer segmentation strategy
+12,Customer Experience & Servicing Strategy,246,CX metrics interpretation
+12,Customer Experience & Servicing Strategy,247,Service channel optimization
+12,Customer Experience & Servicing Strategy,248,Frontline performance enhancement
+12,Customer Experience & Servicing Strategy,249,Customer escalation management
+12,Customer Experience & Servicing Strategy,250,Service automation recommendation
+12,Customer Experience & Servicing Strategy,251,Net promoter score analysis
+12,Customer Experience & Servicing Strategy,252,Customer retention improvement strategy
+12,Customer Experience & Servicing Strategy,253,Interaction quality evaluation
+12,Customer Experience & Servicing Strategy,254,Customer communication improvement
+12,Customer Experience & Servicing Strategy,255,Loyalty program impact assessment
+12,Customer Experience & Servicing Strategy,256,Experience personalization strategy
+12,Customer Experience & Servicing Strategy,257,Call center efficiency optimization
+12,Customer Experience & Servicing Strategy,258,Customer satisfaction trend review
+12,Customer Experience & Servicing Strategy,259,Omnichannel servicing alignment
+13,Talent Leadership & People Management,260,Performance improvement planning guidance
+13,Talent Leadership & People Management,261,Career growth strategy development
+13,Talent Leadership & People Management,262,Leadership feedback preparation
+13,Talent Leadership & People Management,263,Succession planning discussion
+13,Talent Leadership & People Management,264,Talent capability assessment
+13,Talent Leadership & People Management,265,Team structure optimization
+13,Talent Leadership & People Management,266,Stakeholder influence strategy
+13,Talent Leadership & People Management,267,Cross-functional collaboration planning
+13,Talent Leadership & People Management,268,Employee engagement improvement
+13,Talent Leadership & People Management,269,Coaching and mentoring framework
+13,Talent Leadership & People Management,270,Promotion readiness discussion
+13,Talent Leadership & People Management,271,Workforce planning analysis
+13,Talent Leadership & People Management,272,Organizational change communication
+13,Talent Leadership & People Management,273,Conflict resolution strategy
+13,Talent Leadership & People Management,274,Diversity inclusion initiative planning
+13,Talent Leadership & People Management,275,Leadership competency development
+13,Talent Leadership & People Management,276,Performance evaluation calibration
+13,Talent Leadership & People Management,277,Talent risk mitigation planning
+13,Talent Leadership & People Management,278,Behavioral feedback drafting
+13,Talent Leadership & People Management,279,Team productivity optimization
+14,Regulatory Reporting & Controls Automation,280,Regulatory requirement mapping
+14,Regulatory Reporting & Controls Automation,281,Control design effectiveness evaluation
+14,Regulatory Reporting & Controls Automation,282,Audit evidence documentation support
+14,Regulatory Reporting & Controls Automation,283,Compliance automation architecture design
+14,Regulatory Reporting & Controls Automation,284,Reporting traceability validation
+14,Regulatory Reporting & Controls Automation,285,Regulatory data lineage mapping
+14,Regulatory Reporting & Controls Automation,286,Control deficiency remediation planning
+14,Regulatory Reporting & Controls Automation,287,Risk control matrix alignment
+14,Regulatory Reporting & Controls Automation,288,Policy adherence verification
+14,Regulatory Reporting & Controls Automation,289,Automated compliance monitoring setup
+14,Regulatory Reporting & Controls Automation,290,Regulatory change impact assessment
+14,Regulatory Reporting & Controls Automation,291,Governance reporting standardization
+14,Regulatory Reporting & Controls Automation,292,SOX compliance documentation drafting
+14,Regulatory Reporting & Controls Automation,293,Model validation control review
+14,Regulatory Reporting & Controls Automation,294,Internal control narrative drafting
+14,Regulatory Reporting & Controls Automation,295,Compliance dashboard creation
+14,Regulatory Reporting & Controls Automation,296,Testing standard implementation
+14,Regulatory Reporting & Controls Automation,297,Regulatory exception analysis
+14,Regulatory Reporting & Controls Automation,298,Control performance metric design
+14,Regulatory Reporting & Controls Automation,299,Compliance escalation documentation
+15,Product Development & Lifecycle Management,300,Product roadmap prioritization
+15,Product Development & Lifecycle Management,301,Feature requirement definition
+15,Product Development & Lifecycle Management,302,Product-market fit assessment
+15,Product Development & Lifecycle Management,303,Customer feedback incorporation
+15,Product Development & Lifecycle Management,304,Backlog prioritization strategy
+15,Product Development & Lifecycle Management,305,MVP scope definition
+15,Product Development & Lifecycle Management,306,Release planning coordination
+15,Product Development & Lifecycle Management,307,Product KPI tracking design
+15,Product Development & Lifecycle Management,308,Market opportunity evaluation
+15,Product Development & Lifecycle Management,309,Competitive feature benchmarking
+15,Product Development & Lifecycle Management,310,Product risk assessment
+15,Product Development & Lifecycle Management,311,Go-to-market strategy articulation
+15,Product Development & Lifecycle Management,312,Feature adoption analysis
+15,Product Development & Lifecycle Management,313,Product performance measurement
+15,Product Development & Lifecycle Management,314,Lifecycle stage evaluation
+15,Product Development & Lifecycle Management,315,Customer value proposition refinement
+15,Product Development & Lifecycle Management,316,Innovation opportunity identification
+15,Product Development & Lifecycle Management,317,Beta testing coordination
+15,Product Development & Lifecycle Management,318,Product sunset strategy
+15,Product Development & Lifecycle Management,319,Stakeholder alignment communication
+16,Payments Ecosystem & Network Strategy,320,Processor capability comparison
+16,Payments Ecosystem & Network Strategy,321,Network integration architecture review
+16,Payments Ecosystem & Network Strategy,322,Payment routing optimization strategy
+16,Payments Ecosystem & Network Strategy,323,Cross-border settlement explanation
+16,Payments Ecosystem & Network Strategy,324,Interchange fee analysis
+16,Payments Ecosystem & Network Strategy,325,Merchant acquiring model discussion
+16,Payments Ecosystem & Network Strategy,326,Issuer-acquirer relationship evaluation
+16,Payments Ecosystem & Network Strategy,327,Fraud prevention control review
+16,Payments Ecosystem & Network Strategy,328,Tokenization implementation guidance
+16,Payments Ecosystem & Network Strategy,329,Payment authentication protocol clarification
+16,Payments Ecosystem & Network Strategy,330,Chargeback management strategy
+16,Payments Ecosystem & Network Strategy,331,Real-time payment system comparison
+16,Payments Ecosystem & Network Strategy,332,Digital wallet integration support
+16,Payments Ecosystem & Network Strategy,333,Alternative payment method evaluation
+16,Payments Ecosystem & Network Strategy,334,Payment regulatory compliance discussion
+16,Payments Ecosystem & Network Strategy,335,Network reliability assessment
+16,Payments Ecosystem & Network Strategy,336,H2H integration planning
+16,Payments Ecosystem & Network Strategy,337,Payment gateway selection analysis
+16,Payments Ecosystem & Network Strategy,338,Merchant onboarding process review
+16,Payments Ecosystem & Network Strategy,339,Payment data security requirements
+17,Data Engineering & Architecture,340,Data pipeline architecture design
+17,Data Engineering & Architecture,341,ETL process troubleshooting
+17,Data Engineering & Architecture,342,Data warehouse schema modeling
+17,Data Engineering & Architecture,343,Partitioning strategy optimization
+17,Data Engineering & Architecture,344,Data quality validation framework
+17,Data Engineering & Architecture,345,Metadata management strategy
+17,Data Engineering & Architecture,346,Data governance rule mapping
+17,Data Engineering & Architecture,347,BigQuery performance tuning
+17,Data Engineering & Architecture,348,Spark job optimization guidance
+17,Data Engineering & Architecture,349,Data transformation logic review
+17,Data Engineering & Architecture,350,Lineage visualization implementation
+17,Data Engineering & Architecture,351,Data migration strategy planning
+17,Data Engineering & Architecture,352,Master data management design
+17,Data Engineering & Architecture,353,Schema evolution handling
+17,Data Engineering & Architecture,354,API data ingestion integration
+17,Data Engineering & Architecture,355,Batch vs streaming architecture
+17,Data Engineering & Architecture,356,Data lake structure optimization
+17,Data Engineering & Architecture,357,Encryption and masking implementation
+17,Data Engineering & Architecture,358,Data reconciliation validation
+17,Data Engineering & Architecture,359,Cross-system data mapping
+18,Security & Identity Management,360,Authentication flow troubleshooting
+18,Security & Identity Management,361,Authorization policy configuration
+18,Security & Identity Management,362,Identity federation strategy
+18,Security & Identity Management,363,Certificate validation debugging
+18,Security & Identity Management,364,Zero trust architecture planning
+18,Security & Identity Management,365,Access control model review
+18,Security & Identity Management,366,Secrets management implementation
+18,Security & Identity Management,367,Encryption strategy clarification
+18,Security & Identity Management,368,Incident response coordination
+18,Security & Identity Management,369,Security vulnerability remediation
+18,Security & Identity Management,370,IAM role configuration support
+18,Security & Identity Management,371,Network security configuration
+18,Security & Identity Management,372,Data privacy compliance discussion
+18,Security & Identity Management,373,Threat modeling analysis
+18,Security & Identity Management,374,Security audit preparation
+18,Security & Identity Management,375,Identity propagation validation
+18,Security & Identity Management,376,MFA integration guidance
+18,Security & Identity Management,377,Token lifecycle management
+18,Security & Identity Management,378,Secure API design review
+18,Security & Identity Management,379,Security architecture documentation
+19,Enterprise Architecture & Systems Integration,380,End-to-end system architecture design
+19,Enterprise Architecture & Systems Integration,381,Cross-platform integration planning
+19,Enterprise Architecture & Systems Integration,382,Legacy system modernization strategy
+19,Enterprise Architecture & Systems Integration,383,API contract standardization
+19,Enterprise Architecture & Systems Integration,384,Message broker architecture evaluation
+19,Enterprise Architecture & Systems Integration,385,Microservices orchestration design
+19,Enterprise Architecture & Systems Integration,386,Broker-based identity propagation
+19,Enterprise Architecture & Systems Integration,387,Hybrid cloud integration planning
+19,Enterprise Architecture & Systems Integration,388,Event-driven architecture implementation
+19,Enterprise Architecture & Systems Integration,389,Service dependency mapping
+19,Enterprise Architecture & Systems Integration,390,Systems interoperability validation
+19,Enterprise Architecture & Systems Integration,391,Middleware configuration guidance
+19,Enterprise Architecture & Systems Integration,392,Data contract enforcement
+19,Enterprise Architecture & Systems Integration,393,Integration testing strategy
+19,Enterprise Architecture & Systems Integration,394,Enterprise architecture review preparation
+19,Enterprise Architecture & Systems Integration,395,ADR documentation drafting
+19,Enterprise Architecture & Systems Integration,396,Scalability architecture planning
+19,Enterprise Architecture & Systems Integration,397,High availability design review
+19,Enterprise Architecture & Systems Integration,398,Disaster recovery architecture evaluation
+19,Enterprise Architecture & Systems Integration,399,Systems resilience assessment

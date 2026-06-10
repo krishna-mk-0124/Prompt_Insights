@@ -113,7 +113,12 @@ def run_hybrid_discovery():
     
     print("\n[Phase 4/4] Auto-Discovery for 'Other/Miscellaneous' Fallback Bucket")
     if other_count > 0:
-        df.loc[other_mask, "category_id"] = 10
+        max_cat_id = tax_df["category_id"].max()
+        max_sub_id = tax_df["subcategory_id"].max()
+        
+        other_cat_id = max_cat_id + 1
+        
+        df.loc[other_mask, "category_id"] = other_cat_id
         df.loc[other_mask, "category_name"] = "Other/Miscellaneous"
         
         other_indices = np.where(other_mask)[0]
@@ -132,7 +137,7 @@ def run_hybrid_discovery():
         other_names = extract_top_keywords(X_other, vectorizer, other_labels, n_clusters_other, top_n=2)
         
         for local_id in range(n_clusters_other):
-            global_sub_id = 200 + local_id
+            global_sub_id = max_sub_id + 1 + local_id
             sub_name = other_names[local_id]
             
             sub_mask = other_labels == local_id
@@ -142,7 +147,7 @@ def run_hybrid_discovery():
             df.loc[global_indices, "subcategory_name"] = sub_name
             
             hybrid_taxonomy_mapping.append({
-                "category_id": 10,
+                "category_id": other_cat_id,
                 "category_name": "Other/Miscellaneous",
                 "subcategory_id": global_sub_id,
                 "subcategory_name": sub_name
