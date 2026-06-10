@@ -5,6 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import FeatureUnion, Pipeline
 from sklearn.decomposition import TruncatedSVD
 from sklearn.cluster import HDBSCAN
+from .preprocess import preprocess_prompt
 
 def clean_and_truncate(text):
     if pd.isna(text) or not isinstance(text, str):
@@ -32,6 +33,10 @@ def run_discovery():
     
     # Clean and truncate
     processed_lines = [clean_and_truncate(line) for line in lines]
+    
+    print("Applying multilingual keyword normalization and noise reduction...")
+    processed_lines = [preprocess_prompt(line) if line else None for line in processed_lines]
+    
     df = pd.DataFrame({"raw_text": lines, "processed_text": processed_lines})
     df = df.dropna(subset=["processed_text"]).reset_index(drop=True)
     
@@ -69,7 +74,7 @@ def run_discovery():
     X_reduced = pipeline.fit_transform(df["processed_text"])
     
     print("Clustering...")
-    hdbscan = HDBSCAN(min_cluster_size=15, min_samples=5)
+    hdbscan = HDBSCAN(min_cluster_size=100, min_samples=5)
     labels = hdbscan.fit_predict(X_reduced)
     df["cluster"] = labels
     
