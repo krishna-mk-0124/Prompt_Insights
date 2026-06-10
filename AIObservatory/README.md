@@ -1,6 +1,6 @@
 # Enterprise Zero-Shot Prompt Categorizer
 
-**Developer:** Krishna
+**Developer:** Achut Mahadev Kadam (krishna0124@gmail.com)
 
 An ultra-secure, highly scalable, and mathematically deterministic pipeline for categorizing hundreds of thousands (or millions) of user prompts without relying on external Deep Learning models, LLMs, or expensive cloud GPUs.
 
