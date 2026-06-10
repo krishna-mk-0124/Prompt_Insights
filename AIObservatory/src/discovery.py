@@ -100,8 +100,8 @@ def run_hybrid_discovery():
     df["subcategory_id"] = -1
     df["subcategory_name"] = ""
     
-    # If the text shares virtually no words with ANY taxonomy (sim < 0.05), route to Other
-    THRESHOLD = 0.05
+    # If the text shares virtually no words with ANY taxonomy (sim < 0.01), route to Other
+    THRESHOLD = 0.01
     official_mask = max_sims >= THRESHOLD
     other_mask = max_sims < THRESHOLD
     
