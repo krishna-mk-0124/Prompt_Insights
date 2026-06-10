@@ -8,7 +8,7 @@ from sklearn.pipeline import Pipeline
 import joblib
 
 def run_training():
-    data_path = os.path.join("data", "labeled_sample.csv")
+    data_path = os.path.join("data", "fully_categorized_dataset.csv")
     model_dir = "models"
     model_path = os.path.join(model_dir, "intent_pipeline.pkl")
     
