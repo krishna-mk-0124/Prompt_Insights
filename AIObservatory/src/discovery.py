@@ -63,7 +63,7 @@ def run_discovery():
     
     pipeline = Pipeline([
         ("features", vectorizer),
-        ("svd", TruncatedSVD(n_components=150, random_state=42))
+        ("svd", TruncatedSVD(n_components=30, random_state=42))
     ])
     
     X_reduced = pipeline.fit_transform(df["processed_text"])
