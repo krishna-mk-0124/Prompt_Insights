@@ -33,7 +33,7 @@ def extract_top_keywords(tfidf_matrix, vectorizer, cluster_labels, num_clusters,
 def run_hybrid_discovery():
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
     input_file = os.path.join(data_dir, "english_prompts.txt")
-    tax_file = os.path.join(data_dir, "taxonomy.csv")
+    tax_file = os.path.join(data_dir, "optimized_taxonomy.csv")
     
     if not os.path.exists(input_file):
         print(f"Error: {input_file} not found. Run language_router.py first.")
@@ -48,10 +48,6 @@ def run_hybrid_discovery():
     
     # Preprocess taxonomy definitions
     tax_df["processed_desc"] = tax_df["combined_desc"].apply(preprocess_prompt)
-    
-    # Apply Hidden Taxonomy Enrichment
-    from .enrichment import enrich_taxonomy
-    tax_df = enrich_taxonomy(tax_df)
     
     print(f"Loading texts from {input_file}...")
     with open(input_file, "r", encoding="utf-8") as f:
@@ -75,13 +71,16 @@ def run_hybrid_discovery():
     from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
     
     # Block common noise tokens that hijack the unsupervised clusters
-    custom_noise = ['st', 'oo', 'hi', 'hello', 'hey', 'test', 'com', 'www', 'http', 'https', 'nd', 'rd', 'th', 'pls', 'please']
+    custom_noise = [
+        'st', 'oo', 'hi', 'hello', 'hey', 'test', 'com', 'www', 'http', 'https', 'nd', 'rd', 'th', 'pls', 'please',
+        'strategy', 'optimization', 'guidance', 'support', 'clarification', 'review', 'management', 'planning', 'improvement', 'architecture', 'design'
+    ]
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
     # We fit TFIDF on the corpus containing BOTH the taxonomy and the user prompts
     vectorizer = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2))
     
-    corpus = tax_df["enriched_desc"].tolist() + df["processed_text"].tolist()
+    corpus = tax_df["processed_desc"].tolist() + df["processed_text"].tolist()
     tfidf_all = vectorizer.fit_transform(corpus)
     
     X_tax = tfidf_all[:len(tax_df)]
@@ -100,8 +99,8 @@ def run_hybrid_discovery():
     df["subcategory_id"] = -1
     df["subcategory_name"] = ""
     
-    # If the text shares virtually no words with ANY taxonomy (sim < 0.01), route to Other
-    THRESHOLD = 0.01
+    # If the text shares virtually no words with ANY taxonomy, route to Other
+    THRESHOLD = 0.08
     official_mask = max_sims >= THRESHOLD
     other_mask = max_sims < THRESHOLD
     

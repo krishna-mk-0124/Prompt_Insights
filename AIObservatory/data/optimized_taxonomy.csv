@@ -1,0 +1,55 @@
+category_id,category_name,subcategory_id,subcategory_name
+0,Software Engineering & Development,0,Java Python C++ Syntax Compilation Code
+0,Software Engineering & Development,1,Frontend React Angular Vue HTML CSS JavaScript
+0,Software Engineering & Development,2,Backend Node Express Spring Django Flask Middleware
+0,Software Engineering & Development,3,API REST GraphQL gRPC WebSocket Endpoint Payload
+0,Software Engineering & Development,4,Git Version Control Repository Branch Merge Pull Request
+0,Software Engineering & Development,5,Algorithm Data Structure Array HashMap Linked List Graph
+1,Production Support & Debugging,6,Stacktrace Exception Null Pointer Segfault Core Dump
+1,Production Support & Debugging,7,Memory Leak CPU Threading Concurrency Deadlock Performance
+1,Production Support & Debugging,8,Application Crash Outage Incident Root Cause Log Analysis
+1,Production Support & Debugging,9,Dependency Package Version Compatibility Npm Pip Maven Gradle
+2,Data Engineering & Database,10,SQL Select Update Delete Insert Join Group By Query
+2,Data Engineering & Database,11,Table Column Row Schema Dimension Fact Normalization
+2,Data Engineering & Database,12,ETL Pipeline Warehouse Lake Extraction Transformation Loading
+2,Data Engineering & Database,13,NoSQL MongoDB Cassandra Redis Key Value Document
+2,Data Engineering & Database,14,Big Data Hadoop Spark MapReduce Hive Pig Kafka Streaming
+3,Cloud Infrastructure & DevOps,15,AWS EC2 S3 Lambda VPC Azure GCP Virtual Machine
+3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container Pod Cluster K8s Orchestration
+3,Cloud Infrastructure & DevOps,17,CI CD Jenkins GitLab GitHub Actions Deployment Pipeline
+3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure as Code Configuration
+3,Cloud Infrastructure & DevOps,19,Network Load Balancer DNS Router Switch Subnet Firewall
+4,Cyber Security & Identity,20,Authentication OAuth SAML JWT MFA SSO Password Login
+4,Cyber Security & Identity,21,Authorization RBAC Role Permission Access Control Token
+4,Cyber Security & Identity,22,Encryption SSL TLS Certificate RSA Decryption Cipher Key
+4,Cyber Security & Identity,23,Vulnerability Malware Phishing Ransomware Virus Trojan Exploit XSS Injection
+4,Cyber Security & Identity,24,Compliance GDPR HIPAA PCI SOX Audit Risk Governance
+5,Business Communication & Writing,25,Email Draft Response Follow Up Tone Professional Cordial
+5,Business Communication & Writing,26,Grammar Spelling Proofread Edit Punctuation Vocabulary Rephrase
+5,Business Communication & Writing,27,Translate Language Translation Interpretation Localization
+5,Business Communication & Writing,28,Presentation Slide Deck PowerPoint Pitch Proposal Outline
+5,Business Communication & Writing,29,Documentation Manual Article Blog Post Handbook Policy
+6,Executive Strategy & Management,30,ROI KPI Metric Objective Goal OKR Balanced Scorecard
+6,Executive Strategy & Management,31,Budget Revenue Profit Expense Margin Cost Cash Flow Finance
+6,Executive Strategy & Management,32,Roadmap Vision Mission Milestone Long Term Objective
+6,Executive Strategy & Management,33,Talent HR Hiring Interview Promotion Compensation Employee
+6,Executive Strategy & Management,34,Market Competition Differentiation Innovation SWOT Analysis
+7,Process & Project Management,35,Agile Scrum Sprint Kanban User Story Epic Backlog
+7,Process & Project Management,36,Ticket Jira Issue ServiceNow Assignment Triage Queue
+7,Process & Project Management,37,Workflow Checklist Step Procedure SOP Instruction Guide
+7,Process & Project Management,38,Meeting Notes Agenda Minutes Action Item Summary Takeaway
+7,Process & Project Management,39,Release Schedule Change Request Approval RACI Matrix
+8,Testing & Quality Assurance,40,Unit Test Mock Stub Assertion Coverage Code Quality
+8,Testing & Quality Assurance,41,Integration Test End to End E2E System Validation
+8,Testing & Quality Assurance,42,Regression Load Stress Performance Penetration Scalability
+8,Testing & Quality Assurance,43,QA Defect Bug Reproduction Steps Triage Tracking
+9,Data Analytics & Visualization,44,Excel Formula Pivot Table Vlookup Macro VBA Spreadsheet
+9,Data Analytics & Visualization,45,Chart Graph Dashboard Visualization Tableau PowerBI Scatter Bar
+9,Data Analytics & Visualization,46,Statistics Mean Median Variance Standard Deviation Regression
+9,Data Analytics & Visualization,47,Data Cleansing Formatting Imputation Outlier Normalization
+9,Data Analytics & Visualization,48,Python Pandas Numpy Scipy Scikit Learn Machine Learning
+10,General Productivity & Knowledge,49,Summarize Condense Abstract TLDR Digest Abridge
+10,General Productivity & Knowledge,50,Brainstorm Ideate Concept Suggestion Recommend Alternative Option
+10,General Productivity & Knowledge,51,Format Structure Table List Paragraph Indentation Markdown
+10,General Productivity & Knowledge,52,Explain Define Concept Tutorial Guide Lesson Comprehension Theory
+10,General Productivity & Knowledge,53,Math Calculate Equation Algebra Geometry Calculus Arithmetic
