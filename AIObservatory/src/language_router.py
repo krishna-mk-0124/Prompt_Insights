@@ -6,14 +6,26 @@ from langdetect.lang_detect_exception import LangDetectException
 # Seed the detector to ensure deterministic language detection
 DetectorFactory.seed = 0
 
-ENGLISH_WORDS = {"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what"}
+import re
+
+ENGLISH_WORDS = {
+    "the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", 
+    "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", 
+    "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", 
+    "what", "is", "are", "am", "was", "were", "been", "has", "had", "does", "did", "can", 
+    "could", "should", "shall", "may", "might", "must", "how", "why", "when", "where", "who", 
+    "which", "vs", "please", "me", "my", "mine", "your", "yours", "our", "ours", "us", "no", 
+    "yes", "if", "then", "else", "make", "get", "set", "use", "using", "list", "table", "db", 
+    "sql", "query", "error", "issue", "problem", "update", "create", "delete", "remove", "add"
+}
 
 def detect_language(text):
     if pd.isna(text) or not str(text).strip():
         return "unknown"
         
     s_text = str(text).strip()
-    words = s_text.lower().split()
+    # Strip punctuation and get pure alphabetic words
+    words = re.findall(r'[a-z]+', s_text.lower())
     
     # Heuristic 1: Short prompts (1-3 words) like "sql error", "id token", "it support" 
     # are frequently misclassified by `langdetect` as Indonesian (id) or Italian (it).
