@@ -6,11 +6,26 @@ from langdetect.lang_detect_exception import LangDetectException
 # Seed the detector to ensure deterministic language detection
 DetectorFactory.seed = 0
 
+ENGLISH_WORDS = {"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what"}
+
 def detect_language(text):
     if pd.isna(text) or not str(text).strip():
         return "unknown"
+        
+    s_text = str(text).strip()
+    words = s_text.lower().split()
+    
+    # Heuristic 1: Short prompts (1-3 words) like "sql error", "id token", "it support" 
+    # are frequently misclassified by `langdetect` as Indonesian (id) or Italian (it).
+    if len(words) <= 3:
+        return "en"
+        
+    # Heuristic 2: If it contains basic English structural words, override the detector.
+    if any(w in ENGLISH_WORDS for w in words):
+        return "en"
+        
     try:
-        return detect(str(text))
+        return detect(s_text)
     except LangDetectException:
         return "unknown"
 
