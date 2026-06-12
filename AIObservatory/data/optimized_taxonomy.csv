@@ -584,3 +584,8 @@ category_id,category_name,subcategory_id,subcategory_name
 1,Production Support & Debugging,599,CHC Bot
 14,Finance & Procurement,600,Receiving Invoices
 14,Finance & Procurement,601,SP Debit
+4,Cyber Security & Identity,602,Risk RCM
+11,American Express & Payments,603,AMEX Card Volumes
+2,Data Engineering & Database,604,SQL Table Select Query
+2,Data Engineering & Database,605,Unknown Report DT
+2,Data Engineering & Database,606,Date Sub Current Date
