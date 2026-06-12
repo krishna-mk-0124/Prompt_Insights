@@ -146,7 +146,7 @@ category_id,category_name,subcategory_id,subcategory_name
 5,Business Communication & Writing,144,Mentorship Career Coaching
 11,American Express & Payments,145,AEXP Internal Acronym
 2,Data Engineering & Database,146,Encoding Errors Garbage Data
-1,Business Process Automation,147,Process Automation RPA Tooling
+1,Production Support & Debugging,147,Process Automation RPA Tooling
 3,Cloud Infrastructure & DevOps,148,IVR Telephony Voice Recognition
 8,Testing & Quality Assurance,149,Test Expected Actual Result
 2,Data Engineering & Database,150,Tableau LOD Expression
@@ -357,9 +357,9 @@ category_id,category_name,subcategory_id,subcategory_name
 11,American Express & Payments,355,AMEX Cardmember Accounts
 0,Software Engineering & Development,356,CSS Position Attribute
 11,American Express & Payments,357,Spanish Tarjeta Pago
-9,Finance & Procurement,358,Accounting Journal Entries
+9,Data Analytics & Visualization,358,Accounting Journal Entries
 10,General Productivity & Knowledge,359,Conversations AI Evaluation
-9,Finance & Procurement,360,PCM Rule Allocation
+9,Data Analytics & Visualization,360,PCM Rule Allocation
 2,Data Engineering & Database,361,Model ID Product Name
 0,Software Engineering & Development,362,Android OKHttp PageLayout
 11,American Express & Payments,363,AMEX Corporate Cards
@@ -367,9 +367,9 @@ category_id,category_name,subcategory_id,subcategory_name
 4,Cyber Security & Identity,365,Risk Management Controls
 1,Production Support & Debugging,366,Quality Control QC
 11,American Express & Payments,367,PCN Partner Client Number
-9,Finance & Procurement,368,SOW Statement of Work
+9,Data Analytics & Visualization,368,SOW Statement of Work
 3,Cloud Infrastructure & DevOps,369,RFC Request For Change
-9,Finance & Procurement,370,PCM Rule Definition
+9,Data Analytics & Visualization,370,PCM Rule Definition
 10,General Productivity & Knowledge,371,UX User Persona
 11,American Express & Payments,372,Targeting Eligibility
 4,Cyber Security & Identity,373,Falcon GMAS Security
@@ -381,9 +381,9 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,379,Software Install Dependencies
 4,Cyber Security & Identity,380,Issue Corrective Closure
 0,Software Engineering & Development,381,SAP Code Snippets
-9,Finance & Procurement,382,EBITDA Financial Metrics
+9,Data Analytics & Visualization,382,EBITDA Financial Metrics
 2,Data Engineering & Database,383,Azure Cosmos DB
-5,Business Communication & HR,384,HR Immigration Manager
+5,Business Communication & Writing,384,HR Immigration Manager
 4,Cyber Security & Identity,385,AMEX Authentication Auth
 1,Production Support & Debugging,386,Software Code Error
 4,Cyber Security & Identity,387,Risk Data Controls
@@ -395,21 +395,21 @@ category_id,category_name,subcategory_id,subcategory_name
 4,Cyber Security & Identity,393,Inherent Risk
 11,American Express & Payments,394,AMEX Marriott Partnership
 0,Software Engineering & Development,395,Code Helper Clock
-9,Finance & Procurement,396,PCM Rule Allocations
+9,Data Analytics & Visualization,396,PCM Rule Allocations
 2,Data Engineering & Database,397,Allowed Aggregations Code
 4,Cyber Security & Identity,398,Data Risk Management
-5,Business Communication & HR,399,Spanish Translation Mas Que
+5,Business Communication & Writing,399,Spanish Translation Mas Que
 11,American Express & Payments,400,AMEX CR Assist
-9,Finance & Procurement,401,Pricing Approvals
-5,Business Communication & HR,402,Spanish Informacion Todos
+9,Data Analytics & Visualization,401,Pricing Approvals
+5,Business Communication & Writing,402,Spanish Informacion Todos
 2,Data Engineering & Database,403,Tagged Data Samples
 0,Software Engineering & Development,404,Java JAR Files
 6,Executive Strategy & Management,405,Sales Deal Closing
-5,Business Communication & HR,406,Cancellation Conflicts
+5,Business Communication & Writing,406,Cancellation Conflicts
 3,Cloud Infrastructure & DevOps,407,Network Route Name
-5,Business Communication & HR,408,Spanish Eso Esta
+5,Business Communication & Writing,408,Spanish Eso Esta
 11,American Express & Payments,409,AMEX Travel Flight Sync
-5,Business Communication & HR,410,HR Responsibilities Introduction
+5,Business Communication & Writing,410,HR Responsibilities Introduction
 0,Software Engineering & Development,411,HTML Table Tags
 0,Software Engineering & Development,412,NPM Node Modules UUID
 0,Software Engineering & Development,413,Python TQDM library
@@ -417,11 +417,11 @@ category_id,category_name,subcategory_id,subcategory_name
 11,American Express & Payments,415,AMEX Cards General
 3,Cloud Infrastructure & DevOps,416,Linux Shell Script Error
 6,Executive Strategy & Management,417,Data Governance Delivery
-9,Finance & Procurement,418,EOD End of Day Process
+9,Data Analytics & Visualization,418,EOD End of Day Process
 4,Cyber Security & Identity,419,SAM Directors Access
-9,Finance & Procurement,420,Applications Pricing
-9,Finance & Procurement,421,Capital Timing Finance
-9,Finance & Procurement,422,Financials FIN Reporting
+9,Data Analytics & Visualization,420,Applications Pricing
+9,Data Analytics & Visualization,421,Capital Timing Finance
+9,Data Analytics & Visualization,422,Financials FIN Reporting
 2,Data Engineering & Database,423,Data Delimiter Settings
 0,Software Engineering & Development,424,Code TMP Keyword
 2,Data Engineering & Database,425,PIB Predictive Models
@@ -429,9 +429,9 @@ category_id,category_name,subcategory_id,subcategory_name
 3,Cloud Infrastructure & DevOps,427,Backup NAT Gateway
 2,Data Engineering & Database,428,Database Nulls Blanks
 4,Cyber Security & Identity,429,Risk Controls
-9,Finance & Procurement,430,Amount Constants
-5,Business Communication & HR,431,Spanish Que Esta
-5,Business Communication & HR,432,Benefits Enrollment Lift
+9,Data Analytics & Visualization,430,Amount Constants
+5,Business Communication & Writing,431,Spanish Que Esta
+5,Business Communication & Writing,432,Benefits Enrollment Lift
 0,Software Engineering & Development,433,Postman API Repositories
 3,Cloud Infrastructure & DevOps,434,Portal Shell Scripts
 2,Data Engineering & Database,435,SQL Select Table
@@ -439,8 +439,8 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,437,Application Tests
 11,American Express & Payments,438,AMEX Centurion Lounge
 10,General Productivity & Knowledge,439,OpenAI CustomGPT
-5,Business Communication & HR,440,Spanish Mas Cada
-9,Finance & Procurement,441,Emburse Expense Management
+5,Business Communication & Writing,440,Spanish Mas Cada
+9,Data Analytics & Visualization,441,Emburse Expense Management
 0,Software Engineering & Development,442,Development Pull Requests
 1,Production Support & Debugging,443,Invalid Identifier Errors
 2,Data Engineering & Database,444,Refactoring LPAD
@@ -457,7 +457,7 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,455,Git Conflict Reporting
 10,General Productivity & Knowledge,456,AI Hallucinations
 10,General Productivity & Knowledge,457,AI Voicebots
-5,Business Communication & HR,458,HR Benefits Eligibility Evening
+5,Business Communication & Writing,458,HR Benefits Eligibility Evening
 3,Cloud Infrastructure & DevOps,459,Shell PP Scripts
 1,Production Support & Debugging,460,Support Escalation Win
 10,General Productivity & Knowledge,461,AI Hallucination Chargeout
@@ -468,9 +468,9 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,466,Java JVM AMP
 1,Production Support & Debugging,467,Developer Mistakes
 0,Software Engineering & Development,468,UI Clicking Dropdown
-5,Business Communication & HR,469,HR Interviewer Recruiter
-9,Finance & Procurement,470,Pricing Study Research
-9,Finance & Procurement,471,Asset Management Entry
+5,Business Communication & Writing,469,HR Interviewer Recruiter
+9,Data Analytics & Visualization,470,Pricing Study Research
+9,Data Analytics & Visualization,471,Asset Management Entry
 2,Data Engineering & Database,472,Statistical Problems
 3,Cloud Infrastructure & DevOps,473,Dynamic Operations
 3,Cloud Infrastructure & DevOps,474,Geo Routing Argentina
@@ -478,55 +478,55 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,476,PRD Leaves Production
 10,General Productivity & Knowledge,477,Enable GenAI Capabilities
 0,Software Engineering & Development,478,Plot CID Graphics
-5,Business Communication & HR,479,HR Associates Aspirations
+5,Business Communication & Writing,479,HR Associates Aspirations
 6,Executive Strategy & Management,480,Telesales Operations
 6,Executive Strategy & Management,481,Forbes Publications
 0,Software Engineering & Development,482,SOAP Partitions Code
 11,American Express & Payments,483,AMEX Cards Manner
 2,Data Engineering & Database,484,SQL Selects Table
 2,Data Engineering & Database,485,SQL Varchar Price
-5,Business Communication & HR,486,Official Opt In
+5,Business Communication & Writing,486,Official Opt In
 3,Cloud Infrastructure & DevOps,487,Operations Captured
 3,Cloud Infrastructure & DevOps,488,Network Port Accept
-9,Finance & Procurement,489,Bank Locations
-5,Business Communication & HR,490,Singapore Communications
+9,Data Analytics & Visualization,489,Bank Locations
+5,Business Communication & Writing,490,Singapore Communications
 0,Software Engineering & Development,491,Optional Directories
 2,Data Engineering & Database,492,Water Height Measurements
 0,Software Engineering & Development,493,UI Redesign Mother
 0,Software Engineering & Development,494,CSS Styling CCC
-5,Business Communication & HR,495,Email Confirming Receipt
-9,Finance & Procurement,496,Investment Plans
+5,Business Communication & Writing,495,Email Confirming Receipt
+9,Data Analytics & Visualization,496,Investment Plans
 0,Software Engineering & Development,497,CSS Padding Ascending
 11,American Express & Payments,498,GMNS Evaluating
 0,Software Engineering & Development,499,Dispatch Comparable
 0,Software Engineering & Development,500,Swap Sets Logic
-5,Business Communication & HR,501,Spanish Mas Que
+5,Business Communication & Writing,501,Spanish Mas Que
 11,American Express & Payments,502,AMEX Cards Amex
 2,Data Engineering & Database,503,SQL Table Domain
 10,General Productivity & Knowledge,504,Jump Guides
 3,Cloud Infrastructure & DevOps,505,Monitor Built
 0,Software Engineering & Development,506,CCPS Notification
 10,General Productivity & Knowledge,507,Pillars Holding
-9,Finance & Procurement,508,Bank Neutral
+9,Data Analytics & Visualization,508,Bank Neutral
 6,Executive Strategy & Management,509,Decide Owners
 6,Executive Strategy & Management,510,SRR Streamline
 0,Software Engineering & Development,511,Git Friend Branches
 10,General Productivity & Knowledge,512,AI Hallucination Report DT
-5,Business Communication & HR,513,German Fur Sie
-9,Finance & Procurement,514,Fees Dashboards
+5,Business Communication & Writing,513,German Fur Sie
+9,Data Analytics & Visualization,514,Fees Dashboards
 0,Software Engineering & Development,515,SOI PKG Code
-5,Business Communication & HR,516,WFM Coordination
+5,Business Communication & Writing,516,WFM Coordination
 10,General Productivity & Knowledge,517,Printable Gantt Charts
 0,Software Engineering & Development,518,Python OpenPyXL
 0,Software Engineering & Development,519,Airflow Schedule Interval
 11,American Express & Payments,520,AMEX Data Card
 2,Data Engineering & Database,521,SQL Table Que
-5,Business Communication & HR,522,HR Gurgaon Highlights
-9,Finance & Procurement,523,Finance Actuals ADB
+5,Business Communication & Writing,522,HR Gurgaon Highlights
+9,Data Analytics & Visualization,523,Finance Actuals ADB
 6,Executive Strategy & Management,524,Amazon Brands
 0,Software Engineering & Development,525,Downstream Impacts
-5,Business Communication & HR,526,Spanish Mas Tenemos
-9,Finance & Procurement,527,Treasury Report Script
+5,Business Communication & Writing,526,Spanish Mas Tenemos
+9,Data Analytics & Visualization,527,Treasury Report Script
 10,General Productivity & Knowledge,528,AI Hallucination Markup
 0,Software Engineering & Development,529,XHTML Posture
 0,Software Engineering & Development,530,AOP Event
