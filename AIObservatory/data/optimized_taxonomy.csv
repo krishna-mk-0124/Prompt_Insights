@@ -397,7 +397,6 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,395,Code Helper Clock
 14,Finance & Procurement,396,PCM Rule Allocations
 2,Data Engineering & Database,397,Allowed Aggregations Code
-4,Cyber Security & Identity,398,Data Risk Management
 13,Business Communication & HR,399,Spanish Translation Mas Que
 11,American Express & Payments,400,AMEX CR Assist
 14,Finance & Procurement,401,Pricing Approvals
@@ -434,7 +433,6 @@ category_id,category_name,subcategory_id,subcategory_name
 13,Business Communication & HR,432,Benefits Enrollment Lift
 0,Software Engineering & Development,433,Postman API Repositories
 3,Cloud Infrastructure & DevOps,434,Portal Shell Scripts
-2,Data Engineering & Database,435,SQL Select Table
 11,American Express & Payments,436,Pricing TY Reports
 0,Software Engineering & Development,437,Application Tests
 11,American Express & Payments,438,AMEX Centurion Lounge
