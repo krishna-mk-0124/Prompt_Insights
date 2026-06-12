@@ -73,7 +73,8 @@ def run_hybrid_discovery():
     # Block common noise tokens that hijack the unsupervised clusters
     custom_noise = [
         'st', 'oo', 'hi', 'hello', 'hey', 'test', 'com', 'www', 'http', 'https', 'nd', 'rd', 'th', 'pls', 'please',
-        'strategy', 'optimization', 'guidance', 'support', 'clarification', 'review', 'management', 'planning', 'improvement', 'architecture', 'design'
+        'strategy', 'optimization', 'guidance', 'support', 'clarification', 'review', 'management', 'planning', 'improvement', 'architecture', 'design',
+        'using', 'run', 'need', 'new', 'make', 'better', 'want', 'just', 'add', 'total', 'et', 'does', 'know', 'let', 'like', 'looks', 'based', 'level', 'high', 'share', 'id', 'ore', 'doing', 'hope', 'think', 'don', 'provide', 'questions', 'ask', 'check', 'good', 'morning', 'getting', 'include', 'sure', 'yes', 'work', 'al', 'dl', 'che', 'copy', 'paste', 'tell'
     ]
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     

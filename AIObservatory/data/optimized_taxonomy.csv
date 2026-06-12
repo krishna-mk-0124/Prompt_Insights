@@ -53,3 +53,17 @@ category_id,category_name,subcategory_id,subcategory_name
 10,General Productivity & Knowledge,51,Format Structure Table List Paragraph Indentation Markdown
 10,General Productivity & Knowledge,52,Explain Define Concept Tutorial Guide Lesson Comprehension Theory
 10,General Productivity & Knowledge,53,Math Calculate Equation Algebra Geometry Calculus Arithmetic
+11,American Express & Payments,54,American Express AMEX AEXP
+11,American Express & Payments,55,Card Member Membership Credit Points Rewards
+11,American Express & Payments,56,Merchant Global Acquiring Network
+11,American Express & Payments,57,AMEX Offers Marketing
+11,American Express & Payments,58,Account Bank Balance Financial Statement
+0,Software Engineering & Development,59,Python Import Datetime Date Time Timezone
+0,Software Engineering & Development,60,Type Cast String Integer Float Conversion
+2,Data Engineering & Database,61,Pandas Dataframe df Series Info Describe
+2,Data Engineering & Database,62,Data Source Origin Connection Feed
+5,Business Communication & Writing,63,Subject Line Email Draft Thread
+5,Business Communication & Writing,64,Bullet Points List Formatting Text PX
+6,Executive Strategy & Management,65,Business Impact Outcome Value
+8,Testing & Quality Assurance,66,Error Getting Debug Troubleshoot Fix
+1,Production Support & Debugging,67,Script Execution Run Running Console Command
