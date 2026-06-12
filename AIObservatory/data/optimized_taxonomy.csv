@@ -619,4 +619,15 @@ category_id,category_name,subcategory_id,subcategory_name
 2,Data Engineering & Database,634,Increment Connectors
 3,Cloud Infrastructure & DevOps,635,JKS Favorites
 3,Cloud Infrastructure & DevOps,636,Mocks Chmod
+4,Cyber Security & Identity,638,Risk Response
+2,Data Engineering & Database,639,SQL Table Selection
+2,Data Engineering & Database,640,SQL Select Table
+2,Data Engineering & Database,641,Select Database Table
+0,Software Engineering & Development,642,Combinations Sprints
+3,Cloud Infrastructure & DevOps,643,Directory SRC
+11,American Express & Payments,644,Reg AENB
+3,Cloud Infrastructure & DevOps,645,Intelligent Cascade
+2,Data Engineering & Database,646,Account Balance Age Month Code
+3,Cloud Infrastructure & DevOps,647,Inbound Outbound
+3,Cloud Infrastructure & DevOps,648,Trigger Rule Trigger Dag Run Operator
 2,Data Engineering & Database,637,SQL Select Trans DT

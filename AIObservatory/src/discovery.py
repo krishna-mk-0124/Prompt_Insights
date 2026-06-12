@@ -2,8 +2,14 @@ import os
 import sys
 import pandas as pd
 import numpy as np
+import string
+import warnings
+
+# Suppress TruncatedSVD division by zero warning when variance becomes extremely small
+warnings.filterwarnings('ignore', category=RuntimeWarning)
+
 import math
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.decomposition import TruncatedSVD
 from sklearn.cluster import MiniBatchKMeans
@@ -126,7 +132,8 @@ def run_hybrid_discovery():
         'çπ_eusw', '„Ç®_„Ç≠_„Çπ_Éó_É¨_„Çπ_eusw', 'äü_slow', '„Äæ„Äü_slow', 's_table', 'm√°s_table', 'mo_ct_ia', 'or_ps', 'f√°or_ps', 'as_manera', 'd√°as_manera', 'mandate', 'tighter', 'presenting', 'meaningful', 'additionally', 'drivers', 'sz', 'comprehensive', 'stating', 'earliest', 'hallucinate', 'everytime', 'flat', 'art', 'otro', 'lado', 'enviar', 'pregunta', 'hearing', 'coordinating', 'necesario', 'correcto',
         'ignored', 'vic', 'honestly', 'offered', 'filed', 'arent', 'copying', 'wht', 'responding', 'practice', 'paso', 'tiempo', 'cambios', 'rerun', 'pace', 'km', 'nicer', 'caroline', 'kids', 'tea',
         'äü_', 'est', '_voy', 'mo_ct_shape', 'sh_ea', 'puedo_d', 'blend_ma', 'ana', '_f', 'ingl', 's_frase',
-        'or_wie', 'n_entonces', 'maddie_', 'regular', 'chinese', 'forgot', 'begin', 'puedo', 'shape', 'plz', 'remarks', 'estimate', 'voy', 'ads', 'popup', 'worst', 'fue', 'mensaje', 'kumar', 'tienen', 'tie', 'explicitly', 'designed', 'elle', 'scripted'
+        'or_wie', 'n_entonces', 'maddie_', 'regular', 'chinese', 'forgot', 'begin', 'puedo', 'shape', 'plz', 'remarks', 'estimate', 'voy', 'ads', 'popup', 'worst', 'fue', 'mensaje', 'kumar', 'tienen', 'tie', 'explicitly', 'designed', 'elle', 'scripted',
+        'çπ_ev', 'invent_', 'doubt', 'downloaded', 'm√°s_qu√©', 'm√', 's_qu', 'qu√©', 'm√°s', 'appointment', 'broad', 'rc_singh', 'rc', 'singh', 'estimated', 'guy', 'messaging', 'smaller', 'broken', 'ended', 'mo_ct_ia', 'mo_ct', 'ia', 'lay', 'readme', 'callout', 'breaking', 'entre', 'sus', 'tipo', 'hemos', 'alguna', 'manera', 'presented', 'depth', 'significant', 'ks'
     ]
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
