@@ -564,33 +564,46 @@ category_id,category_name,subcategory_id,subcategory_name
 3,Cloud Infrastructure & DevOps,579,parallel_admin
 11,American Express & Payments,580,provider_loyalty
 2,Data Engineering & Database,581,select_table Database Query
-0,Software Engineering & Development,582,file_path_gms_transaction
-4,Cyber Security & Identity,583,risk_ongoing
-14,Finance & Procurement,584,sh_stock
-14,Finance & Procurement,585,pcm_rule_iphone
-13,Business Communication & HR,586,incentive_dell
-11,American Express & Payments,587,apple_retail
-14,Finance & Procurement,588,_cd_amt
-0,Software Engineering & Development,589,bal_total_rows
-3,Cloud Infrastructure & DevOps,590,ses_pw
-2,Data Engineering & Database,591,report_dt_acct_no
-0,Software Engineering & Development,592,elif_throughput
-3,Cloud Infrastructure & DevOps,593,cmd_jks
-2,Data Engineering & Database,594,gms_merchant_char_asm
-13,Business Communication & HR,595,bus_unit_grp
-2,Data Engineering & Database,596,succeeded_req_ts
-11,American Express & Payments,597,risk_card
-1,Production Support & Debugging,598,rca_integrate
-1,Production Support & Debugging,599,chc_bot
-14,Finance & Procurement,600,receiving_invoices
-14,Finance & Procurement,601,sp_debit
-4,Cyber Security & Identity,602,risk_rcm
-11,American Express & Payments,603,card_volumes
-2,Data Engineering & Database,604,table_select
-2,Data Engineering & Database,605,unknown_report_dt
-2,Data Engineering & Database,606,date_sub_current_date
-0,Software Engineering & Development,607,stored_desktop
-2,Data Engineering & Database,608,databases_swimlane
-14,Finance & Procurement,609,provision_losses
-13,Business Communication & HR,610,cet_wellness
-13,Business Communication & HR,611,onboard_erefresh
+0,Software Engineering & Development,582,GMS Transaction File Path
+4,Cyber Security & Identity,583,Ongoing Risk
+14,Finance & Procurement,584,Finance SH Stock
+14,Finance & Procurement,585,PCM Rule iPhone
+13,Business Communication & HR,586,Incentive Dell
+11,American Express & Payments,587,Apple Retail Partner
+14,Finance & Procurement,588,CD Amount
+0,Software Engineering & Development,589,Code Bal Total Rows
+3,Cloud Infrastructure & DevOps,590,SES Password
+2,Data Engineering & Database,591,Report DT Acct No
+0,Software Engineering & Development,592,Python Elif Throughput
+3,Cloud Infrastructure & DevOps,593,Java Keystore CMD
+2,Data Engineering & Database,594,GMS Merchant Char ASM
+13,Business Communication & HR,595,Business Unit Group
+2,Data Engineering & Database,596,Succeeded Request TS
+11,American Express & Payments,597,AMEX Risk Card
+1,Production Support & Debugging,598,RCA Integrate
+1,Production Support & Debugging,599,CHC Bot
+14,Finance & Procurement,600,Receiving Invoices
+14,Finance & Procurement,601,SP Debit
+4,Cyber Security & Identity,602,Risk RCM
+11,American Express & Payments,603,AMEX Card Volumes
+2,Data Engineering & Database,604,SQL Table Select Query
+2,Data Engineering & Database,605,Unknown Report DT
+2,Data Engineering & Database,606,Date Sub Current Date
+0,Software Engineering & Development,607,Desktop Storage
+2,Data Engineering & Database,608,Databases Swimlane
+14,Finance & Procurement,609,Provision Losses
+13,Business Communication & HR,610,CET Wellness
+13,Business Communication & HR,611,Onboard Employee Refresh
+3,Cloud Infrastructure & DevOps,612,Converge Commands
+2,Data Engineering & Database,613,SQL Table Code
+4,Cyber Security & Identity,614,Risk Loss
+2,Data Engineering & Database,615,Account Number Total Rows
+3,Cloud Infrastructure & DevOps,616,OMT DAM
+14,Finance & Procurement,617,Corporate Volumes
+13,Business Communication & HR,618,Staff Employees
+0,Software Engineering & Development,619,Catching SVG
+3,Cloud Infrastructure & DevOps,620,Dice Admin
+1,Production Support & Debugging,621,Summarized Macbook
+4,Cyber Security & Identity,622,Reasoning CCID
+0,Software Engineering & Development,623,Compliant Journeys
+14,Finance & Procurement,624,Suppliers Wholesale
