@@ -100,3 +100,13 @@ category_id,category_name,subcategory_id,subcategory_name
 10,General Productivity & Knowledge,98,Digital Journey UX Design User Experience
 1,Production Support & Debugging,99,Error Code Exception Logs UTC
 9,Data Analytics & Visualization,100,Data Reporting Report
+11,American Express & Payments,101,Business B2B Commercial
+11,American Express & Payments,102,Transaction Fraud Chargeback Dispute
+11,American Express & Payments,103,Platinum Green Centurion Card
+11,American Express & Payments,104,Charge Volume Spend Growth
+6,Executive Strategy & Management,105,Invoice Billing Accounts Payable Receivable
+0,Software Engineering & Development,106,Function Class Method Object Oriented
+9,Data Analytics & Visualization,107,Power BI Dashboard Reporting
+10,General Productivity & Knowledge,108,Fine Tune LLM Prompt Engineering
+2,Data Engineering & Database,109,CSV Path File Format
+7,Process & Project Management,110,Intake Form Process Request
