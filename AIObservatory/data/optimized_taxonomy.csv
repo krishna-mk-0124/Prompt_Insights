@@ -145,10 +145,18 @@ category_id,category_name,subcategory_id,subcategory_name
 6,Executive Strategy & Management,143,Senior Leadership Director Executive
 5,Business Communication & Writing,144,Mentorship Career Coaching
 11,American Express & Payments,145,AEXP Internal Acronym
-12,Other/Miscellaneous,146,Encoding Errors Garbage Data
+2,Data Engineering & Database,146,Encoding Errors Garbage Data
 1,Business Process Automation,147,Process Automation RPA Tooling
 3,Cloud Infrastructure & DevOps,148,IVR Telephony Voice Recognition
 8,Testing & Quality Assurance,149,Test Expected Actual Result
 2,Data Engineering & Database,150,Tableau LOD Expression
 4,Cyber Security & Identity,151,Beneficial Owner Compliance KYC
 3,Cloud Infrastructure & DevOps,152,Incident Alert Monitoring Pager
+11,American Express & Payments,153,Credit Score Account Status
+4,Cyber Security & Identity,154,Compliance Risk Audit Control
+2,Data Engineering & Database,155,SQL Select Distinct Query
+0,Software Engineering & Development,156,Bash Shell Scripting Terminal
+3,Cloud Infrastructure & DevOps,157,Laptop Windows Hardware Support
+2,Data Engineering & Database,158,Analytics Month Over Month MoM
+2,Data Engineering & Database,159,Statistics Sample Population
+11,American Express & Payments,160,IAG Entity Structure
