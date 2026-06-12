@@ -631,3 +631,11 @@ category_id,category_name,subcategory_id,subcategory_name
 3,Cloud Infrastructure & DevOps,647,Inbound Outbound
 3,Cloud Infrastructure & DevOps,648,Trigger Rule Trigger Dag Run Operator
 2,Data Engineering & Database,637,SQL Select Trans DT
+2,Data Engineering & Database,649,Data Expectations
+3,Cloud Infrastructure & DevOps,650,Limits KB
+2,Data Engineering & Database,651,Select Table
+4,Cyber Security & Identity,652,Risk Decisions
+14,Finance & Procurement,653,BPS Efforts
+13,Business Communication & HR,654,Corp Signed
+13,Business Communication & HR,655,Prep BIP
+3,Cloud Infrastructure & DevOps,656,Controller Ports
