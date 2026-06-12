@@ -82,3 +82,13 @@ category_id,category_name,subcategory_id,subcategory_name
 5,Business Communication & Writing,80,Write Email Team Shared Details
 2,Data Engineering & Database,81,Date Year Month Difference
 8,Testing & Quality Assurance,82,Code Changes Required Review
+11,American Express & Payments,83,Lumi SDE Internal Tool
+4,Cyber Security & Identity,84,Privacy Data PII Phone Number Address
+5,Business Communication & Writing,85,Grammar Correct Sentence Words Simple Refine
+0,Software Engineering & Development,86,Feature PR Pull Request
+2,Data Engineering & Database,87,PySpark WithColumn Col DataFrame
+9,Data Analytics & Visualization,88,Model Models Data Science Machine Learning
+5,Business Communication & Writing,89,Slack Message Communication
+5,Business Communication & Writing,90,Diagram Link Visio
+4,Cyber Security & Identity,91,Regulatory Requirements Regulation Compliance
+5,Business Communication & Writing,92,Slides Content Presentation Deck
