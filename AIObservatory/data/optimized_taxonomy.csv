@@ -1,539 +1,236 @@
 category_id,category_name,subcategory_id,subcategory_name
-0,Software Engineering & Development,0,Java Python C++ Syntax Compilation Code
-0,Software Engineering & Development,1,Frontend React Angular Vue HTML CSS JavaScript
-0,Software Engineering & Development,2,Backend Node Express Spring Django Flask Middleware
-0,Software Engineering & Development,3,API REST GraphQL gRPC WebSocket Endpoint Payload
-0,Software Engineering & Development,4,Git Version Control Repository Branch Merge Pull Request
-0,Software Engineering & Development,5,Algorithm Data Structure Array HashMap Linked List Graph
-1,Production Support & Debugging,6,Stacktrace Exception Null Pointer Segfault Core Dump
-1,Production Support & Debugging,7,Memory Leak CPU Threading Concurrency Deadlock Performance
-1,Production Support & Debugging,8,Application Crash Outage Incident Root Cause Log Analysis
-1,Production Support & Debugging,9,Dependency Package Version Compatibility Npm Pip Maven Gradle
-2,Data Engineering & Database,10,SQL Select Update Delete Insert Join Group By Query
-2,Data Engineering & Database,11,Table Column Row Schema Dimension Fact Normalization
-2,Data Engineering & Database,12,ETL Pipeline Warehouse Lake Extraction Transformation Loading
-2,Data Engineering & Database,13,NoSQL MongoDB Cassandra Redis Key Value Document
-2,Data Engineering & Database,14,Big Data Hadoop Spark MapReduce Hive Pig Kafka Streaming
-3,Cloud Infrastructure & DevOps,15,AWS EC2 S3 Lambda VPC Azure GCP Virtual Machine
-3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container Pod Cluster K8s Orchestration
-3,Cloud Infrastructure & DevOps,17,CI CD Jenkins GitLab GitHub Actions Deployment Pipeline
-3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure as Code Configuration
-3,Cloud Infrastructure & DevOps,19,Network Load Balancer DNS Router Switch Subnet Firewall
-4,Cyber Security & Identity,20,Authentication OAuth SAML JWT MFA SSO Password Login
-4,Cyber Security & Identity,21,Authorization RBAC Role Permission Access Control Token
-4,Cyber Security & Identity,22,Encryption SSL TLS Certificate RSA Decryption Cipher Key
-4,Cyber Security & Identity,23,Vulnerability Malware Phishing Ransomware Virus Trojan Exploit XSS Injection
-4,Cyber Security & Identity,24,Compliance GDPR HIPAA PCI SOX Audit Risk Governance
-5,Business Communication & Writing,25,Email Draft Response Follow Up Tone Professional Cordial
-5,Business Communication & Writing,26,Grammar Spelling Proofread Edit Punctuation Vocabulary Rephrase
-5,Business Communication & Writing,27,Translate Language Translation Interpretation Localization
-5,Business Communication & Writing,28,Presentation Slide Deck PowerPoint Pitch Proposal Outline
-5,Business Communication & Writing,29,Documentation Manual Article Blog Post Handbook Policy
-6,Executive Strategy & Management,30,ROI KPI Metric Objective Goal OKR Balanced Scorecard
-6,Executive Strategy & Management,31,Budget Revenue Profit Expense Margin Cost Cash Flow Finance
-6,Executive Strategy & Management,32,Roadmap Vision Mission Milestone Long Term Objective
-6,Executive Strategy & Management,33,Talent HR Hiring Interview Promotion Compensation Employee
-6,Executive Strategy & Management,34,Market Competition Differentiation Innovation SWOT Analysis
-7,Process & Project Management,35,Agile Scrum Sprint Kanban User Story Epic Backlog
-7,Process & Project Management,36,Ticket Jira Issue ServiceNow Assignment Triage Queue
-7,Process & Project Management,37,Workflow Checklist Step Procedure SOP Instruction Guide
-7,Process & Project Management,38,Meeting Notes Agenda Minutes Action Item Summary Takeaway
-7,Process & Project Management,39,Release Schedule Change Request Approval RACI Matrix
-8,Testing & Quality Assurance,40,Unit Test Mock Stub Assertion Coverage Code Quality
-8,Testing & Quality Assurance,41,Integration Test End to End E2E System Validation
-8,Testing & Quality Assurance,42,Regression Load Stress Performance Penetration Scalability
-8,Testing & Quality Assurance,43,QA Defect Bug Reproduction Steps Triage Tracking
-9,Data Analytics & Visualization,44,Excel Formula Pivot Table Vlookup Macro VBA Spreadsheet
-9,Data Analytics & Visualization,45,Chart Graph Dashboard Visualization Tableau PowerBI Scatter Bar
-9,Data Analytics & Visualization,46,Statistics Mean Median Variance Standard Deviation Regression
-9,Data Analytics & Visualization,47,Data Cleansing Formatting Imputation Outlier Normalization
-9,Data Analytics & Visualization,48,Python Pandas Numpy Scipy Scikit Learn Machine Learning
-10,General Productivity & Knowledge,49,Summarize Condense Abstract TLDR Digest Abridge
-10,General Productivity & Knowledge,50,Brainstorm Ideate Concept Suggestion Recommend Alternative Option
-10,General Productivity & Knowledge,51,Format Structure Table List Paragraph Indentation Markdown
-10,General Productivity & Knowledge,52,Explain Define Concept Tutorial Guide Lesson Comprehension Theory
-10,General Productivity & Knowledge,53,Math Calculate Equation Algebra Geometry Calculus Arithmetic
-11,American Express & Payments,54,American Express AMEX AEXP
-11,American Express & Payments,55,Card Member Membership Credit Points Rewards
-11,American Express & Payments,56,Merchant Global Acquiring Network
-11,American Express & Payments,57,AMEX Offers Marketing
-11,American Express & Payments,58,Account Bank Balance Financial Statement
-0,Software Engineering & Development,59,Python Import Datetime Date Time Timezone
-0,Software Engineering & Development,60,Type Cast String Integer Float Conversion
-2,Data Engineering & Database,61,Pandas Dataframe df Series Info Describe
-2,Data Engineering & Database,62,Data Source Origin Connection Feed
-5,Business Communication & Writing,63,Subject Line Email Draft Thread
-5,Business Communication & Writing,64,Bullet Points List Formatting Text PX
-6,Executive Strategy & Management,65,Business Impact Outcome Value
-8,Testing & Quality Assurance,66,Error Getting Debug Troubleshoot Fix
-1,Production Support & Debugging,67,Script Execution Run Running Console Command
-11,American Express & Payments,68,Service AEXP Product Spend Offer Partner Network
-6,Executive Strategy & Management,69,Leadership Leader Vision Executive
-7,Process & Project Management,70,Product Manager Management Action Plan Scale Delivery
-4,Cyber Security & Identity,71,Risk Assessment Control Customer Risk Event Mitigation
-2,Data Engineering & Database,72,Real Time Streaming Kafka Event Driven
-5,Business Communication & Writing,73,Confluence Page Wiki Documentation
-0,Software Engineering & Development,74,Business Logic Rule Condition Engine
-5,Business Communication & Writing,75,Tone Sugar Coat Formal Professional Message Short Easy Read
-0,Software Engineering & Development,76,Mobile App iOS Android React Native Flutter
-0,Software Engineering & Development,77,Data Type Boolean True False Int Timestamp JSON
-10,General Productivity & Knowledge,78,Prompt Engineering Custom GPT AI Assistant
-10,General Productivity & Knowledge,79,Image PNG JPG Picture Media Multimedia
-5,Business Communication & Writing,80,Write Email Team Shared Details
-2,Data Engineering & Database,81,Date Year Month Difference
-8,Testing & Quality Assurance,82,Code Changes Required Review
-11,American Express & Payments,83,Lumi SDE Internal Tool
-4,Cyber Security & Identity,84,Privacy Data PII Phone Number Address
-5,Business Communication & Writing,85,Grammar Correct Sentence Words Simple Refine
-0,Software Engineering & Development,86,Feature PR Pull Request
-2,Data Engineering & Database,87,PySpark WithColumn Col DataFrame
-9,Data Analytics & Visualization,88,Model Models Data Science Machine Learning
-5,Business Communication & Writing,89,Slack Message Communication
-5,Business Communication & Writing,90,Diagram Link Visio
-4,Cyber Security & Identity,91,Regulatory Requirements Regulation Compliance
-5,Business Communication & Writing,92,Slides Content Presentation Deck
-11,American Express & Payments,93,Travel Hotel Booking Corporate Program
-11,American Express & Payments,94,Small Business Services SBS Consumer
-6,Executive Strategy & Management,95,Human Resources HR Sick Leave Letter Employed
-10,General Productivity & Knowledge,96,Best Practices Guide
-5,Business Communication & Writing,97,Meeting Invite Calendar
-10,General Productivity & Knowledge,98,Digital Journey UX Design User Experience
-1,Production Support & Debugging,99,Error Code Exception Logs UTC
-9,Data Analytics & Visualization,100,Data Reporting Report
-11,American Express & Payments,101,Business B2B Commercial
-11,American Express & Payments,102,Transaction Fraud Chargeback Dispute
-11,American Express & Payments,103,Platinum Green Centurion Card
-11,American Express & Payments,104,Charge Volume Spend Growth
-6,Executive Strategy & Management,105,Invoice Billing Accounts Payable Receivable
-0,Software Engineering & Development,106,Function Class Method Object Oriented
-9,Data Analytics & Visualization,107,Power BI Dashboard Reporting
-10,General Productivity & Knowledge,108,Fine Tune LLM Prompt Engineering
-2,Data Engineering & Database,109,CSV Path File Format
-7,Process & Project Management,110,Intake Form Process Request
-11,American Express & Payments,111,Payment Fee Late Penalty Charge
-2,Data Engineering & Database,112,DAG Airflow Pipeline Orchestration
-6,Executive Strategy & Management,113,Tax Income Return Revenue
-11,American Express & Payments,114,Credit Limit Increase Line
-10,General Productivity & Knowledge,115,Outlook Email Calendar Microsoft
-0,Software Engineering & Development,116,Variable Constant Const Private Public
-11,American Express & Payments,117,Customer Complaint Issue Resolution
-6,Executive Strategy & Management,118,Forecast Actual Budget Variance
-6,Executive Strategy & Management,119,Legal Contract Agreement Terms
-8,Testing & Quality Assurance,120,Pass Fail Test Case Status
-6,Executive Strategy & Management,121,Training Learn Course Tutorial
-11,American Express & Payments,122,Market Global Japan Region Country
-11,American Express & Payments,123,Currency USD Pricing Amount
-4,Cyber Security & Identity,124,On-Call Pager Incident Support
-5,Business Communication & Writing,125,Sales Revenue Market Lead
-0,Software Engineering & Development,126,Error Log Fail Exception Status
-3,Cloud Infrastructure & DevOps,127,Server Host Instance Node
-6,Executive Strategy & Management,128,Operating Model Target Strategy
-0,Software Engineering & Development,129,Repository Git Version Control Commit
-5,Business Communication & Writing,130,Attrition Retention Employee Turnover
-5,Business Communication & Writing,131,Marketing Campaign Promotion Advertising
-11,American Express & Payments,132,Cancel Close Account Card
-0,Software Engineering & Development,133,Module Package Library Index
-11,American Express & Payments,134,CCP Customer Care Professional
-11,American Express & Payments,135,Direct Pay Deposit Transfer
-11,American Express & Payments,136,Gold Card Product Criteria
-6,Executive Strategy & Management,137,VP Vice President Executive Director
-10,General Productivity & Knowledge,138,GitHub Copilot Code Completion
-11,American Express & Payments,139,Visa Mastercard Payment Network
-3,Cloud Infrastructure & DevOps,140,Enterprise Architecture Framework
-2,Data Engineering & Database,141,Partition Sort By Window Function
-10,General Productivity & Knowledge,142,Excel Formula Spreadsheet
-6,Executive Strategy & Management,143,Senior Leadership Director Executive
-5,Business Communication & Writing,144,Mentorship Career Coaching
-11,American Express & Payments,145,AEXP Internal Acronym
-2,Data Engineering & Database,146,Encoding Errors Garbage Data
-12,Business Process Automation,147,Process Automation RPA Tooling
-3,Cloud Infrastructure & DevOps,148,IVR Telephony Voice Recognition
-8,Testing & Quality Assurance,149,Test Expected Actual Result
-2,Data Engineering & Database,150,Tableau LOD Expression
-4,Cyber Security & Identity,151,Beneficial Owner Compliance KYC
-3,Cloud Infrastructure & DevOps,152,Incident Alert Monitoring Pager
-11,American Express & Payments,153,Credit Score Account Status
-4,Cyber Security & Identity,154,Compliance Risk Audit Control
-2,Data Engineering & Database,155,SQL Select Distinct Query
-0,Software Engineering & Development,156,Bash Shell Scripting Terminal
-3,Cloud Infrastructure & DevOps,157,Laptop Windows Hardware Support
-2,Data Engineering & Database,158,Analytics Month Over Month MoM
-2,Data Engineering & Database,159,Statistics Sample Population
-11,American Express & Payments,160,IAG Entity Structure
-5,Business Communication & Writing,161,Vendor Management Third Party
-11,American Express & Payments,162,Brand Marketing Communication
-5,Business Communication & Writing,163,Resume CV Career Recruiting
-0,Software Engineering & Development,164,URL Configuration Endpoint
-6,Executive Strategy & Management,165,Legal Law Counsel
-6,Executive Strategy & Management,166,Ownership Accountability Culture
-0,Software Engineering & Development,167,Proof Of Concept POC
-11,American Express & Payments,168,Credit Card Debt Collection
-11,American Express & Payments,169,Credit Card Account Data
-4,Cyber Security & Identity,170,Risk Management Access Control
-10,General Productivity & Knowledge,171,Business Unit Research
-11,American Express & Payments,172,Merchant Services Processing
-11,American Express & Payments,173,AEXP Ticketing Travel
-11,American Express & Payments,174,Merchant Acquisition Onboarding
-10,General Productivity & Knowledge,175,Literature Source Citation
-0,Software Engineering & Development,176,TypeScript Source Code
-5,Business Communication & Writing,177,Meeting Transcript Summarization
-2,Data Engineering & Database,178,SQL Select Query
-11,American Express & Payments,179,AEXP Internal Configuration
-4,Cyber Security & Identity,180,Risk Management Data
-2,Data Engineering & Database,181,Database Priority
-2,Data Engineering & Database,182,SQL Coalesce Function
-11,American Express & Payments,183,Insurance Products
-2,Data Engineering & Database,184,Google BigQuery
-11,American Express & Payments,185,APAC Region Portfolio
-3,Cloud Infrastructure & DevOps,186,AEXP Network Proxy
-10,General Productivity & Knowledge,187,Excel Data Formulas
-2,Data Engineering & Database,188,Database Servicing
-4,Cyber Security & Identity,189,Vulnerability Remediation
-4,Cyber Security & Identity,190,RSA Archer GRC
-11,American Express & Payments,191,Video Creative Assets
-6,Executive Strategy & Management,192,Capacity Shift Planning
-4,Cyber Security & Identity,193,Compliance Control Procedures
-0,Software Engineering & Development,194,Pandas Python Import
-0,Software Engineering & Development,195,VS Code IDE Environment
-4,Cyber Security & Identity,196,Compliance Database Tables
-0,Software Engineering & Development,197,IntelliJ IDEA Environment
-11,American Express & Payments,198,AEXP Engineering General
-11,American Express & Payments,199,AEMP Internal Platform
-10,General Productivity & Knowledge,200,Corporate Food Lunch Meals
-10,General Productivity & Knowledge,201,Agentic AI Workflows
-5,Business Communication & Writing,202,HR Payroll Salary
-6,Executive Strategy & Management,203,Agile PI Planning
-11,American Express & Payments,204,Customer Complaints Reviews
-2,Data Engineering & Database,205,Power BI SelectedValue DAX
-11,American Express & Payments,206,Treasury Funding Liquidity
-6,Executive Strategy & Management,207,CFO Executive Communications
-4,Cyber Security & Identity,208,Risk Control Policies
-11,American Express & Payments,209,AEXP Platform Configuration
-2,Data Engineering & Database,210,SQL Select Table
-2,Data Engineering & Database,211,Database Storage Location
-10,General Productivity & Knowledge,212,TLM Tasks Management
-11,American Express & Payments,213,AEXP LBI Internal Tool
-11,American Express & Payments,214,Critical Merchant Accounts
-2,Data Engineering & Database,215,Oracle Database Enterprise
-11,American Express & Payments,216,YoY Financial Metrics
-2,Data Engineering & Database,217,Raw Data Processing
-10,General Productivity & Knowledge,218,Webex Conferencing
-3,Cloud Infrastructure & DevOps,219,Pre-Prod Environment
-2,Data Engineering & Database,220,Statistical Percentile Response
-4,Cyber Security & Identity,221,Security Allow Deny List
-6,Executive Strategy & Management,222,FTE Headcount Planning
-2,Data Engineering & Database,223,Code Data Engineering
-6,Executive Strategy & Management,224,Pilot Project Proposals
-4,Cyber Security & Identity,225,AEXP Risk Management
-11,American Express & Payments,226,AMEX Mexico Website
-0,Software Engineering & Development,227,Linux Server Configuration
-11,American Express & Payments,228,Merchant Services Platform
-3,Cloud Infrastructure & DevOps,229,YAML Configuration Files
-3,Cloud Infrastructure & DevOps,230,Python PyPI Packages
-0,Software Engineering & Development,231,MCP Tool Exposure
-4,Cyber Security & Identity,232,Compliance Controls Risk
-11,American Express & Payments,234,Gift Card Products
-2,Data Engineering & Database,235,Database Table Attributes
-5,Business Communication & Writing,236,HR PTO Leave Policies
-11,American Express & Payments,237,External Loan Financing
-6,Executive Strategy & Management,238,Process Controls Management
-6,Executive Strategy & Management,239,TSR Shareholder Trends
-5,Business Communication & Writing,240,School Holiday Leave
-5,Business Communication & Writing,241,Group Training Workshops
-0,Software Engineering & Development,242,UI Colors Fonts Design
-5,Business Communication & Writing,243,HR Candidate Recruitment
-11,American Express & Payments,244,AMEX Card Products
-11,American Express & Payments,245,Premium Merchant Accounts
-11,American Express & Payments,246,PCNS System Buttons
-0,Software Engineering & Development,247,JavaScript Capabilities
-2,Data Engineering & Database,248,SQL Current Date Select
-5,Business Communication & Writing,249,Certification Training Programs
-0,Software Engineering & Development,250,Linux Bash Scripting
-11,American Express & Payments,251,EMEA Germany Region
-11,American Express & Payments,252,System of Record SOR
-4,Cyber Security & Identity,253,KRI Risk Indicators
-3,Cloud Infrastructure & DevOps,254,ZIP File Contents
-11,American Express & Payments,255,Online Card Services
-0,Software Engineering & Development,256,Git Code Commits
-2,Data Engineering & Database,257,Database Storage Management
-1,Production Support & Debugging,258,Software Code Errors
-4,Cyber Security & Identity,259,Risk Product Owner
-6,Executive Strategy & Management,260,International Pricing Models
-11,American Express & Payments,261,AMEX Resy Platform
-2,Data Engineering & Database,262,Table Select Queries
-11,American Express & Payments,263,Merchant Data Length
-10,General Productivity & Knowledge,264,SharePoint SLA SLAs
-2,Data Engineering & Database,265,Airtable Database Management
-4,Cyber Security & Identity,266,RCSA Control Testing
-0,Software Engineering & Development,267,Jupyter IPyKernel Temp
-0,Software Engineering & Development,268,Code Diff Comparison
-0,Software Engineering & Development,269,Java Code Annotations
-4,Cyber Security & Identity,270,Data Risk Management
-0,Software Engineering & Development,271,UI Images Positioning
-3,Cloud Infrastructure & DevOps,272,Configuration Applied Status
-2,Data Engineering & Database,273,Database Table Schemas
-3,Cloud Infrastructure & DevOps,274,GCP Cloud Storage GCS
-6,Executive Strategy & Management,275,Stakeholder Management Status
-11,American Express & Payments,276,AMEX Logo Branding
-10,General Productivity & Knowledge,277,Documentation Technical Docs
-11,American Express & Payments,278,Impactful Merchant Accounts
-2,Data Engineering & Database,279,Statistical Percentages Weakness
-10,General Productivity & Knowledge,280,POP Operations Center
-5,Business Communication & Writing,281,Town Hall Meetings
-5,Business Communication & Writing,282,Concurrent Chat Sessions
-10,General Productivity & Knowledge,283,CBR Uploading Process
-0,Software Engineering & Development,284,UI UX Prototype User
-10,General Productivity & Knowledge,285,Email Mailbox Management
-2,Data Engineering & Database,286,SQL Table Select Query
-4,Cyber Security & Identity,287,AMEX Card Risk
-0,Software Engineering & Development,288,Git Repository Clone
-2,Data Engineering & Database,289,AMEX Data Plotting
-2,Data Engineering & Database,290,Data Bin Segments
-0,Software Engineering & Development,291,Code Array Reverse Append
-0,Software Engineering & Development,292,Code Wrap Sorted
-2,Data Engineering & Database,293,Database JavaScript Integration
-3,Cloud Infrastructure & DevOps,294,Cron Job Scheduling
-10,General Productivity & Knowledge,295,Excel Sources Workbook
-11,American Express & Payments,296,Hong Kong Location
-2,Data Engineering & Database,297,Data Metadata Ruleset
-11,American Express & Payments,298,Supplier Buyer Network
-5,Business Communication & Writing,299,HR Candidate Interviews
-10,General Productivity & Knowledge,300,Agile Carryover Stories
-2,Data Engineering & Database,301,Database Data Types
-0,Software Engineering & Development,302,Software Batch Jobs
-3,Cloud Infrastructure & DevOps,303,Systems Cutover Deployments
-2,Data Engineering & Database,304,AMEX Card Database
-1,Production Support & Debugging,305,Software Configuration Errors
-0,Software Engineering & Development,306,AMEX Bold UI Theme
-11,American Express & Payments,307,Customer Account Funds
-4,Cyber Security & Identity,308,Voltage Encryption Expired
-11,American Express & Payments,309,FICO Credit Scores
-1,Production Support & Debugging,310,UAT SIT Testing
-1,Production Support & Debugging,311,UI Bug Screenshots
-11,American Express & Payments,312,AMEX Card Queries
-2,Data Engineering & Database,313,Database DB Queries
-0,Software Engineering & Development,314,JavaScript Entry Files
-10,General Productivity & Knowledge,315,GPT AI Models
-2,Data Engineering & Database,316,Jupyter Notebook Club
-11,American Express & Payments,317,AMEX Award Alternatives
-0,Software Engineering & Development,318,Dark Mode Code Snippet
-2,Data Engineering & Database,319,Database Table Exists
-1,Production Support & Debugging,320,Linux ELF Errors
-2,Data Engineering & Database,321,Chart Vertical Legend
-10,General Productivity & Knowledge,322,RAG Architecture IV
-10,General Productivity & Knowledge,323,Large Conversational Models
-2,Data Engineering & Database,324,US States Exchange
-1,Production Support & Debugging,325,Alert Panel Severity
-11,American Express & Payments,326,Resy Restaurant Opened
-10,General Productivity & Knowledge,327,Workflow Approvals Sorting
-0,Software Engineering & Development,328,UI Call To Action CTA
-3,Cloud Infrastructure & DevOps,329,SMTP Email Configuration
-2,Data Engineering & Database,330,Kafka Event Producer
-4,Cyber Security & Identity,331,Data Risk Analytics
-11,American Express & Payments,332,Credit Card Bins
-1,Production Support & Debugging,333,AMEX Software Error
-6,Executive Strategy & Management,334,Line of Business LOB
-6,Executive Strategy & Management,335,GCO Legal Goals
-3,Cloud Infrastructure & DevOps,336,SAN Storage Spaces
-6,Executive Strategy & Management,337,BAU Business As Usual
-2,Data Engineering & Database,338,Database SQL Trigger
-0,Software Engineering & Development,339,Phoenix Project System
-11,American Express & Payments,340,Pricing CTL Settings
-0,Software Engineering & Development,341,VSCode IDE Editor
-4,Cyber Security & Identity,342,CyberArk Secrets Vault
-10,General Productivity & Knowledge,343,Purple Llama AI
-2,Data Engineering & Database,344,Trino Database Queries
-0,Software Engineering & Development,345,GSOP Subprocess Run
-11,American Express & Payments,346,Brazil Location Region
-2,Data Engineering & Database,347,Airflow PythonOperator
-2,Data Engineering & Database,348,AMEX Card Data
-3,Cloud Infrastructure & DevOps,349,Config Tag Settings
-4,Cyber Security & Identity,350,Risk Controls Performance
-11,American Express & Payments,351,AMEX Merchants Revised
-2,Data Engineering & Database,352,Excel Data Slicer
-11,American Express & Payments,353,AMEX Travel Trip
-6,Executive Strategy & Management,354,Inventory Management
-11,American Express & Payments,355,AMEX Cardmember Accounts
-0,Software Engineering & Development,356,CSS Position Attribute
-14,Finance & Procurement,358,Accounting Journal Entries
-10,General Productivity & Knowledge,359,Conversations AI Evaluation
-14,Finance & Procurement,360,PCM Rule Allocation
-2,Data Engineering & Database,361,Model ID Product Name
-0,Software Engineering & Development,362,Android OKHttp PageLayout
-11,American Express & Payments,363,AMEX Corporate Cards
-2,Data Engineering & Database,364,Data Engineering Code
-4,Cyber Security & Identity,365,Risk Management Controls
-1,Production Support & Debugging,366,Quality Control QC
-11,American Express & Payments,367,PCN Partner Client Number
-14,Finance & Procurement,368,SOW Statement of Work
-3,Cloud Infrastructure & DevOps,369,RFC Request For Change
-14,Finance & Procurement,370,PCM Rule Definition
-10,General Productivity & Knowledge,371,UX User Persona
-11,American Express & Payments,372,Targeting Eligibility
-4,Cyber Security & Identity,373,Falcon GMAS Security
-6,Executive Strategy & Management,374,DCRM Levers
-4,Cyber Security & Identity,375,Risk Control Framework
-0,Software Engineering & Development,376,React JS Memo
-6,Executive Strategy & Management,377,Business Partnerships
-11,American Express & Payments,378,AMEX AEXP API
-0,Software Engineering & Development,379,Software Install Dependencies
-4,Cyber Security & Identity,380,Issue Corrective Closure
-0,Software Engineering & Development,381,SAP Code Snippets
-14,Finance & Procurement,382,EBITDA Financial Metrics
-2,Data Engineering & Database,383,Azure Cosmos DB
-13,Business Communication & HR,384,HR Immigration Manager
-4,Cyber Security & Identity,385,AMEX Authentication Auth
-1,Production Support & Debugging,386,Software Code Error
-4,Cyber Security & Identity,387,Risk Data Controls
-6,Executive Strategy & Management,388,Banking Direction Strategy
-11,American Express & Payments,389,AMEX Card Claims
-10,General Productivity & Knowledge,390,Approval Notices
-2,Data Engineering & Database,391,XML Central Configuration
-3,Cloud Infrastructure & DevOps,392,Splunk Total Rows
-4,Cyber Security & Identity,393,Inherent Risk
-11,American Express & Payments,394,AMEX Marriott Partnership
-0,Software Engineering & Development,395,Code Helper Clock
-14,Finance & Procurement,396,PCM Rule Allocations
-2,Data Engineering & Database,397,Allowed Aggregations Code
-11,American Express & Payments,400,AMEX CR Assist
-14,Finance & Procurement,401,Pricing Approvals
-2,Data Engineering & Database,403,Tagged Data Samples
-0,Software Engineering & Development,404,Java JAR Files
-6,Executive Strategy & Management,405,Sales Deal Closing
-13,Business Communication & HR,406,Cancellation Conflicts
-3,Cloud Infrastructure & DevOps,407,Network Route Name
-11,American Express & Payments,409,AMEX Travel Flight Sync
-13,Business Communication & HR,410,HR Responsibilities Introduction
-0,Software Engineering & Development,411,HTML Table Tags
-0,Software Engineering & Development,412,NPM Node Modules UUID
-0,Software Engineering & Development,413,Python TQDM library
-4,Cyber Security & Identity,414,Cyber Security Passwords JARs
-11,American Express & Payments,415,AMEX Cards General
-3,Cloud Infrastructure & DevOps,416,Linux Shell Script Error
-6,Executive Strategy & Management,417,Data Governance Delivery
-14,Finance & Procurement,418,EOD End of Day Process
-4,Cyber Security & Identity,419,SAM Directors Access
-14,Finance & Procurement,420,Applications Pricing
-14,Finance & Procurement,421,Capital Timing Finance
-14,Finance & Procurement,422,Financials FIN Reporting
-2,Data Engineering & Database,423,Data Delimiter Settings
-0,Software Engineering & Development,424,Code TMP Keyword
-2,Data Engineering & Database,425,PIB Predictive Models
-3,Cloud Infrastructure & DevOps,426,Kernel Application PCN
-3,Cloud Infrastructure & DevOps,427,Backup NAT Gateway
-2,Data Engineering & Database,428,Database Nulls Blanks
-4,Cyber Security & Identity,429,Risk Controls
-14,Finance & Procurement,430,Amount Constants
-13,Business Communication & HR,432,Benefits Enrollment Lift
-0,Software Engineering & Development,433,Postman API Repositories
-3,Cloud Infrastructure & DevOps,434,Portal Shell Scripts
-11,American Express & Payments,436,Pricing TY Reports
-0,Software Engineering & Development,437,Application Tests
-11,American Express & Payments,438,AMEX Centurion Lounge
-10,General Productivity & Knowledge,439,OpenAI CustomGPT
-14,Finance & Procurement,441,Emburse Expense Management
-0,Software Engineering & Development,442,Development Pull Requests
-1,Production Support & Debugging,443,Invalid Identifier Errors
-2,Data Engineering & Database,444,Refactoring LPAD
-2,Data Engineering & Database,445,Airflow Schedule Interval
-0,Software Engineering & Development,446,Gatling Load Testing
-0,Software Engineering & Development,447,Python Pathlib
-0,Software Engineering & Development,448,MIME Types
-2,Data Engineering & Database,449,Correlation Analysis
-4,Cyber Security & Identity,450,Major Risk Events
-11,American Express & Payments,451,AMEX Rewards PT Bonus
-10,General Productivity & Knowledge,452,Qualtrics Surveys
-3,Cloud Infrastructure & DevOps,453,Environment Configuration
-0,Software Engineering & Development,454,Regex Patterns
-0,Software Engineering & Development,455,Git Conflict Reporting
-10,General Productivity & Knowledge,456,AI Hallucinations
-10,General Productivity & Knowledge,457,AI Voicebots
-13,Business Communication & HR,458,HR Benefits Eligibility Evening
-3,Cloud Infrastructure & DevOps,459,Shell PP Scripts
-1,Production Support & Debugging,460,Support Escalation Win
-10,General Productivity & Knowledge,461,AI Hallucination Chargeout
-2,Data Engineering & Database,462,Oracle Fusion Head
-3,Cloud Infrastructure & DevOps,463,Geo Routing JP MX
-3,Cloud Infrastructure & DevOps,464,Network Hub Traffic
-0,Software Engineering & Development,465,Safe Parse Date Code
-0,Software Engineering & Development,466,Java JVM AMP
-1,Production Support & Debugging,467,Developer Mistakes
-0,Software Engineering & Development,468,UI Clicking Dropdown
-13,Business Communication & HR,469,HR Interviewer Recruiter
-14,Finance & Procurement,470,Pricing Study Research
-14,Finance & Procurement,471,Asset Management Entry
-2,Data Engineering & Database,472,Statistical Problems
-3,Cloud Infrastructure & DevOps,473,Dynamic Operations
-3,Cloud Infrastructure & DevOps,474,Geo Routing Argentina
-0,Software Engineering & Development,475,JCL Clickable Links
-0,Software Engineering & Development,476,PRD Leaves Production
-10,General Productivity & Knowledge,477,Enable GenAI Capabilities
-0,Software Engineering & Development,478,Plot CID Graphics
-13,Business Communication & HR,479,HR Associates Aspirations
-6,Executive Strategy & Management,480,Telesales Operations
-6,Executive Strategy & Management,481,Forbes Publications
-0,Software Engineering & Development,482,SOAP Partitions Code
-11,American Express & Payments,483,AMEX Cards Manner
-2,Data Engineering & Database,484,SQL Selects Table
-2,Data Engineering & Database,485,SQL Varchar Price
-13,Business Communication & HR,486,Official Opt In
-3,Cloud Infrastructure & DevOps,487,Operations Captured
-3,Cloud Infrastructure & DevOps,488,Network Port Accept
-14,Finance & Procurement,489,Bank Locations
-13,Business Communication & HR,490,Singapore Communications
-0,Software Engineering & Development,491,Optional Directories
-2,Data Engineering & Database,492,Water Height Measurements
-0,Software Engineering & Development,493,UI Redesign Mother
-0,Software Engineering & Development,494,CSS Styling CCC
-13,Business Communication & HR,495,Email Confirming Receipt
-14,Finance & Procurement,496,Investment Plans
-0,Software Engineering & Development,497,CSS Padding Ascending
-11,American Express & Payments,498,GMNS Evaluating
-0,Software Engineering & Development,499,Dispatch Comparable
-0,Software Engineering & Development,500,Swap Sets Logic
-11,American Express & Payments,502,AMEX Cards Amex
-2,Data Engineering & Database,503,SQL Table Domain
-10,General Productivity & Knowledge,504,Jump Guides
-3,Cloud Infrastructure & DevOps,505,Monitor Built
-0,Software Engineering & Development,506,CCPS Notification
-10,General Productivity & Knowledge,507,Pillars Holding
-14,Finance & Procurement,508,Bank Neutral
-6,Executive Strategy & Management,509,Decide Owners
-6,Executive Strategy & Management,510,SRR Streamline
-0,Software Engineering & Development,511,Git Friend Branches
-10,General Productivity & Knowledge,512,AI Hallucination Report DT
-14,Finance & Procurement,514,Fees Dashboards
-0,Software Engineering & Development,515,SOI PKG Code
-13,Business Communication & HR,516,WFM Coordination
-10,General Productivity & Knowledge,517,Printable Gantt Charts
-0,Software Engineering & Development,518,Python OpenPyXL
-0,Software Engineering & Development,519,Airflow Schedule Interval
-11,American Express & Payments,520,AMEX Data Card
-2,Data Engineering & Database,521,SQL Table Que
-13,Business Communication & HR,522,HR Gurgaon Highlights
-14,Finance & Procurement,523,Finance Actuals ADB
-6,Executive Strategy & Management,524,Amazon Brands
-0,Software Engineering & Development,525,Downstream Impacts
-14,Finance & Procurement,527,Treasury Report Script
-10,General Productivity & Knowledge,528,AI Hallucination Markup
-0,Software Engineering & Development,529,XHTML Posture
-0,Software Engineering & Development,530,AOP Event
-0,Software Engineering & Development,531,Java Lombok Event
-2,Data Engineering & Database,532,SQL Select Mas
-11,American Express & Payments,533,AMEX Card Initiatives
-10,General Productivity & Knowledge,534,AI Hallucination Quiz
-4,Cyber Security & Identity,535,CAS Assign Access
-2,Data Engineering & Database,536,SQL Table Functions
-3,Cloud Infrastructure & DevOps,537,Shell Script Parameters
-1,Production Support & Debugging,538,IT Technology Investigation
-3,Cloud Infrastructure & DevOps,539,MB Nodes Configuration
-11,American Express & Payments,540,AMEX Dining Channels
-14,Finance & Procurement,541,Finance Annual Spend
-0,Software Engineering & Development,542,Software UI Components
-11,American Express & Payments,543,AMEX Dollar Reward
-14,Finance & Procurement,545,Finance PCM Rule Allocation
-9,Data Analytics & Visualization,546,AI Embedding Similarity
-5,Business Communication & Writing,547,Meetings Recording
-1,Production Support & Debugging,548,Nexthink IT Narration
-4,Cyber Security & Identity,549,Entra ID Seasonality
-0,Software Engineering & Development,550,Launchpad ListLevel
+0,Software Engineering & Development,0,Java Python C++ Syntax Compilation Code Frontend React Angular Vue HTML CSS JavaScript Git Version Control Repository Branch Merge Pull Request Import Datetime Date Time Timezone Mobile App iOS Android Native Flutter Feature PR Commit Module Package Library Index TypeScript Source Pandas Capabilities Commits Diff Comparison Annotations Clone Wrap Sorted Entry Files Position Attribute OKHttp PageLayout JS Memo SAP Snippets Helper Clock JAR Table Tags TQDM library TMP Keyword Development Requests Pathlib Conflict Reporting Safe Parse JVM AMP SOAP Partitions Styling CCC Padding Ascending Friend Branches SOI PKG OpenPyXL AOP Event Lombok
+0,Software Engineering & Development,1,Backend Node Express Spring Django Flask Middleware NPM Modules UUID
+0,Software Engineering & Development,2,API REST GraphQL gRPC WebSocket Endpoint Payload Bash Shell Scripting Terminal URL Configuration Linux Server Postman Repositories
+0,Software Engineering & Development,3,Code Array Reverse Append Algorithm Data Structure HashMap Linked List Graph
+1,Production Support & Debugging,4,Stacktrace Exception Null Pointer Segfault Core Dump
+1,Production Support & Debugging,5,Memory Leak CPU Threading Concurrency Deadlock Performance
+1,Production Support & Debugging,6,Application Crash Outage Incident Root Cause Log Analysis
+1,Production Support & Debugging,7,Dependency Package Version Compatibility Npm Pip Maven Gradle
+2,Data Engineering & Database,8,SQL Select Update Delete Insert Join Group By Query Date Year Month Difference Partition Sort Window Function Distinct Analytics Over MoM Database Priority Coalesce Servicing Table Storage Location Oracle Enterprise Raw Data Processing Code Engineering Attributes Current Management Queries Airtable Schemas AMEX Plotting Bin Segments JavaScript Integration Metadata Ruleset Types Card DB Exists Trigger Trino Excel Slicer Azure Cosmos Allowed Aggregations Tagged Samples Delimiter Settings Nulls Blanks Fusion Head Selects Varchar Price Domain Que Mas Functions
+2,Data Engineering & Database,9,Table Column Row Schema Dimension Fact Normalization
+2,Data Engineering & Database,10,Airflow Schedule Interval ETL Pipeline Warehouse Lake Extraction Transformation Loading DAG Orchestration PythonOperator
+2,Data Engineering & Database,11,NoSQL MongoDB Cassandra Redis Key Value Document
+2,Data Engineering & Database,12,Kafka Event Producer Big Data Hadoop Spark MapReduce Hive Pig Streaming Real Time Driven
+3,Cloud Infrastructure & DevOps,13,AWS EC2 S3 Lambda VPC Azure GCP Virtual Machine
+3,Cloud Infrastructure & DevOps,14,Kubernetes Docker Container Pod Cluster K8s Orchestration
+3,Cloud Infrastructure & DevOps,15,CI CD Jenkins GitLab GitHub Actions Deployment Pipeline
+3,Cloud Infrastructure & DevOps,16,Terraform Ansible Infrastructure as Code Configuration MB Nodes Pre-Prod Environment YAML Files Applied Status SMTP Email
+3,Cloud Infrastructure & DevOps,17,Network Hub Traffic Load Balancer DNS Router Switch Subnet Firewall Port Accept AEXP Proxy Route Name
+4,Cyber Security & Identity,18,Authentication OAuth SAML JWT MFA SSO Password Login Authorization RBAC Role Permission Access Control Token Compliance GDPR HIPAA PCI SOX Audit Risk Governance Assessment Customer Event Mitigation Privacy Data PII Phone Number Address Regulatory Requirements Regulation Beneficial Owner KYC Management Procedures Database Tables Policies AEXP Controls Product RCSA Testing AMEX Card Analytics Performance Framework Auth Inherent SAM Directors CAS Assign
+4,Cyber Security & Identity,19,Encryption SSL TLS Certificate RSA Decryption Cipher Key Voltage Expired Archer GRC
+4,Cyber Security & Identity,20,Vulnerability Malware Phishing Ransomware Virus Trojan Exploit XSS Injection Remediation
+5,Business Communication & Writing,21,Email Draft Response Follow Up Tone Professional Cordial Sugar Coat Formal Message Short Easy Read Slack Communication Subject Line Thread
+5,Business Communication & Writing,22,Grammar Spelling Proofread Edit Punctuation Vocabulary Rephrase
+5,Business Communication & Writing,23,Translate Language Translation Interpretation Localization
+5,Business Communication & Writing,24,Presentation Slide Deck PowerPoint Pitch Proposal Outline Slides Content
+5,Business Communication & Writing,25,Documentation Manual Article Blog Post Handbook Policy Confluence Page Wiki
+6,Executive Strategy & Management,26,ROI KPI Metric Objective Goal OKR Balanced Scorecard
+6,Executive Strategy & Management,27,Budget Revenue Profit Expense Margin Cost Cash Flow Finance
+6,Executive Strategy & Management,28,Roadmap Vision Mission Milestone Long Term Objective Leadership Leader Executive VP Vice President Director Senior CFO Communications
+6,Executive Strategy & Management,29,Talent HR Hiring Interview Promotion Compensation Employee
+6,Executive Strategy & Management,30,Market Competition Differentiation Innovation SWOT Analysis
+7,Process & Project Management,31,Agile Scrum Sprint Kanban User Story Epic Backlog
+7,Process & Project Management,32,Ticket Jira Issue ServiceNow Assignment Triage Queue
+7,Process & Project Management,33,Workflow Checklist Step Procedure SOP Instruction Guide
+7,Process & Project Management,34,Meeting Notes Agenda Minutes Action Item Summary Takeaway
+7,Process & Project Management,35,Release Schedule Change Request Approval RACI Matrix
+8,Testing & Quality Assurance,36,Unit Test Mock Stub Assertion Coverage Code Quality
+8,Testing & Quality Assurance,37,Integration Test End to E2E System Validation
+8,Testing & Quality Assurance,38,Regression Load Stress Performance Penetration Scalability
+8,Testing & Quality Assurance,39,QA Defect Bug Reproduction Steps Triage Tracking
+9,Data Analytics & Visualization,40,Excel Formula Pivot Table Vlookup Macro VBA Spreadsheet
+9,Data Analytics & Visualization,41,Chart Graph Dashboard Visualization Tableau PowerBI Scatter Bar
+9,Data Analytics & Visualization,42,Statistics Mean Median Variance Standard Deviation Regression
+9,Data Analytics & Visualization,43,Data Cleansing Formatting Imputation Outlier Normalization Python Pandas Numpy Scipy Scikit Learn Machine Learning Model Models Science Reporting Report Power BI Dashboard
+10,General Productivity & Knowledge,44,Summarize Condense Abstract TLDR Digest Abridge
+10,General Productivity & Knowledge,45,Brainstorm Ideate Concept Suggestion Recommend Alternative Option
+10,General Productivity & Knowledge,46,Format Structure Table List Paragraph Indentation Markdown
+10,General Productivity & Knowledge,47,Explain Define Concept Tutorial Guide Lesson Comprehension Theory Best Practices
+10,General Productivity & Knowledge,48,Math Calculate Equation Algebra Geometry Calculus Arithmetic
+11,American Express & Payments,49,American Express AMEX AEXP Card Member Membership Credit Points Rewards Merchant Global Acquiring Network Offers Marketing Account Bank Balance Financial Statement Service Product Spend Offer Partner Lumi SDE Internal Tool Travel Hotel Booking Corporate Program Small Business Services SBS Consumer B2B Commercial Platinum Green Centurion Charge Volume Growth Payment Fee Late Penalty Limit Increase Line Customer Complaint Issue Resolution Market Japan Region Country Cancel Close CCP Care Professional Gold Criteria Visa Mastercard Acronym Score Status Brand Communication Debt Collection Data Processing Ticketing Acquisition Onboarding Configuration Insurance Products APAC Portfolio Engineering General AEMP Platform Complaints Reviews LBI Critical Accounts YoY Metrics Mexico Website Gift Premium EMEA Germany Online Resy Length Logo Branding Impactful Hong Kong Location Supplier Buyer Funds FICO Scores Queries Award Alternatives Restaurant Opened Bins Brazil Merchants Revised Trip Cardmember Cards PCN Client Number API Claims Marriott Partnership CR Assist Flight Sync Lounge PT Bonus Manner Amex Initiatives Dining Channels Dollar Reward
+0,Software Engineering & Development,50,Type Cast String Integer Float Conversion
+0,Software Engineering & Development,51,Business Logic Rule Condition Engine Swap Sets
+0,Software Engineering & Development,52,Data Type Boolean True False Int Timestamp JSON
+0,Software Engineering & Development,53,Function Class Method Object Oriented
+0,Software Engineering & Development,54,Variable Constant Const Private Public
+0,Software Engineering & Development,55,Error Log Fail Exception Status
+0,Software Engineering & Development,56,Proof Of Concept POC
+0,Software Engineering & Development,57,VSCode IDE Editor VS Code Environment IntelliJ IDEA
+0,Software Engineering & Development,58,MCP Tool Exposure
+0,Software Engineering & Development,59,UI Images Positioning UX Prototype User Clicking Dropdown Software Batch Jobs AMEX Bold Theme Redesign Mother Call To Action CTA Install Dependencies Components Colors Fonts Design
+0,Software Engineering & Development,60,Jupyter IPyKernel Temp
+0,Software Engineering & Development,61,Dark Mode Code Snippet
+0,Software Engineering & Development,62,Phoenix Project System
+0,Software Engineering & Development,63,GSOP Subprocess Run
+0,Software Engineering & Development,64,Application Tests
+0,Software Engineering & Development,65,Gatling Load Testing
+0,Software Engineering & Development,66,MIME Types
+0,Software Engineering & Development,67,Regex Patterns
+0,Software Engineering & Development,68,JCL Clickable Links
+0,Software Engineering & Development,69,PRD Leaves Production
+0,Software Engineering & Development,70,Plot CID Graphics
+0,Software Engineering & Development,71,Optional Directories
+0,Software Engineering & Development,72,Dispatch Comparable
+0,Software Engineering & Development,73,CCPS Notification
+0,Software Engineering & Development,74,Airflow Schedule Interval
+0,Software Engineering & Development,75,Downstream Impacts
+0,Software Engineering & Development,76,XHTML Posture
+0,Software Engineering & Development,77,Launchpad ListLevel
+1,Production Support & Debugging,78,Script Execution Run Running Console Command
+1,Production Support & Debugging,79,Error Code Exception Logs UTC Software Errors Configuration Linux ELF AMEX Invalid Identifier
+1,Production Support & Debugging,80,UAT SIT Testing
+1,Production Support & Debugging,81,UI Bug Screenshots
+1,Production Support & Debugging,82,Alert Panel Severity
+1,Production Support & Debugging,83,Quality Control QC
+1,Production Support & Debugging,84,Support Escalation Win
+1,Production Support & Debugging,85,Developer Mistakes
+1,Production Support & Debugging,86,IT Technology Investigation
+1,Production Support & Debugging,87,Nexthink IT Narration
+2,Data Engineering & Database,88,PySpark WithColumn Col DataFrame Pandas Dataframe df Series Info Describe
+2,Data Engineering & Database,89,Data Source Origin Connection Feed
+2,Data Engineering & Database,90,CSV Path File Format
+2,Data Engineering & Database,91,Encoding Errors Garbage Data
+2,Data Engineering & Database,92,Tableau LOD Expression
+2,Data Engineering & Database,93,Statistics Sample Population
+2,Data Engineering & Database,94,Google BigQuery
+2,Data Engineering & Database,95,Power BI SelectedValue DAX
+2,Data Engineering & Database,96,Statistical Percentile Response Percentages Weakness Problems
+2,Data Engineering & Database,97,Jupyter Notebook Club
+2,Data Engineering & Database,98,Chart Vertical Legend
+2,Data Engineering & Database,99,US States Exchange
+2,Data Engineering & Database,100,Model ID Product Name
+2,Data Engineering & Database,101,XML Central Configuration
+2,Data Engineering & Database,102,PIB Predictive Models
+2,Data Engineering & Database,103,Refactoring LPAD
+2,Data Engineering & Database,104,Correlation Analysis
+2,Data Engineering & Database,105,Water Height Measurements
+3,Cloud Infrastructure & DevOps,106,Server Host Instance Node
+3,Cloud Infrastructure & DevOps,107,Enterprise Architecture Framework
+3,Cloud Infrastructure & DevOps,108,IVR Telephony Voice Recognition
+3,Cloud Infrastructure & DevOps,109,Incident Alert Monitoring Pager
+3,Cloud Infrastructure & DevOps,110,Laptop Windows Hardware Support
+3,Cloud Infrastructure & DevOps,111,Python PyPI Packages
+3,Cloud Infrastructure & DevOps,112,ZIP File Contents
+3,Cloud Infrastructure & DevOps,113,GCP Cloud Storage GCS SAN Spaces
+3,Cloud Infrastructure & DevOps,114,Cron Job Scheduling
+3,Cloud Infrastructure & DevOps,115,Systems Cutover Deployments
+3,Cloud Infrastructure & DevOps,116,Config Tag Settings
+3,Cloud Infrastructure & DevOps,117,RFC Request For Change
+3,Cloud Infrastructure & DevOps,118,Splunk Total Rows
+3,Cloud Infrastructure & DevOps,119,Shell Script Parameters Linux Error Portal Scripts PP
+3,Cloud Infrastructure & DevOps,120,Kernel Application PCN
+3,Cloud Infrastructure & DevOps,121,Backup NAT Gateway
+3,Cloud Infrastructure & DevOps,122,Geo Routing Argentina JP MX
+3,Cloud Infrastructure & DevOps,123,Dynamic Operations Captured
+3,Cloud Infrastructure & DevOps,124,Monitor Built
+4,Cyber Security & Identity,125,On-Call Pager Incident Support
+4,Cyber Security & Identity,126,Security Allow Deny List Cyber Passwords JARs Falcon GMAS
+4,Cyber Security & Identity,127,KRI Risk Indicators
+4,Cyber Security & Identity,128,CyberArk Secrets Vault
+4,Cyber Security & Identity,129,Issue Corrective Closure
+4,Cyber Security & Identity,130,Major Risk Events
+4,Cyber Security & Identity,131,Entra ID Seasonality
+5,Business Communication & Writing,132,Bullet Points List Formatting Text PX
+5,Business Communication & Writing,133,Write Email Team Shared Details
+5,Business Communication & Writing,134,Grammar Correct Sentence Words Simple Refine
+5,Business Communication & Writing,135,Diagram Link Visio
+5,Business Communication & Writing,136,Meeting Transcript Summarization Invite Calendar
+5,Business Communication & Writing,137,Sales Revenue Market Lead
+5,Business Communication & Writing,138,Attrition Retention Employee Turnover
+5,Business Communication & Writing,139,Marketing Campaign Promotion Advertising
+5,Business Communication & Writing,140,Mentorship Career Coaching Resume CV Recruiting
+5,Business Communication & Writing,141,Vendor Management Third Party
+5,Business Communication & Writing,142,HR Payroll Salary PTO Leave Policies School Holiday Candidate Recruitment Interviews
+5,Business Communication & Writing,143,Group Training Workshops Certification Programs
+5,Business Communication & Writing,144,Town Hall Meetings Recording
+5,Business Communication & Writing,145,Concurrent Chat Sessions
+6,Executive Strategy & Management,146,Business Partnerships BAU As Usual Line of LOB Impact Outcome Value
+6,Executive Strategy & Management,147,Human Resources HR Sick Leave Letter Employed
+6,Executive Strategy & Management,148,Invoice Billing Accounts Payable Receivable
+6,Executive Strategy & Management,149,Tax Income Return Revenue
+6,Executive Strategy & Management,150,Forecast Actual Budget Variance
+6,Executive Strategy & Management,151,Legal Law Counsel Contract Agreement Terms GCO Goals
+6,Executive Strategy & Management,152,Training Learn Course Tutorial
+6,Executive Strategy & Management,153,Banking Direction Strategy Operating Model Target
+6,Executive Strategy & Management,154,Ownership Accountability Culture
+6,Executive Strategy & Management,155,Capacity Shift Planning Agile PI FTE Headcount
+6,Executive Strategy & Management,156,Pilot Project Proposals
+6,Executive Strategy & Management,157,Stakeholder Management Status Inventory Process Controls
+6,Executive Strategy & Management,158,TSR Shareholder Trends
+6,Executive Strategy & Management,159,International Pricing Models
+6,Executive Strategy & Management,160,DCRM Levers
+6,Executive Strategy & Management,161,Sales Deal Closing
+6,Executive Strategy & Management,162,Data Governance Delivery
+6,Executive Strategy & Management,163,Telesales Operations
+6,Executive Strategy & Management,164,Forbes Publications
+6,Executive Strategy & Management,165,Decide Owners
+6,Executive Strategy & Management,166,SRR Streamline
+6,Executive Strategy & Management,167,Amazon Brands
+7,Process & Project Management,168,Product Manager Management Action Plan Scale Delivery
+7,Process & Project Management,169,Intake Form Process Request
+8,Testing & Quality Assurance,170,Error Getting Debug Troubleshoot Fix
+8,Testing & Quality Assurance,171,Code Changes Required Review
+8,Testing & Quality Assurance,172,Pass Fail Test Case Status
+8,Testing & Quality Assurance,173,Test Expected Actual Result
+9,Data Analytics & Visualization,174,AI Embedding Similarity
+10,General Productivity & Knowledge,175,Conversations AI Evaluation Prompt Engineering Custom GPT Assistant Hallucinations Voicebots Hallucination Chargeout Fine Tune LLM Report DT Markup Quiz Agentic Workflows Models Large Conversational Purple Llama
+10,General Productivity & Knowledge,176,Image PNG JPG Picture Media Multimedia
+10,General Productivity & Knowledge,177,Digital Journey UX Design User Experience Persona
+10,General Productivity & Knowledge,178,Email Mailbox Management Outlook Calendar Microsoft TLM Tasks
+10,General Productivity & Knowledge,179,GitHub Copilot Code Completion
+10,General Productivity & Knowledge,180,Excel Sources Workbook Formula Spreadsheet Data Formulas
+10,General Productivity & Knowledge,181,Business Unit Research
+10,General Productivity & Knowledge,182,Literature Source Citation
+10,General Productivity & Knowledge,183,Corporate Food Lunch Meals
+10,General Productivity & Knowledge,184,Webex Conferencing
+10,General Productivity & Knowledge,185,SharePoint SLA SLAs
+10,General Productivity & Knowledge,186,Documentation Technical Docs
+10,General Productivity & Knowledge,187,POP Operations Center
+10,General Productivity & Knowledge,188,CBR Uploading Process
+10,General Productivity & Knowledge,189,Agile Carryover Stories
+10,General Productivity & Knowledge,190,RAG Architecture IV
+10,General Productivity & Knowledge,191,Workflow Approvals Sorting
+10,General Productivity & Knowledge,192,Approval Notices
+10,General Productivity & Knowledge,193,OpenAI CustomGPT
+10,General Productivity & Knowledge,194,Qualtrics Surveys
+10,General Productivity & Knowledge,195,Enable GenAI Capabilities
+10,General Productivity & Knowledge,196,Jump Guides
+10,General Productivity & Knowledge,197,Pillars Holding
+10,General Productivity & Knowledge,198,Printable Gantt Charts
+11,American Express & Payments,199,Transaction Fraud Chargeback Dispute
+11,American Express & Payments,200,Pricing TY Reports Currency USD Amount CTL Settings
+11,American Express & Payments,201,Direct Pay Deposit Transfer
+11,American Express & Payments,202,IAG Entity Structure
+11,American Express & Payments,203,Video Creative Assets
+11,American Express & Payments,204,Treasury Funding Liquidity
+11,American Express & Payments,205,External Loan Financing
+11,American Express & Payments,206,PCNS System Buttons
+11,American Express & Payments,207,System of Record SOR
+11,American Express & Payments,208,Targeting Eligibility
+11,American Express & Payments,209,GMNS Evaluating
+12,Business Process Automation,210,Process Automation RPA Tooling
+13,Business Communication & HR,211,HR Immigration Manager
+13,Business Communication & HR,212,Cancellation Conflicts
+13,Business Communication & HR,213,HR Responsibilities Introduction
+13,Business Communication & HR,214,Benefits Enrollment Lift HR Eligibility Evening
+13,Business Communication & HR,215,HR Interviewer Recruiter
+13,Business Communication & HR,216,HR Associates Aspirations
+13,Business Communication & HR,217,Official Opt In
+13,Business Communication & HR,218,Singapore Communications
+13,Business Communication & HR,219,Email Confirming Receipt
+13,Business Communication & HR,220,WFM Coordination
+13,Business Communication & HR,221,HR Gurgaon Highlights
+14,Finance & Procurement,222,Accounting Journal Entries
+14,Finance & Procurement,223,PCM Rule Allocation Definition Allocations Capital Timing Finance Actuals ADB Annual Spend
+14,Finance & Procurement,224,SOW Statement of Work
+14,Finance & Procurement,225,EBITDA Financial Metrics
+14,Finance & Procurement,226,Applications Pricing Study Research Approvals
+14,Finance & Procurement,227,EOD End of Day Process
+14,Finance & Procurement,228,Financials FIN Reporting
+14,Finance & Procurement,229,Amount Constants
+14,Finance & Procurement,230,Emburse Expense Management Asset Entry
+14,Finance & Procurement,231,Bank Neutral Locations
+14,Finance & Procurement,232,Investment Plans
+14,Finance & Procurement,233,Fees Dashboards
+14,Finance & Procurement,234,Treasury Report Script
