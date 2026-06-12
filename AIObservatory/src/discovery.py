@@ -57,7 +57,7 @@ def run_hybrid_discovery():
     
     print(f"Loading texts from {input_file}...")
     garbage_signatures = [
-        '„', 'Ç', '√', 'É', '¨', 'π', 'triggerdagrunoperator', 
+        '„', 'ç', '√', 'é', '¨', 'π', 'triggerdagrunoperator', 
         'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as'
     ]
     with open(input_file, "r", encoding="utf-8") as f:
@@ -66,9 +66,19 @@ def run_hybrid_discovery():
             line_str = line.strip()
             if not line_str:
                 continue
-            # Drop prompts with known useless mojibake or specific huge noise words entirely
-            if any(sig in line_str for sig in garbage_signatures):
+                
+            line_lower = line_str.lower()
+            
+            # Explicit massive garbage strings (now using lower() so it catches them!)
+            if any(sig in line_lower for sig in garbage_signatures):
                 continue
+                
+            # Heuristic: Drop heavy mojibake/non-ASCII garbage
+            # If a prompt contains more than 15 non-ASCII characters, it's likely a massive log/hex dump
+            non_ascii_count = sum(1 for c in line_str if ord(c) > 127)
+            if non_ascii_count > 15:
+                continue
+                
             lines.append(line_str)
         
     df = pd.DataFrame({"raw_text": lines})
