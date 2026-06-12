@@ -579,3 +579,8 @@ category_id,category_name,subcategory_id,subcategory_name
 2,Data Engineering & Database,594,GMS Merchant Char ASM
 13,Business Communication & HR,595,Business Unit Group
 2,Data Engineering & Database,596,Succeeded Request TS
+11,American Express & Payments,597,AMEX Risk Card
+1,Production Support & Debugging,598,RCA Integrate
+1,Production Support & Debugging,599,CHC Bot
+14,Finance & Procurement,600,Receiving Invoices
+14,Finance & Procurement,601,SP Debit
