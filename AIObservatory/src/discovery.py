@@ -61,14 +61,16 @@ def run_hybrid_discovery():
     garbage_signatures = [
         '„', 'ç', '√', 'é', '¨', 'π', 'triggerdagrunoperator', 
         'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as',
-        'informaci', 'essere', 'archivo', 'traduce', 'thsi'
+        'informaci', 'essere', 'archivo', 'traduce', 'thsi',
+        '__ea', 'f√°or', 'xls_mo', 'm√°s'
     ]
     
     # Standalone exact-match words that indicate a garbage/foreign log prompt
     garbage_exact_words = {
         "zz", "estan", "informacion", "cliente", "questo", "documento", 
         "della", "parte", "español", "inglés", "traduci", "poner", "cosa", 
-        "nada", "venta", "tarjeta", "pago", "jersey", "bars", "thsi", "comp"
+        "nada", "venta", "tarjeta", "pago", "jersey", "bars", "thsi", "comp",
+        "entonces", "cadence", "muchas", "wie", "rt", "ea", "xls"
     }
 
     with open(input_file, "r", encoding="utf-8") as f:
