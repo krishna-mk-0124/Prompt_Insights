@@ -374,3 +374,12 @@ category_id,category_name,subcategory_id,subcategory_name
 11,American Express & Payments,372,Targeting Eligibility
 4,Cyber Security & Identity,373,Falcon GMAS Security
 6,Executive Strategy & Management,374,DCRM Levers
+4,Cyber Security & Identity,375,Risk Control Framework
+0,Software Engineering & Development,376,React JS Memo
+6,Executive Strategy & Management,377,Business Partnerships
+11,American Express & Payments,378,AMEX AEXP API
+0,Software Engineering & Development,379,Software Install Dependencies
+4,Cyber Security & Identity,380,Issue Corrective Closure
+0,Software Engineering & Development,381,SAP Code Snippets
+9,Finance & Procurement,382,EBITDA Financial Metrics
+2,Data Engineering & Database,383,Azure Cosmos DB
