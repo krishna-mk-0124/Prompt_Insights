@@ -651,3 +651,14 @@ category_id,category_name,subcategory_id,subcategory_name
 3,Cloud Infrastructure & DevOps,666,VT ITY
 9,Data Analytics & Visualization,667,Spreadsheets Alignments
 3,Cloud Infrastructure & DevOps,668,DSAR Eduardo
+2,Data Engineering & Database,669,select_table
+4,Cyber Security & Identity,670,risk_data
+0,Software Engineering & Development,671,aexp_ea
+0,Software Engineering & Development,672,apis_accepted
+13,Business Communication & HR,673,rescheduled_knowing
+13,Business Communication & HR,674,borders_logos
+0,Software Engineering & Development,675,salesforce_rem
+14,Finance & Procurement,676,evp_variances
+13,Business Communication & HR,677,eta_pmo
+3,Cloud Infrastructure & DevOps,678,vm_bz
+0,Software Engineering & Development,679,felt_clr
