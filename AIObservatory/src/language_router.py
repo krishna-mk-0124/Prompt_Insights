@@ -20,12 +20,6 @@ TECH_WORDS = {
 
 from functools import lru_cache
 
-FAST_ENGLISH_WORDS = {
-    "the", "this", "that", "there", "what", "when", "where", "how", "why", 
-    "which", "would", "could", "should", "please", "they", "their", "them",
-    "these", "those", "have", "with", "from", "your"
-}
-
 @lru_cache(maxsize=100000)
 def cached_detect(text):
     try:
@@ -40,12 +34,7 @@ def detect_language(text):
     s_text = str(text).strip()
     words = set(re.findall(r'[a-záéíóúñäöüß]+', s_text.lower()))
     
-    # 0. Instant bypass for obvious English conversational/structural words (speed optimization)
-    # These are very safe English words that don't overlap with Spanish/German short-words
-    if words.intersection(FAST_ENGLISH_WORDS):
-        return "en"
-    
-    # 1. Primary language detection (now cached for massive speedup on duplicate prompts)
+    # 1. Primary language detection (cached for speedup on duplicate prompts)
     lang = cached_detect(s_text)
         
     # 2. Rescue misclassified short tech prompts
