@@ -448,3 +448,12 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,446,Gatling Load Testing
 0,Software Engineering & Development,447,Python Pathlib
 0,Software Engineering & Development,448,MIME Types
+2,Data Engineering & Database,449,Correlation Analysis
+4,Cyber Security & Identity,450,Major Risk Events
+11,American Express & Payments,451,AMEX Rewards PT Bonus
+10,General Productivity & Knowledge,452,Qualtrics Surveys
+3,Cloud Infrastructure & DevOps,453,Environment Configuration
+0,Software Engineering & Development,454,Regex Patterns
+0,Software Engineering & Development,455,Git Conflict Reporting
+10,General Productivity & Knowledge,456,AI Hallucinations
+10,General Productivity & Knowledge,457,AI Voicebots
