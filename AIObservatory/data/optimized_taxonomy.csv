@@ -222,3 +222,12 @@ category_id,category_name,subcategory_id,subcategory_name
 2,Data Engineering & Database,220,Statistical Percentile Response
 4,Cyber Security & Identity,221,Security Allow Deny List
 6,Executive Strategy & Management,222,FTE Headcount Planning
+2,Data Engineering & Database,223,Code Data Engineering
+6,Executive Strategy & Management,224,Pilot Project Proposals
+4,Cyber Security & Identity,225,AEXP Risk Management
+11,American Express & Payments,226,AMEX Mexico Website
+0,Software Engineering & Development,227,Linux Server Configuration
+11,American Express & Payments,228,Merchant Services Platform
+3,Cloud Infrastructure & DevOps,229,YAML Configuration Files
+3,Cloud Infrastructure & DevOps,230,Python PyPI Packages
+0,Software Engineering & Development,231,MCP Tool Exposure
