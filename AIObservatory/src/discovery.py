@@ -56,8 +56,20 @@ def run_hybrid_discovery():
     tax_df["processed_desc"] = tax_df["combined_desc"].apply(preprocess_prompt)
     
     print(f"Loading texts from {input_file}...")
+    garbage_signatures = [
+        '„', 'Ç', '√', 'É', '¨', 'π', 'triggerdagrunoperator', 
+        'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as'
+    ]
     with open(input_file, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f if line.strip()]
+        lines = []
+        for line in f:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            # Drop prompts with known useless mojibake or specific huge noise words entirely
+            if any(sig in line_str for sig in garbage_signatures):
+                continue
+            lines.append(line_str)
         
     df = pd.DataFrame({"raw_text": lines})
     print(f"Loaded {len(df)} English prompts. Beginning Hybrid Mapping...")
