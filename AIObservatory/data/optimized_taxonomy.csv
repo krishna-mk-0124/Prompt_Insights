@@ -346,3 +346,19 @@ category_id,category_name,subcategory_id,subcategory_name
 2,Data Engineering & Database,344,Trino Database Queries
 0,Software Engineering & Development,345,GSOP Subprocess Run
 11,American Express & Payments,346,Brazil Location Region
+2,Data Engineering & Database,347,Airflow PythonOperator
+2,Data Engineering & Database,348,AMEX Card Data
+3,Cloud Infrastructure & DevOps,349,Config Tag Settings
+4,Cyber Security & Identity,350,Risk Controls Performance
+11,American Express & Payments,351,AMEX Merchants Revised
+2,Data Engineering & Database,352,Excel Data Slicer
+11,American Express & Payments,353,AMEX Travel Trip
+6,Executive Strategy & Management,354,Inventory Management
+11,American Express & Payments,355,AMEX Cardmember Accounts
+0,Software Engineering & Development,356,CSS Position Attribute
+11,American Express & Payments,357,Spanish Tarjeta Pago
+9,Finance & Procurement,358,Accounting Journal Entries
+10,General Productivity & Knowledge,359,Conversations AI Evaluation
+9,Finance & Procurement,360,PCM Rule Allocation
+2,Data Engineering & Database,361,Model ID Product Name
+0,Software Engineering & Development,362,Android OKHttp PageLayout
