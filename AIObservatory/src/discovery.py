@@ -63,7 +63,7 @@ def run_hybrid_discovery():
         '__ea', 'xls_mo', 'entonces', 'cadence', 'muchas', 'wie'
     ]
     
-    mojibake_chars = ['√', 'é', '¨', 'π', '„', 'ç', '°', '©', '≥', '≠', 'ä', 'ü', 'æ', 'Á', 'ñ', '≤', 'Ç', 'å', 'Ê', 'ß', 'ò', 'Ä']
+    mojibake_chars = ['√', 'é', '¨', 'π', '„', 'ç', '°', '©', '≥', '≠', 'ä', 'ü', 'æ', 'Á', 'ñ', '≤', 'Ç', 'å', 'Ê', 'ß', 'ò', 'Ä', 'á', 'í', 'ó', 'ú']
     
     # Standalone exact-match words that indicate a garbage/foreign log prompt
     garbage_exact_words = {
@@ -205,7 +205,7 @@ def run_hybrid_discovery():
     df["subcategory_name"] = ""
     
     # If the text shares virtually no words with ANY taxonomy, route to Other
-    THRESHOLD = 0.08
+    THRESHOLD = 0.04
     official_mask = max_sims >= THRESHOLD
     other_mask = max_sims < THRESHOLD
     
