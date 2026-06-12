@@ -255,3 +255,15 @@ category_id,category_name,subcategory_id,subcategory_name
 4,Cyber Security & Identity,253,KRI Risk Indicators
 3,Cloud Infrastructure & DevOps,254,ZIP File Contents
 11,American Express & Payments,255,Online Card Services
+0,Software Engineering & Development,256,Git Code Commits
+2,Data Engineering & Database,257,Database Storage Management
+1,Production Support & Debugging,258,Software Code Errors
+4,Cyber Security & Identity,259,Risk Product Owner
+6,Executive Strategy & Management,260,International Pricing Models
+11,American Express & Payments,261,AMEX Resy Platform
+2,Data Engineering & Database,262,Table Select Queries
+11,American Express & Payments,263,Merchant Data Length
+10,General Productivity & Knowledge,264,SharePoint SLA SLAs
+2,Data Engineering & Database,265,Airtable Database Management
+4,Cyber Security & Identity,266,RCSA Control Testing
+0,Software Engineering & Development,267,Jupyter IPyKernel Temp
