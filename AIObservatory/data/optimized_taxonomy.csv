@@ -310,3 +310,22 @@ category_id,category_name,subcategory_id,subcategory_name
 4,Cyber Security & Identity,308,Voltage Encryption Expired
 11,American Express & Payments,309,FICO Credit Scores
 1,Production Support & Debugging,310,UAT SIT Testing
+1,Production Support & Debugging,311,UI Bug Screenshots
+11,American Express & Payments,312,AMEX Card Queries
+2,Data Engineering & Database,313,Database DB Queries
+0,Software Engineering & Development,314,JavaScript Entry Files
+10,General Productivity & Knowledge,315,GPT AI Models
+2,Data Engineering & Database,316,Jupyter Notebook Club
+11,American Express & Payments,317,AMEX Award Alternatives
+0,Software Engineering & Development,318,Dark Mode Code Snippet
+2,Data Engineering & Database,319,Database Table Exists
+1,Production Support & Debugging,320,Linux ELF Errors
+2,Data Engineering & Database,321,Chart Vertical Legend
+10,General Productivity & Knowledge,322,RAG Architecture IV
+10,General Productivity & Knowledge,323,Large Conversational Models
+2,Data Engineering & Database,324,US States Exchange
+1,Production Support & Debugging,325,Alert Panel Severity
+11,American Express & Payments,326,Resy Restaurant Opened
+10,General Productivity & Knowledge,327,Workflow Approvals Sorting
+0,Software Engineering & Development,328,UI Call To Action CTA
+3,Cloud Infrastructure & DevOps,329,SMTP Email Configuration
