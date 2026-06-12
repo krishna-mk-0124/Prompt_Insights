@@ -552,3 +552,11 @@ category_id,category_name,subcategory_id,subcategory_name
 14,Finance & Procurement,567,footer_pcm_rule
 14,Finance & Procurement,568,drivers_bps
 0,Software Engineering & Development,569,puedo_trigger_rule
+11,American Express & Payments,570,AMEX Card Risk
+0,Software Engineering & Development,571,Python Code Def
+0,Software Engineering & Development,572,Retry Flags Code
+0,Software Engineering & Development,573,UI Component Browser
+13,Business Communication & HR,574,France HR Candidates
+3,Cloud Infrastructure & DevOps,575,Env Parameter
+3,Cloud Infrastructure & DevOps,576,Network Conf IPv
+2,Data Engineering & Database,577,SQL Select Table Database Query
