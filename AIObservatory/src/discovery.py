@@ -78,7 +78,7 @@ def run_hybrid_discovery():
                 continue
                 
             line_lower = line_str.lower()
-            words_set = set(line_lower.split())
+            words_set = set(re.findall(r'\b\w+\b', line_lower))
             
             # Explicit massive garbage strings (substring match)
             if any(sig in line_lower for sig in garbage_signatures):
@@ -277,8 +277,10 @@ def run_hybrid_discovery():
                     m_indices = cluster_global_indices[m_mask]
                     
                     if m_size >= 2:
-                        top_keywords = extract_top_keywords(X_prompts[m_indices], vectorizer, n_keywords=2)
-                        sub_name = "_".join(top_keywords) if top_keywords else f"auto_micro_{current_global_sub_id}"
+                        mean_tfidf = np.asarray(X_prompts[m_indices].mean(axis=0)).flatten()
+                        top_indices = mean_tfidf.argsort()[-2:][::-1]
+                        feature_names = np.array(vectorizer.get_feature_names_out())
+                        sub_name = "_".join(feature_names[top_indices])
                     else:
                         sub_name = f"auto_micro_{current_global_sub_id}"
                         
@@ -294,8 +296,10 @@ def run_hybrid_discovery():
                     current_global_sub_id += 1
             else:
                 if cluster_size >= 2:
-                    top_keywords = extract_top_keywords(cluster_X, vectorizer, n_keywords=2)
-                    sub_name = "_".join(top_keywords) if top_keywords else f"auto_{current_global_sub_id}"
+                    mean_tfidf = np.asarray(cluster_X.mean(axis=0)).flatten()
+                    top_indices = mean_tfidf.argsort()[-2:][::-1]
+                    feature_names = np.array(vectorizer.get_feature_names_out())
+                    sub_name = "_".join(feature_names[top_indices])
                 else:
                     sub_name = f"auto_{current_global_sub_id}"
                     
