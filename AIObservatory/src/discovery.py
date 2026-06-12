@@ -59,11 +59,12 @@ def run_hybrid_discovery():
     
     print(f"Loading texts from {input_file}...")
     garbage_signatures = [
-        '„', 'ç', '√', 'é', '¨', 'π', 'triggerdagrunoperator', 
-        'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as',
-        'informaci', 'essere', 'archivo', 'traduce', 'thsi',
-        '__ea', 'f√°or', 'xls_mo', 'm√°s'
+        'triggerdagrunoperator', 'informaci', 'essere', 'archivo', 'traduce', 'thsi',
+        '__ea', 'xls_mo', 'entonces', 'cadence', 'muchas', 'wie',
+        'qhse', 'zwa', 'qabvj'
     ]
+    
+    mojibake_chars = ['√', 'é', '¨', 'π', '„', 'ç', '°', '©', '≥', '≠', 'ä', 'ü', 'æ', 'Á', 'ñ', '≤', 'Ç', 'å', 'Ê', 'ß', 'ò', 'Ä']
     
     # Standalone exact-match words that indicate a garbage/foreign log prompt
     garbage_exact_words = {
@@ -87,14 +88,16 @@ def run_hybrid_discovery():
             if any(sig in line_lower for sig in garbage_signatures):
                 continue
                 
+            # Mojibake robust character match
+            if any(c in line_lower for c in mojibake_chars):
+                continue
+                
             # Exact word match for massive noise clusters
             if words_set.intersection(garbage_exact_words):
                 continue
                 
             # Heuristic: Drop heavy mojibake/non-ASCII garbage
-            # If a prompt contains more than 15 non-ASCII characters, it's likely a massive log/hex dump
-            non_ascii_count = sum(1 for c in line_str if ord(c) > 127)
-            if non_ascii_count > 15:
+            if sum(1 for c in line_str if ord(c) > 127) > 5:
                 continue
                 
             lines.append(line_str)
