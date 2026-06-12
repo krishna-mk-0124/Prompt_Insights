@@ -125,7 +125,8 @@ def run_hybrid_discovery():
         'çπ_euc', '„Ç®_„Ç≠_„Çπ_Éó_É¨_„Çπ_euc', '„Ç¢_É°_É¨_Ç´_É≥_„Ç®_„Ç≠_„Çπ_Éó_É¨_„Çπ', '„ÄäÁñ≤_ÇåÊßò_Äß_Äô_bps', '_çåêßò_äß_äô_bps', 'signing', 'est√°_informaci√≥n', 'traducir', 'poa', 'waht', 'narrow', 'qu√©_admin', '_admin', 'edited', 'operation', 'hot', 'classes', 'broader', 'confusion', 'facts', 'pain', 'diagrams', 'actionable', 'lose', 'brain', 'correctness', 'compact', 'm√°s_tipo', 's_tipo', 'south', 'attending', 'punto', 'delle', 'ah', 'slice', 'evaluate', 'dhawan_„Ç®_„Ç≠_„Çπ_Éó_É¨_„Çπ', 'dhawan_', 'logging', 'stick', '_çåêßò_äß_äô_drivers', 'or_ein', 'ääáñ',
         'çπ_eusw', '„Ç®_„Ç≠_„Çπ_Éó_É¨_„Çπ_eusw', 'äü_slow', '„Äæ„Äü_slow', 's_table', 'm√°s_table', 'mo_ct_ia', 'or_ps', 'f√°or_ps', 'as_manera', 'd√°as_manera', 'mandate', 'tighter', 'presenting', 'meaningful', 'additionally', 'drivers', 'sz', 'comprehensive', 'stating', 'earliest', 'hallucinate', 'everytime', 'flat', 'art', 'otro', 'lado', 'enviar', 'pregunta', 'hearing', 'coordinating', 'necesario', 'correcto',
         'ignored', 'vic', 'honestly', 'offered', 'filed', 'arent', 'copying', 'wht', 'responding', 'practice', 'paso', 'tiempo', 'cambios', 'rerun', 'pace', 'km', 'nicer', 'caroline', 'kids', 'tea',
-        'äü_', 'est', '_voy', 'mo_ct_shape', 'sh_ea', 'puedo_d', 'blend_ma', 'ana', '_f', 'ingl', 's_frase'
+        'äü_', 'est', '_voy', 'mo_ct_shape', 'sh_ea', 'puedo_d', 'blend_ma', 'ana', '_f', 'ingl', 's_frase',
+        'or_wie', 'n_entonces', 'maddie_', 'regular', 'chinese', 'forgot', 'begin', 'puedo', 'shape', 'plz', 'remarks', 'estimate', 'voy', 'ads', 'popup', 'worst', 'fue', 'mensaje', 'kumar', 'tienen', 'tie', 'explicitly', 'designed', 'elle', 'scripted'
     ]
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
