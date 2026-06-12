@@ -560,3 +560,7 @@ category_id,category_name,subcategory_id,subcategory_name
 3,Cloud Infrastructure & DevOps,575,Env Parameter
 3,Cloud Infrastructure & DevOps,576,Network Conf IPv
 2,Data Engineering & Database,577,SQL Select Table Database Query
+10,General Productivity & Knowledge,578,hallucinate_report_dt
+3,Cloud Infrastructure & DevOps,579,parallel_admin
+11,American Express & Payments,580,provider_loyalty
+2,Data Engineering & Database,581,select_table Database Query
