@@ -362,3 +362,15 @@ category_id,category_name,subcategory_id,subcategory_name
 9,Finance & Procurement,360,PCM Rule Allocation
 2,Data Engineering & Database,361,Model ID Product Name
 0,Software Engineering & Development,362,Android OKHttp PageLayout
+11,American Express & Payments,363,AMEX Corporate Cards
+2,Data Engineering & Database,364,Data Engineering Code
+4,Cyber Security & Identity,365,Risk Management Controls
+1,Production Support & Debugging,366,Quality Control QC
+11,American Express & Payments,367,PCN Partner Client Number
+9,Finance & Procurement,368,SOW Statement of Work
+3,Cloud Infrastructure & DevOps,369,RFC Request For Change
+9,Finance & Procurement,370,PCM Rule Definition
+10,General Productivity & Knowledge,371,UX User Persona
+11,American Express & Payments,372,Targeting Eligibility
+4,Cyber Security & Identity,373,Falcon GMAS Security
+6,Executive Strategy & Management,374,DCRM Levers
