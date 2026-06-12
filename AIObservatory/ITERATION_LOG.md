@@ -66,5 +66,9 @@ The objective was to categorize millions of user prompts into enterprise taxonom
 - Safely split overlapping categories into unique IDs (ID 12: `Business Process Automation`, ID 13: `Business Communication & HR`, ID 14: `Finance & Procurement`).
 - Removed duplicate subcategories (`SQL Select Table` and `Data Risk Management`) to prevent redundant mapping.
 
+**Structural Taxonomy Fix (Post-Round 43)**:
+- Identified that the pipeline is strictly for English prompts. Removed 15 newly mapped Spanish/French/German/Mojibake subcategories (e.g., `m√°s_qu√©`, `informaci√≥n_ingl√©s`, `German Fur Sie`) from the official taxonomy.
+- Re-routed all of these non-English tokens and UTF-8 encoding errors directly into the `custom_noise` filter to automatically drop them during tokenization.
+
 ---
 *Note on Semantic Search Trade-Offs*: During Optimization Round 4, a major architectural limitation was documented. TF-IDF acts as a lexical keyword-matcher, not a true semantic engine. Aggressively filtering action verbs (e.g., "optimize", "analyze") reduces the engine to noun-based topic modeling, losing the intent of *what* the user is doing to the noun. To combat this without switching to a computationally expensive Local Embedding model (Deep Learning), the pipeline relies on Bi-Grams (`ngram_range=(1, 2)`) to capture multi-word intent (e.g., "optimize code") while filtering out the standalone verb.
