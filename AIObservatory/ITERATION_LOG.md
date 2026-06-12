@@ -58,4 +58,10 @@ The objective was to categorize millions of user prompts into enterprise taxonom
 | **47. Optimization Round 40** | Mapped 13 more business categories and destructed the 35k `mojibake_repetitive` cluster. | "Other" bucket dropped to 182k! Subcategories held steady at 32. | - Added 13 subcategories (Airflow Schedule Interval, AMEX Data Card, SQL Table Que, HR Gurgaon Highlights, Finance Actuals ADB, Amazon Brands, Downstream Impacts, Spanish Mas Tenemos, Treasury Report Script, AI Hallucination Markup, XHTML Posture, AOP Event, Java Lombok Event).<br>- Banished 36 more noise words (`repetitive`, `appendix`, `millions`, `twice`, `observation`, `walkthrough`). | [`f06d49a`](https://github.com/krishna-mk-0124/Prompt_Insights/commit/f06d49a) |
 
 ---
+**Structural Taxonomy Fix (Post-Round 40)**:
+- Standardized all 532 subcategories to map perfectly to 15 non-overlapping top-level categories.
+- Safely split overlapping categories into unique IDs (ID 12: `Business Process Automation`, ID 13: `Business Communication & HR`, ID 14: `Finance & Procurement`).
+- Removed duplicate subcategories (`SQL Select Table` and `Data Risk Management`) to prevent redundant mapping.
+
+---
 *Note on Semantic Search Trade-Offs*: During Optimization Round 4, a major architectural limitation was documented. TF-IDF acts as a lexical keyword-matcher, not a true semantic engine. Aggressively filtering action verbs (e.g., "optimize", "analyze") reduces the engine to noun-based topic modeling, losing the intent of *what* the user is doing to the noun. To combat this without switching to a computationally expensive Local Embedding model (Deep Learning), the pipeline relies on Bi-Grams (`ngram_range=(1, 2)`) to capture multi-word intent (e.g., "optimize code") while filtering out the standalone verb.
