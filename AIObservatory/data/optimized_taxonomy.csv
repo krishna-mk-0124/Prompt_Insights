@@ -67,3 +67,18 @@ category_id,category_name,subcategory_id,subcategory_name
 6,Executive Strategy & Management,65,Business Impact Outcome Value
 8,Testing & Quality Assurance,66,Error Getting Debug Troubleshoot Fix
 1,Production Support & Debugging,67,Script Execution Run Running Console Command
+11,American Express & Payments,68,Service AEXP Product Spend Offer Partner Network
+6,Executive Strategy & Management,69,Leadership Leader Vision Executive
+7,Process & Project Management,70,Product Manager Management Action Plan Scale Delivery
+4,Cyber Security & Identity,71,Risk Assessment Control Customer Risk Event Mitigation
+2,Data Engineering & Database,72,Real Time Streaming Kafka Event Driven
+5,Business Communication & Writing,73,Confluence Page Wiki Documentation
+0,Software Engineering & Development,74,Business Logic Rule Condition Engine
+5,Business Communication & Writing,75,Tone Sugar Coat Formal Professional Message Short Easy Read
+0,Software Engineering & Development,76,Mobile App iOS Android React Native Flutter
+0,Software Engineering & Development,77,Data Type Boolean True False Int Timestamp JSON
+10,General Productivity & Knowledge,78,Prompt Engineering Custom GPT AI Assistant
+10,General Productivity & Knowledge,79,Image PNG JPG Picture Media Multimedia
+5,Business Communication & Writing,80,Write Email Team Shared Details
+2,Data Engineering & Database,81,Date Year Month Difference
+8,Testing & Quality Assurance,82,Code Changes Required Review
