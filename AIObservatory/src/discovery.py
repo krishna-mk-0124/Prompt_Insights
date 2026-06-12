@@ -114,7 +114,8 @@ def run_hybrid_discovery():
         'qu', 's_qu', 'informaci', '_informaci', 'data_code', 'anymore', 'restart', 'manner', 'precise', 'recheck', 'bn', 'quite', 'approve', 'breakdown', 'official', 'opt', 'ops', 'captured', 'eu', 'dos', 'produce', 'mn', 'apps', 'achieve', 'repos', 'solid', 'texts', 'minus', 'poder', 'confirming', 'receipt', 'simply', 'stable', 'remainder', 'verticle',
         'eval', 'advance', 'saved', 'updating', 'requesting', 'cl', 'ly', 'day', 'dat', 'fe', 'compress', 'dt', 'accuracy', 'confident', 'att', 'som', 'highlights', 'amber', 'cons', 'pros', 'heap', 'restated',
         'repetitive', 'appendix', 'millions', 'twice', 'observation', 'ns', 'av', 'visit', 'walkthrough', 'structured', 'according', 'speech', 'symbol', 'congratulations', 'decided', 'kick', 'knows', 'recap', 'amt', 'noticed', 'milestones', 'consideration', 'pressure', 'qui', 'avec', 'baseline', 'lengthy', 'respective', 'flows', 'cs', 'gc', 'plain', 'modern', 'arial', 'prospective', 'event',
-        'capitalization', 'mix', 'responded', 'blocks', 'strengths', 'aren', 'chris', 'james', 'wasn', 'followup', 'comfortable', 'tn', 'ds', 'mais', 'faire', 'comparing', 'bryan', 'folders', 'maintains', 'repetition', 'apt', 'shaded', 'deviations', 'aakash', 'opts'
+        'capitalization', 'mix', 'responded', 'blocks', 'strengths', 'aren', 'chris', 'james', 'wasn', 'followup', 'comfortable', 'tn', 'ds', 'mais', 'faire', 'comparing', 'bryan', 'folders', 'maintains', 'repetition', 'apt', 'shaded', 'deviations', 'aakash', 'opts',
+        'evidenced', 'mo', 'ct', 'contribution', 'ahve', 'aif', 'drag', 'percent', 'understood', 'piece', 'paul', 'assess', 'smart', 'speaker', 'suggesting', 'claim', 'reasons', 'optimize', 'finalize', 'tweak', 'dry', 'banco', 'phrasing', 'successful', 'reset', 'antes', 'nada', 'ts', 'ii', 'attaching', 'validated', 'maria', 'johnson', 'engineers', 'rounds'
     ]
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
