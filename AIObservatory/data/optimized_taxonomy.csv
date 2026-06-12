@@ -284,3 +284,18 @@ category_id,category_name,subcategory_id,subcategory_name
 5,Business Communication & Writing,282,Concurrent Chat Sessions
 10,General Productivity & Knowledge,283,CBR Uploading Process
 0,Software Engineering & Development,284,UI UX Prototype User
+10,General Productivity & Knowledge,285,Email Mailbox Management
+2,Data Engineering & Database,286,SQL Table Select Query
+4,Cyber Security & Identity,287,AMEX Card Risk
+0,Software Engineering & Development,288,Git Repository Clone
+2,Data Engineering & Database,289,AMEX Data Plotting
+2,Data Engineering & Database,290,Data Bin Segments
+0,Software Engineering & Development,291,Code Array Reverse Append
+0,Software Engineering & Development,292,Code Wrap Sorted
+2,Data Engineering & Database,293,Database JavaScript Integration
+3,Cloud Infrastructure & DevOps,294,Cron Job Scheduling
+10,General Productivity & Knowledge,295,Excel Sources Workbook
+11,American Express & Payments,296,Hong Kong Location
+2,Data Engineering & Database,297,Data Metadata Ruleset
+11,American Express & Payments,298,Supplier Buyer Network
+5,Business Communication & Writing,299,HR Candidate Interviews
