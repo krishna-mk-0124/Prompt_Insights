@@ -299,3 +299,14 @@ category_id,category_name,subcategory_id,subcategory_name
 2,Data Engineering & Database,297,Data Metadata Ruleset
 11,American Express & Payments,298,Supplier Buyer Network
 5,Business Communication & Writing,299,HR Candidate Interviews
+10,General Productivity & Knowledge,300,Agile Carryover Stories
+2,Data Engineering & Database,301,Database Data Types
+0,Software Engineering & Development,302,Software Batch Jobs
+3,Cloud Infrastructure & DevOps,303,Systems Cutover Deployments
+2,Data Engineering & Database,304,AMEX Card Database
+1,Production Support & Debugging,305,Software Configuration Errors
+0,Software Engineering & Development,306,AMEX Bold UI Theme
+11,American Express & Payments,307,Customer Account Funds
+4,Cyber Security & Identity,308,Voltage Encryption Expired
+11,American Express & Payments,309,FICO Credit Scores
+1,Production Support & Debugging,310,UAT SIT Testing
