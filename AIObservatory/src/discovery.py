@@ -59,8 +59,13 @@ def run_hybrid_discovery():
     garbage_signatures = [
         '„', 'ç', '√', 'é', '¨', 'π', 'triggerdagrunoperator', 
         'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as',
-        'zz_estan', 'jersey_bars', 'informaci', 'essere_september',
-        'archivo_lookup', 'han_traduce', 'comp_thsi'
+        'informaci', 'essere', 'archivo', 'traduce', 'thsi'
+    ]
+    
+    garbage_pairs = [
+        ('zz', 'estan'),
+        ('jersey', 'bars'),
+        ('comp', 'thsi')
     ]
     with open(input_file, "r", encoding="utf-8") as f:
         lines = []
@@ -73,6 +78,10 @@ def run_hybrid_discovery():
             
             # Explicit massive garbage strings (now using lower() so it catches them!)
             if any(sig in line_lower for sig in garbage_signatures):
+                continue
+                
+            # Compound garbage signatures
+            if any(all(word in line_lower for word in pair) for pair in garbage_pairs):
                 continue
                 
             # Heuristic: Drop heavy mojibake/non-ASCII garbage
@@ -148,7 +157,7 @@ def run_hybrid_discovery():
         'evidenced', 'mo', 'ct', 'contribution', 'ahve', 'aif', 'drag', 'percent', 'understood', 'piece', 'paul', 'assess', 'smart', 'speaker', 'suggesting', 'claim', 'reasons', 'optimize', 'finalize', 'tweak', 'dry', 'banco', 'phrasing', 'successful', 'reset', 'antes', 'nada', 'ts', 'ii', 'attaching', 'validated', 'maria', 'johnson', 'engineers', 'rounds',
         'evolved', 'partially', 'weaknesses', 'kya', 'snapshot', 'dear', 'traduci', 'man', 'valid', 'poner', 'waterfall', 'placeholder', 'fall', 'peer', 'views', 'dar', 'wi', 'sunday', 'train', 'cosa', 'laura', 'letting', 'val', 'honest', 'calling', 'nt', 'spec', 'literally', 'ur', 'workpapers', 'specializes',
         'venta', 'tarjeta', 'pago', 'mas', 'que', 'informacion', 'todos', 'eso', 'esta', 'cada', 'fur', 'sie', 'tenemos', 'español', 'm√°s', 'qu√©', '„äæ', '„äü', 'informaci√≥n', 'ingl√©s', 'cual', 'm√°s_qu√©', 'informaci√≥n_ingl√©s', 'qu√©_cual',
-        '_cual', 'n_ingl', 'äæ', 'äü', 'mla', 'customized', 'decrease', 'assuming', 'populated', 'est√°', 'est', 'difficult', 'savings', 'workshop', 'recreate', 'af', 'star', 'takeaways', 'hilton', 'engage', 'purchase', 'justification', 'raq', 'dia', 'lock', 'humble', 'collapse', 'f√°or', 'warm', 'materials', 'selection', 'dame', 'ran', 'introduce', 'asi', 'ng', 'essence', 'divided', 'pet', 'purely', 'printed', 'kartik', 'imported', 'differs', 'arch', 'prb', 'thresholds', 'posible', 'peter', 'jack',
+        '_cual', 'n_ingl', '_ingl', 'äæ', 'äü', 'mla', 'customized', 'decrease', 'assuming', 'populated', 'est√°', 'est', 'difficult', 'savings', 'workshop', 'recreate', 'af', 'star', 'takeaways', 'hilton', 'engage', 'purchase', 'justification', 'raq', 'dia', 'lock', 'humble', 'collapse', 'f√°or', 'warm', 'materials', 'selection', 'dame', 'ran', 'introduce', 'asi', 'ng', 'essence', 'divided', 'pet', 'purely', 'printed', 'kartik', 'imported', 'differs', 'arch', 'prb', 'thresholds', 'posible', 'peter', 'jack',
         '_est', 's_poa', 'çπ_éó_é', 'çπ', '_é', '_ç', 'eva', 'hyperlink', 'millennial', 'hooks', 'automatically', 'leads', 'answering', 'usually', 'myca', 'replying', 'craft', 'ace', 'driving', 'nel', 'anche', 'docx', 'prepared', 'behavior', 'opinion', 'spoke', 'sahil', 'tickets', 'sold', 'ramp', 'deeper', 'lista', 'clientes', 'cat', 'rep', 'servicios', 'ans', 'acw', 'cust', 'smooth',
         'äü_arrange', 'arrange', 's_select', 'och', 'followed', 'functionality', 'agency', 'kept', 'fl', 'ill', 'corresponding', 'ff', 'learnings', 'located', 'condensed', 'cold', 'stores', 'originally', 'frequency', 'het', 'resource', 'rsk', 'stronger', 'weak', 'mes', 'mayo', 'interactive', 'accessible', 'fresh', 'completes', 'wider', 'networking',
         'accessed', 'backed', 'figures', 'tips', 'mo_ct_ooo', '„Ç¢_É°_É¨_Ç´_É≥_filled', '_filled', 'patch', 'uno', '„ÄäÁñ≤_ÇåÊßò_Äß_Äô_drivers', '_drivers', 'm√°s_informaci√≥n', 's_informaci', 'hoping', 'closer', 'guidelines', 'picked', 'qu√©_est√°', 'f√°or_ein', 'ein', 'questa', 'connecting', 'plug', 'cleanly', 'adjustment', 'stages', 'saturday', 'november', 'otra', 'vamos', 'ls', 'paper', 'synopsis', 'fetching', 'everyday', 'strict', 'thousands', 'consumed', 'reads', 'retro', 'constructor', 'raus', 'indices', 'passionate', 'lisa', 'kanika', 'objection', 'iloc',
