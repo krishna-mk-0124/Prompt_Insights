@@ -52,7 +52,10 @@ def run_hybrid_discovery():
         
     print(f"Loading official taxonomy from {tax_file}...")
     tax_df = pd.read_csv(tax_file)
-    tax_df["combined_desc"] = tax_df["category_name"] + " " + tax_df["subcategory_name"]
+    if "keywords" in tax_df.columns:
+        tax_df["combined_desc"] = tax_df["category_name"] + " " + tax_df["subcategory_name"] + " " + tax_df["keywords"].fillna("")
+    else:
+        tax_df["combined_desc"] = tax_df["category_name"] + " " + tax_df["subcategory_name"]
     
     # Preprocess taxonomy definitions
     tax_df["processed_desc"] = tax_df["combined_desc"].apply(preprocess_prompt)

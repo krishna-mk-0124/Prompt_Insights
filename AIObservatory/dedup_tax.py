@@ -9,51 +9,76 @@ df['is_core'] = df.index < 59
 
 def deduplicate_subcategories(group_df):
     group_df = group_df.reset_index(drop=True)
+    
+    # 1. Initialize keywords if not exists
+    if 'keywords' not in group_df.columns:
+        group_df['keywords'] = group_df['subcategory_name']
+        
+        # For core rows, generate a clean 2-3 word display name
+        for idx, row in group_df.iterrows():
+            if row['is_core']:
+                words = str(row['subcategory_name']).split()
+                clean_name = " ".join(words[:min(3, len(words))])
+                group_df.at[idx, 'subcategory_name'] = clean_name
+
     vectorizer = TfidfVectorizer(stop_words='english')
     try:
-        tfidf = vectorizer.fit_transform(group_df['subcategory_name'])
+        # Vectorize against the keywords, not the display name!
+        tfidf = vectorizer.fit_transform(group_df['keywords'])
     except ValueError:
         return group_df
         
     sim_matrix = cosine_similarity(tfidf)
     
-    G = nx.Graph()
-    for i in range(len(group_df)):
-        G.add_node(i)
-        
-    for i in range(len(group_df)):
-        for j in range(i+1, len(group_df)):
-            if sim_matrix[i, j] > 0.15:
-                G.add_edge(i, j)
-                
-    components = list(nx.connected_components(G))
+    core_indices = group_df[group_df['is_core']].index.tolist()
+    auto_indices = group_df[~group_df['is_core']].index.tolist()
     
-    merged_rows = []
-    for comp in components:
-        comp_indices = list(comp)
-        comp_rows = group_df.iloc[comp_indices]
+    # If no core rows exist in this category, we just use the auto rows as anchors
+    if not core_indices:
+        core_indices = [auto_indices[0]] if auto_indices else []
+        auto_indices = auto_indices[1:] if len(auto_indices) > 1 else []
         
-        # Merge all unique words from all subcategories in this cluster
-        all_words = " ".join(comp_rows['subcategory_name']).split()
-        unique_words = list(dict.fromkeys(all_words)) # preserves order
-        merged_name = " ".join(unique_words)
+    final_rows = []
+    merged_auto_indices = set()
+    
+    # Anchor Clustering: Match auto rows directly to core anchors
+    for core_idx in core_indices:
+        core_row = group_df.iloc[core_idx]
+        current_keywords = set(str(core_row['keywords']).split())
         
-        # Prefer a core row if one exists in the cluster
-        core_rows = comp_rows[comp_rows['is_core']]
-        if not core_rows.empty:
-            anchor_row = core_rows.iloc[0]
-        else:
-            anchor_row = comp_rows.iloc[0]
-            
-        merged_rows.append({
-            'category_id': anchor_row['category_id'],
-            'category_name': anchor_row['category_name'],
-            'subcategory_id': anchor_row['subcategory_id'],
-            'subcategory_name': merged_name,
-            'is_core': anchor_row['is_core']
+        for auto_idx in auto_indices:
+            if auto_idx in merged_auto_indices:
+                continue
+                
+            # If the auto row matches this specific core row strongly
+            if sim_matrix[core_idx, auto_idx] > 0.20:
+                auto_words = str(group_df.iloc[auto_idx]['keywords']).split()
+                current_keywords.update(auto_words)
+                merged_auto_indices.add(auto_idx)
+                
+        final_rows.append({
+            'category_id': core_row['category_id'],
+            'category_name': core_row['category_name'],
+            'subcategory_id': core_row['subcategory_id'],
+            'subcategory_name': core_row['subcategory_name'],
+            'keywords': " ".join(list(current_keywords)),
+            'is_core': True
         })
         
-    return pd.DataFrame(merged_rows)
+    # Any auto rows that didn't match a core anchor survive as their own subcategories
+    for auto_idx in auto_indices:
+        if auto_idx not in merged_auto_indices:
+            auto_row = group_df.iloc[auto_idx]
+            final_rows.append({
+                'category_id': auto_row['category_id'],
+                'category_name': auto_row['category_name'],
+                'subcategory_id': auto_row['subcategory_id'],
+                'subcategory_name': auto_row['subcategory_name'],
+                'keywords': auto_row['keywords'],
+                'is_core': False
+            })
+            
+    return pd.DataFrame(final_rows)
 
 final_dfs = []
 for cat, group in df.groupby('category_name'):
