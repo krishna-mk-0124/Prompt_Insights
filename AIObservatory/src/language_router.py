@@ -8,22 +8,14 @@ DetectorFactory.seed = 0
 
 import re
 
-ENGLISH_WORDS = {
-    "the", "be", "to", "of", "and", "that", "have", "it", "for", "not", "on", 
-    "with", "as", "you", "at", "this", "but", "his", "by", "from", "they", "we", 
-    "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", 
-    "what", "is", "are", "am", "was", "were", "been", "has", "had", "does", "did", "can", 
-    "could", "should", "shall", "may", "might", "must", "how", "why", "when", "where", "who", 
-    "which", "vs", "please", "your", "yours", "our", "ours", "us", 
-    "yes", "if", "then", "else", "make", "get", "set", "use", "using", "list", "table", "db", 
-    "sql", "query", "error", "issue", "problem", "update", "create", "delete", "remove", "add"
-}
-
-FOREIGN_WORDS = {
-    "que", "de", "la", "el", "en", "y", "los", "se", "del", "las", "un", "por", "con", 
-    "una", "su", "para", "es", "como", "más", "pero", "al", "lo", "esto", "o", "si", 
-    "está", "dice", "cliente", "informacion", "español", "inglés", "traduci",
-    "und", "die", "der", "das", "ist", "zu", "für", "auf", "mit", "sich", "des", "eine"
+# Words that strongly indicate a technical prompt that should be routed to English 
+# even if langdetect thinks it is another language (e.g. "sql error" -> id, "it support" -> it)
+TECH_WORDS = {
+    "sql", "query", "error", "issue", "problem", "update", "create", "delete", 
+    "remove", "add", "token", "app", "user", "run", "test", "data", "db", 
+    "table", "list", "use", "using", "get", "set", "make", "id", "support", 
+    "server", "python", "java", "code", "script", "api", "rest", "select", 
+    "from", "where", "join", "insert", "log", "file", "network", "system"
 }
 
 def detect_language(text):
@@ -31,26 +23,22 @@ def detect_language(text):
         return "unknown"
         
     s_text = str(text).strip()
-    # Strip punctuation and get pure alphabetic words (including accents)
     words = set(re.findall(r'[a-záéíóúñäöüß]+', s_text.lower()))
     
-    # 1. Immediate rejection of known foreign stop words
-    if words.intersection(FOREIGN_WORDS):
-        return "non_english"
-        
-    # 2. Strong override for obvious English tech/structural words
-    if words.intersection(ENGLISH_WORDS):
-        return "en"
-        
-    # 3. Fallback to langdetect
+    # 1. Primary language detection
     try:
         lang = detect(s_text)
-        # Fix the "id" (Indonesian) or "it" (Italian) bug for short tech acronyms
-        if lang in ['id', 'it'] and len(words) <= 3:
-            return "en"
-        return lang
     except LangDetectException:
         return "unknown"
+        
+    # 2. Rescue misclassified short tech prompts
+    # If langdetect thinks it's non-English, but it contains clear technical keywords,
+    # override to English so it isn't lost from the pipeline.
+    if lang != "en":
+        if words.intersection(TECH_WORDS):
+            return "en"
+            
+    return lang
 
 def route_languages():
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
