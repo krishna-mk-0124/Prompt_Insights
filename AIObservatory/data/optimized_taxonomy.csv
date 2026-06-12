@@ -178,3 +178,11 @@ category_id,category_name,subcategory_id,subcategory_name
 0,Software Engineering & Development,176,TypeScript Source Code
 5,Business Communication & Writing,177,Meeting Transcript Summarization
 2,Data Engineering & Database,178,SQL Select Query
+11,American Express & Payments,179,AEXP Internal Configuration
+4,Cyber Security & Identity,180,Risk Management Data
+2,Data Engineering & Database,181,Database Priority
+2,Data Engineering & Database,182,SQL Coalesce Function
+11,American Express & Payments,183,Insurance Products
+2,Data Engineering & Database,184,Google BigQuery
+11,American Express & Payments,185,APAC Region Portfolio
+3,Cloud Infrastructure & DevOps,186,AEXP Network Proxy
