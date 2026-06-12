@@ -7,6 +7,7 @@ import warnings
 
 # Suppress TruncatedSVD division by zero warning when variance becomes extremely small
 warnings.filterwarnings('ignore', category=RuntimeWarning)
+warnings.filterwarnings("ignore")
 
 import math
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
@@ -62,11 +63,13 @@ def run_hybrid_discovery():
         'informaci', 'essere', 'archivo', 'traduce', 'thsi'
     ]
     
-    garbage_pairs = [
-        ('zz', 'estan'),
-        ('jersey', 'bars'),
-        ('comp', 'thsi')
-    ]
+    # Standalone exact-match words that indicate a garbage/foreign log prompt
+    garbage_exact_words = {
+        "zz", "estan", "informacion", "cliente", "questo", "documento", 
+        "della", "parte", "español", "inglés", "traduci", "poner", "cosa", 
+        "nada", "venta", "tarjeta", "pago", "jersey", "bars", "thsi", "comp"
+    }
+
     with open(input_file, "r", encoding="utf-8") as f:
         lines = []
         for line in f:
@@ -75,13 +78,14 @@ def run_hybrid_discovery():
                 continue
                 
             line_lower = line_str.lower()
+            words_set = set(line_lower.split())
             
-            # Explicit massive garbage strings (now using lower() so it catches them!)
+            # Explicit massive garbage strings (substring match)
             if any(sig in line_lower for sig in garbage_signatures):
                 continue
                 
-            # Compound garbage signatures
-            if any(all(word in line_lower for word in pair) for pair in garbage_pairs):
+            # Exact word match for massive noise clusters
+            if words_set.intersection(garbage_exact_words):
                 continue
                 
             # Heuristic: Drop heavy mojibake/non-ASCII garbage
@@ -273,7 +277,7 @@ def run_hybrid_discovery():
                     m_indices = cluster_global_indices[m_mask]
                     
                     if m_size >= 2:
-                        top_keywords = extract_top_keywords(X_prompts[m_indices], vec, n_keywords=2)
+                        top_keywords = extract_top_keywords(X_prompts[m_indices], vectorizer, n_keywords=2)
                         sub_name = "_".join(top_keywords) if top_keywords else f"auto_micro_{current_global_sub_id}"
                     else:
                         sub_name = f"auto_micro_{current_global_sub_id}"
@@ -290,7 +294,7 @@ def run_hybrid_discovery():
                     current_global_sub_id += 1
             else:
                 if cluster_size >= 2:
-                    top_keywords = extract_top_keywords(cluster_X, vec, n_keywords=2)
+                    top_keywords = extract_top_keywords(cluster_X, vectorizer, n_keywords=2)
                     sub_name = "_".join(top_keywords) if top_keywords else f"auto_{current_global_sub_id}"
                 else:
                     sub_name = f"auto_{current_global_sub_id}"
