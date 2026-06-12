@@ -60,8 +60,7 @@ def run_hybrid_discovery():
     print(f"Loading texts from {input_file}...")
     garbage_signatures = [
         'triggerdagrunoperator', 'informaci', 'essere', 'archivo', 'traduce', 'thsi',
-        '__ea', 'xls_mo', 'entonces', 'cadence', 'muchas', 'wie',
-        'qhse', 'zwa', 'qabvj'
+        '__ea', 'xls_mo', 'entonces', 'cadence', 'muchas', 'wie'
     ]
     
     mojibake_chars = ['√', 'é', '¨', 'π', '„', 'ç', '°', '©', '≥', '≠', 'ä', 'ü', 'æ', 'Á', 'ñ', '≤', 'Ç', 'å', 'Ê', 'ß', 'ò', 'Ä']
