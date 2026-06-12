@@ -21,64 +21,74 @@ def deduplicate_subcategories(group_df):
                 clean_name = " ".join(words[:min(3, len(words))])
                 group_df.at[idx, 'subcategory_name'] = clean_name
 
-    vectorizer = TfidfVectorizer(stop_words='english')
-    try:
-        # Vectorize against the keywords, not the display name!
-        tfidf = vectorizer.fit_transform(group_df['keywords'])
-    except ValueError:
-        return group_df
-        
-    sim_matrix = cosine_similarity(tfidf)
+    working_rows = group_df.to_dict('records')
     
-    core_indices = group_df[group_df['is_core']].index.tolist()
-    auto_indices = group_df[~group_df['is_core']].index.tolist()
-    
-    # If no core rows exist in this category, we just use the auto rows as anchors
-    if not core_indices:
-        core_indices = [auto_indices[0]] if auto_indices else []
-        auto_indices = auto_indices[1:] if len(auto_indices) > 1 else []
-        
-    final_rows = []
-    merged_auto_indices = set()
-    
-    # Anchor Clustering: Match auto rows directly to core anchors
-    for core_idx in core_indices:
-        core_row = group_df.iloc[core_idx]
-        current_keywords = set(str(core_row['keywords']).split())
-        
-        for auto_idx in auto_indices:
-            if auto_idx in merged_auto_indices:
-                continue
-                
-            # If the auto row matches this specific core row strongly
-            if sim_matrix[core_idx, auto_idx] > 0.20:
-                auto_words = str(group_df.iloc[auto_idx]['keywords']).split()
-                current_keywords.update(auto_words)
-                merged_auto_indices.add(auto_idx)
-                
-        final_rows.append({
-            'category_id': core_row['category_id'],
-            'category_name': core_row['category_name'],
-            'subcategory_id': core_row['subcategory_id'],
-            'subcategory_name': core_row['subcategory_name'],
-            'keywords': " ".join(list(current_keywords)),
-            'is_core': True
-        })
-        
-    # Any auto rows that didn't match a core anchor survive as their own subcategories
-    for auto_idx in auto_indices:
-        if auto_idx not in merged_auto_indices:
-            auto_row = group_df.iloc[auto_idx]
-            final_rows.append({
-                'category_id': auto_row['category_id'],
-                'category_name': auto_row['category_name'],
-                'subcategory_id': auto_row['subcategory_id'],
-                'subcategory_name': auto_row['subcategory_name'],
-                'keywords': auto_row['keywords'],
-                'is_core': False
-            })
+    while True:
+        # Re-vectorize current working rows
+        vectorizer = TfidfVectorizer(stop_words='english')
+        try:
+            tfidf = vectorizer.fit_transform([r['keywords'] for r in working_rows])
+        except ValueError:
+            break
             
-    return pd.DataFrame(final_rows)
+        sim_matrix = cosine_similarity(tfidf)
+        
+        # 2. Phase 1: High-Confidence Anchor Merging (> 0.20)
+        merged_in_phase_1 = False
+        for i, row_i in enumerate(working_rows):
+            if not row_i['is_core']: continue
+            for j, row_j in enumerate(working_rows):
+                if row_j['is_core'] or i == j: continue
+                if sim_matrix[i, j] > 0.20:
+                    # Merge auto row (j) into core row (i)
+                    merged_keywords = set(str(row_i['keywords']).split() + str(row_j['keywords']).split())
+                    working_rows[i]['keywords'] = " ".join(list(merged_keywords))
+                    working_rows.pop(j)
+                    merged_in_phase_1 = True
+                    break
+            if merged_in_phase_1: break
+            
+        if merged_in_phase_1:
+            continue # Restart loop to re-calculate vectors after merging
+            
+        # 3. Phase 2: Iterative Compression (Max 20 Subcategories)
+        if len(working_rows) <= 20:
+            break # Successfully compressed to limit!
+            
+        # Find the absolute MOST similar pair where at least one is NOT core
+        max_sim = -1.0
+        best_pair = None
+        for i in range(len(working_rows)):
+            for j in range(i+1, len(working_rows)):
+                # Rule: NEVER merge core + core
+                if working_rows[i]['is_core'] and working_rows[j]['is_core']:
+                    continue
+                if sim_matrix[i, j] > max_sim:
+                    max_sim = sim_matrix[i, j]
+                    best_pair = (i, j)
+                    
+        if best_pair is None:
+            break # No valid merge pairs left (highly unlikely)
+            
+        # Merge best_pair[1] into best_pair[0]
+        i, j = best_pair
+        # Ensure 'i' is the core row if one of them is core
+        if working_rows[j]['is_core']:
+            i, j = j, i
+            
+        merged_keywords = set(str(working_rows[i]['keywords']).split() + str(working_rows[j]['keywords']).split())
+        working_rows[i]['keywords'] = " ".join(list(merged_keywords))
+        
+        # Keep the shortest/cleanest display name if both are auto
+        if not working_rows[i]['is_core']:
+            len_i = len(str(working_rows[i]['subcategory_name']).split())
+            len_j = len(str(working_rows[j]['subcategory_name']).split())
+            if len_j < len_i:
+                working_rows[i]['subcategory_name'] = working_rows[j]['subcategory_name']
+                
+        working_rows.pop(j)
+        
+    return pd.DataFrame(working_rows)
 
 final_dfs = []
 for cat, group in df.groupby('category_name'):
