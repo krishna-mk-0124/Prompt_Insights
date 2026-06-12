@@ -58,7 +58,11 @@ def run_hybrid_discovery():
     print(f"Loading texts from {input_file}...")
     garbage_signatures = [
         '„', 'ç', '√', 'é', '¨', 'π', 'triggerdagrunoperator', 
-        'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as'
+        'est√°', 'm√°s_qu√©', 'informaci√≥n', 'd√≠as',
+        'zz_estan', 'jersey_bars', 'risk_data', 'informaci', 'essere_september',
+        'aexp_ea', 'archivo_lookup', 'han_traduce', 'apis_accepted', 'comp_thsi',
+        'rescheduled_knowing', 'borders_logos', 'salesforce_rem', 'evp_variances',
+        'eta_pmo', 'vm_bz', 'felt_clr', 'select_table'
     ]
     with open(input_file, "r", encoding="utf-8") as f:
         lines = []
@@ -205,88 +209,25 @@ def run_hybrid_discovery():
     
     hybrid_taxonomy_mapping = tax_df[["category_id", "category_name", "subcategory_id", "subcategory_name"]].to_dict('records')
     
-    print("\n[Phase 4/4] Recursive Auto-Discovery for 'Other/Miscellaneous' Fallback Bucket")
+    print("\n[Phase 4/4] Assigning 'Other/Miscellaneous' Fallback Bucket")
     if other_count > 0:
-        MAX_CLUSTER_SIZE = 10000
-        
         max_cat_id = tax_df["category_id"].max()
         max_sub_id = tax_df["subcategory_id"].max()
         
         other_cat_id = max_cat_id + 1
+        other_sub_id = max_sub_id + 1
         
         df.loc[other_mask, "category_id"] = other_cat_id
         df.loc[other_mask, "category_name"] = "Other/Miscellaneous"
+        df.loc[other_mask, "subcategory_id"] = other_sub_id
+        df.loc[other_mask, "subcategory_name"] = "Other/Miscellaneous"
         
-        other_indices = np.where(other_mask)[0]
-        X_other = X_prompts[other_indices]
-        
-        # Base Dimensionality Reduction
-        svd = TruncatedSVD(n_components=min(150, other_count - 1), random_state=42)
-        X_reduced_other = svd.fit_transform(X_other)
-        
-        n_clusters_other = min(20, other_count)
-        print(f"  -> Step 1: Initial grouping into {n_clusters_other} baseline clusters...")
-        
-        kmeans = MiniBatchKMeans(n_clusters=n_clusters_other, random_state=42, batch_size=min(10000, other_count), n_init='auto')
-        base_other_labels = kmeans.fit_predict(X_reduced_other)
-        
-        current_global_sub_id = max_sub_id + 1
-        
-        for local_id in range(n_clusters_other):
-            sub_mask = base_other_labels == local_id
-            cluster_size = sub_mask.sum()
-            if cluster_size == 0:
-                continue
-                
-            cluster_X = X_other[sub_mask]
-            cluster_global_indices = other_indices[sub_mask]
-            
-            if cluster_size > MAX_CLUSTER_SIZE:
-                # Shatter the mega-cluster
-                shatter_count = min(math.ceil(cluster_size / MAX_CLUSTER_SIZE), cluster_size)
-                print(f"    -> Shattering Mega-Cluster {local_id} ({cluster_size:,} prompts) into {shatter_count} micro-clusters...")
-                
-                # Reduce dims specifically for this dense mega-cluster
-                svd_micro = TruncatedSVD(n_components=min(150, cluster_size - 1), random_state=42)
-                X_reduced_micro = svd_micro.fit_transform(cluster_X)
-                
-                kmeans_micro = MiniBatchKMeans(n_clusters=shatter_count, random_state=42, batch_size=min(10000, cluster_size), n_init='auto')
-                micro_labels = kmeans_micro.fit_predict(X_reduced_micro)
-                micro_names = extract_top_keywords(cluster_X, vectorizer, micro_labels, shatter_count, top_n=2)
-                
-                for m_id in range(shatter_count):
-                    m_mask = micro_labels == m_id
-                    if m_mask.sum() == 0:
-                        continue
-                        
-                    m_global_indices = cluster_global_indices[m_mask]
-                    
-                    df.loc[m_global_indices, "subcategory_id"] = current_global_sub_id
-                    df.loc[m_global_indices, "subcategory_name"] = micro_names[m_id]
-                    
-                    hybrid_taxonomy_mapping.append({
-                        "category_id": other_cat_id,
-                        "category_name": "Other/Miscellaneous",
-                        "subcategory_id": current_global_sub_id,
-                        "subcategory_name": micro_names[m_id]
-                    })
-                    current_global_sub_id += 1
-            else:
-                # Normal cluster
-                base_names = extract_top_keywords(cluster_X, vectorizer, np.zeros(cluster_size, dtype=int), 1, top_n=2)
-                name = base_names[0]
-                
-                df.loc[cluster_global_indices, "subcategory_id"] = current_global_sub_id
-                df.loc[cluster_global_indices, "subcategory_name"] = name
-                
-                hybrid_taxonomy_mapping.append({
-                    "category_id": other_cat_id,
-                    "category_name": "Other/Miscellaneous",
-                    "subcategory_id": current_global_sub_id,
-                    "subcategory_name": name
-                })
-                current_global_sub_id += 1
-                
+        hybrid_taxonomy_mapping.append({
+            "category_id": other_cat_id,
+            "category_name": "Other/Miscellaneous",
+            "subcategory_id": other_sub_id,
+            "subcategory_name": "Other/Miscellaneous"
+        })
     print("\n[Exporting Final Hybrid Automations]")
     taxonomy_df = pd.DataFrame(hybrid_taxonomy_mapping)
     tax_path = os.path.join(data_dir, "hybrid_taxonomy_mapping.csv")
