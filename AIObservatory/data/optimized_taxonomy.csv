@@ -168,3 +168,13 @@ category_id,category_name,subcategory_id,subcategory_name
 6,Executive Strategy & Management,166,Ownership Accountability Culture
 0,Software Engineering & Development,167,Proof Of Concept POC
 11,American Express & Payments,168,Credit Card Debt Collection
+11,American Express & Payments,169,Credit Card Account Data
+4,Cyber Security & Identity,170,Risk Management Access Control
+10,General Productivity & Knowledge,171,Business Unit Research
+11,American Express & Payments,172,Merchant Services Processing
+11,American Express & Payments,173,AEXP Ticketing Travel
+11,American Express & Payments,174,Merchant Acquisition Onboarding
+10,General Productivity & Knowledge,175,Literature Source Citation
+0,Software Engineering & Development,176,TypeScript Source Code
+5,Business Communication & Writing,177,Meeting Transcript Summarization
+2,Data Engineering & Database,178,SQL Select Query
