@@ -135,7 +135,8 @@ def run_hybrid_discovery():
         'or_wie', 'n_entonces', 'maddie_', 'regular', 'chinese', 'forgot', 'begin', 'puedo', 'shape', 'plz', 'remarks', 'estimate', 'voy', 'ads', 'popup', 'worst', 'fue', 'mensaje', 'kumar', 'tienen', 'tie', 'explicitly', 'designed', 'elle', 'scripted',
         'çπ_ev', 'invent_', 'doubt', 'downloaded', 'm√°s_qu√©', 'm√', 's_qu', 'qu√©', 'm√°s', 'appointment', 'broad', 'rc_singh', 'rc', 'singh', 'estimated', 'guy', 'messaging', 'smaller', 'broken', 'ended', 'mo_ct_ia', 'mo_ct', 'ia', 'lay', 'readme', 'callout', 'breaking', 'entre', 'sus', 'tipo', 'hemos', 'alguna', 'manera', 'presented', 'depth', 'significant', 'ks',
         'triggerdagrunoperator_', '„Äæ„Äü_„Ç¢_É°_É¨_Ç´_É≥', 'n_f', 'sharma_pi', 'isnull_', 'ther', 'hook', 'weather', 'onwards', 'tabla', 'sell', 'wouldn', 'efficient', 'li_ex', 'li', 'ex', 'disconnected', 'directions', 'grupo', 'worse', 'fa_fc', 'fa', 'fc', 'formato', 'mucho', 'tutti', 'italia',
-        'october', 'nuevo_replied', 'nuevo', 'replied', 'sharma_pulling', 'sharma', 'pulling', 'highest_increased', 'highest', 'increased', 'stopped_responsibility', 'stopped', 'responsibility', 'd√≠as_buenos', 'd', 'as_buenos', 'buenos', 'expecting_jessica', 'expecting', 'jessica'
+        'october', 'nuevo_replied', 'nuevo', 'replied', 'sharma_pulling', 'sharma', 'pulling', 'highest_increased', 'highest', 'increased', 'stopped_responsibility', 'stopped', 'responsibility', 'd√≠as_buenos', 'd', 'as_buenos', 'buenos', 'expecting_jessica', 'expecting', 'jessica',
+        'soft_dropped', 'soft', 'dropped', 'youre_chnages', 'youre', 'chnages', 'est√°_ingl√©s', 'est', 'ingl', 'ellos_worries', 'ellos', 'worries', 'podemos_estas', 'podemos', 'estas', 'resumen_rephase', 'resumen', 'rephase'
     ]
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
