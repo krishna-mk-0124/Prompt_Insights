@@ -9,14 +9,21 @@ DetectorFactory.seed = 0
 import re
 
 ENGLISH_WORDS = {
-    "the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", 
-    "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", 
+    "the", "be", "to", "of", "and", "that", "have", "it", "for", "not", "on", 
+    "with", "as", "you", "at", "this", "but", "his", "by", "from", "they", "we", 
     "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", 
     "what", "is", "are", "am", "was", "were", "been", "has", "had", "does", "did", "can", 
     "could", "should", "shall", "may", "might", "must", "how", "why", "when", "where", "who", 
-    "which", "vs", "please", "me", "my", "mine", "your", "yours", "our", "ours", "us", "no", 
+    "which", "vs", "please", "your", "yours", "our", "ours", "us", 
     "yes", "if", "then", "else", "make", "get", "set", "use", "using", "list", "table", "db", 
     "sql", "query", "error", "issue", "problem", "update", "create", "delete", "remove", "add"
+}
+
+FOREIGN_WORDS = {
+    "que", "de", "la", "el", "en", "y", "los", "se", "del", "las", "un", "por", "con", 
+    "una", "su", "para", "es", "como", "más", "pero", "al", "lo", "esto", "o", "si", 
+    "está", "dice", "cliente", "informacion", "español", "inglés", "traduci",
+    "und", "die", "der", "das", "ist", "zu", "für", "auf", "mit", "sich", "des", "eine"
 }
 
 def detect_language(text):
@@ -24,20 +31,24 @@ def detect_language(text):
         return "unknown"
         
     s_text = str(text).strip()
-    # Strip punctuation and get pure alphabetic words
-    words = re.findall(r'[a-z]+', s_text.lower())
+    # Strip punctuation and get pure alphabetic words (including accents)
+    words = set(re.findall(r'[a-záéíóúñäöüß]+', s_text.lower()))
     
-    # Heuristic 1: Short prompts (1-3 words) like "sql error", "id token", "it support" 
-    # are frequently misclassified by `langdetect` as Indonesian (id) or Italian (it).
-    if len(words) <= 3:
+    # 1. Immediate rejection of known foreign stop words
+    if words.intersection(FOREIGN_WORDS):
+        return "non_english"
+        
+    # 2. Strong override for obvious English tech/structural words
+    if words.intersection(ENGLISH_WORDS):
         return "en"
         
-    # Heuristic 2: If it contains basic English structural words, override the detector.
-    if any(w in ENGLISH_WORDS for w in words):
-        return "en"
-        
+    # 3. Fallback to langdetect
     try:
-        return detect(s_text)
+        lang = detect(s_text)
+        # Fix the "id" (Indonesian) or "it" (Italian) bug for short tech acronyms
+        if lang in ['id', 'it'] and len(words) <= 3:
+            return "en"
+        return lang
     except LangDetectException:
         return "unknown"
 
