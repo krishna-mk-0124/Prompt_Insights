@@ -18,6 +18,21 @@ TECH_WORDS = {
     "from", "where", "join", "insert", "log", "file", "network", "system"
 }
 
+from functools import lru_cache
+
+FAST_ENGLISH_WORDS = {
+    "the", "this", "that", "there", "what", "when", "where", "how", "why", 
+    "which", "would", "could", "should", "please", "they", "their", "them",
+    "these", "those", "have", "with", "from", "your"
+}
+
+@lru_cache(maxsize=100000)
+def cached_detect(text):
+    try:
+        return detect(text)
+    except LangDetectException:
+        return "unknown"
+
 def detect_language(text):
     if pd.isna(text) or not str(text).strip():
         return "unknown"
@@ -25,16 +40,18 @@ def detect_language(text):
     s_text = str(text).strip()
     words = set(re.findall(r'[a-záéíóúñäöüß]+', s_text.lower()))
     
-    # 1. Primary language detection
-    try:
-        lang = detect(s_text)
-    except LangDetectException:
-        return "unknown"
+    # 0. Instant bypass for obvious English conversational/structural words (speed optimization)
+    # These are very safe English words that don't overlap with Spanish/German short-words
+    if words.intersection(FAST_ENGLISH_WORDS):
+        return "en"
+    
+    # 1. Primary language detection (now cached for massive speedup on duplicate prompts)
+    lang = cached_detect(s_text)
         
     # 2. Rescue misclassified short tech prompts
     # If langdetect thinks it's non-English, but it contains clear technical keywords,
     # override to English so it isn't lost from the pipeline.
-    if lang != "en":
+    if lang != "en" and lang != "unknown":
         if words.intersection(TECH_WORDS):
             return "en"
             
