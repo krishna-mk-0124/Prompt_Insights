@@ -206,3 +206,19 @@ category_id,category_name,subcategory_id,subcategory_name
 11,American Express & Payments,204,Customer Complaints Reviews
 2,Data Engineering & Database,205,Power BI SelectedValue DAX
 11,American Express & Payments,206,Treasury Funding Liquidity
+6,Executive Strategy & Management,207,CFO Executive Communications
+4,Cyber Security & Identity,208,Risk Control Policies
+11,American Express & Payments,209,AEXP Platform Configuration
+2,Data Engineering & Database,210,SQL Select Table
+2,Data Engineering & Database,211,Database Storage Location
+10,General Productivity & Knowledge,212,TLM Tasks Management
+11,American Express & Payments,213,AEXP LBI Internal Tool
+11,American Express & Payments,214,Critical Merchant Accounts
+2,Data Engineering & Database,215,Oracle Database Enterprise
+11,American Express & Payments,216,YoY Financial Metrics
+2,Data Engineering & Database,217,Raw Data Processing
+10,General Productivity & Knowledge,218,Webex Conferencing
+3,Cloud Infrastructure & DevOps,219,Pre-Prod Environment
+2,Data Engineering & Database,220,Statistical Percentile Response
+4,Cyber Security & Identity,221,Security Allow Deny List
+6,Executive Strategy & Management,222,FTE Headcount Planning
