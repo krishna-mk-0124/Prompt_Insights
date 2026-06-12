@@ -329,3 +329,20 @@ category_id,category_name,subcategory_id,subcategory_name
 10,General Productivity & Knowledge,327,Workflow Approvals Sorting
 0,Software Engineering & Development,328,UI Call To Action CTA
 3,Cloud Infrastructure & DevOps,329,SMTP Email Configuration
+2,Data Engineering & Database,330,Kafka Event Producer
+4,Cyber Security & Identity,331,Data Risk Analytics
+11,American Express & Payments,332,Credit Card Bins
+1,Production Support & Debugging,333,AMEX Software Error
+6,Executive Strategy & Management,334,Line of Business LOB
+6,Executive Strategy & Management,335,GCO Legal Goals
+3,Cloud Infrastructure & DevOps,336,SAN Storage Spaces
+6,Executive Strategy & Management,337,BAU Business As Usual
+2,Data Engineering & Database,338,Database SQL Trigger
+0,Software Engineering & Development,339,Phoenix Project System
+11,American Express & Payments,340,Pricing CTL Settings
+0,Software Engineering & Development,341,VSCode IDE Editor
+4,Cyber Security & Identity,342,CyberArk Secrets Vault
+10,General Productivity & Knowledge,343,Purple Llama AI
+2,Data Engineering & Database,344,Trino Database Queries
+0,Software Engineering & Development,345,GSOP Subprocess Run
+11,American Express & Payments,346,Brazil Location Region
