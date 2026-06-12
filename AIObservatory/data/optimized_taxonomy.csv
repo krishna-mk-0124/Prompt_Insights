@@ -195,3 +195,14 @@ category_id,category_name,subcategory_id,subcategory_name
 4,Cyber Security & Identity,193,Compliance Control Procedures
 0,Software Engineering & Development,194,Pandas Python Import
 0,Software Engineering & Development,195,VS Code IDE Environment
+4,Cyber Security & Identity,196,Compliance Database Tables
+0,Software Engineering & Development,197,IntelliJ IDEA Environment
+11,American Express & Payments,198,AEXP Engineering General
+11,American Express & Payments,199,AEMP Internal Platform
+10,General Productivity & Knowledge,200,Corporate Food Lunch Meals
+10,General Productivity & Knowledge,201,Agentic AI Workflows
+5,Business Communication & Writing,202,HR Payroll Salary
+6,Executive Strategy & Management,203,Agile PI Planning
+11,American Express & Payments,204,Customer Complaints Reviews
+2,Data Engineering & Database,205,Power BI SelectedValue DAX
+11,American Express & Payments,206,Treasury Funding Liquidity
