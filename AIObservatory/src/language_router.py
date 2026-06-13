@@ -32,6 +32,17 @@ def detect_language(text):
         return "unknown"
         
     s_text = str(text).strip()
+    
+    # 0. Fast Unicode Filter
+    # If the text has a high ratio of non-ASCII characters (>15%) and >5 total unicode chars,
+    # it is overwhelmingly likely to be Chinese, Japanese, Korean, Arabic, Russian, etc.
+    # We instantly route it out to save time and prevent langdetect from being confused by English signatures.
+    text_len = len(s_text)
+    if text_len > 0:
+        unicode_count = sum(1 for c in s_text if ord(c) > 127)
+        if unicode_count > 5 and (unicode_count / text_len) > 0.15:
+            return "unknown" # Instantly routes to the non-English pipeline
+            
     words = set(re.findall(r'[a-záéíóúñäöüß]+', s_text.lower()))
     
     # 1. Primary language detection (cached for speedup on duplicate prompts)
