@@ -39,9 +39,11 @@ def detect_language(text):
         
     # 2. Rescue misclassified short tech prompts
     # If langdetect thinks it's non-English, but it contains clear technical keywords,
-    # override to English so it isn't lost from the pipeline.
+    # override to English. We ONLY do this for short prompts (less than 150 chars)
+    # because langdetect is highly accurate on long texts, and long foreign emails 
+    # might accidentally contain a tech word like "from" in their English signature.
     if lang != "en" and lang != "unknown":
-        if words.intersection(TECH_WORDS):
+        if len(s_text) < 150 and words.intersection(TECH_WORDS):
             return "en"
             
     return lang
