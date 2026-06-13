@@ -183,6 +183,15 @@ def run_hybrid_discovery():
         'october', 'nuevo_replied', 'nuevo', 'replied', 'sharma_pulling', 'sharma', 'pulling', 'highest_increased', 'highest', 'increased', 'stopped_responsibility', 'stopped', 'responsibility', 'd√≠as_buenos', 'd', 'as_buenos', 'buenos', 'expecting_jessica', 'expecting', 'jessica',
         'soft_dropped', 'soft', 'dropped', 'youre_chnages', 'youre', 'chnages', 'est√°_ingl√©s', 'est', 'ingl', 'ellos_worries', 'ellos', 'worries', 'podemos_estas', 'podemos', 'estas', 'resumen_rephase', 'resumen', 'rephase'
     ]
+    # Load dynamically generated unicode noise from language router
+    unicode_noise_file = os.path.join(data_dir, "unicode_noise.txt")
+    if os.path.exists(unicode_noise_file):
+        with open(unicode_noise_file, "r", encoding="utf-8") as f:
+            for line in f:
+                c = line.strip()
+                if c and c not in custom_noise:
+                    custom_noise.append(c)
+
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
     # We fit TFIDF on the corpus containing BOTH the taxonomy and the user prompts

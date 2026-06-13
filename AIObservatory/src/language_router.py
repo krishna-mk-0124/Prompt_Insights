@@ -112,6 +112,17 @@ def route_languages():
     with open(non_english_file, "w", encoding="utf-8") as f:
         for idx, row in non_english_df.iterrows():
             f.write(f"[{row['language']}] {row['prompt_text']}\n")
+            
+    # Extract surviving unicode characters and export to discovery.py's noise filter
+    unicode_chars = set()
+    for prompt in english_df["prompt_text"]:
+        unicode_chars.update(c for c in str(prompt) if ord(c) > 127)
+        
+    unicode_file = os.path.join(data_dir, "unicode_noise.txt")
+    with open(unicode_file, "w", encoding="utf-8") as f:
+        for c in sorted(list(unicode_chars)):
+            if c.strip(): # Ignore unicode whitespaces
+                f.write(c + "\n")
     
     print(f"Routing complete!")
     print(f"- English prompts saved to: {english_file} ({len(english_df)} rows)")
