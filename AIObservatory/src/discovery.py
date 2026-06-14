@@ -228,18 +228,14 @@ def run_hybrid_discovery():
 
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
-    # We fit TFIDF on the corpus containing BOTH the taxonomy and the user prompts
-    vectorizer = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2))
-    
-    corpus = tax_df["processed_desc"].tolist() + df["processed_text"].tolist()
-    tfidf_all = vectorizer.fit_transform(corpus)
-    
-    X_tax = tfidf_all[:len(tax_df)]
-    X_prompts = tfidf_all[len(tax_df):]
+    # We fit TFIDF ONLY on the taxonomy for classification to preserve IDF weights
+    class_vectorizer = TfidfVectorizer(stop_words=extended_stop_words, ngram_range=(1, 2))
+    X_tax = class_vectorizer.fit_transform(tax_df["processed_desc"].tolist())
+    X_prompts_class = class_vectorizer.transform(df["processed_text"].tolist())
     
     print("\n[Phase 3/4] Mathematical Routing (Cosine Similarity)")
     print("  -> Computing cosine distances against the official taxonomies...")
-    sim_matrix = cosine_similarity(X_prompts, X_tax)
+    sim_matrix = cosine_similarity(X_prompts_class, X_tax)
     
     max_sims = sim_matrix.max(axis=1)
     best_tax_idx = sim_matrix.argmax(axis=1)
@@ -284,7 +280,11 @@ def run_hybrid_discovery():
         df.loc[other_mask, "category_name"] = "Other/Miscellaneous"
         
         other_indices = np.where(other_mask)[0]
-        X_other = X_prompts[other_indices]
+        
+        # We need a NEW vectorizer for Phase 4 to discover new out-of-vocabulary features
+        vectorizer = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2))
+        X_other = vectorizer.fit_transform(df.loc[other_indices, "processed_text"])
+
         
         # Base Dimensionality Reduction
         svd = TruncatedSVD(n_components=min(150, other_count - 1), random_state=42)
@@ -328,7 +328,7 @@ def run_hybrid_discovery():
                     m_indices = cluster_global_indices[m_mask]
                     
                     if m_size >= 2:
-                        mean_tfidf = np.asarray(X_prompts[m_indices].mean(axis=0)).flatten()
+                        mean_tfidf = np.asarray(cluster_X[m_mask].mean(axis=0)).flatten()
                         top_indices = mean_tfidf.argsort()[-3:][::-1]
                         # Clean feature names to remove any accidental underscores (e.g. '_am' -> 'am')
                         raw_words = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])[top_indices]
