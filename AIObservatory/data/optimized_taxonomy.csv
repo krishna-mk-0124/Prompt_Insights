@@ -1,237 +1,237 @@
 category_id,category_name,subcategory_id,subcategory_name,keywords
-0,Software Engineering & Development,0,Java Python C++ Development Practices,MCP Mother Install Jupyter Code Dependencies Module Fonts Clicking OpenPyXL GSOP Components Theme Date UX Colors Java Python Action Design Project Const library Concept Swap AMEX Images Redesign Datetime Logic Index Import Of Pathlib Prototype Fail TQDM User IPyKernel Exposure Timezone Package Jobs Safe Compilation Call Private Exception Dropdown Library Annotations Software Sets Pandas Positioning To System Method Object Subprocess Run POC Log CTA Phoenix Batch Public Class Temp Error Condition Engine Variable Rule Parse Time UI Constant C++ Business Tool Bold Status Oriented Syntax Proof Function
-0,Software Engineering & Development,1,Frontend React Angular Development Practices,JVM Files CCC JS Lombok Ascending Position Event Vue AOP JavaScript Tags Memo Frontend Flutter Styling Java AMP OKHttp iOS Attribute Mobile JAR App Entry React HTML Table Android Native Padding PageLayout Capabilities Angular CSS grid browser sugarcoat
-0,Software Engineering & Development,2,Backend Node Express Development Practices,Modules Node Spring Middleware Flask Django Express UUID NPM Backend
-0,Software Engineering & Development,3,Api Rest Graphql Development Practices,Endpoint Payload Shell Configuration Terminal gRPC API Linux Bash URL REST Repositories Server Postman WebSocket GraphQL Scripting
-0,Software Engineering & Development,4,Git Version Control Development Practices,VSCode Mode TypeScript Dark Repository Requests Commits Code Control Snippet Version Reporting Request Branch Partitions VS Git SOI Clone Snippets Commit IDE IDEA SOAP PR TMP PKG Comparison Environment Helper Merge Feature SAP Friend Pull Wrap Source Editor Development Branches Diff Keyword IntelliJ Clock Conflict Sorted
-0,Software Engineering & Development,5,Algorithm Data Structure Data Analytics,Linked Int HashMap Code Graph Array True Conversion Timestamp List Append Cast Algorithm Structure Reverse Boolean Float Integer Type JSON False Data String wide weighted operator naming maps brackets
-1,Production Support & Debugging,6,Stacktrace Exception Null Error Triage,Stacktrace Exception Null Pointer Segfault Core Dump badrequest conferma poid cdn fail issue
-1,Production Support & Debugging,7,Memory Leak Cpu Error Triage,Memory Leak CPU Threading Concurrency Deadlock Performance
-1,Production Support & Debugging,8,Application Crash Outage Error Triage,Application Crash Outage Incident Root Cause Log Analysis
-1,Production Support & Debugging,9,Dependency Package Version Strategic Planning,Dependency Package Version Compatibility Npm Pip Maven Gradle
-2,Data Engineering & Database,10,Sql Select Update Data Analytics,Functions Group By df Analytics Join DataFrame Que PySpark Describe Info Difference Select Mas Month Date Insert Pandas Col Over Domain Dataframe WithColumn Queries Query Current Distinct Series SQL Update Table Year MoM Selects Delete
-2,Data Engineering & Database,11,Table Column Row Data Analytics,Delimiter Database Varchar By AMEX Samples Normalization Card Types Trino Integration Tagged Nulls Schema Slicer JavaScript Excel Settings Fusion Dimension Sort Metadata Fact Azure Location Management Enterprise Ruleset Row Airtable DB Queries Window Partition Attributes Priority Column Cosmos Exists Trigger Function Servicing SQL Oracle Plotting Head Table Schemas Blanks Storage Data Price Coalesce
-2,Data Engineering & Database,12,Etl Pipeline Warehouse Data Analytics,Warehouse Loading Interval Orchestration Schedule Lake Airflow ETL Pipeline Transformation Extraction DAG PythonOperator
-2,Data Engineering & Database,13,Nosql Mongodb Cassandra Data Analytics,NoSQL MongoDB Cassandra Redis Key Value Document
-2,Data Engineering & Database,14,Big Data Hadoop Data Analytics,Aggregations Time Real Code Streaming Event MapReduce Processing Segments Driven Origin Spark Errors Hadoop Hive Connection Allowed Feed Encoding Producer Bin Pig Kafka Garbage Source Engineering Raw Data Big
-3,Cloud Infrastructure & DevOps,15,Aws Ec2 S3 Cloud Infrastructure,Architecture IVR Host VPC Node AWS Azure Telephony Enterprise GCS Spaces Instance Cloud Framework Virtual Voice Lambda S3 GCP Machine SAN Storage EC2 Server Recognition env directory eea
-3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container Cloud Infrastructure,Kubernetes Docker Container Pod Cluster K8s Orchestration env directory eea
-3,Cloud Infrastructure & DevOps,17,Ci Cd Jenkins Cloud Infrastructure,CI CD Jenkins GitLab GitHub Actions Deployment Pipeline env directory eea
-3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure Development Practices,Applied Ansible SMTP Files Terraform Configuration MB Environment Status Pre-Prod YAML Code as Infrastructure Email Nodes
-3,Cloud Infrastructure & DevOps,19,Network Load Balancer Cloud Infrastructure,Proxy Subnet AEXP Name Balancer Accept Router Network DNS Load Switch Route Port Traffic Hub Firewall env directory eea
-4,Cyber Security & Identity,20,Authentication Oauth Saml Security Compliance,Authentication OAuth SAML JWT MFA SSO Password Login
-4,Cyber Security & Identity,21,Authorization Rbac Role Security Compliance,Access Role Controls Compliance AEXP Authorization Analytics RBAC Control Risk Audit Data Performance Management Token Permission
-4,Cyber Security & Identity,22,Encryption Ssl Tls Security Compliance,Archer Certificate Decryption Expired Cipher TLS Encryption Voltage RSA SSL GRC Key
-4,Cyber Security & Identity,23,Vulnerability Malware Phishing Security Compliance,Phishing Exploit Injection XSS Malware Vulnerability Ransomware Remediation Trojan Virus
-4,Cyber Security & Identity,24,Compliance Gdpr Hipaa Security Compliance,Compliance GDPR HIPAA PCI SOX Audit Risk Governance
-5,Business Communication & Writing,25,Email Draft Response Business Communications,Professional Up Draft Line Read Subject Sugar Response Message Easy Short Follow Tone Email Thread Cordial Coat Formal conclusion valuable
-5,Business Communication & Writing,26,Grammar Spelling Proofread Business Communications,Grammar Spelling Proofread Edit Punctuation Vocabulary Rephrase
-5,Business Communication & Writing,27,Translate Language Translation Business Communications,Translate Language Translation Interpretation Localization
-5,Business Communication & Writing,28,Presentation Slide Deck Business Communications,PowerPoint Pitch Slides Proposal Outline Presentation Content Slide Deck
-5,Business Communication & Writing,29,Documentation Manual Article Business Communications,Manual Documentation Page Policy Blog Confluence Wiki Post Article Handbook
-6,Executive Strategy & Management,30,Roi Kpi Metric Financial Strategy,BAU KPI Learn Outcome Value LOB Course Accounts Payable Agreement Usual OKR Tutorial Training GCO Balanced Scorecard of Line Receivable As Invoice Goals Counsel Partnerships Business Law Legal Impact ROI Metric Billing Goal Objective Contract Terms aml privileged fins stock
-6,Executive Strategy & Management,31,Budget Revenue Profit Financial Strategy,Return Cost Variance Income Expense Flow Margin Finance Profit Revenue Tax Cash Actual Forecast Budget aml privileged fins stock
-6,Executive Strategy & Management,32,Roadmap Vision Mission Financial Strategy,Roadmap Senior Director Vision Communications Leader Mission Milestone Objective Vice Executive President CFO VP Term Leadership Long aml privileged fins stock
-6,Executive Strategy & Management,33,Talent Hr Hiring Human Resources,Employed Employee Leave Letter Resources Compensation Human Talent Hiring HR Sick Promotion Interview candidates park wife spot efforts
-6,Executive Strategy & Management,34,Market Competition Differentiation Financial Strategy,Market Competition Differentiation Innovation SWOT Analysis aml privileged fins stock
-7,Process & Project Management,35,Agile Scrum Sprint Project Management,Agile Scrum Sprint Kanban User Story Epic Backlog rush teach ongoing phases playbook
-7,Process & Project Management,36,Ticket Jira Issue Project Management,Ticket Jira Issue ServiceNow Assignment Triage Queue rush teach ongoing phases playbook
-7,Process & Project Management,37,Workflow Checklist Step Project Management,Workflow Checklist Step Procedure SOP Instruction Guide rush teach ongoing phases playbook
-7,Process & Project Management,38,Meeting Notes Agenda Business Communications,Meeting Notes Agenda Minutes Action Item Summary Takeaway
-7,Process & Project Management,39,Release Schedule Change Project Management,Release Schedule Change Request Approval RACI Matrix rush teach ongoing phases playbook
-8,Testing & Quality Assurance,40,Unit Test Mock Project Management,Unit Test Mock Stub Assertion Coverage Code Quality rush teach ongoing phases playbook
-8,Testing & Quality Assurance,41,Integration Test End Project Management,Integration Test End to End E2E System Validation rush teach ongoing phases playbook
-8,Testing & Quality Assurance,42,Regression Load Stress Strategic Planning,Regression Load Stress Performance Penetration Scalability
-8,Testing & Quality Assurance,43,Qa Defect Bug Error Triage,QA Defect Bug Reproduction Steps Triage Tracking
-9,Data Analytics & Visualization,44,Excel Formula Pivot Statistical Analysis,Excel Formula Pivot Table Vlookup Macro VBA Spreadsheet
-9,Data Analytics & Visualization,45,Chart Graph Dashboard Statistical Analysis,Chart Graph Dashboard Visualization Tableau PowerBI Scatter Bar
-9,Data Analytics & Visualization,46,Statistics Mean Median Statistical Analysis,Statistics Mean Median Variance Standard Deviation Regression
-9,Data Analytics & Visualization,47,Data Cleansing Formatting Data Analytics,Data Cleansing Formatting Imputation Outlier Normalization
-9,Data Analytics & Visualization,48,Python Pandas Numpy Development Practices,Python Numpy Learn Science Model Models Learning Pandas Data Scikit Scipy Machine
-10,General Productivity & Knowledge,49,Summarize Condense Abstract Statistical Analysis,Research Prompt Purple Workflows Image Food AI Abstract Conversational Markup Code Hallucinations Formula Journey Tune Large Mailbox Assistant Copilot Completion GitHub LLM Formulas Excel Custom Calendar Experience UX Email Evaluation Tasks Persona Sources Chargeout Abridge Outlook Fine Quiz Spreadsheet Workbook Hallucination Design Report GPT Conversations Media Digest DT Source Corporate User PNG Agentic Business Literature Multimedia Engineering TLM Picture Condense Llama Models Digital Lunch Meals Summarize Unit Data Citation Microsoft TLDR Management Voicebots JPG
-10,General Productivity & Knowledge,50,Brainstorm Ideate Concept Statistical Analysis,Brainstorm Ideate Concept Suggestion Recommend Alternative Option
-10,General Productivity & Knowledge,51,Format Structure Table Data Analytics,Format Structure Table List Paragraph Indentation Markdown
-10,General Productivity & Knowledge,52,Explain Define Concept Strategic Planning,Explain Define Tutorial Best Practices Comprehension Theory Concept Lesson Guide
-10,General Productivity & Knowledge,53,Math Calculate Equation Statistical Analysis,Math Calculate Equation Algebra Geometry Calculus Arithmetic
-11,American Express & Payments,54,American Express Amex Development Practices,Dining AEXP Cards General Express Amex Flight Travel Sync Channels API Hotel Corporate Ticketing Dollar Engineering Manner American Booking Program Trip Reward AMEX
-11,American Express & Payments,55,Card Member Membership Banking Operations,Debt Card FICO Points Rewards PT Close Credit Bonus Member Bins Scores Limit Line Score Account Collection Status Cancel Data Membership Increase AMEX aml privileged fins stock
-11,American Express & Payments,56,Merchant Global Acquiring Banking Operations,EMEA Portfolio Hong Japan Global Region Location Country Brazil Onboarding Germany Length Merchant Acquiring Acquisition Network Data Kong APAC Market aml privileged fins stock
-11,American Express & Payments,57,Amex Offers Marketing Financial Strategy,Offers Communication Brand Website Marketing Branding Mexico Logo AMEX aml privileged fins stock
-11,American Express & Payments,58,Account Bank Balance Banking Operations,CCP Professional Customer Issue Complaint Balance Reviews Account Resolution Care YoY Complaints Bank Financial Statement Metrics Funds aml privileged fins stock
-0,Software Engineering & Development,59,Application Tests Project Management,Application Tests rush teach ongoing phases playbook
-0,Software Engineering & Development,60,Gatling Load Testing Project Management,Gatling Load Testing rush teach ongoing phases playbook
-0,Software Engineering & Development,61,Mime Types Strategic Planning,MIME Types
-0,Software Engineering & Development,62,Regex Patterns Strategic Planning,Regex Patterns
-0,Software Engineering & Development,63,Jcl Clickable Links Strategic Planning,JCL Clickable Links
-0,Software Engineering & Development,64,Prd Leaves Production Strategic Planning,PRD Leaves Production
-0,Software Engineering & Development,65,Plot Cid Graphics Cloud Infrastructure,Plot CID Graphics env directory eea
-0,Software Engineering & Development,66,Optional Directories Strategic Planning,Optional Directories
-0,Software Engineering & Development,67,Dispatch Comparable Strategic Planning,Dispatch Comparable
-0,Software Engineering & Development,68,Ccps Notification Strategic Planning,CCPS Notification
-0,Software Engineering & Development,69,Airflow Schedule Interval Project Management,Airflow Schedule Interval rush teach ongoing phases playbook
-0,Software Engineering & Development,70,Downstream Impacts Strategic Planning,Downstream Impacts
-0,Software Engineering & Development,71,Xhtml Posture Strategic Planning,XHTML Posture
-0,Software Engineering & Development,72,Launchpad Listlevel Strategic Planning,Launchpad ListLevel
-1,Production Support & Debugging,73,Script Execution Run Strategic Planning,Script Execution Run Running Console Command
-1,Production Support & Debugging,74,Error Code Exception Development Practices,Error Code Exception Logs UTC
-1,Production Support & Debugging,75,Software Code Errors Development Practices,Software Code Errors
-1,Production Support & Debugging,76,Software Configuration Errors Development Practices,Software Configuration Errors
-1,Production Support & Debugging,77,Uat Sit Testing Project Management,UAT SIT Testing rush teach ongoing phases playbook
-1,Production Support & Debugging,78,Ui Bug Screenshots Error Triage,UI Bug Screenshots
-1,Production Support & Debugging,79,Linux Elf Errors Error Triage,Linux ELF Errors
-1,Production Support & Debugging,80,Alert Panel Severity Strategic Planning,Alert Panel Severity
-1,Production Support & Debugging,81,Amex Software Error Development Practices,AMEX Software Error
-1,Production Support & Debugging,82,Quality Control Qc Strategic Planning,Quality Control QC
-1,Production Support & Debugging,83,Software Code Error Development Practices,Software Code Error
-1,Production Support & Debugging,84,Invalid Identifier Errors Error Triage,Invalid Identifier Errors
-1,Production Support & Debugging,85,Support Escalation Win Strategic Planning,Support Escalation Win
-1,Production Support & Debugging,86,Developer Mistakes Strategic Planning,Developer Mistakes
-1,Production Support & Debugging,87,It Technology Investigation Strategic Planning,IT Technology Investigation
-1,Production Support & Debugging,88,Nexthink It Narration Strategic Planning,Nexthink IT Narration
-2,Data Engineering & Database,89,Csv Path File Data Analytics,CSV Path File Format
-2,Data Engineering & Database,90,Tableau Lod Expression Development Practices,Tableau LOD Expression
-2,Data Engineering & Database,91,Statistics Sample Population Statistical Analysis,Statistics Sample Population
-2,Data Engineering & Database,92,Google Bigquery Data Analytics,Google BigQuery bq
-2,Data Engineering & Database,93,Power Bi Selectedvalue Data Analytics,Power BI SelectedValue DAX
-2,Data Engineering & Database,94,Statistical Problems Strategic Planning,Problems Percentages Statistical Response Percentile Weakness
-2,Data Engineering & Database,95,Jupyter Notebook Club Strategic Planning,Jupyter Notebook Club
-2,Data Engineering & Database,96,Chart Vertical Legend Statistical Analysis,Chart Vertical Legend
-2,Data Engineering & Database,97,Us States Exchange Strategic Planning,US States Exchange
-2,Data Engineering & Database,98,Model Id Product Strategic Planning,Model ID Product Name
-2,Data Engineering & Database,99,Xml Central Configuration Strategic Planning,XML Central Configuration
-2,Data Engineering & Database,100,Pib Predictive Models Strategic Planning,PIB Predictive Models
-2,Data Engineering & Database,101,Refactoring Lpad Strategic Planning,Refactoring LPAD
-2,Data Engineering & Database,102,Correlation Analysis Strategic Planning,Correlation Analysis
-2,Data Engineering & Database,103,Water Height Measurements Strategic Planning,Water Height Measurements
-3,Cloud Infrastructure & DevOps,104,Incident Alert Monitoring Cloud Infrastructure,Incident Alert Monitoring Pager env directory eea
-3,Cloud Infrastructure & DevOps,105,Laptop Windows Hardware Strategic Planning,Laptop Windows Hardware Support
-3,Cloud Infrastructure & DevOps,106,Python Pypi Packages Development Practices,Python PyPI Packages
-3,Cloud Infrastructure & DevOps,107,Zip File Contents Strategic Planning,ZIP File Contents
-3,Cloud Infrastructure & DevOps,108,Cron Job Scheduling Strategic Planning,Cron Job Scheduling
-3,Cloud Infrastructure & DevOps,109,Systems Cutover Deployments Cloud Infrastructure,Systems Cutover Deployments env directory eea
-3,Cloud Infrastructure & DevOps,110,Config Tag Settings Strategic Planning,Config Tag Settings
-3,Cloud Infrastructure & DevOps,111,Rfc Request For Strategic Planning,RFC Request For Change
-3,Cloud Infrastructure & DevOps,112,Splunk Total Rows Data Analytics,Splunk Total Rows
-3,Cloud Infrastructure & DevOps,113,Shell Script Parameters Strategic Planning,Shell Parameters Script Linux Error Scripts Portal PP
-3,Cloud Infrastructure & DevOps,114,Kernel Application Pcn Strategic Planning,Kernel Application PCN
-3,Cloud Infrastructure & DevOps,115,Backup Nat Gateway Cloud Infrastructure,Backup NAT Gateway env directory eea
-3,Cloud Infrastructure & DevOps,116,Geo Routing Argentina Strategic Planning,JP MX Routing Argentina Geo
-3,Cloud Infrastructure & DevOps,117,Dynamic Operations Strategic Planning,Captured Dynamic Operations
-3,Cloud Infrastructure & DevOps,118,Monitor Built Strategic Planning,Monitor Built
-4,Cyber Security & Identity,119,Risk Control Policies Cloud Infrastructure,Policies Assessment Customer Framework Risk Control Mitigation Event env directory eea
-4,Cyber Security & Identity,120,Privacy Data Pii Data Analytics,Privacy Data PII Phone Number Address
-4,Cyber Security & Identity,121,Regulatory Requirements Regulation Security Compliance,Regulatory Requirements Regulation Compliance
-4,Cyber Security & Identity,122,On-Call Pager Incident Cloud Infrastructure,On-Call Pager Incident Support env directory eea
-4,Cyber Security & Identity,123,Risk Product Owner Security Compliance,Compliance Risk Product Owner Beneficial KYC
-4,Cyber Security & Identity,124,Compliance Control Procedures Security Compliance,Compliance RCSA Procedures Testing Control
-4,Cyber Security & Identity,125,Compliance Database Tables Data Analytics,Compliance Database Tables
-4,Cyber Security & Identity,126,Falcon Gmas Security Security Compliance,Allow Deny JARs List GMAS Falcon Security Cyber Passwords
-4,Cyber Security & Identity,127,Inherent Risk Security Compliance,Risk KRI Inherent Indicators
-4,Cyber Security & Identity,128,Amex Card Risk Security Compliance,Auth Card Authentication Risk AMEX
-4,Cyber Security & Identity,129,Cyberark Secrets Vault Strategic Planning,CyberArk Secrets Vault
-4,Cyber Security & Identity,130,Issue Corrective Closure Strategic Planning,Issue Corrective Closure
-4,Cyber Security & Identity,131,Sam Directors Access Strategic Planning,Access Directors SAM Assign CAS
-4,Cyber Security & Identity,132,Major Risk Events Security Compliance,Major Risk Events
-4,Cyber Security & Identity,133,Entra Id Seasonality Strategic Planning,Entra ID Seasonality
-5,Business Communication & Writing,134,Bullet Points List Strategic Planning,Bullet Points List Formatting Text PX
-5,Business Communication & Writing,135,Write Email Team Business Communications,Write Email Team Shared Details conclusion valuable
-5,Business Communication & Writing,136,Grammar Correct Sentence Business Communications,Grammar Correct Sentence Words Simple Refine
-5,Business Communication & Writing,137,Slack Message Communication Business Communications,Slack Message Communication
-5,Business Communication & Writing,138,Diagram Link Visio Business Communications,Diagram Link Visio
-5,Business Communication & Writing,139,Meeting Invite Calendar Business Communications,Summarization Calendar Transcript Invite Meeting
-5,Business Communication & Writing,140,Sales Revenue Market Financial Strategy,Sales Revenue Market Lead aml privileged fins stock
-5,Business Communication & Writing,141,Attrition Retention Employee Human Resources,Attrition Retention Employee Turnover candidates park wife spot efforts
-5,Business Communication & Writing,142,Marketing Campaign Promotion Financial Strategy,Marketing Campaign Promotion Advertising aml privileged fins stock
-5,Business Communication & Writing,143,Mentorship Career Coaching Human Resources,Coaching Recruiting CV Resume Career Mentorship candidates park wife spot efforts
-5,Business Communication & Writing,144,Vendor Management Third Strategic Planning,Vendor Management Third Party
-5,Business Communication & Writing,145,Hr Payroll Salary Human Resources,Policies Leave Interviews Recruitment School Payroll PTO HR Holiday Candidate Salary candidates park wife spot efforts
-5,Business Communication & Writing,146,Group Training Workshops Human Resources,Workshops Programs Certification Training Group candidates park wife spot efforts
-5,Business Communication & Writing,147,Meetings Recording Business Communications,Recording Town Meetings Hall
-5,Business Communication & Writing,148,Concurrent Chat Sessions Strategic Planning,Concurrent Chat Sessions
-6,Executive Strategy & Management,149,Banking Direction Strategy Banking Operations,Target Model Strategy Banking Direction Operating aml privileged fins stock
-6,Executive Strategy & Management,150,Ownership Accountability Culture Banking Operations,Ownership Accountability Culture aml privileged fins stock
-6,Executive Strategy & Management,151,Capacity Shift Planning Cloud Infrastructure,Planning Capacity Headcount FTE Shift Agile PI env directory eea
-6,Executive Strategy & Management,152,Pilot Project Proposals Strategic Planning,Pilot Project Proposals
-6,Executive Strategy & Management,153,Inventory Management Strategic Planning,Controls Stakeholder Inventory Status Management Process
-6,Executive Strategy & Management,154,Tsr Shareholder Trends Strategic Planning,TSR Shareholder Trends
-6,Executive Strategy & Management,155,International Pricing Models Cloud Infrastructure,International Pricing Models env directory eea
-6,Executive Strategy & Management,156,Dcrm Levers Strategic Planning,DCRM Levers
-6,Executive Strategy & Management,157,Sales Deal Closing Financial Strategy,Sales Deal Closing aml privileged fins stock
-6,Executive Strategy & Management,158,Data Governance Delivery Data Analytics,Data Governance Delivery
-6,Executive Strategy & Management,159,Telesales Operations Financial Strategy,Telesales Operations aml privileged fins stock
-6,Executive Strategy & Management,160,Forbes Publications Strategic Planning,Forbes Publications
-6,Executive Strategy & Management,161,Decide Owners Cloud Infrastructure,Decide Owners env directory eea
-6,Executive Strategy & Management,162,Srr Streamline Strategic Planning,SRR Streamline
-6,Executive Strategy & Management,163,Amazon Brands Strategic Planning,Amazon Brands
-7,Process & Project Management,164,Product Manager Management Strategic Planning,Product Manager Management Action Plan Scale Delivery
-7,Process & Project Management,165,Intake Form Process Strategic Planning,Intake Form Process Request
-8,Testing & Quality Assurance,166,Error Getting Debug Error Triage,Error Getting Debug Troubleshoot Fix
-8,Testing & Quality Assurance,167,Code Changes Required Development Practices,Code Changes Required Review
-8,Testing & Quality Assurance,168,Pass Fail Test Project Management,Pass Fail Test Case Status rush teach ongoing phases playbook
-8,Testing & Quality Assurance,169,Test Expected Actual Project Management,Test Expected Actual Result rush teach ongoing phases playbook
-9,Data Analytics & Visualization,170,Data Reporting Report Data Analytics,Data Reporting Report
-9,Data Analytics & Visualization,171,Power Bi Dashboard Statistical Analysis,Power BI Dashboard Reporting
-9,Data Analytics & Visualization,172,Ai Embedding Similarity Strategic Planning,AI Embedding Similarity
-10,General Productivity & Knowledge,173,Webex Conferencing Cloud Infrastructure,Webex Conferencing env directory eea
-10,General Productivity & Knowledge,174,Sharepoint Sla Slas Strategic Planning,SharePoint SLA SLAs
-10,General Productivity & Knowledge,175,Documentation Technical Docs Business Communications,Documentation Technical Docs
-10,General Productivity & Knowledge,176,Pop Operations Center Strategic Planning,POP Operations Center
-10,General Productivity & Knowledge,177,Cbr Uploading Process Strategic Planning,CBR Uploading Process
-10,General Productivity & Knowledge,178,Agile Carryover Stories Project Management,Agile Carryover Stories rush teach ongoing phases playbook
-10,General Productivity & Knowledge,179,Rag Architecture Iv Strategic Planning,RAG Architecture IV
-10,General Productivity & Knowledge,180,Workflow Approvals Sorting Project Management,Workflow Approvals Sorting rush teach ongoing phases playbook
-10,General Productivity & Knowledge,181,Approval Notices Strategic Planning,Approval Notices
-10,General Productivity & Knowledge,182,Openai Customgpt Strategic Planning,OpenAI CustomGPT
-10,General Productivity & Knowledge,183,Qualtrics Surveys Strategic Planning,Qualtrics Surveys
-10,General Productivity & Knowledge,184,Enable Genai Capabilities Strategic Planning,Enable GenAI Capabilities
-10,General Productivity & Knowledge,185,Jump Guides Strategic Planning,Jump Guides
-10,General Productivity & Knowledge,186,Pillars Holding Strategic Planning,Pillars Holding
-10,General Productivity & Knowledge,187,Printable Gantt Charts Data Analytics,Printable Gantt Charts
-11,American Express & Payments,188,Supplier Buyer Network Cloud Infrastructure,AEXP Charge Partner Number Mastercard Card Criteria Offer Product Fee Penalty Supplier Buyer Payment Volume Late Service Client Gold Network Visa PCN Spend Growth env directory eea
-11,American Express & Payments,189,Aexp Internal Acronym Strategic Planning,Lumi AEXP Internal Configuration AEMP LBI Acronym Platform SDE Tool
-11,American Express & Payments,190,Insurance Products Strategic Planning,Impactful Small Consumer Card Accounts Critical Processing Platform SBS Products Opened Cardmember Commercial Premium Green Restaurant Gift Queries B2B Resy Platinum Merchant Claims Centurion Services Lounge Business Insurance Online Initiatives AMEX
-11,American Express & Payments,191,Transaction Fraud Chargeback Strategic Planning,Transaction Fraud Chargeback Dispute
-11,American Express & Payments,192,Pricing Ctl Settings Cloud Infrastructure,TY Settings Amount Currency Reports Pricing USD CTL env directory eea
-11,American Express & Payments,193,Direct Pay Deposit Strategic Planning,Direct Pay Deposit Transfer
-11,American Express & Payments,194,Iag Entity Structure Strategic Planning,IAG Entity Structure
-11,American Express & Payments,195,Video Creative Assets Strategic Planning,Video Creative Assets
-11,American Express & Payments,196,Treasury Funding Liquidity Financial Strategy,Treasury Funding Liquidity aml privileged fins stock
-11,American Express & Payments,197,External Loan Financing Cloud Infrastructure,External Loan Financing env directory eea
-11,American Express & Payments,198,Pcns System Buttons Cloud Infrastructure,PCNS System Buttons env directory eea
-11,American Express & Payments,199,System Of Record Cloud Infrastructure,System of Record SOR env directory eea
-11,American Express & Payments,200,Amex Award Alternatives Banking Operations,Award Assist Merchants Revised Partnership Marriott CR Alternatives AMEX aml privileged fins stock
-11,American Express & Payments,201,Targeting Eligibility Strategic Planning,Targeting Eligibility
-11,American Express & Payments,202,Gmns Evaluating Strategic Planning,GMNS Evaluating
-12,Business Process Automation,203,Process Automation Rpa Strategic Planning,Process Automation RPA Tooling
-13,Business Communication & HR,204,Hr Immigration Manager Human Resources,HR Immigration Manager candidates park wife spot efforts
-13,Business Communication & HR,205,Cancellation Conflicts Strategic Planning,Cancellation Conflicts
-13,Business Communication & HR,206,Hr Responsibilities Introduction Human Resources,HR Responsibilities Introduction candidates park wife spot efforts
-13,Business Communication & HR,207,Benefits Enrollment Lift Human Resources,Benefits Enrollment Lift candidates park wife spot efforts
-13,Business Communication & HR,208,Hr Benefits Eligibility Human Resources,HR Benefits Eligibility Evening candidates park wife spot efforts
-13,Business Communication & HR,209,Hr Interviewer Recruiter Human Resources,HR Interviewer Recruiter candidates park wife spot efforts
-13,Business Communication & HR,210,Hr Associates Aspirations Cloud Infrastructure,HR Associates Aspirations env directory eea
-13,Business Communication & HR,211,Official Opt In Cloud Infrastructure,Official Opt In env directory eea
-13,Business Communication & HR,212,Singapore Communications Strategic Planning,Singapore Communications
-13,Business Communication & HR,213,Email Confirming Receipt Business Communications,Email Confirming Receipt conclusion valuable
-13,Business Communication & HR,214,Wfm Coordination Strategic Planning,WFM Coordination
-13,Business Communication & HR,215,Hr Gurgaon Highlights Human Resources,HR Gurgaon Highlights candidates park wife spot efforts
-14,Finance & Procurement,216,Accounting Journal Entries Financial Strategy,Accounting Journal Entries aml privileged fins stock
-14,Finance & Procurement,217,Pcm Rule Allocation Project Management,Allocations Finance Definition Allocation PCM Rule rush teach ongoing phases playbook
-14,Finance & Procurement,218,Sow Statement Of Strategic Planning,SOW Statement of Work
-14,Finance & Procurement,219,Ebitda Financial Metrics Cloud Infrastructure,EBITDA Financial Metrics env directory eea
-14,Finance & Procurement,220,Pricing Approvals Cloud Infrastructure,Pricing Approvals env directory eea
-14,Finance & Procurement,221,Eod End Of Strategic Planning,EOD End of Day Process
-14,Finance & Procurement,222,Applications Pricing Cloud Infrastructure,Applications Pricing env directory eea
-14,Finance & Procurement,223,Capital Timing Finance Development Practices,Capital Timing Finance
-14,Finance & Procurement,224,Financials Fin Reporting Cloud Infrastructure,Financials FIN Reporting env directory eea
-14,Finance & Procurement,225,Amount Constants Strategic Planning,Amount Constants
-14,Finance & Procurement,226,Emburse Expense Management Strategic Planning,Emburse Expense Management
-14,Finance & Procurement,227,Pricing Study Research Cloud Infrastructure,Pricing Study Research env directory eea
-14,Finance & Procurement,228,Asset Management Entry Strategic Planning,Asset Management Entry
-14,Finance & Procurement,229,Bank Locations Strategic Planning,Bank Locations
-14,Finance & Procurement,230,Investment Plans Financial Strategy,Investment Plans aml privileged fins stock
-14,Finance & Procurement,231,Bank Neutral Strategic Planning,Bank Neutral
-14,Finance & Procurement,232,Fees Dashboards Strategic Planning,Fees Dashboards
-14,Finance & Procurement,233,Finance Actuals Adb Financial Strategy,Finance Actuals ADB aml privileged fins stock
-14,Finance & Procurement,234,Treasury Report Script Financial Strategy,Treasury Report Script aml privileged fins stock
-14,Finance & Procurement,235,Finance Annual Spend Financial Strategy,Finance Annual Spend aml privileged fins stock
+0,Software Engineering & Development,0,Java Python C++,MCP Mother Install Jupyter Code Dependencies Module Fonts Clicking OpenPyXL GSOP Components Theme Date UX Colors Java Python Action Design Project Const library Concept Swap AMEX Images Redesign Datetime Logic Index Import Of Pathlib Prototype Fail TQDM User IPyKernel Exposure Timezone Package Jobs Safe Compilation Call Private Exception Dropdown Library Annotations Software Sets Pandas Positioning To System Method Object Subprocess Run POC Log CTA Phoenix Batch Public Class Temp Error Condition Engine Variable Rule Parse Time UI Constant C++ Business Tool Bold Status Oriented Syntax Proof Function
+0,Software Engineering & Development,1,Frontend React Angular,JVM Files CCC JS Lombok Ascending Position Event Vue AOP JavaScript Tags Memo Frontend Flutter Styling Java AMP OKHttp iOS Attribute Mobile JAR App Entry React HTML Table Android Native Padding PageLayout Capabilities Angular CSS grid browser sugarcoat
+0,Software Engineering & Development,2,Backend Node Express,Modules Node Spring Middleware Flask Django Express UUID NPM Backend
+0,Software Engineering & Development,3,Api Rest Graphql,Endpoint Payload Shell Configuration Terminal gRPC API Linux Bash URL REST Repositories Server Postman WebSocket GraphQL Scripting
+0,Software Engineering & Development,4,Git Version Control,VSCode Mode TypeScript Dark Repository Requests Commits Code Control Snippet Version Reporting Request Branch Partitions VS Git SOI Clone Snippets Commit IDE IDEA SOAP PR TMP PKG Comparison Environment Helper Merge Feature SAP Friend Pull Wrap Source Editor Development Branches Diff Keyword IntelliJ Clock Conflict Sorted
+0,Software Engineering & Development,5,Algorithm Data Structure,Linked Int HashMap Code Graph Array True Conversion Timestamp List Append Cast Algorithm Structure Reverse Boolean Float Integer Type JSON False Data String wide weighted operator naming maps brackets
+1,Production Support & Debugging,6,Stacktrace Exception Null,Stacktrace Exception Null Pointer Segfault Core Dump badrequest conferma poid cdn fail issue
+1,Production Support & Debugging,7,Memory Leak Cpu,Memory Leak CPU Threading Concurrency Deadlock Performance
+1,Production Support & Debugging,8,Application Crash Outage,Application Crash Outage Incident Root Cause Log Analysis
+1,Production Support & Debugging,9,Dependency Package Version,Dependency Package Version Compatibility Npm Pip Maven Gradle
+2,Data Engineering & Database,10,Sql Select Update,Functions Group By df Analytics Join DataFrame Que PySpark Describe Info Difference Select Mas Month Date Insert Pandas Col Over Domain Dataframe WithColumn Queries Query Current Distinct Series SQL Update Table Year MoM Selects Delete
+2,Data Engineering & Database,11,Table Column Row,Delimiter Database Varchar By AMEX Samples Normalization Card Types Trino Integration Tagged Nulls Schema Slicer JavaScript Excel Settings Fusion Dimension Sort Metadata Fact Azure Location Management Enterprise Ruleset Row Airtable DB Queries Window Partition Attributes Priority Column Cosmos Exists Trigger Function Servicing SQL Oracle Plotting Head Table Schemas Blanks Storage Data Price Coalesce
+2,Data Engineering & Database,12,Etl Pipeline Warehouse,Warehouse Loading Interval Orchestration Schedule Lake Airflow ETL Pipeline Transformation Extraction DAG PythonOperator
+2,Data Engineering & Database,13,Nosql Mongodb Cassandra,NoSQL MongoDB Cassandra Redis Key Value Document
+2,Data Engineering & Database,14,Big Data Hadoop,Aggregations Time Real Code Streaming Event MapReduce Processing Segments Driven Origin Spark Errors Hadoop Hive Connection Allowed Feed Encoding Producer Bin Pig Kafka Garbage Source Engineering Raw Data Big
+3,Cloud Infrastructure & DevOps,15,Aws Ec2 S3,Architecture IVR Host VPC Node AWS Azure Telephony Enterprise GCS Spaces Instance Cloud Framework Virtual Voice Lambda S3 GCP Machine SAN Storage EC2 Server Recognition env directory eea
+3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container,Kubernetes Docker Container Pod Cluster K8s Orchestration env directory eea
+3,Cloud Infrastructure & DevOps,17,Ci Cd Jenkins,CI CD Jenkins GitLab GitHub Actions Deployment Pipeline env directory eea
+3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure,Applied Ansible SMTP Files Terraform Configuration MB Environment Status Pre-Prod YAML Code as Infrastructure Email Nodes
+3,Cloud Infrastructure & DevOps,19,Network Load Balancer,Proxy Subnet AEXP Name Balancer Accept Router Network DNS Load Switch Route Port Traffic Hub Firewall env directory eea
+4,Cyber Security & Identity,20,Authentication Oauth Saml,Authentication OAuth SAML JWT MFA SSO Password Login
+4,Cyber Security & Identity,21,Authorization Rbac Role,Access Role Controls Compliance AEXP Authorization Analytics RBAC Control Risk Audit Data Performance Management Token Permission
+4,Cyber Security & Identity,22,Encryption Ssl Tls,Archer Certificate Decryption Expired Cipher TLS Encryption Voltage RSA SSL GRC Key
+4,Cyber Security & Identity,23,Vulnerability Malware Phishing,Phishing Exploit Injection XSS Malware Vulnerability Ransomware Remediation Trojan Virus
+4,Cyber Security & Identity,24,Compliance Gdpr Hipaa,Compliance GDPR HIPAA PCI SOX Audit Risk Governance
+5,Business Communication & Writing,25,Email Draft Response,Professional Up Draft Line Read Subject Sugar Response Message Easy Short Follow Tone Email Thread Cordial Coat Formal conclusion valuable
+5,Business Communication & Writing,26,Grammar Spelling Proofread,Grammar Spelling Proofread Edit Punctuation Vocabulary Rephrase
+5,Business Communication & Writing,27,Translate Language Translation,Translate Language Translation Interpretation Localization
+5,Business Communication & Writing,28,Presentation Slide Deck,PowerPoint Pitch Slides Proposal Outline Presentation Content Slide Deck
+5,Business Communication & Writing,29,Documentation Manual Article,Manual Documentation Page Policy Blog Confluence Wiki Post Article Handbook
+6,Executive Strategy & Management,30,Roi Kpi Metric,BAU KPI Learn Outcome Value LOB Course Accounts Payable Agreement Usual OKR Tutorial Training GCO Balanced Scorecard of Line Receivable As Invoice Goals Counsel Partnerships Business Law Legal Impact ROI Metric Billing Goal Objective Contract Terms aml privileged fins stock
+6,Executive Strategy & Management,31,Budget Revenue Profit,Return Cost Variance Income Expense Flow Margin Finance Profit Revenue Tax Cash Actual Forecast Budget aml privileged fins stock
+6,Executive Strategy & Management,32,Roadmap Vision Mission,Roadmap Senior Director Vision Communications Leader Mission Milestone Objective Vice Executive President CFO VP Term Leadership Long aml privileged fins stock
+6,Executive Strategy & Management,33,Talent Hr Hiring,Employed Employee Leave Letter Resources Compensation Human Talent Hiring HR Sick Promotion Interview candidates park wife spot efforts
+6,Executive Strategy & Management,34,Market Competition Differentiation,Market Competition Differentiation Innovation SWOT Analysis aml privileged fins stock
+7,Process & Project Management,35,Agile Scrum Sprint,Agile Scrum Sprint Kanban User Story Epic Backlog rush teach ongoing phases playbook
+7,Process & Project Management,36,Ticket Jira Issue,Ticket Jira Issue ServiceNow Assignment Triage Queue rush teach ongoing phases playbook
+7,Process & Project Management,37,Workflow Checklist Step,Workflow Checklist Step Procedure SOP Instruction Guide rush teach ongoing phases playbook
+7,Process & Project Management,38,Meeting Notes Agenda,Meeting Notes Agenda Minutes Action Item Summary Takeaway
+7,Process & Project Management,39,Release Schedule Change,Release Schedule Change Request Approval RACI Matrix rush teach ongoing phases playbook
+8,Testing & Quality Assurance,40,Unit Test Mock,Unit Test Mock Stub Assertion Coverage Code Quality rush teach ongoing phases playbook
+8,Testing & Quality Assurance,41,Integration Test End,Integration Test End to End E2E System Validation rush teach ongoing phases playbook
+8,Testing & Quality Assurance,42,Regression Load Stress,Regression Load Stress Performance Penetration Scalability
+8,Testing & Quality Assurance,43,Qa Defect Bug,QA Defect Bug Reproduction Steps Triage Tracking
+9,Data Analytics & Visualization,44,Excel Formula Pivot,Excel Formula Pivot Table Vlookup Macro VBA Spreadsheet
+9,Data Analytics & Visualization,45,Chart Graph Dashboard,Chart Graph Dashboard Visualization Tableau PowerBI Scatter Bar
+9,Data Analytics & Visualization,46,Statistics Mean Median,Statistics Mean Median Variance Standard Deviation Regression
+9,Data Analytics & Visualization,47,Data Cleansing Formatting,Data Cleansing Formatting Imputation Outlier Normalization
+9,Data Analytics & Visualization,48,Python Pandas Numpy,Python Numpy Learn Science Model Models Learning Pandas Data Scikit Scipy Machine
+10,General Productivity & Knowledge,49,Summarize Condense Abstract,Research Prompt Purple Workflows Image Food AI Abstract Conversational Markup Code Hallucinations Formula Journey Tune Large Mailbox Assistant Copilot Completion GitHub LLM Formulas Excel Custom Calendar Experience UX Email Evaluation Tasks Persona Sources Chargeout Abridge Outlook Fine Quiz Spreadsheet Workbook Hallucination Design Report GPT Conversations Media Digest DT Source Corporate User PNG Agentic Business Literature Multimedia Engineering TLM Picture Condense Llama Models Digital Lunch Meals Summarize Unit Data Citation Microsoft TLDR Management Voicebots JPG
+10,General Productivity & Knowledge,50,Brainstorm Ideate Concept,Brainstorm Ideate Concept Suggestion Recommend Alternative Option
+10,General Productivity & Knowledge,51,Format Structure Table,Format Structure Table List Paragraph Indentation Markdown
+10,General Productivity & Knowledge,52,Explain Define Concept,Explain Define Tutorial Best Practices Comprehension Theory Concept Lesson Guide
+10,General Productivity & Knowledge,53,Math Calculate Equation,Math Calculate Equation Algebra Geometry Calculus Arithmetic
+11,American Express & Payments,54,American Express Amex,Dining AEXP Cards General Express Amex Flight Travel Sync Channels API Hotel Corporate Ticketing Dollar Engineering Manner American Booking Program Trip Reward AMEX
+11,American Express & Payments,55,Card Member Membership,Debt Card FICO Points Rewards PT Close Credit Bonus Member Bins Scores Limit Line Score Account Collection Status Cancel Data Membership Increase AMEX aml privileged fins stock
+11,American Express & Payments,56,Merchant Global Acquiring,EMEA Portfolio Hong Japan Global Region Location Country Brazil Onboarding Germany Length Merchant Acquiring Acquisition Network Data Kong APAC Market aml privileged fins stock
+11,American Express & Payments,57,Amex Offers Marketing,Offers Communication Brand Website Marketing Branding Mexico Logo AMEX aml privileged fins stock
+11,American Express & Payments,58,Account Bank Balance,CCP Professional Customer Issue Complaint Balance Reviews Account Resolution Care YoY Complaints Bank Financial Statement Metrics Funds aml privileged fins stock
+0,Software Engineering & Development,59,Application Tests,Application Tests rush teach ongoing phases playbook
+0,Software Engineering & Development,60,Gatling Load Testing,Gatling Load Testing rush teach ongoing phases playbook
+0,Software Engineering & Development,61,Mime Types,MIME Types
+0,Software Engineering & Development,62,Regex Patterns,Regex Patterns
+0,Software Engineering & Development,63,Jcl Clickable Links,JCL Clickable Links
+0,Software Engineering & Development,64,Prd Leaves Production,PRD Leaves Production
+0,Software Engineering & Development,65,Plot Cid Graphics,Plot CID Graphics env directory eea
+0,Software Engineering & Development,66,Optional Directories,Optional Directories
+0,Software Engineering & Development,67,Dispatch Comparable,Dispatch Comparable
+0,Software Engineering & Development,68,Ccps Notification,CCPS Notification
+0,Software Engineering & Development,69,Airflow Schedule Interval,Airflow Schedule Interval rush teach ongoing phases playbook
+0,Software Engineering & Development,70,Downstream Impacts,Downstream Impacts
+0,Software Engineering & Development,71,Xhtml Posture,XHTML Posture
+0,Software Engineering & Development,72,Launchpad Listlevel,Launchpad ListLevel
+1,Production Support & Debugging,73,Script Execution Run,Script Execution Run Running Console Command
+1,Production Support & Debugging,74,Error Code Exception,Error Code Exception Logs UTC
+1,Production Support & Debugging,75,Software Code Errors,Software Code Errors
+1,Production Support & Debugging,76,Software Configuration Errors,Software Configuration Errors
+1,Production Support & Debugging,77,Uat Sit Testing,UAT SIT Testing rush teach ongoing phases playbook
+1,Production Support & Debugging,78,Ui Bug Screenshots,UI Bug Screenshots
+1,Production Support & Debugging,79,Linux Elf Errors,Linux ELF Errors
+1,Production Support & Debugging,80,Alert Panel Severity,Alert Panel Severity
+1,Production Support & Debugging,81,Amex Software Error,AMEX Software Error
+1,Production Support & Debugging,82,Quality Control Qc,Quality Control QC
+1,Production Support & Debugging,83,Software Code Error,Software Code Error
+1,Production Support & Debugging,84,Invalid Identifier Errors,Invalid Identifier Errors
+1,Production Support & Debugging,85,Support Escalation Win,Support Escalation Win
+1,Production Support & Debugging,86,Developer Mistakes,Developer Mistakes
+1,Production Support & Debugging,87,It Technology Investigation,IT Technology Investigation
+1,Production Support & Debugging,88,Nexthink It Narration,Nexthink IT Narration
+2,Data Engineering & Database,89,Csv Path File,CSV Path File Format
+2,Data Engineering & Database,90,Tableau Lod Expression,Tableau LOD Expression
+2,Data Engineering & Database,91,Statistics Sample Population,Statistics Sample Population
+2,Data Engineering & Database,92,Google Bigquery,Google BigQuery bq
+2,Data Engineering & Database,93,Power Bi Selectedvalue,Power BI SelectedValue DAX
+2,Data Engineering & Database,94,Statistical Problems,Problems Percentages Statistical Response Percentile Weakness
+2,Data Engineering & Database,95,Jupyter Notebook Club,Jupyter Notebook Club
+2,Data Engineering & Database,96,Chart Vertical Legend,Chart Vertical Legend
+2,Data Engineering & Database,97,Us States Exchange,US States Exchange
+2,Data Engineering & Database,98,Model Id Product,Model ID Product Name
+2,Data Engineering & Database,99,Xml Central Configuration,XML Central Configuration
+2,Data Engineering & Database,100,Pib Predictive Models,PIB Predictive Models
+2,Data Engineering & Database,101,Refactoring Lpad,Refactoring LPAD
+2,Data Engineering & Database,102,Correlation Analysis,Correlation Analysis
+2,Data Engineering & Database,103,Water Height Measurements,Water Height Measurements
+3,Cloud Infrastructure & DevOps,104,Incident Alert Monitoring,Incident Alert Monitoring Pager env directory eea
+3,Cloud Infrastructure & DevOps,105,Laptop Windows Hardware,Laptop Windows Hardware Support
+3,Cloud Infrastructure & DevOps,106,Python Pypi Packages,Python PyPI Packages
+3,Cloud Infrastructure & DevOps,107,Zip File Contents,ZIP File Contents
+3,Cloud Infrastructure & DevOps,108,Cron Job Scheduling,Cron Job Scheduling
+3,Cloud Infrastructure & DevOps,109,Systems Cutover Deployments,Systems Cutover Deployments env directory eea
+3,Cloud Infrastructure & DevOps,110,Config Tag Settings,Config Tag Settings
+3,Cloud Infrastructure & DevOps,111,Rfc Request For,RFC Request For Change
+3,Cloud Infrastructure & DevOps,112,Splunk Total Rows,Splunk Total Rows
+3,Cloud Infrastructure & DevOps,113,Shell Script Parameters,Shell Parameters Script Linux Error Scripts Portal PP
+3,Cloud Infrastructure & DevOps,114,Kernel Application Pcn,Kernel Application PCN
+3,Cloud Infrastructure & DevOps,115,Backup Nat Gateway,Backup NAT Gateway env directory eea
+3,Cloud Infrastructure & DevOps,116,Geo Routing Argentina,JP MX Routing Argentina Geo
+3,Cloud Infrastructure & DevOps,117,Dynamic Operations,Captured Dynamic Operations
+3,Cloud Infrastructure & DevOps,118,Monitor Built,Monitor Built
+4,Cyber Security & Identity,119,Risk Control Policies,Policies Assessment Customer Framework Risk Control Mitigation Event env directory eea
+4,Cyber Security & Identity,120,Privacy Data Pii,Privacy Data PII Phone Number Address
+4,Cyber Security & Identity,121,Regulatory Requirements Regulation,Regulatory Requirements Regulation Compliance
+4,Cyber Security & Identity,122,On-Call Pager Incident,On-Call Pager Incident Support env directory eea
+4,Cyber Security & Identity,123,Risk Product Owner,Compliance Risk Product Owner Beneficial KYC
+4,Cyber Security & Identity,124,Compliance Control Procedures,Compliance RCSA Procedures Testing Control
+4,Cyber Security & Identity,125,Compliance Database Tables,Compliance Database Tables
+4,Cyber Security & Identity,126,Falcon Gmas Security,Allow Deny JARs List GMAS Falcon Security Cyber Passwords
+4,Cyber Security & Identity,127,Inherent Risk,Risk KRI Inherent Indicators
+4,Cyber Security & Identity,128,Amex Card Risk,Auth Card Authentication Risk AMEX
+4,Cyber Security & Identity,129,Cyberark Secrets Vault,CyberArk Secrets Vault
+4,Cyber Security & Identity,130,Issue Corrective Closure,Issue Corrective Closure
+4,Cyber Security & Identity,131,Sam Directors Access,Access Directors SAM Assign CAS
+4,Cyber Security & Identity,132,Major Risk Events,Major Risk Events
+4,Cyber Security & Identity,133,Entra Id Seasonality,Entra ID Seasonality
+5,Business Communication & Writing,134,Bullet Points List,Bullet Points List Formatting Text PX
+5,Business Communication & Writing,135,Write Email Team,Write Email Team Shared Details conclusion valuable
+5,Business Communication & Writing,136,Grammar Correct Sentence,Grammar Correct Sentence Words Simple Refine
+5,Business Communication & Writing,137,Slack Message Communication,Slack Message Communication
+5,Business Communication & Writing,138,Diagram Link Visio,Diagram Link Visio
+5,Business Communication & Writing,139,Meeting Invite Calendar,Summarization Calendar Transcript Invite Meeting
+5,Business Communication & Writing,140,Sales Revenue Market,Sales Revenue Market Lead aml privileged fins stock
+5,Business Communication & Writing,141,Attrition Retention Employee,Attrition Retention Employee Turnover candidates park wife spot efforts
+5,Business Communication & Writing,142,Marketing Campaign Promotion,Marketing Campaign Promotion Advertising aml privileged fins stock
+5,Business Communication & Writing,143,Mentorship Career Coaching,Coaching Recruiting CV Resume Career Mentorship candidates park wife spot efforts
+5,Business Communication & Writing,144,Vendor Management Third,Vendor Management Third Party
+5,Business Communication & Writing,145,Hr Payroll Salary,Policies Leave Interviews Recruitment School Payroll PTO HR Holiday Candidate Salary candidates park wife spot efforts
+5,Business Communication & Writing,146,Group Training Workshops,Workshops Programs Certification Training Group candidates park wife spot efforts
+5,Business Communication & Writing,147,Meetings Recording,Recording Town Meetings Hall
+5,Business Communication & Writing,148,Concurrent Chat Sessions,Concurrent Chat Sessions
+6,Executive Strategy & Management,149,Banking Direction Strategy,Target Model Strategy Banking Direction Operating aml privileged fins stock
+6,Executive Strategy & Management,150,Ownership Accountability Culture,Ownership Accountability Culture aml privileged fins stock
+6,Executive Strategy & Management,151,Capacity Shift Planning,Planning Capacity Headcount FTE Shift Agile PI env directory eea
+6,Executive Strategy & Management,152,Pilot Project Proposals,Pilot Project Proposals
+6,Executive Strategy & Management,153,Inventory Management,Controls Stakeholder Inventory Status Management Process
+6,Executive Strategy & Management,154,Tsr Shareholder Trends,TSR Shareholder Trends
+6,Executive Strategy & Management,155,International Pricing Models,International Pricing Models env directory eea
+6,Executive Strategy & Management,156,Dcrm Levers,DCRM Levers
+6,Executive Strategy & Management,157,Sales Deal Closing,Sales Deal Closing aml privileged fins stock
+6,Executive Strategy & Management,158,Data Governance Delivery,Data Governance Delivery
+6,Executive Strategy & Management,159,Telesales Operations,Telesales Operations aml privileged fins stock
+6,Executive Strategy & Management,160,Forbes Publications,Forbes Publications
+6,Executive Strategy & Management,161,Decide Owners,Decide Owners env directory eea
+6,Executive Strategy & Management,162,Srr Streamline,SRR Streamline
+6,Executive Strategy & Management,163,Amazon Brands,Amazon Brands
+7,Process & Project Management,164,Product Manager Management,Product Manager Management Action Plan Scale Delivery
+7,Process & Project Management,165,Intake Form Process,Intake Form Process Request
+8,Testing & Quality Assurance,166,Error Getting Debug,Error Getting Debug Troubleshoot Fix
+8,Testing & Quality Assurance,167,Code Changes Required,Code Changes Required Review
+8,Testing & Quality Assurance,168,Pass Fail Test,Pass Fail Test Case Status rush teach ongoing phases playbook
+8,Testing & Quality Assurance,169,Test Expected Actual,Test Expected Actual Result rush teach ongoing phases playbook
+9,Data Analytics & Visualization,170,Data Reporting Report,Data Reporting Report
+9,Data Analytics & Visualization,171,Power Bi Dashboard,Power BI Dashboard Reporting
+9,Data Analytics & Visualization,172,Ai Embedding Similarity,AI Embedding Similarity
+10,General Productivity & Knowledge,173,Webex Conferencing,Webex Conferencing env directory eea
+10,General Productivity & Knowledge,174,Sharepoint Sla Slas,SharePoint SLA SLAs
+10,General Productivity & Knowledge,175,Documentation Technical Docs,Documentation Technical Docs
+10,General Productivity & Knowledge,176,Pop Operations Center,POP Operations Center
+10,General Productivity & Knowledge,177,Cbr Uploading Process,CBR Uploading Process
+10,General Productivity & Knowledge,178,Agile Carryover Stories,Agile Carryover Stories rush teach ongoing phases playbook
+10,General Productivity & Knowledge,179,Rag Architecture Iv,RAG Architecture IV
+10,General Productivity & Knowledge,180,Workflow Approvals Sorting,Workflow Approvals Sorting rush teach ongoing phases playbook
+10,General Productivity & Knowledge,181,Approval Notices,Approval Notices
+10,General Productivity & Knowledge,182,Openai Customgpt,OpenAI CustomGPT
+10,General Productivity & Knowledge,183,Qualtrics Surveys,Qualtrics Surveys
+10,General Productivity & Knowledge,184,Enable Genai Capabilities,Enable GenAI Capabilities
+10,General Productivity & Knowledge,185,Jump Guides,Jump Guides
+10,General Productivity & Knowledge,186,Pillars Holding,Pillars Holding
+10,General Productivity & Knowledge,187,Printable Gantt Charts,Printable Gantt Charts
+11,American Express & Payments,188,Supplier Buyer Network,AEXP Charge Partner Number Mastercard Card Criteria Offer Product Fee Penalty Supplier Buyer Payment Volume Late Service Client Gold Network Visa PCN Spend Growth env directory eea
+11,American Express & Payments,189,Aexp Internal Acronym,Lumi AEXP Internal Configuration AEMP LBI Acronym Platform SDE Tool
+11,American Express & Payments,190,Insurance Products,Impactful Small Consumer Card Accounts Critical Processing Platform SBS Products Opened Cardmember Commercial Premium Green Restaurant Gift Queries B2B Resy Platinum Merchant Claims Centurion Services Lounge Business Insurance Online Initiatives AMEX
+11,American Express & Payments,191,Transaction Fraud Chargeback,Transaction Fraud Chargeback Dispute
+11,American Express & Payments,192,Pricing Ctl Settings,TY Settings Amount Currency Reports Pricing USD CTL env directory eea
+11,American Express & Payments,193,Direct Pay Deposit,Direct Pay Deposit Transfer
+11,American Express & Payments,194,Iag Entity Structure,IAG Entity Structure
+11,American Express & Payments,195,Video Creative Assets,Video Creative Assets
+11,American Express & Payments,196,Treasury Funding Liquidity,Treasury Funding Liquidity aml privileged fins stock
+11,American Express & Payments,197,External Loan Financing,External Loan Financing env directory eea
+11,American Express & Payments,198,Pcns System Buttons,PCNS System Buttons env directory eea
+11,American Express & Payments,199,System Of Record,System of Record SOR env directory eea
+11,American Express & Payments,200,Amex Award Alternatives,Award Assist Merchants Revised Partnership Marriott CR Alternatives AMEX aml privileged fins stock
+11,American Express & Payments,201,Targeting Eligibility,Targeting Eligibility
+11,American Express & Payments,202,Gmns Evaluating,GMNS Evaluating
+12,Business Process Automation,203,Process Automation Rpa,Process Automation RPA Tooling
+13,Business Communication & HR,204,Hr Immigration Manager,HR Immigration Manager candidates park wife spot efforts
+13,Business Communication & HR,205,Cancellation Conflicts,Cancellation Conflicts
+13,Business Communication & HR,206,Hr Responsibilities Introduction,HR Responsibilities Introduction candidates park wife spot efforts
+13,Business Communication & HR,207,Benefits Enrollment Lift,Benefits Enrollment Lift candidates park wife spot efforts
+13,Business Communication & HR,208,Hr Benefits Eligibility,HR Benefits Eligibility Evening candidates park wife spot efforts
+13,Business Communication & HR,209,Hr Interviewer Recruiter,HR Interviewer Recruiter candidates park wife spot efforts
+13,Business Communication & HR,210,Hr Associates Aspirations,HR Associates Aspirations env directory eea
+13,Business Communication & HR,211,Official Opt In,Official Opt In env directory eea
+13,Business Communication & HR,212,Singapore Communications,Singapore Communications
+13,Business Communication & HR,213,Email Confirming Receipt,Email Confirming Receipt conclusion valuable
+13,Business Communication & HR,214,Wfm Coordination,WFM Coordination
+13,Business Communication & HR,215,Hr Gurgaon Highlights,HR Gurgaon Highlights candidates park wife spot efforts
+14,Finance & Procurement,216,Accounting Journal Entries,Accounting Journal Entries aml privileged fins stock
+14,Finance & Procurement,217,Pcm Rule Allocation,Allocations Finance Definition Allocation PCM Rule rush teach ongoing phases playbook
+14,Finance & Procurement,218,Sow Statement Of,SOW Statement of Work
+14,Finance & Procurement,219,Ebitda Financial Metrics,EBITDA Financial Metrics env directory eea
+14,Finance & Procurement,220,Pricing Approvals,Pricing Approvals env directory eea
+14,Finance & Procurement,221,Eod End Of,EOD End of Day Process
+14,Finance & Procurement,222,Applications Pricing,Applications Pricing env directory eea
+14,Finance & Procurement,223,Capital Timing Finance,Capital Timing Finance
+14,Finance & Procurement,224,Financials Fin Reporting,Financials FIN Reporting env directory eea
+14,Finance & Procurement,225,Amount Constants,Amount Constants
+14,Finance & Procurement,226,Emburse Expense Management,Emburse Expense Management
+14,Finance & Procurement,227,Pricing Study Research,Pricing Study Research env directory eea
+14,Finance & Procurement,228,Asset Management Entry,Asset Management Entry
+14,Finance & Procurement,229,Bank Locations,Bank Locations
+14,Finance & Procurement,230,Investment Plans,Investment Plans aml privileged fins stock
+14,Finance & Procurement,231,Bank Neutral,Bank Neutral
+14,Finance & Procurement,232,Fees Dashboards,Fees Dashboards
+14,Finance & Procurement,233,Finance Actuals Adb,Finance Actuals ADB aml privileged fins stock
+14,Finance & Procurement,234,Treasury Report Script,Treasury Report Script aml privileged fins stock
+14,Finance & Procurement,235,Finance Annual Spend,Finance Annual Spend aml privileged fins stock

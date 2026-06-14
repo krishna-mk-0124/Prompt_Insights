@@ -1,13 +1,35 @@
 import pandas as pd
-df = pd.read_csv('data/optimized_taxonomy.csv')
-print('Total rows:', len(df))
+import re
 
-clean_df = df.iloc[:540]
-removed_df = df.iloc[540:]
+TAX_FILE = 'data/optimized_taxonomy.csv'
 
-print("--- REVIEW OF REMOVED SUBCATEGORIES ---")
-for _, row in removed_df.iterrows():
-    print(f"Removed: Category={row['category_name']}, Subcategory={row['subcategory_name']}")
+def clean_frankenstein_subcategories():
+    df = pd.read_csv(TAX_FILE)
+    
+    # List of the blindly appended heuristic suffixes we need to strip
+    suffixes = [
+        " Development Practices",
+        " Error Triage",
+        " Data Analytics",
+        " Cloud Infrastructure",
+        " Security Compliance",
+        " Business Communications",
+        " Financial Strategy",
+        " Project Management",
+        " Human Resources",
+        " Banking Operations",
+        " Statistical Analysis",
+        " Strategic Planning"
+    ]
+    
+    # Create a regex pattern to match any of these suffixes at the end of the string
+    pattern = re.compile(r'(' + '|'.join(suffixes) + r')$')
+    
+    # Strip the suffix
+    df['subcategory_name'] = df['subcategory_name'].apply(lambda x: pattern.sub('', x).strip())
+    
+    df.to_csv(TAX_FILE, index=False)
+    print("Successfully stripped heuristic semantic suffixes from all 236 subcategories.")
 
-clean_df.to_csv('data/optimized_taxonomy.csv', index=False)
-print("Taxonomy cleaned!")
+if __name__ == "__main__":
+    clean_frankenstein_subcategories()
