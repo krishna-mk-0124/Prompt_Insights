@@ -183,7 +183,7 @@ def run_hybrid_discovery():
         'triggerdagrunoperator_', '„Äæ„Äü_„Ç¢_É°_É¨_Ç´_É≥', 'n_f', 'sharma_pi', 'isnull_', 'ther', 'hook', 'weather', 'onwards', 'tabla', 'sell', 'wouldn', 'efficient', 'li_ex', 'li', 'ex', 'disconnected', 'directions', 'grupo', 'worse', 'fa_fc', 'fa', 'fc', 'formato', 'mucho', 'tutti', 'italia',
         'october', 'nuevo_replied', 'nuevo', 'replied', 'sharma_pulling', 'sharma', 'pulling', 'highest_increased', 'highest', 'increased', 'stopped_responsibility', 'stopped', 'responsibility', 'd√≠as_buenos', 'd', 'as_buenos', 'buenos', 'expecting_jessica', 'expecting', 'jessica',
         'soft_dropped', 'soft', 'dropped', 'youre_chnages', 'youre', 'chnages', 'est√°_ingl√©s', 'est', 'ingl', 'ellos_worries', 'ellos', 'worries', 'podemos_estas', 'podemos', 'estas', 'resumen_rephase', 'resumen', 'rephase',
-        'wt', 'sp', 'v', 'ery', 'cd', 'ps', 'dr', 'conferma'
+        'wt', 'sp', 'v', 'ery', 'cd', 'ps', 'dr', 'conferma', 'am', 'c'
     ]
     # Load dynamically generated unicode noise from language router
     unicode_noise_file = os.path.join(data_dir, "unicode_noise.txt")
@@ -298,7 +298,8 @@ def run_hybrid_discovery():
                     if m_size >= 2:
                         mean_tfidf = np.asarray(X_prompts[m_indices].mean(axis=0)).flatten()
                         top_indices = mean_tfidf.argsort()[-2:][::-1]
-                        feature_names = np.array(vectorizer.get_feature_names_out())
+                        # Clean feature names to remove any accidental underscores (e.g. '_am' -> 'am')
+                        feature_names = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])
                         sub_name = f"Auto Cluster: {' '.join(feature_names[top_indices]).title()}"
                     else:
                         sub_name = f"Auto Cluster: Micro {current_global_sub_id}"
@@ -317,7 +318,7 @@ def run_hybrid_discovery():
                 if cluster_size >= 2:
                     mean_tfidf = np.asarray(cluster_X.mean(axis=0)).flatten()
                     top_indices = mean_tfidf.argsort()[-2:][::-1]
-                    feature_names = np.array(vectorizer.get_feature_names_out())
+                    feature_names = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])
                     sub_name = f"Auto Cluster: {' '.join(feature_names[top_indices]).title()}"
                 else:
                     sub_name = f"Auto Cluster: {current_global_sub_id}"
