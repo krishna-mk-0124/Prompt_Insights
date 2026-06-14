@@ -1,23 +1,23 @@
 category_id,category_name,subcategory_id,subcategory_name,keywords
-0,Software Engineering & Development,0,Java Python C++,software engineering development java python c
-0,Software Engineering & Development,1,Frontend React Angular,software engineering development frontend react angular
-0,Software Engineering & Development,2,Backend Node Express,software engineering development backend node express
-0,Software Engineering & Development,3,Api Rest Graphql,software engineering development api rest graphql
-0,Software Engineering & Development,4,Git Version Control,software engineering development git version control
+0,Software Engineering & Development,0,Java Python C++,software engineering development java python c import def class public private syntax compile method object variable function loop array
+0,Software Engineering & Development,1,Frontend React Angular,software engineering development frontend react angular html css javascript ui dom jsx hook component state prop npm window document
+0,Software Engineering & Development,2,Backend Node Express,software engineering development backend node express server middleware endpoint route npm django flask spring
+0,Software Engineering & Development,3,Api Rest Graphql,software engineering development api rest graphql json payload endpoint get post put delete request response
+0,Software Engineering & Development,4,Git Version Control,software engineering development git version control commit push pull branch merge repository clone pr conflict
 0,Software Engineering & Development,5,Algorithm Data Structure,software engineering development algorithm data structure
-1,Production Support & Debugging,6,Stacktrace Exception Null,production support debugging stacktrace exception null
+1,Production Support & Debugging,6,Stacktrace Exception Null,production support debugging stacktrace exception null traceback pointer segfault error fail line file
 1,Production Support & Debugging,7,Memory Leak Cpu,production support debugging memory leak cpu
 1,Production Support & Debugging,8,Application Crash Outage,production support debugging application crash outage
 1,Production Support & Debugging,9,Dependency Package Version,production support debugging dependency package version
-2,Data Engineering & Database,10,Sql Select Update,data engineering database sql select update
+2,Data Engineering & Database,10,Sql Select Update,data engineering database sql select update from where join group by insert delete query table
 2,Data Engineering & Database,11,Table Column Row,data engineering database table column row
 2,Data Engineering & Database,12,Etl Pipeline Warehouse,data engineering database etl pipeline warehouse
 2,Data Engineering & Database,13,Nosql Mongodb Cassandra,data engineering database nosql mongodb cassandra
-2,Data Engineering & Database,14,Big Data Hadoop,data engineering database big hadoop
+2,Data Engineering & Database,14,Big Data Hadoop,data engineering database big hadoop spark mapreduce hive kafka streaming pipeline
 3,Cloud Infrastructure & DevOps,15,Aws Ec2 S3,cloud infrastructure devops aws ec s
-3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container,cloud infrastructure devops kubernetes docker container
-3,Cloud Infrastructure & DevOps,17,Ci Cd Jenkins,cloud infrastructure devops ci cd jenkins
-3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure,cloud infrastructure devops terraform ansible
+3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container,cloud infrastructure devops kubernetes docker container pod cluster k8s image registry orchestration
+3,Cloud Infrastructure & DevOps,17,Ci Cd Jenkins,cloud infrastructure devops ci cd jenkins gitlab pipeline deployment build action runner
+3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure,cloud infrastructure devops terraform ansible as code yaml playbook configuration
 3,Cloud Infrastructure & DevOps,19,Network Load Balancer,cloud infrastructure devops network load balancer
 4,Cyber Security & Identity,20,Authentication Oauth Saml,cyber security identity authentication oauth saml
 4,Cyber Security & Identity,21,Authorization Rbac Role,cyber security identity authorization rbac role
