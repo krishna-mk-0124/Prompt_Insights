@@ -233,9 +233,22 @@ def run_hybrid_discovery():
     X_tax = class_vectorizer.fit_transform(tax_df["processed_desc"].tolist())
     X_prompts_class = class_vectorizer.transform(df["processed_text"].tolist())
     
-    print("\n[Phase 3/4] Mathematical Routing (Cosine Similarity)")
+    print("\n[Phase 3/4] Mathematical Routing (Cosine Similarity with Overlap Enforcement)")
     print("  -> Computing cosine distances against the official taxonomies...")
     sim_matrix = cosine_similarity(X_prompts_class, X_tax)
+    
+    # ENFORCE MINIMUM OVERLAP (to kill single-word hallucination black holes)
+    from sklearn.feature_extraction.text import CountVectorizer
+    count_vectorizer = CountVectorizer(vocabulary=class_vectorizer.vocabulary_)
+    C_tax = count_vectorizer.transform(tax_df["processed_desc"].tolist())
+    C_prompts = count_vectorizer.transform(df["processed_text"].tolist())
+    
+    overlap_matrix = C_prompts.dot(C_tax.T).toarray()
+    tax_term_counts = np.asarray(C_tax.sum(axis=1)).flatten()
+    min_overlap_required = np.minimum(2, tax_term_counts) # Require at least 2 matching words if category has >= 2 words
+    
+    valid_overlap_mask = overlap_matrix >= min_overlap_required
+    sim_matrix[~valid_overlap_mask] = 0.0
     
     max_sims = sim_matrix.max(axis=1)
     best_tax_idx = sim_matrix.argmax(axis=1)
