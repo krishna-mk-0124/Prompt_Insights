@@ -269,50 +269,9 @@ def run_hybrid_discovery():
     print(f"  -> {official_count:,} prompts successfully matched an official taxonomy!")
     print(f"  -> {other_count:,} prompts had zero similarity and were routed to 'Other/Miscellaneous'.")
     
-    if official_count > 0 and other_count > 0:
-        print("\n[Phase 3.5] Semi-Supervised Pass (Pseudo-Labeling with Full Vocabulary)")
-        print("  -> Learning OOV words from mapped prompts to drain the Other bucket...")
-        
-        from sklearn.neighbors import NearestCentroid
-        full_vectorizer = TfidfVectorizer(max_features=25000, stop_words=extended_stop_words, ngram_range=(1, 2))
-        X_full = full_vectorizer.fit_transform(df["processed_text"].tolist())
-        
-        # Strict Validation Masking: Only allow mathematically pure prompts (Sim >= 0.15) to teach the centroids
-        DRIFT_THRESHOLD = 0.15
-        drift_safe_mask = max_sims >= DRIFT_THRESHOLD
-        training_indices = np.where(drift_safe_mask)[0]
-        other_indices = np.where(other_mask)[0]
-        
-        clf = NearestCentroid()
-        if len(training_indices) > 50:
-            clf.fit(X_full[training_indices], best_tax_idx[training_indices])
-            centroids = clf.centroids_
-            sim_to_centroids = cosine_similarity(X_full[other_indices], centroids)
-            
-            max_sims_pass2 = sim_to_centroids.max(axis=1)
-            best_centroid_idx = sim_to_centroids.argmax(axis=1)
-            mapped_classes = clf.classes_[best_centroid_idx]
-            
-            PASS2_THRESHOLD = 0.05
-            pass2_mask = max_sims_pass2 >= PASS2_THRESHOLD
-            
-            pass2_indices_in_other = np.where(pass2_mask)[0]
-            global_pass2_indices = other_indices[pass2_indices_in_other]
-            
-            if len(global_pass2_indices) > 0:
-                print(f"  -> Rescued {len(global_pass2_indices):,} prompts via Semantic Pseudo-Labeling!")
-                official_mask[global_pass2_indices] = True
-                other_mask[global_pass2_indices] = False
-                best_tax_idx[global_pass2_indices] = mapped_classes[pass2_indices_in_other]
-                
-                official_count = official_mask.sum()
-                other_count = other_mask.sum()
-                print(f"  -> New Official Count: {official_count:,}")
-                print(f"  -> New Other Count: {other_count:,}")
-            else:
-                print("  -> No prompts rescued in Phase 3.5.")
-        else:
-            print("  -> Insufficient drift-safe prompts to train Phase 3.5.")
+    # PHASE 3.5 (Pseudo-Labeling) HAS BEEN PERMANENTLY REMOVED
+    # It was causing catastrophic hallucinations by forcing Out-Of-Vocabulary prompts into official categories.
+    print("\n[Phase 3.5] SKIPPED: Pseudo-Labeling is disabled to prevent mathematical hallucinations.")
     
     # Map Official Prompts
     official_indices = np.where(official_mask)[0]
