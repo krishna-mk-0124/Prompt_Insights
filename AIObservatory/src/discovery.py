@@ -181,7 +181,8 @@ def run_hybrid_discovery():
         'çπ_ev', 'invent_', 'doubt', 'downloaded', 'm√°s_qu√©', 'm√', 's_qu', 'qu√©', 'm√°s', 'appointment', 'broad', 'rc_singh', 'rc', 'singh', 'estimated', 'guy', 'messaging', 'smaller', 'broken', 'ended', 'mo_ct_ia', 'mo_ct', 'ia', 'lay', 'readme', 'callout', 'breaking', 'entre', 'sus', 'tipo', 'hemos', 'alguna', 'manera', 'presented', 'depth', 'significant', 'ks',
         'triggerdagrunoperator_', '„Äæ„Äü_„Ç¢_É°_É¨_Ç´_É≥', 'n_f', 'sharma_pi', 'isnull_', 'ther', 'hook', 'weather', 'onwards', 'tabla', 'sell', 'wouldn', 'efficient', 'li_ex', 'li', 'ex', 'disconnected', 'directions', 'grupo', 'worse', 'fa_fc', 'fa', 'fc', 'formato', 'mucho', 'tutti', 'italia',
         'october', 'nuevo_replied', 'nuevo', 'replied', 'sharma_pulling', 'sharma', 'pulling', 'highest_increased', 'highest', 'increased', 'stopped_responsibility', 'stopped', 'responsibility', 'd√≠as_buenos', 'd', 'as_buenos', 'buenos', 'expecting_jessica', 'expecting', 'jessica',
-        'soft_dropped', 'soft', 'dropped', 'youre_chnages', 'youre', 'chnages', 'est√°_ingl√©s', 'est', 'ingl', 'ellos_worries', 'ellos', 'worries', 'podemos_estas', 'podemos', 'estas', 'resumen_rephase', 'resumen', 'rephase'
+        'soft_dropped', 'soft', 'dropped', 'youre_chnages', 'youre', 'chnages', 'est√°_ingl√©s', 'est', 'ingl', 'ellos_worries', 'ellos', 'worries', 'podemos_estas', 'podemos', 'estas', 'resumen_rephase', 'resumen', 'rephase',
+        'wt', 'ery', 'v', 'sp', 'cd', 'dr', 'ps', 'gpt', 'conferma'
     ]
     # Load dynamically generated unicode noise from language router
     unicode_noise_file = os.path.join(data_dir, "unicode_noise.txt")
@@ -297,9 +298,36 @@ def run_hybrid_discovery():
                         mean_tfidf = np.asarray(X_prompts[m_indices].mean(axis=0)).flatten()
                         top_indices = mean_tfidf.argsort()[-2:][::-1]
                         feature_names = np.array(vectorizer.get_feature_names_out())
-                        sub_name = "_".join(feature_names[top_indices])
+                        raw_sub = " ".join(feature_names[top_indices]).title()
                     else:
-                        sub_name = f"auto_micro_{current_global_sub_id}"
+                        raw_sub = f"Auto Micro {current_global_sub_id}"
+                        
+                    # Apply heuristic to make it meaningful and > 4 words
+                    name_lower = raw_sub.lower()
+                    if any(x in name_lower for x in ['java', 'python', 'c++', 'react', 'angular', 'node', 'express', 'api', 'graphql', 'git', 'terraform', 'software', 'code']):
+                        sub_name = f"{raw_sub} Software Engineering and Architecture"
+                    elif any(x in name_lower for x in ['stacktrace', 'exception', 'null', 'leak', 'cpu', 'crash', 'outage', 'bug', 'defect', 'error', 'badrequest', 'grep']):
+                        sub_name = f"{raw_sub} Issue Troubleshooting and Debugging"
+                    elif any(x in name_lower for x in ['sql', 'table', 'column', 'etl', 'nosql', 'mongodb', 'hadoop', 'bigquery', 'dax', 'data', 'row', 'csv']):
+                        sub_name = f"{raw_sub} Database Querying and Analytics"
+                    elif any(x in name_lower for x in ['aws', 'kubernetes', 'docker', 'ci', 'cd', 'jenkins', 'network', 'load balancer', 'gateway', 'linux', 'system', 'directory', 'remote', 'browser']):
+                        sub_name = f"{raw_sub} Cloud Infrastructure and Deployment"
+                    elif any(x in name_lower for x in ['auth', 'rbac', 'encryption', 'ssl', 'vulnerability', 'phishing', 'compliance', 'gdpr', 'risk', 'security', 'guard', 'otp', 'identification']):
+                        sub_name = f"{raw_sub} Security Compliance and Risk Management"
+                    elif any(x in name_lower for x in ['email', 'grammar', 'translate', 'presentation', 'documentation', 'slack', 'message', 'write', 'diagram', 'meeting']):
+                        sub_name = f"{raw_sub} Corporate Communications and Drafting"
+                    elif any(x in name_lower for x in ['roi', 'budget', 'roadmap', 'market', 'sales', 'revenue', 'pricing', 'finance', 'treasury', 'accounting', 'investment', 'capital', 'ebitda', 'invoice', 'loss']):
+                        sub_name = f"{raw_sub} Financial Strategy and Market Planning"
+                    elif any(x in name_lower for x in ['agile', 'scrum', 'ticket', 'workflow', 'meeting', 'release', 'qa', 'test', 'jira', 'schedule', 'argument', 'rule']):
+                        sub_name = f"{raw_sub} Agile Project Management and Testing"
+                    elif any(x in name_lower for x in ['hr', 'talent', 'attrition', 'mentorship', 'payroll', 'training', 'immigration', 'benefits', 'employee', 'staff', 'admin', 'candidate']):
+                        sub_name = f"{raw_sub} Human Resources and Talent Management"
+                    elif any(x in name_lower for x in ['amex', 'card', 'merchant', 'offers', 'account', 'banking']):
+                        sub_name = f"{raw_sub} AMEX Banking and Card Operations"
+                    elif any(x in name_lower for x in ['excel', 'chart', 'statistics', 'pandas', 'summarize', 'brainstorm', 'math', 'plot', 'power bi', 'tableau']):
+                        sub_name = f"{raw_sub} Data Analysis and Statistical Processing"
+                    else:
+                        sub_name = f"{raw_sub} Operations and Strategic Planning"
                         
                     df.loc[m_indices, "subcategory_id"] = current_global_sub_id
                     df.loc[m_indices, "subcategory_name"] = sub_name
@@ -316,9 +344,36 @@ def run_hybrid_discovery():
                     mean_tfidf = np.asarray(cluster_X.mean(axis=0)).flatten()
                     top_indices = mean_tfidf.argsort()[-2:][::-1]
                     feature_names = np.array(vectorizer.get_feature_names_out())
-                    sub_name = "_".join(feature_names[top_indices])
+                    raw_sub = " ".join(feature_names[top_indices]).title()
                 else:
-                    sub_name = f"auto_{current_global_sub_id}"
+                    raw_sub = f"Auto {current_global_sub_id}"
+                    
+                # Apply heuristic to make it meaningful and > 4 words
+                name_lower = raw_sub.lower()
+                if any(x in name_lower for x in ['java', 'python', 'c++', 'react', 'angular', 'node', 'express', 'api', 'graphql', 'git', 'terraform', 'software', 'code']):
+                    sub_name = f"{raw_sub} Software Engineering and Architecture"
+                elif any(x in name_lower for x in ['stacktrace', 'exception', 'null', 'leak', 'cpu', 'crash', 'outage', 'bug', 'defect', 'error', 'badrequest', 'grep']):
+                    sub_name = f"{raw_sub} Issue Troubleshooting and Debugging"
+                elif any(x in name_lower for x in ['sql', 'table', 'column', 'etl', 'nosql', 'mongodb', 'hadoop', 'bigquery', 'dax', 'data', 'row', 'csv']):
+                    sub_name = f"{raw_sub} Database Querying and Analytics"
+                elif any(x in name_lower for x in ['aws', 'kubernetes', 'docker', 'ci', 'cd', 'jenkins', 'network', 'load balancer', 'gateway', 'linux', 'system', 'directory', 'remote', 'browser']):
+                    sub_name = f"{raw_sub} Cloud Infrastructure and Deployment"
+                elif any(x in name_lower for x in ['auth', 'rbac', 'encryption', 'ssl', 'vulnerability', 'phishing', 'compliance', 'gdpr', 'risk', 'security', 'guard', 'otp', 'identification']):
+                    sub_name = f"{raw_sub} Security Compliance and Risk Management"
+                elif any(x in name_lower for x in ['email', 'grammar', 'translate', 'presentation', 'documentation', 'slack', 'message', 'write', 'diagram', 'meeting']):
+                    sub_name = f"{raw_sub} Corporate Communications and Drafting"
+                elif any(x in name_lower for x in ['roi', 'budget', 'roadmap', 'market', 'sales', 'revenue', 'pricing', 'finance', 'treasury', 'accounting', 'investment', 'capital', 'ebitda', 'invoice', 'loss']):
+                    sub_name = f"{raw_sub} Financial Strategy and Market Planning"
+                elif any(x in name_lower for x in ['agile', 'scrum', 'ticket', 'workflow', 'meeting', 'release', 'qa', 'test', 'jira', 'schedule', 'argument', 'rule']):
+                    sub_name = f"{raw_sub} Agile Project Management and Testing"
+                elif any(x in name_lower for x in ['hr', 'talent', 'attrition', 'mentorship', 'payroll', 'training', 'immigration', 'benefits', 'employee', 'staff', 'admin', 'candidate']):
+                    sub_name = f"{raw_sub} Human Resources and Talent Management"
+                elif any(x in name_lower for x in ['amex', 'card', 'merchant', 'offers', 'account', 'banking']):
+                    sub_name = f"{raw_sub} AMEX Banking and Card Operations"
+                elif any(x in name_lower for x in ['excel', 'chart', 'statistics', 'pandas', 'summarize', 'brainstorm', 'math', 'plot', 'power bi', 'tableau']):
+                    sub_name = f"{raw_sub} Data Analysis and Statistical Processing"
+                else:
+                    sub_name = f"{raw_sub} Operations and Strategic Planning"
                     
                 df.loc[cluster_global_indices, "subcategory_id"] = current_global_sub_id
                 df.loc[cluster_global_indices, "subcategory_name"] = sub_name
