@@ -264,37 +264,42 @@ def run_hybrid_discovery():
         full_vectorizer = TfidfVectorizer(max_features=25000, stop_words=extended_stop_words, ngram_range=(1, 2))
         X_full = full_vectorizer.fit_transform(df["processed_text"].tolist())
         
-        official_indices = np.where(official_mask)[0]
+        # Strict Validation Masking: Only allow mathematically pure prompts (Sim >= 0.15) to teach the centroids
+        DRIFT_THRESHOLD = 0.15
+        drift_safe_mask = max_sims >= DRIFT_THRESHOLD
+        training_indices = np.where(drift_safe_mask)[0]
         other_indices = np.where(other_mask)[0]
         
         clf = NearestCentroid()
-        clf.fit(X_full[official_indices], best_tax_idx[official_indices])
-        
-        centroids = clf.centroids_
-        sim_to_centroids = cosine_similarity(X_full[other_indices], centroids)
-        
-        max_sims_pass2 = sim_to_centroids.max(axis=1)
-        best_centroid_idx = sim_to_centroids.argmax(axis=1)
-        mapped_classes = clf.classes_[best_centroid_idx]
-        
-        PASS2_THRESHOLD = 0.05
-        pass2_mask = max_sims_pass2 >= PASS2_THRESHOLD
-        
-        pass2_indices_in_other = np.where(pass2_mask)[0]
-        global_pass2_indices = other_indices[pass2_indices_in_other]
-        
-        if len(global_pass2_indices) > 0:
-            print(f"  -> Rescued {len(global_pass2_indices):,} prompts via Semantic Pseudo-Labeling!")
-            official_mask[global_pass2_indices] = True
-            other_mask[global_pass2_indices] = False
-            best_tax_idx[global_pass2_indices] = mapped_classes[pass2_indices_in_other]
+        if len(training_indices) > 50:
+            clf.fit(X_full[training_indices], best_tax_idx[training_indices])
+            centroids = clf.centroids_
+            sim_to_centroids = cosine_similarity(X_full[other_indices], centroids)
             
-            official_count = official_mask.sum()
-            other_count = other_mask.sum()
-            print(f"  -> New Official Count: {official_count:,}")
-            print(f"  -> New Other Count: {other_count:,}")
+            max_sims_pass2 = sim_to_centroids.max(axis=1)
+            best_centroid_idx = sim_to_centroids.argmax(axis=1)
+            mapped_classes = clf.classes_[best_centroid_idx]
+            
+            PASS2_THRESHOLD = 0.05
+            pass2_mask = max_sims_pass2 >= PASS2_THRESHOLD
+            
+            pass2_indices_in_other = np.where(pass2_mask)[0]
+            global_pass2_indices = other_indices[pass2_indices_in_other]
+            
+            if len(global_pass2_indices) > 0:
+                print(f"  -> Rescued {len(global_pass2_indices):,} prompts via Semantic Pseudo-Labeling!")
+                official_mask[global_pass2_indices] = True
+                other_mask[global_pass2_indices] = False
+                best_tax_idx[global_pass2_indices] = mapped_classes[pass2_indices_in_other]
+                
+                official_count = official_mask.sum()
+                other_count = other_mask.sum()
+                print(f"  -> New Official Count: {official_count:,}")
+                print(f"  -> New Other Count: {other_count:,}")
+            else:
+                print("  -> No prompts rescued in Phase 3.5.")
         else:
-            print("  -> No prompts rescued in Phase 3.5.")
+            print("  -> Insufficient drift-safe prompts to train Phase 3.5.")
     
     # Map Official Prompts
     official_indices = np.where(official_mask)[0]
