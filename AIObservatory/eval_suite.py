@@ -1,8 +1,11 @@
 import pandas as pd
 import numpy as np
 import os
+import warnings
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_distances
+
+warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 DATA_FILE = 'data/fully_categorized_dataset.csv'
 GOLDEN_FILE = 'data/golden_set_review.csv'
@@ -34,7 +37,8 @@ def main():
             sampled = sampled.sample(500, random_state=42)
         
         # We only need prompt, category, subcategory, and a blank column for human to mark 1/0
-        golden_df = sampled[['prompt', 'category_name', 'subcategory_name']].copy()
+        golden_df = sampled[['truncated_prompt', 'category_name', 'subcategory_name']].copy()
+        golden_df.rename(columns={'truncated_prompt': 'prompt'}, inplace=True)
         golden_df['is_correct_mapping (1=Yes, 0=No)'] = ""
         
         golden_df.to_csv(GOLDEN_FILE, index=False)
@@ -54,8 +58,8 @@ def main():
     print("Computing TF-IDF to check for Semantic Drift...")
     vec = TfidfVectorizer(max_features=5000, stop_words='english')
     # Use a random sample of 20k to speed up math
-    sample_for_math = mapped_df.sample(min(len(mapped_df), 20000), random_state=42)
-    sample_for_math['text'] = sample_for_math['prompt'].astype(str)
+    sample_for_math = mapped_df.sample(min(len(mapped_df), 20000), random_state=42).copy()
+    sample_for_math['text'] = sample_for_math['truncated_prompt'].astype(str)
     
     X = vec.fit_transform(sample_for_math['text'])
     
