@@ -24,6 +24,38 @@ def clean_and_truncate(text):
         return " ".join(words[:50])
     return text
 
+def get_smart_cluster_name(feature_words):
+    name_lower = " ".join(feature_words).lower()
+    
+    if any(x in name_lower for x in ['java', 'python', 'c++', 'react', 'angular', 'node', 'express', 'api', 'graphql', 'git', 'terraform', 'software', 'code', 'script', 'deploy', 'cdn', 'operator']):
+        suffix = "Development Practices"
+    elif any(x in name_lower for x in ['stacktrace', 'exception', 'null', 'leak', 'cpu', 'crash', 'outage', 'bug', 'defect', 'error', 'badrequest', 'grep', 'fail']):
+        suffix = "Error Triage"
+    elif any(x in name_lower for x in ['sql', 'table', 'column', 'etl', 'nosql', 'mongodb', 'hadoop', 'bigquery', 'dax', 'data', 'row', 'csv', 'db']):
+        suffix = "Data Analytics"
+    elif any(x in name_lower for x in ['aws', 'kubernetes', 'docker', 'ci', 'cd', 'jenkins', 'network', 'load balancer', 'gateway', 'linux', 'system', 'directory', 'remote', 'browser', 'env', 'host']):
+        suffix = "Cloud Infrastructure"
+    elif any(x in name_lower for x in ['auth', 'rbac', 'encryption', 'ssl', 'vulnerability', 'phishing', 'compliance', 'gdpr', 'risk', 'security', 'guard', 'otp', 'identification', 'compromise', 'aml', 'ppe']):
+        suffix = "Security Compliance"
+    elif any(x in name_lower for x in ['email', 'grammar', 'translate', 'presentation', 'documentation', 'slack', 'message', 'write', 'diagram', 'meeting', 'conclusion', 'teach', 'rush', 'summarize']):
+        suffix = "Business Communications"
+    elif any(x in name_lower for x in ['roi', 'budget', 'roadmap', 'market', 'sales', 'revenue', 'pricing', 'finance', 'treasury', 'accounting', 'investment', 'capital', 'ebitda', 'invoice', 'loss', 'stock']):
+        suffix = "Financial Strategy"
+    elif any(x in name_lower for x in ['agile', 'scrum', 'ticket', 'workflow', 'meeting', 'release', 'qa', 'test', 'jira', 'schedule', 'argument', 'rule', 'playbook', 'phases', 'ongoing']):
+        suffix = "Project Management"
+    elif any(x in name_lower for x in ['hr', 'talent', 'attrition', 'mentorship', 'payroll', 'training', 'immigration', 'benefits', 'employee', 'staff', 'admin', 'candidate', 'candidates', 'wife', 'spot']):
+        suffix = "Human Resources"
+    elif any(x in name_lower for x in ['amex', 'card', 'merchant', 'offers', 'account', 'banking', 'fins', 'privileged']):
+        suffix = "Banking Operations"
+    elif any(x in name_lower for x in ['excel', 'chart', 'statistics', 'pandas', 'summarize', 'brainstorm', 'math', 'plot', 'power bi', 'tableau', 'grid', 'weighted', 'maps']):
+        suffix = "Statistical Analysis"
+    else:
+        suffix = "Strategic Planning"
+
+    core_topic = " ".join([w.title() for w in feature_words[:3]])
+    return f"Auto Cluster: {core_topic} {suffix}"
+
+
 def extract_top_keywords(tfidf_matrix, vectorizer, cluster_labels, num_clusters, top_n=2):
     feature_names = np.array(vectorizer.get_feature_names_out())
     cluster_names = {}
@@ -297,10 +329,14 @@ def run_hybrid_discovery():
                     
                     if m_size >= 2:
                         mean_tfidf = np.asarray(X_prompts[m_indices].mean(axis=0)).flatten()
-                        top_indices = mean_tfidf.argsort()[-2:][::-1]
+                        top_indices = mean_tfidf.argsort()[-3:][::-1]
                         # Clean feature names to remove any accidental underscores (e.g. '_am' -> 'am')
-                        feature_names = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])
-                        sub_name = f"Auto Cluster: {' '.join(feature_names[top_indices]).title()}"
+                        raw_words = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])[top_indices]
+                        valid_words = [w for w in raw_words if len(w) > 1]
+                        if valid_words:
+                            sub_name = get_smart_cluster_name(valid_words)
+                        else:
+                            sub_name = f"Auto Cluster: Micro {current_global_sub_id}"
                     else:
                         sub_name = f"Auto Cluster: Micro {current_global_sub_id}"
                         
@@ -317,9 +353,13 @@ def run_hybrid_discovery():
             else:
                 if cluster_size >= 2:
                     mean_tfidf = np.asarray(cluster_X.mean(axis=0)).flatten()
-                    top_indices = mean_tfidf.argsort()[-2:][::-1]
-                    feature_names = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])
-                    sub_name = f"Auto Cluster: {' '.join(feature_names[top_indices]).title()}"
+                    top_indices = mean_tfidf.argsort()[-3:][::-1]
+                    raw_words = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])[top_indices]
+                    valid_words = [w for w in raw_words if len(w) > 1]
+                    if valid_words:
+                        sub_name = get_smart_cluster_name(valid_words)
+                    else:
+                        sub_name = f"Auto Cluster: {current_global_sub_id}"
                 else:
                     sub_name = f"Auto Cluster: {current_global_sub_id}"
                     
