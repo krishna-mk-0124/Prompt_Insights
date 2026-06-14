@@ -1,237 +1,237 @@
 category_id,category_name,subcategory_id,subcategory_name,keywords
-0,Software Engineering & Development,0,Java Python C++,software engineering development java python c import def class public private syntax compile method object variable function loop array
-0,Software Engineering & Development,1,Frontend React Angular,software engineering development frontend react angular html css javascript ui dom jsx hook component state prop npm window document
-0,Software Engineering & Development,2,Backend Node Express,software engineering development backend node express server middleware endpoint route npm django flask spring
-0,Software Engineering & Development,3,Api Rest Graphql,software engineering development api rest graphql json payload endpoint get post put delete request response
-0,Software Engineering & Development,4,Git Version Control,software engineering development git version control commit push pull branch merge repository clone pr conflict
-0,Software Engineering & Development,5,Algorithm Data Structure,software engineering development algorithm data structure
-1,Production Support & Debugging,6,Stacktrace Exception Null,production support debugging stacktrace exception null traceback pointer segfault error fail line file
-1,Production Support & Debugging,7,Memory Leak Cpu,production support debugging memory leak cpu
-1,Production Support & Debugging,8,Application Crash Outage,production support debugging application crash outage
-1,Production Support & Debugging,9,Dependency Package Version,production support debugging dependency package version
-2,Data Engineering & Database,10,Sql Select Update,data engineering database sql select update from where join group by insert delete query table
-2,Data Engineering & Database,11,Table Column Row,data engineering database table column row
-2,Data Engineering & Database,12,Etl Pipeline Warehouse,data engineering database etl pipeline warehouse
-2,Data Engineering & Database,13,Nosql Mongodb Cassandra,data engineering database nosql mongodb cassandra
-2,Data Engineering & Database,14,Big Data Hadoop,data engineering database big hadoop spark mapreduce hive kafka streaming pipeline
-3,Cloud Infrastructure & DevOps,15,Aws Ec2 S3,cloud infrastructure devops aws ec s
-3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container,cloud infrastructure devops kubernetes docker container pod cluster k8s image registry orchestration
-3,Cloud Infrastructure & DevOps,17,Ci Cd Jenkins,cloud infrastructure devops ci cd jenkins gitlab pipeline deployment build action runner
-3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure,cloud infrastructure devops terraform ansible as code yaml playbook configuration
-3,Cloud Infrastructure & DevOps,19,Network Load Balancer,cloud infrastructure devops network load balancer
-4,Cyber Security & Identity,20,Authentication Oauth Saml,cyber security identity authentication oauth saml
-4,Cyber Security & Identity,21,Authorization Rbac Role,cyber security identity authorization rbac role
-4,Cyber Security & Identity,22,Encryption Ssl Tls,cyber security identity encryption ssl tls
-4,Cyber Security & Identity,23,Vulnerability Malware Phishing,cyber security identity vulnerability malware phishing
-4,Cyber Security & Identity,24,Compliance Gdpr Hipaa,cyber security identity compliance gdpr hipaa
-5,Business Communication & Writing,25,Email Draft Response,business communication writing email draft response
-5,Business Communication & Writing,26,Grammar Spelling Proofread,business communication writing grammar spelling proofread
-5,Business Communication & Writing,27,Translate Language Translation,business communication writing translate language translation
-5,Business Communication & Writing,28,Presentation Slide Deck,business communication writing presentation slide deck
-5,Business Communication & Writing,29,Documentation Manual Article,business communication writing documentation manual article
-6,Executive Strategy & Management,30,Roi Kpi Metric,executive strategy management roi kpi metric
-6,Executive Strategy & Management,31,Budget Revenue Profit,executive strategy management budget revenue profit
-6,Executive Strategy & Management,32,Roadmap Vision Mission,executive strategy management roadmap vision mission
-6,Executive Strategy & Management,33,Talent Hr Hiring,executive strategy management talent hr hiring
-6,Executive Strategy & Management,34,Market Competition Differentiation,executive strategy management market competition differentiation
-7,Process & Project Management,35,Agile Scrum Sprint,process project management agile scrum sprint
-7,Process & Project Management,36,Ticket Jira Issue,process project management ticket jira issue
-7,Process & Project Management,37,Workflow Checklist Step,process project management workflow checklist step
-7,Process & Project Management,38,Meeting Notes Agenda,process project management meeting notes agenda
-7,Process & Project Management,39,Release Schedule Change,process project management release schedule change
-8,Testing & Quality Assurance,40,Unit Test Mock,testing quality assurance unit test mock
-8,Testing & Quality Assurance,41,Integration Test End,testing quality assurance integration test end
-8,Testing & Quality Assurance,42,Regression Load Stress,testing quality assurance regression load stress
-8,Testing & Quality Assurance,43,Qa Defect Bug,testing quality assurance qa defect bug
-9,Data Analytics & Visualization,44,Excel Formula Pivot,data analytics visualization excel formula pivot
-9,Data Analytics & Visualization,45,Chart Graph Dashboard,data analytics visualization chart graph dashboard
-9,Data Analytics & Visualization,46,Statistics Mean Median,data analytics visualization statistics mean median
-9,Data Analytics & Visualization,47,Data Cleansing Formatting,data analytics visualization cleansing formatting
-9,Data Analytics & Visualization,48,Python Pandas Numpy,data analytics visualization python pandas numpy
-10,General Productivity & Knowledge,49,Summarize Condense Abstract,general productivity knowledge summarize condense abstract
-10,General Productivity & Knowledge,50,Brainstorm Ideate Concept,general productivity knowledge brainstorm ideate concept
-10,General Productivity & Knowledge,51,Format Structure Table,general productivity knowledge format structure table
-10,General Productivity & Knowledge,52,Explain Define Concept,general productivity knowledge explain define concept
-10,General Productivity & Knowledge,53,Math Calculate Equation,general productivity knowledge math calculate equation
-11,American Express & Payments,54,American Express Amex,american express payments amex
-11,American Express & Payments,55,Card Member Membership,american express payments card member membership
-11,American Express & Payments,56,Merchant Global Acquiring,american express payments merchant global acquiring
-11,American Express & Payments,57,Amex Offers Marketing,american express payments amex offers marketing
-11,American Express & Payments,58,Account Bank Balance,american express payments account bank balance
-0,Software Engineering & Development,59,Application Tests,software engineering development application tests
-0,Software Engineering & Development,60,Gatling Load Testing,software engineering development gatling load testing
-0,Software Engineering & Development,61,Mime Types,software engineering development mime types
-0,Software Engineering & Development,62,Regex Patterns,software engineering development regex patterns
-0,Software Engineering & Development,63,Jcl Clickable Links,software engineering development jcl clickable links
-0,Software Engineering & Development,64,Prd Leaves Production,software engineering development prd leaves production
-0,Software Engineering & Development,65,Plot Cid Graphics,software engineering development plot cid graphics
-0,Software Engineering & Development,66,Optional Directories,software engineering development optional directories
-0,Software Engineering & Development,67,Dispatch Comparable,software engineering development dispatch comparable
-0,Software Engineering & Development,68,Ccps Notification,software engineering development ccps notification
-0,Software Engineering & Development,69,Airflow Schedule Interval,software engineering development airflow schedule interval
-0,Software Engineering & Development,70,Downstream Impacts,software engineering development downstream impacts
-0,Software Engineering & Development,71,Xhtml Posture,software engineering development xhtml posture
-0,Software Engineering & Development,72,Launchpad Listlevel,software engineering development launchpad listlevel
-1,Production Support & Debugging,73,Script Execution Run,production support debugging script execution run
-1,Production Support & Debugging,74,Error Code Exception,production support debugging error code exception
-1,Production Support & Debugging,75,Software Code Errors,production support debugging software code errors
-1,Production Support & Debugging,76,Software Configuration Errors,production support debugging software configuration errors
-1,Production Support & Debugging,77,Uat Sit Testing,production support debugging uat sit testing
-1,Production Support & Debugging,78,Ui Bug Screenshots,production support debugging ui bug screenshots
-1,Production Support & Debugging,79,Linux Elf Errors,production support debugging linux elf errors
-1,Production Support & Debugging,80,Alert Panel Severity,production support debugging alert panel severity
-1,Production Support & Debugging,81,Amex Software Error,production support debugging amex software error
-1,Production Support & Debugging,82,Quality Control Qc,production support debugging quality control qc
-1,Production Support & Debugging,83,Software Code Error,production support debugging software code error
-1,Production Support & Debugging,84,Invalid Identifier Errors,production support debugging invalid identifier errors
-1,Production Support & Debugging,85,Support Escalation Win,production support debugging escalation win
-1,Production Support & Debugging,86,Developer Mistakes,production support debugging developer mistakes
-1,Production Support & Debugging,87,It Technology Investigation,production support debugging it technology investigation
-1,Production Support & Debugging,88,Nexthink It Narration,production support debugging nexthink it narration
-2,Data Engineering & Database,89,Csv Path File,data engineering database csv path file
-2,Data Engineering & Database,90,Tableau Lod Expression,data engineering database tableau lod expression
-2,Data Engineering & Database,91,Statistics Sample Population,data engineering database statistics sample population
-2,Data Engineering & Database,92,Google Bigquery,data engineering database google bigquery
-2,Data Engineering & Database,93,Power Bi Selectedvalue,data engineering database power bi selectedvalue
-2,Data Engineering & Database,94,Statistical Problems,data engineering database statistical problems
-2,Data Engineering & Database,95,Jupyter Notebook Club,data engineering database jupyter notebook club
-2,Data Engineering & Database,96,Chart Vertical Legend,data engineering database chart vertical legend
-2,Data Engineering & Database,97,Us States Exchange,data engineering database us states exchange
-2,Data Engineering & Database,98,Model Id Product,data engineering database model id product
-2,Data Engineering & Database,99,Xml Central Configuration,data engineering database xml central configuration
-2,Data Engineering & Database,100,Pib Predictive Models,data engineering database pib predictive models
-2,Data Engineering & Database,101,Refactoring Lpad,data engineering database refactoring lpad
-2,Data Engineering & Database,102,Correlation Analysis,data engineering database correlation analysis
-2,Data Engineering & Database,103,Water Height Measurements,data engineering database water height measurements
-3,Cloud Infrastructure & DevOps,104,Incident Alert Monitoring,cloud infrastructure devops incident alert monitoring
-3,Cloud Infrastructure & DevOps,105,Laptop Windows Hardware,cloud infrastructure devops laptop windows hardware
-3,Cloud Infrastructure & DevOps,106,Python Pypi Packages,cloud infrastructure devops python pypi packages
-3,Cloud Infrastructure & DevOps,107,Zip File Contents,cloud infrastructure devops zip file contents
-3,Cloud Infrastructure & DevOps,108,Cron Job Scheduling,cloud infrastructure devops cron job scheduling
-3,Cloud Infrastructure & DevOps,109,Systems Cutover Deployments,cloud infrastructure devops systems cutover deployments
-3,Cloud Infrastructure & DevOps,110,Config Tag Settings,cloud infrastructure devops config tag settings
-3,Cloud Infrastructure & DevOps,111,Rfc Request For,cloud infrastructure devops rfc request
-3,Cloud Infrastructure & DevOps,112,Splunk Total Rows,cloud infrastructure devops splunk total rows
-3,Cloud Infrastructure & DevOps,113,Shell Script Parameters,cloud infrastructure devops shell script parameters
-3,Cloud Infrastructure & DevOps,114,Kernel Application Pcn,cloud infrastructure devops kernel application pcn
-3,Cloud Infrastructure & DevOps,115,Backup Nat Gateway,cloud infrastructure devops backup nat gateway
-3,Cloud Infrastructure & DevOps,116,Geo Routing Argentina,cloud infrastructure devops geo routing argentina
-3,Cloud Infrastructure & DevOps,117,Dynamic Operations,cloud infrastructure devops dynamic operations
-3,Cloud Infrastructure & DevOps,118,Monitor Built,cloud infrastructure devops monitor built
-4,Cyber Security & Identity,119,Risk Control Policies,cyber security identity risk control policies
-4,Cyber Security & Identity,120,Privacy Data Pii,cyber security identity privacy data pii
-4,Cyber Security & Identity,121,Regulatory Requirements Regulation,cyber security identity regulatory requirements regulation
-4,Cyber Security & Identity,122,On-Call Pager Incident,cyber security identity call pager incident
-4,Cyber Security & Identity,123,Risk Product Owner,cyber security identity risk product owner
-4,Cyber Security & Identity,124,Compliance Control Procedures,cyber security identity compliance control procedures
-4,Cyber Security & Identity,125,Compliance Database Tables,cyber security identity compliance database tables
-4,Cyber Security & Identity,126,Falcon Gmas Security,cyber security identity falcon gmas
-4,Cyber Security & Identity,127,Inherent Risk,cyber security identity inherent risk
-4,Cyber Security & Identity,128,Amex Card Risk,cyber security identity amex card risk
-4,Cyber Security & Identity,129,Cyberark Secrets Vault,cyber security identity cyberark secrets vault
-4,Cyber Security & Identity,130,Issue Corrective Closure,cyber security identity issue corrective closure
-4,Cyber Security & Identity,131,Sam Directors Access,cyber security identity sam directors access
-4,Cyber Security & Identity,132,Major Risk Events,cyber security identity major risk events
-4,Cyber Security & Identity,133,Entra Id Seasonality,cyber security identity entra id seasonality
-5,Business Communication & Writing,134,Bullet Points List,business communication writing bullet points list
-5,Business Communication & Writing,135,Write Email Team,business communication writing write email team
-5,Business Communication & Writing,136,Grammar Correct Sentence,business communication writing grammar correct sentence
-5,Business Communication & Writing,137,Slack Message Communication,business communication writing slack message
-5,Business Communication & Writing,138,Diagram Link Visio,business communication writing diagram link visio
-5,Business Communication & Writing,139,Meeting Invite Calendar,business communication writing meeting invite calendar
-5,Business Communication & Writing,140,Sales Revenue Market,business communication writing sales revenue market
-5,Business Communication & Writing,141,Attrition Retention Employee,business communication writing attrition retention employee
-5,Business Communication & Writing,142,Marketing Campaign Promotion,business communication writing marketing campaign promotion
-5,Business Communication & Writing,143,Mentorship Career Coaching,business communication writing mentorship career coaching
-5,Business Communication & Writing,144,Vendor Management Third,business communication writing vendor management third
-5,Business Communication & Writing,145,Hr Payroll Salary,business communication writing hr payroll salary
-5,Business Communication & Writing,146,Group Training Workshops,business communication writing group training workshops
-5,Business Communication & Writing,147,Meetings Recording,business communication writing meetings recording
-5,Business Communication & Writing,148,Concurrent Chat Sessions,business communication writing concurrent chat sessions
-6,Executive Strategy & Management,149,Banking Direction Strategy,executive strategy management banking direction
-6,Executive Strategy & Management,150,Ownership Accountability Culture,executive strategy management ownership accountability culture
-6,Executive Strategy & Management,151,Capacity Shift Planning,executive strategy management capacity shift planning
-6,Executive Strategy & Management,152,Pilot Project Proposals,executive strategy management pilot project proposals
-6,Executive Strategy & Management,153,Inventory Management,executive strategy management inventory
-6,Executive Strategy & Management,154,Tsr Shareholder Trends,executive strategy management tsr shareholder trends
-6,Executive Strategy & Management,155,International Pricing Models,executive strategy management international pricing models
-6,Executive Strategy & Management,156,Dcrm Levers,executive strategy management dcrm levers
-6,Executive Strategy & Management,157,Sales Deal Closing,executive strategy management sales deal closing
-6,Executive Strategy & Management,158,Data Governance Delivery,executive strategy management data governance delivery
-6,Executive Strategy & Management,159,Telesales Operations,executive strategy management telesales operations
-6,Executive Strategy & Management,160,Forbes Publications,executive strategy management forbes publications
-6,Executive Strategy & Management,161,Decide Owners,executive strategy management decide owners
-6,Executive Strategy & Management,162,Srr Streamline,executive strategy management srr streamline
-6,Executive Strategy & Management,163,Amazon Brands,executive strategy management amazon brands
-7,Process & Project Management,164,Product Manager Management,process project management product manager
-7,Process & Project Management,165,Intake Form Process,process project management intake form
-8,Testing & Quality Assurance,166,Error Getting Debug,testing quality assurance error getting debug
-8,Testing & Quality Assurance,167,Code Changes Required,testing quality assurance code changes required
-8,Testing & Quality Assurance,168,Pass Fail Test,testing quality assurance pass fail test
-8,Testing & Quality Assurance,169,Test Expected Actual,testing quality assurance test expected actual
-9,Data Analytics & Visualization,170,Data Reporting Report,data analytics visualization reporting report
-9,Data Analytics & Visualization,171,Power Bi Dashboard,data analytics visualization power bi dashboard
-9,Data Analytics & Visualization,172,Ai Embedding Similarity,data analytics visualization ai embedding similarity
-10,General Productivity & Knowledge,173,Webex Conferencing,general productivity knowledge webex conferencing
-10,General Productivity & Knowledge,174,Sharepoint Sla Slas,general productivity knowledge sharepoint sla slas
-10,General Productivity & Knowledge,175,Documentation Technical Docs,general productivity knowledge documentation technical docs
-10,General Productivity & Knowledge,176,Pop Operations Center,general productivity knowledge pop operations center
-10,General Productivity & Knowledge,177,Cbr Uploading Process,general productivity knowledge cbr uploading process
-10,General Productivity & Knowledge,178,Agile Carryover Stories,general productivity knowledge agile carryover stories
-10,General Productivity & Knowledge,179,Rag Architecture Iv,general productivity knowledge rag architecture iv
-10,General Productivity & Knowledge,180,Workflow Approvals Sorting,general productivity knowledge workflow approvals sorting
-10,General Productivity & Knowledge,181,Approval Notices,general productivity knowledge approval notices
-10,General Productivity & Knowledge,182,Openai Customgpt,general productivity knowledge openai customgpt
-10,General Productivity & Knowledge,183,Qualtrics Surveys,general productivity knowledge qualtrics surveys
-10,General Productivity & Knowledge,184,Enable Genai Capabilities,general productivity knowledge enable genai capabilities
-10,General Productivity & Knowledge,185,Jump Guides,general productivity knowledge jump guides
-10,General Productivity & Knowledge,186,Pillars Holding,general productivity knowledge pillars holding
-10,General Productivity & Knowledge,187,Printable Gantt Charts,general productivity knowledge printable gantt charts
-11,American Express & Payments,188,Supplier Buyer Network,american express payments supplier buyer network
-11,American Express & Payments,189,Aexp Internal Acronym,american express payments aexp internal acronym
-11,American Express & Payments,190,Insurance Products,american express payments insurance products
-11,American Express & Payments,191,Transaction Fraud Chargeback,american express payments transaction fraud chargeback
-11,American Express & Payments,192,Pricing Ctl Settings,american express payments pricing ctl settings
-11,American Express & Payments,193,Direct Pay Deposit,american express payments direct pay deposit
-11,American Express & Payments,194,Iag Entity Structure,american express payments iag entity structure
-11,American Express & Payments,195,Video Creative Assets,american express payments video creative assets
-11,American Express & Payments,196,Treasury Funding Liquidity,american express payments treasury funding liquidity
-11,American Express & Payments,197,External Loan Financing,american express payments external loan financing
-11,American Express & Payments,198,Pcns System Buttons,american express payments pcns system buttons
-11,American Express & Payments,199,System Of Record,american express payments system record
-11,American Express & Payments,200,Amex Award Alternatives,american express payments amex award alternatives
-11,American Express & Payments,201,Targeting Eligibility,american express payments targeting eligibility
-11,American Express & Payments,202,Gmns Evaluating,american express payments gmns evaluating
-12,Business Process Automation,203,Process Automation Rpa,business process automation rpa
-13,Business Communication & HR,204,Hr Immigration Manager,business communication hr immigration manager
-13,Business Communication & HR,205,Cancellation Conflicts,business communication hr cancellation conflicts
-13,Business Communication & HR,206,Hr Responsibilities Introduction,business communication hr responsibilities introduction
-13,Business Communication & HR,207,Benefits Enrollment Lift,business communication hr benefits enrollment lift
-13,Business Communication & HR,208,Hr Benefits Eligibility,business communication hr benefits eligibility
-13,Business Communication & HR,209,Hr Interviewer Recruiter,business communication hr interviewer recruiter
-13,Business Communication & HR,210,Hr Associates Aspirations,business communication hr associates aspirations
-13,Business Communication & HR,211,Official Opt In,business communication hr official opt
-13,Business Communication & HR,212,Singapore Communications,business communication hr singapore communications
-13,Business Communication & HR,213,Email Confirming Receipt,business communication hr email confirming receipt
-13,Business Communication & HR,214,Wfm Coordination,business communication hr wfm coordination
-13,Business Communication & HR,215,Hr Gurgaon Highlights,business communication hr gurgaon highlights
-14,Finance & Procurement,216,Accounting Journal Entries,finance procurement accounting journal entries
-14,Finance & Procurement,217,Pcm Rule Allocation,finance procurement pcm rule allocation
-14,Finance & Procurement,218,Sow Statement Of,finance procurement sow statement
-14,Finance & Procurement,219,Ebitda Financial Metrics,finance procurement ebitda financial metrics
-14,Finance & Procurement,220,Pricing Approvals,finance procurement pricing approvals
-14,Finance & Procurement,221,Eod End Of,finance procurement eod end
-14,Finance & Procurement,222,Applications Pricing,finance procurement applications pricing
-14,Finance & Procurement,223,Capital Timing Finance,finance procurement capital timing
-14,Finance & Procurement,224,Financials Fin Reporting,finance procurement financials fin reporting
-14,Finance & Procurement,225,Amount Constants,finance procurement amount constants
-14,Finance & Procurement,226,Emburse Expense Management,finance procurement emburse expense management
-14,Finance & Procurement,227,Pricing Study Research,finance procurement pricing study research
-14,Finance & Procurement,228,Asset Management Entry,finance procurement asset management entry
-14,Finance & Procurement,229,Bank Locations,finance procurement bank locations
-14,Finance & Procurement,230,Investment Plans,finance procurement investment plans
-14,Finance & Procurement,231,Bank Neutral,finance procurement bank neutral
-14,Finance & Procurement,232,Fees Dashboards,finance procurement fees dashboards
-14,Finance & Procurement,233,Finance Actuals Adb,finance procurement actuals adb
-14,Finance & Procurement,234,Treasury Report Script,finance procurement treasury report script
-14,Finance & Procurement,235,Finance Annual Spend,finance procurement annual spend
+0,Software Engineering & Development,0,Java Python C++,java python c import def class public private syntax compile method object variable function loop array
+0,Software Engineering & Development,1,Frontend React Angular,frontend react angular html css javascript ui dom jsx hook component state prop npm window document
+0,Software Engineering & Development,2,Backend Node Express,backend node express server middleware endpoint route npm django flask spring
+0,Software Engineering & Development,3,Api Rest Graphql,api rest graphql json payload endpoint get post put delete request response
+0,Software Engineering & Development,4,Git Version Control,git version control commit push pull branch merge repository clone pr conflict
+0,Software Engineering & Development,5,Algorithm Data Structure,algorithm data structure
+1,Production Support & Debugging,6,Stacktrace Exception Null,stacktrace exception null traceback pointer segfault error fail line file
+1,Production Support & Debugging,7,Memory Leak Cpu,memory leak cpu
+1,Production Support & Debugging,8,Application Crash Outage,application crash outage
+1,Production Support & Debugging,9,Dependency Package Version,dependency package version
+2,Data Engineering & Database,10,Sql Select Update,sql select update from where join group by insert delete query table
+2,Data Engineering & Database,11,Table Column Row,table column row
+2,Data Engineering & Database,12,Etl Pipeline Warehouse,etl pipeline warehouse
+2,Data Engineering & Database,13,Nosql Mongodb Cassandra,nosql mongodb cassandra
+2,Data Engineering & Database,14,Big Data (Hadoop/Spark),big hadoop spark mapreduce hive kafka streaming pipeline data hadoopspark hadoop spark mapreduce hive kafka streaming pipeline
+3,Cloud Infrastructure & DevOps,15,Aws Ec2 S3,aws ec s
+3,Cloud Infrastructure & DevOps,16,Kubernetes Docker Container,kubernetes docker container pod cluster k8s image registry orchestration
+3,Cloud Infrastructure & DevOps,17,Ci Cd Jenkins,ci cd jenkins gitlab pipeline deployment build action runner
+3,Cloud Infrastructure & DevOps,18,Terraform Ansible Infrastructure,terraform ansible as code yaml playbook configuration infrastructure
+3,Cloud Infrastructure & DevOps,19,Network Load Balancer,network load balancer
+4,Cyber Security & Identity,20,Authentication Oauth Saml,authentication oauth saml
+4,Cyber Security & Identity,21,Authorization Rbac Role,authorization rbac role
+4,Cyber Security & Identity,22,Encryption Ssl Tls,encryption ssl tls
+4,Cyber Security & Identity,23,Vulnerability Malware Phishing,vulnerability malware phishing
+4,Cyber Security & Identity,24,Compliance Gdpr Hipaa,compliance gdpr hipaa
+5,Business Communication & Writing,25,Email Draft Response,email draft response
+5,Business Communication & Writing,26,Grammar Spelling Proofread,grammar spelling proofread
+5,Business Communication & Writing,27,Translate Language Translation,translate language translation
+5,Business Communication & Writing,28,Presentation Slide Deck,presentation slide deck
+5,Business Communication & Writing,29,Documentation Manual Article,documentation manual article
+6,Executive Strategy & Management,30,Roi Kpi Metric,roi kpi metric
+6,Executive Strategy & Management,31,Revenue & Profitability,budget revenue profit profitability
+6,Executive Strategy & Management,32,Roadmap Vision Mission,roadmap vision mission
+6,Executive Strategy & Management,33,Talent Hr Hiring,talent hr hiring
+6,Executive Strategy & Management,34,Market Competition Differentiation,market competition differentiation
+7,Process & Project Management,35,Agile Scrum Sprint,agile scrum sprint
+7,Process & Project Management,36,Ticket Jira Issue,ticket jira issue
+7,Process & Project Management,37,Workflow Checklist Step,workflow checklist step
+7,Process & Project Management,38,Meeting Notes Agenda,meeting notes agenda
+7,Process & Project Management,39,Release Schedule Change,release schedule change
+8,Testing & Quality Assurance,40,Unit Test Mock,unit test mock
+8,Testing & Quality Assurance,41,Integration Test End,integration test end
+8,Testing & Quality Assurance,42,Regression Load Stress,regression load stress
+8,Testing & Quality Assurance,43,Qa Defect Bug,qa defect bug
+9,Data Analytics & Visualization,44,Excel Formula Pivot,excel formula pivot
+9,Data Analytics & Visualization,45,Dashboards & Visualization,chart graph dashboard dashboards visualization
+9,Data Analytics & Visualization,46,Statistics Mean Median,statistics mean median
+9,Data Analytics & Visualization,47,Data Cleansing Formatting,cleansing formatting data
+9,Data Analytics & Visualization,48,Python Data Science (Pandas/Numpy),python pandas numpy data science pandasnumpy
+10,General Productivity & Knowledge,49,Summarize Condense Abstract,summarize condense abstract
+10,General Productivity & Knowledge,50,Concept Ideation,brainstorm ideate concept ideation
+10,General Productivity & Knowledge,51,Format Structure Table,format structure table
+10,General Productivity & Knowledge,52,Explain Define Concept,explain define concept
+10,General Productivity & Knowledge,53,Math Calculate Equation,math calculate equation
+11,American Express & Payments,54,American Express Amex,amex american express
+11,American Express & Payments,55,Card Member Membership,card member membership
+11,American Express & Payments,56,Merchant Global Acquiring,merchant global acquiring
+11,American Express & Payments,57,Amex Offers Marketing,amex offers marketing
+11,American Express & Payments,58,Account Bank Balance,account bank balance
+0,Software Engineering & Development,59,Application Tests,application tests
+0,Software Engineering & Development,60,Gatling Load Testing,gatling load testing
+0,Software Engineering & Development,61,Mime Types,mime types
+0,Software Engineering & Development,62,Regex Patterns,regex patterns
+0,Software Engineering & Development,63,Jcl Clickable Links,jcl clickable links
+0,Software Engineering & Development,64,Prd Leaves Production,prd leaves production
+0,Software Engineering & Development,65,Plot Cid Graphics,plot cid graphics
+0,Software Engineering & Development,66,Optional Directories,optional directories
+0,Software Engineering & Development,67,Dispatch Comparable,dispatch comparable
+0,Software Engineering & Development,68,Ccps Notification,ccps notification
+0,Software Engineering & Development,69,Airflow Schedule Interval,airflow schedule interval
+0,Software Engineering & Development,70,Downstream Impacts,downstream impacts
+0,Software Engineering & Development,71,Xhtml Posture,xhtml posture
+0,Software Engineering & Development,72,Launchpad Listlevel,launchpad listlevel
+1,Production Support & Debugging,73,Script Execution Logs,script execution run logs bash script execution run python java node logs output
+1,Production Support & Debugging,74,Error Code Exception,error code exception
+1,Production Support & Debugging,75,Software Code Errors,software code errors
+1,Production Support & Debugging,76,Software Configuration Errors,software configuration errors
+1,Production Support & Debugging,77,Uat Sit Testing,uat sit testing
+1,Production Support & Debugging,78,Ui Bug Screenshots,ui bug screenshots
+1,Production Support & Debugging,79,Linux Elf Errors,linux elf errors
+1,Production Support & Debugging,80,Alert Panel Severity,alert panel severity
+1,Production Support & Debugging,81,Software Error Reports,amex software error reports stacktrace exception null traceback pointer segfault error fail line file
+1,Production Support & Debugging,82,Quality Control Qc,quality control qc
+1,Production Support & Debugging,83,Software Code Error,software code error
+1,Production Support & Debugging,84,Invalid Identifier Errors,invalid identifier errors
+1,Production Support & Debugging,85,Support Escalation Win,escalation win support
+1,Production Support & Debugging,86,Developer Mistakes,developer mistakes
+1,Production Support & Debugging,87,It Technology Investigation,it technology investigation
+1,Production Support & Debugging,88,Nexthink It Narration,nexthink it narration
+2,Data Engineering & Database,89,CSV Data Loading,csv path file data loading
+2,Data Engineering & Database,90,Tableau Lod Expression,tableau lod expression
+2,Data Engineering & Database,91,Statistics Sample Population,statistics sample population
+2,Data Engineering & Database,92,Google Bigquery,google bigquery
+2,Data Engineering & Database,93,Power Bi Selectedvalue,power bi selectedvalue
+2,Data Engineering & Database,94,Statistical Analysis,statistical problems analysis
+2,Data Engineering & Database,95,Jupyter Notebooks,jupyter notebook club notebooks
+2,Data Engineering & Database,96,Chart Vertical Legend,chart vertical legend
+2,Data Engineering & Database,97,Us States Exchange,us states exchange
+2,Data Engineering & Database,98,Model Id Product,model id product
+2,Data Engineering & Database,99,Xml Central Configuration,xml central configuration
+2,Data Engineering & Database,100,Pib Predictive Models,pib predictive models
+2,Data Engineering & Database,101,Refactoring Lpad,refactoring lpad
+2,Data Engineering & Database,102,Correlation Analysis,correlation analysis
+2,Data Engineering & Database,103,Water Height Measurements,water height measurements
+3,Cloud Infrastructure & DevOps,104,Incident Alert Monitoring,incident alert monitoring
+3,Cloud Infrastructure & DevOps,105,Laptop Windows Hardware,laptop windows hardware
+3,Cloud Infrastructure & DevOps,106,Python Pypi Packages,python pypi packages
+3,Cloud Infrastructure & DevOps,107,Zip File Contents,zip file contents
+3,Cloud Infrastructure & DevOps,108,Cron Job Scheduling,cron job scheduling
+3,Cloud Infrastructure & DevOps,109,Systems Cutover Deployments,systems cutover deployments
+3,Cloud Infrastructure & DevOps,110,Config Tag Settings,config tag settings
+3,Cloud Infrastructure & DevOps,111,Rfc Request For,rfc request
+3,Cloud Infrastructure & DevOps,112,Splunk Total Rows,splunk total rows
+3,Cloud Infrastructure & DevOps,113,Shell Script Parameters,shell script parameters
+3,Cloud Infrastructure & DevOps,114,Kernel Application Pcn,kernel application pcn
+3,Cloud Infrastructure & DevOps,115,Backup Nat Gateway,backup nat gateway
+3,Cloud Infrastructure & DevOps,116,Geo Routing Argentina,geo routing argentina
+3,Cloud Infrastructure & DevOps,117,Dynamic Operations,dynamic operations
+3,Cloud Infrastructure & DevOps,118,Monitor Built,monitor built
+4,Cyber Security & Identity,119,Risk Control Policies,risk control policies
+4,Cyber Security & Identity,120,Privacy Data Pii,privacy data pii
+4,Cyber Security & Identity,121,Regulatory Requirements Regulation,regulatory requirements regulation
+4,Cyber Security & Identity,122,On-Call Pager Incident,call pager incident oncall
+4,Cyber Security & Identity,123,Risk Product Owner,risk product owner
+4,Cyber Security & Identity,124,Compliance Control Procedures,compliance control procedures
+4,Cyber Security & Identity,125,Compliance Data,compliance database tables data
+4,Cyber Security & Identity,126,Falcon Gmas Security,falcon gmas security
+4,Cyber Security & Identity,127,Inherent Risk,inherent risk
+4,Cyber Security & Identity,128,Amex Card Risk,amex card risk
+4,Cyber Security & Identity,129,Cyberark Secrets Vault,cyberark secrets vault
+4,Cyber Security & Identity,130,Issue Corrective Closure,issue corrective closure
+4,Cyber Security & Identity,131,Sam Directors Access,sam directors access
+4,Cyber Security & Identity,132,Major Risk Events,major risk events
+4,Cyber Security & Identity,133,Entra Id Seasonality,entra id seasonality
+5,Business Communication & Writing,134,Presentation Bullet Points,bullet points list presentation
+5,Business Communication & Writing,135,Write Email Team,write email team
+5,Business Communication & Writing,136,Grammar Correct Sentence,grammar correct sentence
+5,Business Communication & Writing,137,Slack Message Communication,slack message communication
+5,Business Communication & Writing,138,Diagrams & Flowcharts,diagram link visio diagrams flowcharts
+5,Business Communication & Writing,139,Meeting Invite Calendar,meeting invite calendar
+5,Business Communication & Writing,140,Sales Revenue Market,sales revenue market
+5,Business Communication & Writing,141,Attrition Retention Employee,attrition retention employee
+5,Business Communication & Writing,142,Marketing Campaign Promotion,marketing campaign promotion
+5,Business Communication & Writing,143,Mentorship Career Coaching,mentorship career coaching
+5,Business Communication & Writing,144,Vendor Management Third,vendor management third
+5,Business Communication & Writing,145,Hr Payroll Salary,hr payroll salary
+5,Business Communication & Writing,146,Group Training Workshops,group training workshops
+5,Business Communication & Writing,147,Meetings Recording,meetings recording
+5,Business Communication & Writing,148,Live Chat Concurrency,concurrent chat sessions live concurrency
+6,Executive Strategy & Management,149,Banking Direction Strategy,banking direction strategy
+6,Executive Strategy & Management,150,Ownership Accountability Culture,ownership accountability culture
+6,Executive Strategy & Management,151,Capacity Shift Planning,capacity shift planning
+6,Executive Strategy & Management,152,Pilot Projects,pilot project proposals projects
+6,Executive Strategy & Management,153,Inventory Management,inventory management
+6,Executive Strategy & Management,154,Shareholder Trends (TSR),tsr shareholder trends
+6,Executive Strategy & Management,155,International Pricing Models,international pricing models
+6,Executive Strategy & Management,156,Dcrm Levers,dcrm levers
+6,Executive Strategy & Management,157,Sales Deal Closing,sales deal closing
+6,Executive Strategy & Management,158,Data Governance Delivery,data governance delivery
+6,Executive Strategy & Management,159,Telesales & Operations,telesales operations
+6,Executive Strategy & Management,160,Forbes Publications,forbes publications
+6,Executive Strategy & Management,161,Decide Owners,decide owners
+6,Executive Strategy & Management,162,Srr Streamline,srr streamline
+6,Executive Strategy & Management,163,Amazon & Brand Marketing,amazon brands brand marketing
+7,Process & Project Management,164,Product Manager Management,product manager management
+7,Process & Project Management,165,Intake Form Process,intake form process
+8,Testing & Quality Assurance,166,Debugging & Error Logs,error getting debug debugging logs debug error warning log traceback exception
+8,Testing & Quality Assurance,167,Code Review & Changes,code changes required review git commit push pull request merge conflict diff review
+8,Testing & Quality Assurance,168,Pass Fail Test,pass fail test
+8,Testing & Quality Assurance,169,Test Expected Actual,test expected actual
+9,Data Analytics & Visualization,170,Data Reporting Report,reporting report data
+9,Data Analytics & Visualization,171,Power Bi Dashboard,power bi dashboard
+9,Data Analytics & Visualization,172,Ai Embedding Similarity,ai embedding similarity
+10,General Productivity & Knowledge,173,WebEx & Conferencing,webex conferencing
+10,General Productivity & Knowledge,174,Sharepoint Sla Slas,sharepoint sla slas
+10,General Productivity & Knowledge,175,Documentation Technical Docs,documentation technical docs
+10,General Productivity & Knowledge,176,Pop Operations Center,pop operations center
+10,General Productivity & Knowledge,177,Cbr Uploading Process,cbr uploading process
+10,General Productivity & Knowledge,178,Agile Carryover Stories,agile carryover stories
+10,General Productivity & Knowledge,179,Rag Architecture Iv,rag architecture iv
+10,General Productivity & Knowledge,180,Workflow Approvals Sorting,workflow approvals sorting
+10,General Productivity & Knowledge,181,Approval Notices,approval notices
+10,General Productivity & Knowledge,182,Openai Customgpt,openai customgpt
+10,General Productivity & Knowledge,183,Qualtrics Surveys,qualtrics surveys
+10,General Productivity & Knowledge,184,Enable Genai Capabilities,enable genai capabilities
+10,General Productivity & Knowledge,185,Knowledge Base & Jump Guides,jump guides knowledge base
+10,General Productivity & Knowledge,186,Pillars Holding,pillars holding
+10,General Productivity & Knowledge,187,Printable Gantt Charts,printable gantt charts
+11,American Express & Payments,188,Supplier Buyer Network,supplier buyer network
+11,American Express & Payments,189,Aexp Internal Acronym,aexp internal acronym
+11,American Express & Payments,190,Insurance Products,insurance products
+11,American Express & Payments,191,Transaction Fraud Chargeback,transaction fraud chargeback
+11,American Express & Payments,192,Pricing Ctl Settings,pricing ctl settings
+11,American Express & Payments,193,Direct Pay Deposit,direct pay deposit
+11,American Express & Payments,194,Iag Entity Structure,iag entity structure
+11,American Express & Payments,195,Video & Creative Assets,video creative assets
+11,American Express & Payments,196,Treasury Funding Liquidity,treasury funding liquidity
+11,American Express & Payments,197,External Loan Financing,external loan financing
+11,American Express & Payments,198,Pcns System Buttons,pcns system buttons
+11,American Express & Payments,199,System Of Record,system record
+11,American Express & Payments,200,Employee Awards & Recognition,amex award alternatives employee awards recognition
+11,American Express & Payments,201,Targeting Eligibility,targeting eligibility
+11,American Express & Payments,202,Gmns Evaluating,gmns evaluating
+12,Business Process Automation,203,Process Automation Rpa,rpa process automation
+13,Business Communication & HR,204,Hr Immigration Manager,hr immigration manager
+13,Business Communication & HR,205,Cancellation Conflicts,hr cancellation conflicts
+13,Business Communication & HR,206,Hr Responsibilities Introduction,hr responsibilities introduction
+13,Business Communication & HR,207,Benefits Enrollment Lift,hr benefits enrollment lift
+13,Business Communication & HR,208,Hr Benefits Eligibility,hr benefits eligibility
+13,Business Communication & HR,209,Hr Interviewer Recruiter,hr interviewer recruiter
+13,Business Communication & HR,210,Hr Associates Aspirations,hr associates aspirations
+13,Business Communication & HR,211,Official Opt In,hr official opt
+13,Business Communication & HR,212,Singapore Communications,hr singapore communications
+13,Business Communication & HR,213,Email Confirming Receipt,hr email confirming receipt
+13,Business Communication & HR,214,Wfm Coordination,hr wfm coordination
+13,Business Communication & HR,215,Hr Gurgaon Highlights,hr gurgaon highlights
+14,Finance & Procurement,216,Accounting Journal Entries,accounting journal entries
+14,Finance & Procurement,217,Pcm Rule Allocation,pcm rule allocation
+14,Finance & Procurement,218,Statement of Work (SOW),sow statement work
+14,Finance & Procurement,219,Ebitda Financial Metrics,ebitda financial metrics
+14,Finance & Procurement,220,Pricing Approvals,pricing approvals
+14,Finance & Procurement,221,End of Day (EOD) Operations,eod end day operations
+14,Finance & Procurement,222,Applications Pricing,applications pricing
+14,Finance & Procurement,223,Capital Timing Finance,capital timing finance
+14,Finance & Procurement,224,Financials Fin Reporting,financials fin reporting
+14,Finance & Procurement,225,Amount Constants,amount constants
+14,Finance & Procurement,226,Emburse Expense Management,emburse expense management
+14,Finance & Procurement,227,Pricing Study Research,pricing study research
+14,Finance & Procurement,228,Asset Management Entry,asset management entry
+14,Finance & Procurement,229,Bank Locations,bank locations
+14,Finance & Procurement,230,Investment Plans,investment plans
+14,Finance & Procurement,231,Legal & Tribunal Proceedings,bank neutral legal tribunal proceedings
+14,Finance & Procurement,232,Fees Dashboards,fees dashboards
+14,Finance & Procurement,233,Finance Actuals Adb,actuals adb finance
+14,Finance & Procurement,234,Treasury Report Script,treasury report script
+14,Finance & Procurement,235,Finance Annual Spend,annual spend finance

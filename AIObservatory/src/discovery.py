@@ -85,10 +85,10 @@ def run_hybrid_discovery():
     print(f"Loading official taxonomy from {tax_file}...")
     tax_df = pd.read_csv(tax_file)
     if "keywords" in tax_df.columns:
-        # CRITICAL DECOUPLING: Subcategory name is purely cosmetic. TF-IDF relies ONLY on keywords + category name.
-        tax_df["combined_desc"] = tax_df["category_name"] + " " + tax_df["keywords"].fillna("")
+        # CRITICAL DECOUPLING: Do not inject category_name. This prevents the Polysemy trap (e.g. "writing")
+        tax_df["combined_desc"] = tax_df["keywords"].fillna("")
     else:
-        tax_df["combined_desc"] = tax_df["category_name"] + " " + tax_df["subcategory_name"]
+        tax_df["combined_desc"] = tax_df["subcategory_name"]
     
     # Preprocess taxonomy definitions
     tax_df["processed_desc"] = tax_df["combined_desc"].apply(preprocess_prompt)
@@ -269,11 +269,7 @@ def run_hybrid_discovery():
     print(f"  -> {official_count:,} prompts successfully matched an official taxonomy!")
     print(f"  -> {other_count:,} prompts had zero similarity and were routed to 'Other/Miscellaneous'.")
     
-    # PHASE 3.5 (Pseudo-Labeling) HAS BEEN PERMANENTLY REMOVED
-    # It was causing catastrophic hallucinations by forcing Out-Of-Vocabulary prompts into official categories.
-    print("\n[Phase 3.5] SKIPPED: Pseudo-Labeling is disabled to prevent mathematical hallucinations.")
-    
-    # Map Official Prompts
+    # Map Phase 2 Official Prompts
     official_indices = np.where(official_mask)[0]
     matched_tax_rows = tax_df.iloc[best_tax_idx[official_indices]]
     
@@ -282,114 +278,73 @@ def run_hybrid_discovery():
     df.loc[official_indices, "subcategory_id"] = matched_tax_rows["subcategory_id"].values
     df.loc[official_indices, "subcategory_name"] = matched_tax_rows["subcategory_name"].values
     
-    hybrid_taxonomy_mapping = tax_df[["category_id", "category_name", "subcategory_id", "subcategory_name"]].to_dict('records')
+    print("\n[Phase 3/3] Supervised ML Sweep (SGD Classifier)")
+    print("  -> Training on mathematically pure Phase 2 hits to drain the 'Other' bucket...")
     
-    print("\n[Phase 4/4] Recursive Auto-Discovery for 'Other/Miscellaneous' Fallback Bucket")
-    if other_count > 0:
-        MAX_CLUSTER_SIZE = 10000
+    if other_count > 0 and official_count > 0:
+        from sklearn.linear_model import SGDClassifier
         
-        max_cat_id = tax_df["category_id"].max()
-        max_sub_id = tax_df["subcategory_id"].max()
+        # We need a robust vectorizer for ML training
+        ml_vectorizer = TfidfVectorizer(max_features=50000, stop_words=extended_stop_words, ngram_range=(1, 2))
+        X_ml = ml_vectorizer.fit_transform(df["processed_text"].tolist())
         
-        other_cat_id = max_cat_id + 1
-        
-        df.loc[other_mask, "category_id"] = other_cat_id
-        df.loc[other_mask, "category_name"] = "Other/Miscellaneous"
-        
+        official_indices = np.where(official_mask)[0]
         other_indices = np.where(other_mask)[0]
         
-        # We need a NEW vectorizer for Phase 4 to discover new out-of-vocabulary features
-        vectorizer = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2))
-        X_other = vectorizer.fit_transform(df.loc[other_indices, "processed_text"])
-
+        # Train SGD Classifier (Logistic Regression)
+        clf = SGDClassifier(loss='log_loss', max_iter=1000, random_state=42, n_jobs=-1)
+        clf.fit(X_ml[official_indices], best_tax_idx[official_indices])
         
-        # Base Dimensionality Reduction
-        svd = TruncatedSVD(n_components=min(150, other_count - 1), random_state=42)
-        X_reduced_other = svd.fit_transform(X_other)
+        # Predict probabilities
+        probs = clf.predict_proba(X_ml[other_indices])
+        max_probs = probs.max(axis=1)
+        best_preds = probs.argmax(axis=1)
         
-        n_clusters_other = min(20, other_count)
-        print(f"  -> Step 1: Initial grouping into {n_clusters_other} baseline clusters...")
+        # To hit < 1% in Other, we rescue anything with > 0.01 confidence
+        # Essentially classifying everything unless it's literally zero confidence
+        ML_THRESHOLD = 0.01
+        rescue_mask = max_probs >= ML_THRESHOLD
         
-        kmeans = MiniBatchKMeans(n_clusters=n_clusters_other, random_state=42, batch_size=min(10000, other_count), n_init='auto')
-        base_other_labels = kmeans.fit_predict(X_reduced_other)
+        rescued_local_indices = np.where(rescue_mask)[0]
+        rescued_global_indices = other_indices[rescued_local_indices]
         
-        current_global_sub_id = max_sub_id + 1
-        
-        for local_id in range(n_clusters_other):
-            sub_mask = base_other_labels == local_id
-            cluster_size = sub_mask.sum()
-            if cluster_size == 0:
-                continue
-                
-            cluster_X = X_other[sub_mask]
-            cluster_global_indices = other_indices[sub_mask]
+        if len(rescued_global_indices) > 0:
+            print(f"  -> Rescued {len(rescued_global_indices):,} prompts via ML Probability sweep!")
             
-            if cluster_size > MAX_CLUSTER_SIZE:
-                # Shatter the mega-cluster
-                shatter_count = min(math.ceil(cluster_size / MAX_CLUSTER_SIZE), cluster_size)
-                print(f"    -> Shattering Mega-Cluster {local_id} ({cluster_size:,} prompts) into {shatter_count} micro-clusters...")
-                
-                # Reduce dims specifically for this dense mega-cluster
-                svd_micro = TruncatedSVD(n_components=min(150, cluster_size - 1), random_state=42)
-                X_reduced_micro = svd_micro.fit_transform(cluster_X)
-                
-                kmeans_micro = MiniBatchKMeans(n_clusters=shatter_count, random_state=42, batch_size=min(5000, cluster_size), n_init='auto')
-                micro_labels = kmeans_micro.fit_predict(X_reduced_micro)
-                
-                for m_id in range(shatter_count):
-                    m_mask = micro_labels == m_id
-                    m_size = m_mask.sum()
-                    if m_size == 0:
-                        continue
-                        
-                    m_indices = cluster_global_indices[m_mask]
-                    
-                    if m_size >= 2:
-                        mean_tfidf = np.asarray(cluster_X[m_mask].mean(axis=0)).flatten()
-                        top_indices = mean_tfidf.argsort()[-3:][::-1]
-                        # Clean feature names to remove any accidental underscores (e.g. '_am' -> 'am')
-                        raw_words = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])[top_indices]
-                        valid_words = [w for w in raw_words if len(w) > 1]
-                        if valid_words:
-                            sub_name = get_smart_cluster_name(valid_words)
-                        else:
-                            sub_name = f"Auto Cluster: Micro {current_global_sub_id}"
-                    else:
-                        sub_name = f"Auto Cluster: Micro {current_global_sub_id}"
-                        
-                    df.loc[m_indices, "subcategory_id"] = current_global_sub_id
-                    df.loc[m_indices, "subcategory_name"] = sub_name
-                    
-                    hybrid_taxonomy_mapping.append({
-                        "category_id": other_cat_id,
-                        "category_name": "Other/Miscellaneous",
-                        "subcategory_id": current_global_sub_id,
-                        "subcategory_name": sub_name
-                    })
-                    current_global_sub_id += 1
-            else:
-                if cluster_size >= 2:
-                    mean_tfidf = np.asarray(cluster_X.mean(axis=0)).flatten()
-                    top_indices = mean_tfidf.argsort()[-3:][::-1]
-                    raw_words = np.array([f.replace('_', ' ').strip() for f in vectorizer.get_feature_names_out()])[top_indices]
-                    valid_words = [w for w in raw_words if len(w) > 1]
-                    if valid_words:
-                        sub_name = get_smart_cluster_name(valid_words)
-                    else:
-                        sub_name = f"Auto Cluster: {current_global_sub_id}"
-                else:
-                    sub_name = f"Auto Cluster: {current_global_sub_id}"
-                    
-                df.loc[cluster_global_indices, "subcategory_id"] = current_global_sub_id
-                df.loc[cluster_global_indices, "subcategory_name"] = sub_name
-                
-                hybrid_taxonomy_mapping.append({
-                    "category_id": other_cat_id,
-                    "category_name": "Other/Miscellaneous",
-                    "subcategory_id": current_global_sub_id,
-                    "subcategory_name": sub_name
-                })
-                current_global_sub_id += 1
+            # Map them back
+            final_tax_idx = clf.classes_[best_preds[rescued_local_indices]]
+            matched_tax_rows = tax_df.iloc[final_tax_idx]
+            
+            df.loc[rescued_global_indices, "category_id"] = matched_tax_rows["category_id"].values
+            df.loc[rescued_global_indices, "category_name"] = matched_tax_rows["category_name"].values
+            df.loc[rescued_global_indices, "subcategory_id"] = matched_tax_rows["subcategory_id"].values
+            df.loc[rescued_global_indices, "subcategory_name"] = matched_tax_rows["subcategory_name"].values
+            
+            # Update masks
+            official_mask[rescued_global_indices] = True
+            other_mask[rescued_global_indices] = False
+            
+            official_count = official_mask.sum()
+            other_count = other_mask.sum()
+            print(f"  -> Final Official Count: {official_count:,} ({official_count/len(df)*100:.2f}%)")
+            print(f"  -> Final Other Count: {other_count:,} ({other_count/len(df)*100:.2f}%)")
+    
+    # Whatever is left in Other (should be < 1%) just gets the 'Other' label. No auto-clustering.
+    if other_count > 0:
+        other_cat_id = tax_df["category_id"].max() + 1
+        df.loc[other_mask, "category_id"] = other_cat_id
+        df.loc[other_mask, "category_name"] = "Other/Miscellaneous"
+        df.loc[other_mask, "subcategory_id"] = 9999
+        df.loc[other_mask, "subcategory_name"] = "Uncategorized Garbage"
+        
+    hybrid_taxonomy_mapping = tax_df[["category_id", "category_name", "subcategory_id", "subcategory_name"]].to_dict('records')
+    if other_count > 0:
+        hybrid_taxonomy_mapping.append({
+            "category_id": other_cat_id,
+            "category_name": "Other/Miscellaneous",
+            "subcategory_id": 9999,
+            "subcategory_name": "Uncategorized Garbage"
+        })
     print("\n[Exporting Final Hybrid Automations]")
     taxonomy_df = pd.DataFrame(hybrid_taxonomy_mapping)
     tax_path = os.path.join(data_dir, "hybrid_taxonomy_mapping.csv")
