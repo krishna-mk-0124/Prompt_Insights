@@ -89,6 +89,20 @@ If the SGD Classifier (Phase 3) is so smart at finding hidden correlations (like
 
 ---
 
+## Testing & Quality Assurance (Human-in-the-Loop)
+
+**Script:** `eval_suite.py`
+
+While the ML pipeline operates fully autonomously in production, `eval_suite.py` exists purely for periodic Quality Assurance (QA). It is **not** part of the daily automated server pipeline.
+
+### Mechanisms & Algorithms:
+1.  **Stratified Sampling:** It mathematically selects up to 5 random, highly-diverse prompts from each of the 236 subcategories (capped at 500 total).
+2.  **Golden Set Generation:** It exports these 500 prompts into `data/golden_set_review.csv` with a blank `is_correct_mapping` column.
+3.  **Human Validation:** An employee manually reads the 500 prompts and marks `1` (Correct) or `0` (Incorrect).
+4.  **Accuracy Scoring:** When run again, the script calculates the final mathematical accuracy of the pipeline against this human ground-truth.
+
+---
+
 ## Server Deployment & Resource Constraints
 
 To run this pipeline on ultra-low-resource enterprise hardware (1 CPU core, <3GB RAM) without triggering an Out-of-Memory (OOM) crash, we implemented a Master Switch at the top of the codebase.
