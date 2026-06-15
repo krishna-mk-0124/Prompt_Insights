@@ -3,6 +3,7 @@ import sys
 import re
 import pandas as pd
 import time
+import threading
 import numpy as np
 import string
 import warnings
@@ -328,9 +329,25 @@ def run_hybrid_discovery():
         other_indices = np.where(other_mask)[0]
         
         # Train SGD Classifier with ElasticNet Regularization
-        print("  -> Fitting SGD Classifier (Watch live epochs below)...")
-        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=1)
+                def progress_tracker(stop_event, start_time):
+            while not stop_event.is_set():
+                time.sleep(60)
+                if not stop_event.is_set():
+                    elapsed = time.time() - start_time
+                    print(f"    [Live Status] Fitting SGD Classifier... {elapsed/60:.1f} minutes elapsed.")
+
+        print("  -> Fitting SGD Classifier (This will take ~7-10 minutes. A status update will print every minute)...")
+        stop_event = threading.Event()
+        fit_start = time.time()
+        tracker_thread = threading.Thread(target=progress_tracker, args=(stop_event, fit_start))
+        tracker_thread.daemon = True
+        tracker_thread.start()
+
+        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=0)
         clf.fit(X_ml[official_indices], best_tax_idx[official_indices])
+
+        stop_event.set()
+        tracker_thread.join()
         
         # Predict probabilities
         probs = clf.predict_proba(X_ml[other_indices])

@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.linear_model import SGDClassifier
 import re
 import time
+import threading
 
 print("Loading mapped dataset...")
 df = pd.read_csv('data/fully_categorized_dataset.csv')
@@ -22,9 +23,25 @@ y = mapped_df["subcategory_id"].values
 print(f"  -> TF-IDF Vectorization completed in {time.time() - start_time:.2f} seconds.")
 
 # OPTIMIZATION: n_jobs=1 prevents multiprocessing memory duplication. Added verbose=1 for live tracking.
-print("  -> Phase 2/3: Fitting SGD Classifier (Watch live epochs below)...")
-clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=1)
+def progress_tracker(stop_event, start_time):
+    while not stop_event.is_set():
+        time.sleep(60)
+        if not stop_event.is_set():
+            elapsed = time.time() - start_time
+            print(f"    [Live Status] Fitting SGD Classifier... {elapsed/60:.1f} minutes elapsed.")
+
+print("  -> Phase 2/3: Fitting SGD Classifier (This will take ~7-10 minutes. A status update will print every minute)...")
+stop_event = threading.Event()
+fit_start = time.time()
+tracker_thread = threading.Thread(target=progress_tracker, args=(stop_event, fit_start))
+tracker_thread.daemon = True
+tracker_thread.start()
+
+clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=0)
 clf.fit(X, y)
+
+stop_event.set()
+tracker_thread.join()
 print(f"  -> SGD Classifier fitting completed. Total elapsed time: {time.time() - start_time:.2f} seconds.")
 
 feature_names = np.array(vectorizer.get_feature_names_out())
