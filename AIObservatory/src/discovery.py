@@ -233,21 +233,21 @@ def run_hybrid_discovery():
     from sklearn.feature_extraction.text import CountVectorizer
     
     # Word Vectorizer (Sublinear TF enabled)
-    word_vectorizer = TfidfVectorizer(max_features=50000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True)
+    word_vectorizer = TfidfVectorizer(max_features=20000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True, dtype=np.float32)
     word_vectorizer.fit(tax_df["processed_desc"].tolist())
     
     C_tax_word = word_vectorizer.transform(tax_df["processed_desc"].tolist())
     C_prompts_word = word_vectorizer.transform(df["processed_text"].tolist())
     
     # Char Vectorizer (Sublinear TF enabled, char_wb)
-    char_vectorizer = TfidfVectorizer(max_features=40000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True)
+    char_vectorizer = TfidfVectorizer(max_features=20000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True, dtype=np.float32)
     char_vectorizer.fit(tax_df["processed_desc"].tolist())
     
     C_tax_char = char_vectorizer.transform(tax_df["processed_desc"].tolist())
     C_prompts_char = char_vectorizer.transform(df["processed_text"].tolist())
     
     # Strict Overlap Masking ONLY uses the word vectorizer to prevent char-level noise from bypassing the mask
-    count_vectorizer = CountVectorizer(vocabulary=word_vectorizer.vocabulary_)
+    count_vectorizer = CountVectorizer(vocabulary=word_vectorizer.vocabulary_, dtype=np.int16)
     count_tax = count_vectorizer.transform(tax_df["processed_desc"].tolist())
     count_prompts = count_vectorizer.transform(df["processed_text"].tolist())
     
@@ -315,8 +315,8 @@ def run_hybrid_discovery():
         from sklearn.pipeline import FeatureUnion
         
         # Combine Word and Char for the ML model to maximize accuracy
-        ml_word_vec = TfidfVectorizer(max_features=30000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True)
-        ml_char_vec = TfidfVectorizer(max_features=30000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True)
+        ml_word_vec = TfidfVectorizer(max_features=10000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True, dtype=np.float32)
+        ml_char_vec = TfidfVectorizer(max_features=10000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True, dtype=np.float32)
         
         ml_vectorizer = FeatureUnion([("word", ml_word_vec), ("char", ml_char_vec)])
         X_ml = ml_vectorizer.fit_transform(df["processed_text"].tolist())
@@ -325,7 +325,7 @@ def run_hybrid_discovery():
         other_indices = np.where(other_mask)[0]
         
         # Train SGD Classifier with ElasticNet Regularization
-        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=-1)
+        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1)
         clf.fit(X_ml[official_indices], best_tax_idx[official_indices])
         
         # Predict probabilities
