@@ -87,26 +87,26 @@ graph TD
     DEDUPE -.-> |Overwrites| TAX
 
     %% Clickable Links to Documentation Anchors below
-    click LANG "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
-    click UNI "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
-    click DET "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
-    click RES "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click LANG "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click UNI "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click DET "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click RES "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-1-data-ingestion--language-filtering" "View Details & Examples"
     
-    click DISC "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
-    click TFIDF "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
-    click COS "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
-    click MASK "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click DISC "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click TFIDF "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click COS "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click MASK "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
 
-    click SGD "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-3-the-ml-rescue-sweep" "View Details & Examples"
-    click PRED "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-3-the-ml-rescue-sweep" "View Details & Examples"
+    click SGD "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-3-the-ml-rescue-sweep" "View Details & Examples"
+    click PRED "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-3-the-ml-rescue-sweep" "View Details & Examples"
     
-    click EXPORT "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-4-data-export--storage" "View Details & Examples"
-    click PANDAS "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-4-data-export--storage" "View Details & Examples"
-    click PG "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-4-data-export--storage" "View Details & Examples"
+    click EXPORT "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-4-data-export--storage" "View Details & Examples"
+    click PANDAS "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-4-data-export--storage" "View Details & Examples"
+    click PG "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-4-data-export--storage" "View Details & Examples"
     
-    click ENRICH "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
-    click WEIGHTS "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
-    click DEDUPE "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/ARCHITECTURE.md#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
+    click ENRICH "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
+    click WEIGHTS "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
+    click DEDUPE "https://github.com/krishna-mk-0124/Prompt_Insights/blob/master/AIObservatory/ARCHITECTURE.md#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
 ```
 
 ---
