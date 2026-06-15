@@ -1,0 +1,237 @@
+﻿category_id,category_name,subcategory_id,subcategory_name,keywords
+0,Software Engineering & Development,0,Core Programming Languages,java python c++ import def class public private syntax compile method object variable function loop array typedef enum struct pointer-arithmetic inheritance polymorphism encapsulation overloading overriding casting generics interface abstract iterator lambda exception-handling
+0,Software Engineering & Development,1,Frontend Architecture,frontend react angular html css javascript dom jsx hook component state prop window document vue svelte nextjs nuxtjs webpack vite babel eslint tailwind bootstrap responsive scss sass flexbox grid-layout spa hydration virtual-dom
+0,Software Engineering & Development,2,Backend Architecture,backend node express server middleware route django flask spring microservice monolith grpc fastapi nestjs gunicorn uvicorn wsgi asgi celery rabbitmq socket websocket orm sequelize
+0,Software Engineering & Development,3,API & Integration Services,api graphql json payload post put get rest endpoint restful swagger openapi webhook oauth2 cors rate-limiting pagination versioning soap wsdl protobuf api-gateway throttle idempotent
+0,Software Engineering & Development,4,Version Control Systems,git version commit push pull branch merge repository clone pr conflict rebase stash cherry-pick gitflow tag squash diff changelog bisect worktree submodule detached-head
+0,Software Engineering & Development,5,Algorithms & Data Structures,algorithm structure sorting searching binary-tree hashtable linkedlist stack queue heap graph-theory recursion dynamic-programming greedy bfs dfs big-o complexity trie red-black-tree avl dijkstra
+1,Production Support & Debugging,6,Exception Handling & Diagnostics,stacktrace exception null traceback pointer segfault error fail line file try-catch throw finally assertion runtime-error syntax-error type-error value-error overflow-error index-out-of-bounds classnotfound noclassdeffounderror
+1,Production Support & Debugging,7,Performance Profiling,memory leak cpu profiler flamegraph heap-dump thread-dump garbage-collection gc-tuning jvm-monitoring apm newrelic dynatrace datadog-apm profiling bottleneck latency-profiling
+1,Production Support & Debugging,8,Outage & Crash Triage,application crash outage downtime incident-response postmortem blameless severity sev1 sev2 mttr rto rpo failover circuit-breaker degradation service-disruption
+1,Production Support & Debugging,9,Package Management,dependency package npm-install pip-install maven gradle nuget composer yarn pnpm package-lock lockfile semver peer-dependency transitive-dependency
+2,Data Engineering & Database,10,Database Querying & DML,sql select update from where join insert query having distinct subquery cursor index stored procedure trigger view materialized dml crud rdbms postgresql mysql oracle mssql mariadb clause aggregate count sum avg
+2,Data Engineering & Database,11,Schema & Data Modeling,column row schema normalization denormalization erd cardinality foreignkey primarykey constraint schemamigration alter ddl tablespace datatype varchar integer blob relational star snowflake dimension fact surrogate
+2,Data Engineering & Database,12,Data Pipelines & Warehousing,etl warehouse elt ingestion dataflow lakehouse datalake medallion bronze silver gold fivetran informatica talend nifi dagster prefect staging transformation dimensional olap ssis dbt
+2,Data Engineering & Database,13,NoSQL Database Administration,nosql mongodb cassandra couchdb dynamodb redis couchbase documentdb hbase neo4j keyvalue graphdb partitionkey sharding ttl oplog wiredtiger
+2,Data Engineering & Database,14,Big Data Processing,hadoop spark mapreduce hive kafka streaming flink presto trino hdfs zookeeper avro parquet orc iceberg delta databricks emr kinesis stormrunner
+3,Cloud Infrastructure & DevOps,15,Cloud Provisioning,aws ec2 s3 vpc iam securitygroup rds sqs sns elasticache cloudwatch autoscaling ebs route53 azurevm gcp
+3,Cloud Infrastructure & DevOps,16,Container Orchestration,kubernetes docker container pod cluster k8s registry orchestration helm kustomize daemonset statefulset replicaset kubectl containerd cri dockercompose podman sidecar
+3,Cloud Infrastructure & DevOps,17,CI/CD Automation,ci/cd jenkins gitlab deployment build runner circleci travisci argocd tekton artifactory nexus sonarqube codecov buildkite githubactions artifact
+3,Cloud Infrastructure & DevOps,18,Infrastructure as Code (IaC),terraform ansible yaml playbook iac pulumi cfnstack stackset hcl tfstate moduleregistry provisioner declarative driftdetection
+3,Cloud Infrastructure & DevOps,19,Networking & Routing,loadbalancer firewall dns subnet vlan proxy cdn ingress egress cidr peering vpn bgp routetable nacl haproxy nginx
+4,Cyber Security & Identity,20,Authentication Services,authentication oauth saml sso mfa totp oidc openid ldap kerberos authn passwordless passkey fido2 webauthn jwt okta ping federation
+4,Cyber Security & Identity,21,Access Control & RBAC,authorization rbac role permissions acl abac entitlement provisioning least-privilege segregation sod privilege scoping clearance
+4,Cyber Security & Identity,22,Cryptography & Encryption,encryption ssl tls cipher aes rsa pkcs x509 certificate pki hmac sha256 hashing decrypt ciphertext keystore pgp gpg
+4,Cyber Security & Identity,23,Threat Detection,vulnerability malware phishing ransomware trojan exploit cve siem ids ips edr xdr ioc threat pentest apt sandbox antivirus quarantine
+4,Cyber Security & Identity,24,Regulatory Compliance,gdpr hipaa sox pci-dss ccpa ferpa nist iso27001 attestation fedramp coso cobit cmmc
+5,Business Communication & Writing,25,Email Correspondence,draft mailbox inbox cc bcc subject-line signature attachment forwarding reply-all outlook compose recipient
+5,Business Communication & Writing,26,Copywriting & Proofreading,spelling proofread punctuation syntax-check readability tone copyedit wordsmith clarity rewrite rephrase conciseness
+5,Business Communication & Writing,27,Translation Services,translate language translation localization i18n multilingual interpreter bilingual glossary terminology l10n
+5,Business Communication & Writing,28,Presentation Design,slide deck powerpoint keynote template layout animation storytelling pptx storyboard visual-aids
+5,Business Communication & Writing,29,Technical Documentation,manual article readme faq runbook-doc howto knowledge-article sop-doc api-doc wiki
+6,Executive Strategy & Management,30,KPIs & Performance Metrics,roi kpi metric okr benchmark scorecard nps csat throughput-metric utilization-metric sli slo uptime-target mttf lagging leading indicator quota attainment
+6,Executive Strategy & Management,31,Revenue & Margin Tracking,budget profit profitability margin topline bottomline arpu cogs yield monetization mrr arr churn ltv cltv bookings forecast-revenue backlog-revenue ebitda-margin
+6,Executive Strategy & Management,32,Strategic Planning,roadmap vision mission swot pestle alignment initiative milestones objective north-star charter mandate strategic priorities goal-setting
+6,Executive Strategy & Management,33,Talent Acquisition,talent hiring headcount onboarding requisition sourcing offboarding jd job-description compensation employer-branding referral workforce succession workforce-planning
+6,Executive Strategy & Management,34,Market Research,market-analysis competitive-intelligence pestel industry-trends consumer-insights focus-group market-sizing target-market segment-analysis demand-forecast market-share positioning benchmarking-study brand-perception customer-journey
+7,Process & Project Management,35,Agile Methodologies,scrum sprint kanban standup retrospective backlog velocity burndown user-story epic ceremony refinement iteration timebox scrum-master product-owner wip-limit
+7,Process & Project Management,36,Issue Tracking,ticket jira bugzilla servicedesk servicenow triage-queue severity-level priority-level assignee reporter resolution sla-breach workaround escalation-tier defect-tracking
+7,Process & Project Management,37,Workflow Automation,checklist step zapier n8n power-automate condition action-item orchestrator runbook sop bpmn swimlane flowchart-automation rule-engine
+7,Process & Project Management,38,Meeting Management,notes agenda standup-notes minutes action-items facilitator recap follow-up quorum attendees parking-lot timekeeper round-robin decision-log mom
+7,Process & Project Management,39,Release Management,release change cutover-plan rollback canary blue-green feature-flag freeze deployment-window hotfix semantic-versioning release-notes go-live release-train
+8,Testing & Quality Assurance,40,Unit Testing,unit mock stub xunit nunit junit pytest testng arrange-act-assert fixture parametrize isolation code-coverage branch-coverage test-double spy
+8,Testing & Quality Assurance,41,Integration Testing,integration end-to-end e2e contract-testing pact wiremock testcontainers api-testing service-test smoke-test sanity-check boundary-test interoperability system-integration-test compatibility
+8,Testing & Quality Assurance,42,Load & Performance Testing,regression stress jmeter locust gatling-perf k6 throughput-test latency-test soak-test spike-test concurrency-test baseline-benchmark percentile p99 response-time scalability-test
+8,Testing & Quality Assurance,43,Quality Assurance,qa defect test-plan test-case traceability acceptance-criteria test-strategy severity-classification defect-triage test-coverage test-matrix exploratory-testing risk-based-testing sign-off-criteria defect-lifecycle
+9,Data Analytics & Visualization,44,Spreadsheet Analytics,excel formula pivot vlookup xlookup hlookup countif sumif spreadsheet workbook worksheet cell range macro vba conditional xlsm xlsx match concatenate iferror arrayformula
+9,Data Analytics & Visualization,45,Dashboards & Visualization,graph dashboard visualization heatmap treemap scatterplot histogram barchart piechart sparkline tooltip axis trendline plotly seaborn bokeh altair d3 vega choropleth sunburst funnel
+9,Data Analytics & Visualization,46,Statistical Analysis,mean median variance stdev anova pvalue ttest zscore chisquare hypothesis quartile outlier normality skewness kurtosis confidence bayesian frequentist binomial poisson
+9,Data Analytics & Visualization,47,Data Cleansing & Transformation,cleansing formatting deduplication imputation wrangling trimming parsing nulls missing reshape melt unpivot coalesce fillna dropna dtype standardize
+9,Data Analytics & Visualization,48,Data Science & Analysis,pandas numpy scipy scikit-learn sklearn dataframe series eda exploratory clustering classification supervised unsupervised featureengineering xgboost randomforest hyperparameter overfitting crossvalidation
+10,General Productivity & Knowledge,49,Text Summarization,summarize condense synopsis digest tldr briefing keypoints highlight extractive abstractive paraphrase shorten distill
+10,General Productivity & Knowledge,50,Concept Ideation,brainstorm ideate ideation moodboard mindmap divergent convergent wireframe prototype sketching innovative freeform lateral thinking blue-sky imagination
+10,General Productivity & Knowledge,51,Document Formatting,format heading paragraph indent font stylesheet numbering bulleted spacing pagebreak columns headers footers typesetting kerning
+10,General Productivity & Knowledge,52,Educational Explanations,explain define tutorial analogy primer beginner concept overview fundamentals basics simplified layman eli5 explainer prerequisite curriculum lesson
+10,General Productivity & Knowledge,53,Mathematical Computation,math calculate equation arithmetic algebra calculus derivative integral trigonometry logarithm exponent fraction matrix determinant quadratic polynomial combinatorics probability
+11,American Express & Payments,54,Brand Representation,american platinum cobrand partnership prestige brand-identity cardholder-value green skymiles hilton bonvoy marriott blue-cash everyday preferred
+11,American Express & Payments,55,Cardholder Services,member membership rewards redemption billing annual-fee supplementary authorized-user cardmember activation replacement dispute-resolution concierge cardholder spend-limit credit-score
+11,American Express & Payments,56,Merchant Services,merchant acquiring pos terminal mdr discount-rate acceptance authorization-code settlement batch-processing interchange acquirer iso gateway-processing
+11,American Express & Payments,57,Offers & Promotions,offers cashback shopsmall promotional reward-multiplier welcome-bonus retention-offer spending-threshold category-bonus dining-credit airline-credit streaming-credit
+11,American Express & Payments,58,Account Management,balance autopay paperless creditlimit overlimit payment-due minimum-payment installment plan-it pay-over-time revolving credit-line account-summary account-status
+0,Software Engineering & Development,59,Application Testing,tests smoke sanity regression-test acceptance-test functional-test boundary-value equivalence-partition blackbox whitebox cypress playwright puppeteer selenium
+0,Software Engineering & Development,60,Load Testing (Gatling),gatling load-testing performance-testing throughput rps concurrent-users stress-test percentile-99
+0,Software Engineering & Development,61,Mime Types,mime types content-type multipart octet-stream application/json text/html text/plain media-type charset encoding binary-data file-extension mime-mapping
+0,Software Engineering & Development,62,Regular Expressions,regex patterns regexp capture-group lookahead lookbehind quantifier character-class anchor alternation backreference greedy-match lazy-match pcre posix-regex sed-regex
+0,Software Engineering & Development,63,Jcl Clickable Links,jcl clickable links mainframe cobol cics vsam jes2 jes3 tso ispf rexx sysout dd-statement jobcard proc steplib
+0,Software Engineering & Development,64,Prd Leaves Production,prd leaves production environment promotion rollout cutover prod-push release-candidate hotfix-deploy production-readiness change-window
+0,Software Engineering & Development,65,Plot Cid Graphics,plot cid graphics rendering visualization-engine canvas svg bitmap vector-graphics pixel rasterize charting-library gnuplot matplotlib-plot
+0,Software Engineering & Development,66,Optional Directories,optional directories directory-structure folder-hierarchy src-layout package-layout project-scaffold boilerplate skeleton-project convention-over-configuration directory-naming
+0,Software Engineering & Development,67,Dispatch Comparable,dispatch comparable comparator sort-order natural-ordering custom-comparator comparable-interface dispatch-table event-dispatch callback observer-pattern delegate invocation
+0,Software Engineering & Development,68,Ccps Notification,ccps notification notification-service push-notification alert-system event-notification message-queue notification-channel subscription-event webhook-notification pub-sub
+0,Software Engineering & Development,69,Data Orchestration (Airflow),airflow schedule interval dag task-scheduler luigi cron-expression sensor operator executor xcom task-dependency directed-acyclic-graph workflow-orchestration
+0,Software Engineering & Development,70,Downstream Impacts,downstream impacts upstream dependency-chain cascading ripple-effect blast-radius impact-analysis change-impact downstream-consumer upstream-producer service-dependency breaking-change
+0,Software Engineering & Development,71,Xhtml Posture,xhtml posture doctype xmlns well-formed valid-xml xslt xsd dtd namespace xml-schema strict-mode quirks-mode standards-mode
+0,Software Engineering & Development,72,Launchpad Listlevel,launchpad listlevel launcher portal entry-point application-hub quick-access favorites shortcut navigation-menu app-drawer catalog-listing
+1,Production Support & Debugging,73,Script Execution Logs,script execution run logs bash output stdout stderr crontab scheduled-job powershell batch-script exit-code return-code log-rotation
+1,Production Support & Debugging,74,Error Code Exception,error-code http-status 400 401 403 404 500 502 503 504 errno exit-status return-value error-handling error-message
+1,Production Support & Debugging,75,Software Code Errors,software code-error compile-error build-error linker-error unresolved-symbol undefined-reference missing-import circular-dependency syntax-issue code-defect
+1,Production Support & Debugging,76,Software Configuration Errors,configuration-error misconfiguration config-file environment-variable properties-file settings-file connection-string misconfigured toggle-config
+1,Production Support & Debugging,77,UAT & SIT Testing,uat sit system-integration-testing user-acceptance-testing regression-suite test-environment staging-environment pre-production signoff test-cases
+1,Production Support & Debugging,78,UI/UX Debugging,ui-debugging ux-issue screenshots responsive-bug layout-issue z-index overflow-hidden css-bug browser-devtools element-inspector console-error dom-debugging
+1,Production Support & Debugging,79,Linux Elf Errors,linux elf errors binary-format shared-library ldconfig ldd segmentation-fault core-dump executable-format ld-preload dynamic-linker lib-dependency
+1,Production Support & Debugging,80,Alert Panel Severity,alert panel monitoring-alert threshold-breach warning critical-alert notification-panel grafana prometheus alertmanager pagerduty-alert ops-genie
+1,Production Support & Debugging,81,Software Error Reports,software-error reports stacktrace-analysis exception-report null-pointer segfault-analysis failure-report crash-report error-log diagnostic-report root-cause defect-report
+1,Production Support & Debugging,82,Quality Control Qc,quality control qc inspection checklist-qc acceptance-criteria-qc verification validation conformance standard-compliance non-conformance audit-trail-qc
+1,Production Support & Debugging,83,Software Code Error,runtime-exception logic-error off-by-one deadlock race-condition memory-corruption buffer-overflow null-reference stack-overflow infinite-loop
+1,Production Support & Debugging,84,Invalid Identifier Errors,invalid identifier undeclared-variable unresolved-name misspelled-identifier scope-error naming-conflict reserved-word shadowing type-mismatch declaration-error
+1,Production Support & Debugging,85,Support Escalations,escalation support-ticket priority-escalation tier-1 tier-2 tier-3 sme-escalation subject-matter-expert handover warm-transfer cold-transfer
+1,Production Support & Debugging,86,Code Review Feedback,developer mistakes peer-review pull-request-review code-smell anti-pattern refactoring-suggestion linting static-analysis review-comment nit-pick
+1,Production Support & Debugging,87,IT Root Cause Analysis,investigation fishbone-diagram five-whys rca fault-tree causal-analysis contributing-factor corrective-action preventive-action lessons-learned
+1,Production Support & Debugging,88,Nexthink It Narration,nexthink narration digital-experience endpoint-monitoring dex-score experience-score compliance-score remediation-script campaign-nexthink finder-nexthink
+2,Data Engineering & Database,89,Csv Data Loading,csv tsv delimiter flatfile headerrow loaddata bulkinsert datafile importcsv parsecsv separator newline utf8 bom skiprows
+2,Data Engineering & Database,90,BI Analytics (Tableau),tableau lod calculatedfield datasource blending extracts hyper publishedsheet parameter mark filter crosstab
+2,Data Engineering & Database,91,Statistics Sample Population,sample population census sampling stratified randomsample samplesize surveying polldata observational cohort crosssectional
+2,Data Engineering & Database,92,Cloud Data Warehousing (BigQuery),bigquery bq dataset partitioning slots standardsql legacysql biglake dataproc cloudspanner looker datastudio scheduled
+2,Data Engineering & Database,93,BI Analytics (Power BI DAX),dax selectedvalue powerbi pbix datamodel measureexpression gateway refreshschedule powerquery mquery directquery importmode composite paginated
+2,Data Engineering & Database,94,Statistical Analysis,linearregression stddev ztest significance confinterval nullhypothesis
+2,Data Engineering & Database,95,Jupyter Notebooks,jupyter notebook ipynb jupyterkernel magics nbconvert jupyterlab jupyterhub colab kernelspec widgetsnbextension voila
+2,Data Engineering & Database,96,Chart Vertical Legend,vertical legend yaxis xaxis barplot linechart areachart annotation gridlines tick labelrotation colorscale
+2,Data Engineering & Database,97,Us States Exchange,states fips geocode stateabbreviation zipcode postalcode regioncode countyfips census2020 territorycode usps
+2,Data Engineering & Database,98,Product Data Modeling,sku catalog attribute taxonomyclass productid masterdata pim productline productvariant upc ean gtin
+2,Data Engineering & Database,99,XML Configuration Management,xml xpath xmlparser cdata xmlnamespace xmlschema saxparser domparser xmlvalidation xmltransform
+2,Data Engineering & Database,100,Predictive Modeling,predictive forecast arima timeseries prophet gbm logistic decisiontree rmse
+2,Data Engineering & Database,101,Code Refactoring,refactoring lpad rpad substr cte windowfunction optimize readable simplify modularize inline extractmethod
+2,Data Engineering & Database,102,Correlation & Bivariate Analysis,correlation bivariate pearson spearman covariance rsquared linearfit residuals pairplot cramersv
+2,Data Engineering & Database,103,Water Height Measurements,water height gauge streamflow hydrograph tidal waterlevel precipitation reservoir depthsensor floodstage
+3,Cloud Infrastructure & DevOps,104,Incident Monitoring,incidentmgmt monitoring pagerduty opsgenie statuspage mtta escalationpolicy oncallrotation
+3,Cloud Infrastructure & DevOps,105,Hardware & IT Support,laptop hardware bios firmware motherboard peripherals printer scanner docking workstation reimage warranty devicedriver helpdesk
+3,Cloud Infrastructure & DevOps,106,Python Dependency Management,pypi pip virtualenv conda pipenv poetry setuptools requirementstxt wheelfile packageindex venv tox dependabot
+3,Cloud Infrastructure & DevOps,107,Zip File Contents,zip archive unzip tarball gzip bzip2 7zip rar compress decompress checksum extraction
+3,Cloud Infrastructure & DevOps,108,Job Scheduling,cron scheduler quartz autosys taskscheduler airflowdag batchjob recurrence windowstask atcommand periodicjob
+3,Cloud Infrastructure & DevOps,109,System Cutover & Deployments,golive bluegreen maintenancewindow switchover datamigration parallel dryrun
+3,Cloud Infrastructure & DevOps,110,Configuration Management,config puppet chef consul etcd configmap secretsmanager parametersstore featureflag envvars dotenv propertiesfile appsettings
+3,Cloud Infrastructure & DevOps,111,RFC & Change Management,rfc cab changerecord changerequest approvalboard changeadvisory freezeperiod backout impactassessment changetypes emergencychange
+3,Cloud Infrastructure & DevOps,112,Log Analytics (Splunk),splunk spl sourcetype forwarder indexer searchhead logstash kibana elk fluentd syslog logrotation graylog datadog
+3,Cloud Infrastructure & DevOps,113,Shell Scripting,shellscript zsh shebang awk sed grep pipe redirect chmod chown coreutils xargs
+3,Cloud Infrastructure & DevOps,114,Kernel & System Ops,kernelmod systemd grub initramfs dmesg sysctl modprobe lvm fdisk fstab bootloader swapspace oom
+3,Cloud Infrastructure & DevOps,115,Disaster Recovery & Networking,backup disasterrecovery georedundancy snapshots replicationlag warmstandby coldstandby archival offsite
+3,Cloud Infrastructure & DevOps,116,Geo Routing Argentina,argentina latam geoip geolocation anycast edgenode regionrouting locality
+3,Cloud Infrastructure & DevOps,117,Dynamic Operations,dynamic scaling elasticity autoscale spotinstance burstable warmpool ondemand reservedinstance
+3,Cloud Infrastructure & DevOps,118,Monitor Built,healthcheck uptimemonitor synthetic heartbeat probe livenesscheck readinessprobe servicemesh observability
+4,Cyber Security & Identity,119,Risk & Control Governance,rcsa framework controls maturity oversight residual appetite tolerance mitigations assurance safeguards countermeasures
+4,Cyber Security & Identity,120,Data Privacy (PII),privacy pii masking anonymization pseudonymization redaction dsar consent tokenization dpia retention-policy obfuscation sensitive
+4,Cyber Security & Identity,121,Regulatory Operations,regulatory requirements regulation regulator examination filings enforcement sanctions remediation supervisory regtech
+4,Cyber Security & Identity,122,On-Call Operations,pager oncall on-call escalations duty triage responder acknowledgment handoff warroom
+4,Cyber Security & Identity,123,Risk Product Owner,backlog-risk prioritization-risk stakeholder criteria roadmap-risk scoring taxonomy categorization risk-register
+4,Cyber Security & Identity,124,Compliance Control Procedures,attestations walkthrough testing-controls effectiveness evidencing documented control-testing compliance-testing
+4,Cyber Security & Identity,125,Compliance Data,lineage completeness reconciliation crosswalk repository-data compliance-reporting compliance-records
+4,Cyber Security & Identity,126,Fraud & Security Ops,falcon gmas detection anomaly suspicious unauthorized watchlist aml kyc transaction-monitoring soc alerts-fraud chargeback-fraud
+4,Cyber Security & Identity,127,Inherent Risk,inherent exposure likelihood impact pre-control unmitigated baseline magnitude residual-risk scoring-inherent risk-rating
+4,Cyber Security & Identity,128,Amex Card Risk,charge corporate customer dispute ends chargeback-risk credit-risk delinquency default exposure-card portfolio underwriting loss-rate
+4,Cyber Security & Identity,129,Secrets Management (CyberArk),cyberark secrets vault credential pam privileged conjur hashicorp-vault keychain password-vault service-account safes rotation-secrets
+4,Cyber Security & Identity,130,Issue Corrective Closure,corrective closure remediation-plan cap findings disposition closed revalidation action-plan
+4,Cyber Security & Identity,131,Sam Directors Access,sam directors entitlements recertification birthright joiner-mover-leaver delegation approvers attestation-access role-review
+4,Cyber Security & Identity,132,Major Risk Events,breach post-mortem escalation-event material reportable near-miss timeline-event risk-event
+4,Cyber Security & Identity,133,Identity Management (Entra),entra seasonality azure-ad conditional-access sso-entra directory tenant provisioning-entra lifecycle joiner mover leaver identity-governance
+5,Business Communication & Writing,134,Presentation Bullet Points,bullet points talking-points highlights-slide executive-summary key-takeaways outline enumeration
+5,Business Communication & Writing,135,Internal Team Comms,announcement memo broadcast newsletter townhall update-comms all-hands internal-comms
+5,Business Communication & Writing,136,Grammar Correct Sentence,correct sentence proofreading fix-grammar reword tense subject-verb correction
+5,Business Communication & Writing,137,Instant Messaging Ops,slack message communication teams-chat dm channel thread emoji reaction msteams notifications-im
+5,Business Communication & Writing,138,Diagrams & Flowcharts,diagram visio diagrams flowcharts mermaid lucidchart uml sequence-diagram mockup drawio
+5,Business Communication & Writing,139,Meeting Invite Calendar,invite calendar outlook-invite recurring organizer attendee rsvp scheduling-meeting ical timeslot availability
+5,Business Communication & Writing,140,Sales Revenue Market,territory crm opportunity leads conversion prospecting win-rate deal-size
+5,Business Communication & Writing,141,Employee Retention,attrition retention turnover engagement satisfaction esat pulse-survey stay-interview exit-interview morale
+5,Business Communication & Writing,142,Marketing Campaign Promotion,campaign branding collateral ctr impressions seo sem social-media outreach drip-campaign nurture
+5,Business Communication & Writing,143,Mentorship Career Coaching,mentorship career coaching mentee sponsor development-plan growth feedback-career 1on1 leadership-development
+5,Business Communication & Writing,144,Vendor & Third-Party Mgmt,vendor procurement contract rfp sla-vendor onboarding-vendor evaluation renewal-contract third-party
+5,Business Communication & Writing,145,Payroll Operations,payroll salary overtime deductions garnishment paystub w2 withholding direct-deposit timesheet
+5,Business Communication & Writing,146,Training & Workshops,training workshops onboarding-training certification bootcamp e-learning modules lms upskilling
+5,Business Communication & Writing,147,Meetings Recording,recording otter notetaker playback summary-meeting action-items-meeting transcript-meeting
+5,Business Communication & Writing,148,Live Chat Operations,concurrent chat sessions live concurrency queue-time chatbot first-response average-handle-time abandon-rate wait-time routing-chat
+6,Executive Strategy & Management,149,Banking Direction Strategy,banking direction fintech deposits lending neobank charter-bank retail-banking commercial-banking wealth-management interest-rate compliance-banking derisking
+6,Executive Strategy & Management,150,Organizational Culture,ownership accountability culture dei inclusion belonging values psychological-safety empowerment team-building recognition-program collaboration-culture
+6,Executive Strategy & Management,151,Capacity Planning,capacity shift headroom staffing workload-balancing fte utilization-rate ramp-up right-sizing scalability-planning resource-allocation throughput-planning overflow
+6,Executive Strategy & Management,152,Pilot Projects,pilot proposals poc mvp proof-of-concept feasibility experiment incubation trial-run beta-launch go-nogo evaluation-criteria rollout-plan
+6,Executive Strategy & Management,153,Inventory Management,inventory stockout replenishment warehouse-ops fifo lifo safety-stock reorder-point abc-analysis wms fulfillment bin-location cycle-count shrinkage
+6,Executive Strategy & Management,154,Investor Relations,tsr shareholder trends dividend earnings-call prospectus sec-filing 10-k 10-q annual-report proxy-statement ir equity analyst-day buyback valuation
+6,Executive Strategy & Management,155,International Pricing Strategy,international fx tariff cross-border currency-conversion hedging transfer-pricing geo-pricing parity ppp import-duty export-control price-elasticity
+6,Executive Strategy & Management,156,Dcrm Levers,dcrm levers segmentation upsell cross-sell retention-strategy win-back propensity churn-reduction engagement-score loyalty reactivation
+6,Executive Strategy & Management,157,Sales & Deal Management,deal closing quota-management pipeline-velocity negotiation rfi rfq proposal-management crm-pipeline weighted-pipeline bookings-forecast discount-approval
+6,Executive Strategy & Management,158,Data Governance,governance delivery stewardship metadata-management data-quality master-data data-classification data-dictionary schema-registry data-owner data-custodian
+6,Executive Strategy & Management,159,Telesales & Operations,telesales outbound inbound cold-calling talk-time aht handle-time wrap-up dialer ivr call-center pbx csat-score fcr telephony
+6,Executive Strategy & Management,160,Forbes Publications,forbes editorial thought-leadership byline ranking listicle feature-article contributed-content op-ed press-release media-coverage syndication publication-strategy brand-journalism
+6,Executive Strategy & Management,161,Decide Owners,decide owners raci decision-matrix accountable consulted informed decision-rights escalation-path governance-board authority sign-off empowerment-framework
+6,Executive Strategy & Management,162,Srr Streamline,srr streamline simplification standardization optimization lean waste-reduction process-improvement kaizen six-sigma value-stream continuous-improvement efficiency-gain bpr reengineering
+6,Executive Strategy & Management,163,Amazon & Brand Marketing,amazon brand-awareness marketplace seller-central fba prime vendor-central advertising-console ppc sponsored-ads asin listing-optimization brand-registry storefront a+-content
+7,Process & Project Management,164,Product Management,roadmapping prd-spec feature-request user-research persona discovery north-star-metric impact-mapping opportunity-scoring prioritization-framework kano jtbd story-mapping prm product-lifecycle
+7,Process & Project Management,165,Intake & Triage,intake form request-form submission-queue prioritization routing-rules sla-assignment demand-intake ticket-routing screening approval-workflow queue-management intake-portal
+8,Testing & Quality Assurance,166,Debugging & Log Analysis,debug debugging log-level logback log4j grep-log structured-logging correlation-id stackdriver cloudwatch-logs log-aggregation
+8,Testing & Quality Assurance,167,Code Review,changes required review lgtm nit approve reject comment-thread pr-review codeowner lint checkstyle pmd
+8,Testing & Quality Assurance,168,Test Execution,pass test-run test-suite test-runner ci-test parallel-test flaky-test rerun test-report test-harness test-result test-log execution-status green-build red-build
+8,Testing & Quality Assurance,169,Test Assertions,expected actual assert-equals assert-true assert-throws matcher hamcrest chai-expect should-be deep-equal snapshot-testing assertion-error soft-assert assert-that fluent-assertions
+9,Data Analytics & Visualization,170,Data Reporting,tabular aggregation drilldown rollup subtotal snapshot weekly monthly quarterly ad-hoc scoreboard deck-report automated-report
+9,Data Analytics & Visualization,171,Power Bi Dashboard,measure slicer workspace-bi tenant-bi bookmark drillthrough m-language row-level-security import-mode
+9,Data Analytics & Visualization,172,AI/ML Vector Operations,embedding similarity cosine vector vectordb faiss pinecone weaviate chroma qdrant annoy knn dimensionality pca tsne umap retrieval semantic nearest neighbors
+10,General Productivity & Knowledge,173,Webex & Conferencing,webex conferencing zoom webinar screenshare breakout whiteboarding virtual mute unmute participant cohost lobby waiting-room dial-in bridge-line teleconference
+10,General Productivity & Knowledge,174,SLA Management,sharepoint sla slas uptime latency threshold escalate resolution-time penalize compliance-level servicelevel mtbf
+10,General Productivity & Knowledge,175,Technical Documentation,docs api-docs postman confluence restructuredtext docstring javadoc pydoc mkdocs sphinx asciidoc runbook-docs
+10,General Productivity & Knowledge,176,NOC / Operations Center,noc center watchdog dashboard-ops oncall-rotation ticketing p1 p2 p3 war-room bridge-call command-center
+10,General Productivity & Knowledge,177,Cbr Uploading Process,cbr uploading upload batch submission filetype filesize preview
+10,General Productivity & Knowledge,178,Agile Carryover Stories,carryover stories grooming storypoints carry-forward unfinished incomplete
+10,General Productivity & Knowledge,179,Rag Architecture Iv,rag retrieval-augmented generation chunking indexing reranking context-window grounding hallucination vectorstore knowledge-base augmented-generation retrieval-pipeline
+10,General Productivity & Knowledge,180,Approval Workflows,approver authorization-chain multi-level reviewer gatekeeper sequential chain-of-approval auto-approve
+10,General Productivity & Knowledge,181,Approval Notices,approval notices reminder pending approved rejected confirmation alert-email digest-email status-update action-required sign-off-notice
+10,General Productivity & Knowledge,182,LLM Integration (OpenAI),openai customgpt gpt chatgpt completions tokens prompt fine-tuning embeddings-api assistants-api function-calling streaming-response rate-limit tiktoken
+10,General Productivity & Knowledge,183,Qualtrics Surveys,qualtrics surveys questionnaire poll likert survey-logic branching skip-logic response-rate distribution sentiment-analysis feedback-collection
+10,General Productivity & Knowledge,184,Enable Genai Capabilities,enable genai capabilities generative copilot assistant playground inference model-deployment prompt-engineering guardrails responsible-ai safety-filter
+10,General Productivity & Knowledge,185,Knowledge Management,knowledge base guides articles ontology faq-bot search-index content-curation documentation-hub repository-management information-architecture
+10,General Productivity & Knowledge,186,Pillars Holding,pillars holding strategic-pillars organizational foundational capability
+10,General Productivity & Knowledge,187,Printable Gantt Charts,printable gantt charts timeline milestone dependency-tracking scheduling-view project-timeline bar-chart-schedule export-pdf waterfall critical-path
+11,American Express & Payments,188,Supplier Networks,supplier buyer procurement-network payables receivables invoicing purchase-order supply-chain ariba coupa vendor-onboarding supplier-diversity spend-analytics
+11,American Express & Payments,189,Aexp Internal Acronym,aexp acronym abbreviation internal-term nomenclature corporate-language shorthand codename taxonomy-internal lexicon
+11,American Express & Payments,190,Insurance Products,insurance products premium coverage deductible policyholder claim indemnity rider beneficiary liability travel-insurance purchase-protection
+11,American Express & Payments,191,Fraud & Chargebacks,chargeback fraud fraudulent stolen skimming representment reason-code retrieval-request provisional-credit liability-shift emv chip-and-pin friendly-fraud
+11,American Express & Payments,192,Pricing Configuration,ctl tier rate-table fee-schedule spread discount-tier volume-pricing interchange-plus blended-rate pricing-engine pricing-rules surcharge
+11,American Express & Payments,193,Payment & Deposit Ops,direct pay deposit ach wire remittance clearing payout disbursement batch-settlement nostro vostro correspondent-banking
+11,American Express & Payments,194,Iag Entity Structure,iag entity subsidiary affiliate holding-company organizational-chart corporate-entity legal-entity jurisdiction org-hierarchy division
+11,American Express & Payments,195,Video & Creative Assets,video creative assets storyboard-video motion-graphics thumbnail branding-assets visual-content post-production footage
+11,American Express & Payments,196,Treasury & Liquidity,cash-management cash-flow sweep-account money-market short-term-funding repo counterparty fx-hedging liquidity-buffer intraday-liquidity stress-testing-liquidity
+11,American Express & Payments,197,External Financing,external loan financing credit-facility syndicated revolving-credit securitization bond-issuance debt-capital commercial-paper term-loan borrowing
+11,American Express & Payments,198,Pcns System Buttons,pcns buttons toggle checkbox radio-button dropdown ui-element widget click-handler form-field control-panel
+11,American Express & Payments,199,System Of Record,system record sor authoritative golden-record single-source-of-truth data-lineage audit-trail canonical
+11,American Express & Payments,200,Employee Recognition,award alternatives awards recognition peer-to-peer kudos spotlight nomination appreciation program-rewards milestone-award bravo-zulu shoutout
+11,American Express & Payments,201,Marketing Targeting,targeting lookalike propensity-model audience demographics behavioral-targeting geo-targeting retargeting affinity-targeting
+11,American Express & Payments,202,Gmns Evaluating,gmns evaluating assessment grading rubric weighted-score
+12,Business Process Automation,203,RPA & Automation,rpa automation uipath blueprism automationanywhere bot robotic unattended attended workflow-automation automate powershell-automation winautomation taskbot recorder hyperautomation intelligent-automation aari
+13,Business Communication & HR,204,HR Immigration Services,immigration visa h1b sponsorship petition i-94 ead greencard lca perm uscis i-140 i-129 h4 l1 tn work-permit citizenship naturalization consulate
+13,Business Communication & HR,205,Cancellation Conflicts,cancellation rescind revoke retract withdraw grievance disagreement mediation contested void nullify annul termination-dispute hr-dispute conflict-resolution
+13,Business Communication & HR,206,Hr Responsibilities Introduction,responsibilities orientation induction welcome handbook roleoverview jobdescription probation reporting-structure duties expectations
+13,Business Communication & HR,207,Benefits Enrollment,enrollment open-enrollment waiver opt-out hsa fsa dependents cobra deduction 401k dental hra life-insurance supplemental benefits-election
+13,Business Communication & HR,208,Benefits Administration,qualifying-event benefits-plan copay coinsurance wellness eap stda ltda disability maternity paternity benefits-eligibility
+13,Business Communication & HR,209,Recruiting Operations,interviewer recruiter ats candidate resume shortlist offer-letter talent-pipeline onsite phone-screen panel-interview
+13,Business Communication & HR,210,Hr Associates Aspirations,aspirations associate career-growth career-advancement mentoring idp competency performance-review skill-gap lateral-move
+13,Business Communication & HR,211,Official Opt,opt-in authorization-form declination waiver-form e-signature disclaimer enrollment-election policy-election
+13,Business Communication & HR,212,Regional Comms (Singapore),singapore apac sg regional-comms cpf iras southeast-asia hq-sg statutory-leave ns-leave shg
+13,Business Communication & HR,213,Email Confirming Receipt,confirming receipt acknowledgment-email received-confirmation read-receipt delivery-notification acceptance-letter offer-confirmation onboarding-email
+13,Business Communication & HR,214,Workforce Management (WFM),wfm roster rostering headcount-planning forecasting occupancy adherence absenteeism shift-swap attrition-rate
+13,Business Communication & HR,215,Hr Gurgaon Highlights,gurgaon gurugram india-office highlights delhincr site-update town-hall regional-update india-hr
+14,Finance & Procurement,216,Accounting & Journaling,accounting journal entries ledger debit credit accrual gl posting adjusting-entry trial-balance subledger intercompany gaap ifrs coa
+14,Finance & Procurement,217,Rule Allocation (PCM),pcm allocation cost-center profitability-model cost-allocation apportionment allocation-rule driver-based cost-recharge overhead segment
+14,Finance & Procurement,218,Statement Of Work (Sow),sow statement deliverable scope engagement-letter amendment addendum terms-and-conditions procurement-contract
+14,Finance & Procurement,219,Financial Metrics (EBITDA),ebitda financial metrics gross-margin operating-income net-income eps cagr leverage ratio debt-to-equity roic roa roe working-capital
+14,Finance & Procurement,220,Pricing Approvals,price-approval rate-card msrp markup tiered-pricing approval-matrix price-exception pricing-committee price-governance
+14,Finance & Procurement,221,EOD Operations,eod end-of-day cutoff day-close reconciliation-run nightly-batch sweep position
+14,Finance & Procurement,222,Applications Pricing,applications price-list skus rate-sheet bundling subscription-pricing seat-license per-user usage-based metered
+14,Finance & Procurement,223,Capital Planning,capital capex opex timing appropriation budget-cycle depreciation amortization capital-expenditure project-funding allocation-plan roi-analysis payback-period npv irr
+14,Finance & Procurement,224,Financial Reporting,financials fin quarterly-report earnings p&l income-statement balance-sheet cashflow footnotes financial-reporting
+14,Finance & Procurement,225,Amount Constants,amount constants fixed-amount nominal ceiling floor minimum maximum hardcoded
+14,Finance & Procurement,226,Expense Management,emburse expense reimbursement receipt-upload per-diem travel-expense mileage corporate-card expense-report expensify concur t&e
+14,Finance & Procurement,227,Pricing Research,study benchmarking competitor-pricing willingness-to-pay conjoint price-sensitivity price-index market-rate survey-pricing price-optimization
+14,Finance & Procurement,228,Asset Management,asset depreciation-schedule amortization-schedule fixed-asset tangible intangible book-value useful-life disposal write-off impairment asset-register asset-tracking capitalization
+14,Finance & Procurement,229,Branch Operations,locations branch-office atm teller safe-deposit cash-handling kiosk footprint branch-network branch-manager
+14,Finance & Procurement,230,Investment Plans,investment diversification equities bonds mutual-fund etf securities coupon asset-allocation rebalancing
+14,Finance & Procurement,231,Legal Proceedings,tribunal proceedings litigation arbitration-panel subpoena deposition injunction judgment verdict settlement-agreement plaintiff defendant counsel court-filings
+14,Finance & Procurement,232,Fees Dashboards,fees service-charge late-fee penalty rebate waiver-fee fee-income fee-waiver fee-dashboard
+14,Finance & Procurement,233,Financial Actuals,actuals adb actual-vs-budget variance-analysis ytd mtd qtd run-rate forecast-vs-actual budget-variance true-up accrued
+14,Finance & Procurement,234,Treasury Reporting,treasury-report cash-position cash-forecast wire-transfer bank-reconciliation liquidity-ratio
+14,Finance & Procurement,235,Annual Spend Analysis,annual spend procurement-spend category-spend spend-cube vendor-spend addressable-spend tail-spend savings-target yoy
