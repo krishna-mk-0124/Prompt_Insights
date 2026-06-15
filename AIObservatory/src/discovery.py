@@ -240,7 +240,7 @@ def run_hybrid_discovery():
     C_prompts_word = word_vectorizer.transform(df["processed_text"].tolist())
     
     # Char Vectorizer (Sublinear TF enabled, char_wb)
-    char_vectorizer = TfidfVectorizer(max_features=50000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True)
+    char_vectorizer = TfidfVectorizer(max_features=40000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True)
     char_vectorizer.fit(tax_df["processed_desc"].tolist())
     
     C_tax_char = char_vectorizer.transform(tax_df["processed_desc"].tolist())
@@ -252,20 +252,32 @@ def run_hybrid_discovery():
     count_prompts = count_vectorizer.transform(df["processed_text"].tolist())
     
     print("\n[Phase 3/4] Mathematical Routing (Cosine Similarity with Overlap Enforcement)")
-    print("  -> Computing cosine distances against the official taxonomies...")
+    print("  -> Computing cosine distances in batches to prevent RAM thrashing...")
     
-    # Blended Cosine Similarity (50% Word, 50% Char)
-    sim_matrix_word = C_prompts_word.dot(C_tax_word.T).toarray()
-    sim_matrix_char = C_prompts_char.dot(C_tax_char.T).toarray()
-    sim_matrix = (sim_matrix_word + sim_matrix_char) / 2.0
+    num_prompts = df.shape[0]
+    num_tax = tax_df.shape[0]
     
-    # ENFORCE MINIMUM OVERLAP (to kill single-word hallucination black holes)
-    overlap_matrix = count_prompts.dot(count_tax.T).toarray()
+    # Pre-allocate the final similarity matrix and best indexes
+    sim_matrix = np.zeros((num_prompts, num_tax), dtype=np.float32)
     tax_term_counts = np.asarray(count_tax.sum(axis=1)).flatten()
-    min_overlap_required = np.minimum(2, tax_term_counts) # Require at least 2 matching words if category has >= 2 words
+    min_overlap_required = np.minimum(2, tax_term_counts)
     
-    valid_overlap_mask = overlap_matrix >= min_overlap_required
-    sim_matrix[~valid_overlap_mask] = 0.0
+    BATCH_SIZE = 50000
+    for start_idx in range(0, num_prompts, BATCH_SIZE):
+        end_idx = min(start_idx + BATCH_SIZE, num_prompts)
+        
+        # Word and Char similarities for the batch
+        batch_sim_word = C_prompts_word[start_idx:end_idx].dot(C_tax_word.T).toarray()
+        batch_sim_char = C_prompts_char[start_idx:end_idx].dot(C_tax_char.T).toarray()
+        batch_sim = (batch_sim_word + batch_sim_char) / 2.0
+        
+        # Overlap masking for the batch
+        batch_overlap = count_prompts[start_idx:end_idx].dot(count_tax.T).toarray()
+        valid_overlap_mask = batch_overlap >= min_overlap_required
+        
+        # Apply mask
+        batch_sim[~valid_overlap_mask] = 0.0
+        sim_matrix[start_idx:end_idx] = batch_sim
     
     max_sims = sim_matrix.max(axis=1)
     best_tax_idx = sim_matrix.argmax(axis=1)
