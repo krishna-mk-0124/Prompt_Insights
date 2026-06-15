@@ -4,6 +4,17 @@ import re
 import pandas as pd
 import time
 import threading
+
+# ==========================================
+# RESOURCE CONFIGURATION (Edit for Server)
+# ==========================================
+CPU_CORES = 8               # Set to 1 for low-resource server
+USE_FLOAT32 = False         # Set to True to cut RAM usage by 50%
+MAX_FEATURES_P2_WORD = 50000 # Drop to 25000 for server
+MAX_FEATURES_P2_CHAR = 40000 # Drop to 25000 for server
+MAX_FEATURES_P3 = 30000      # Drop to 15000 for server
+# ==========================================
+
 import numpy as np
 import string
 import warnings
@@ -250,7 +261,7 @@ def run_hybrid_discovery():
     C_prompts_char = char_vectorizer.transform(df["processed_text"].tolist())
     
     # Strict Overlap Masking ONLY uses the word vectorizer to prevent char-level noise from bypassing the mask
-    count_vectorizer = CountVectorizer(vocabulary=word_vectorizer.vocabulary_, dtype=np.int16)
+    count_vectorizer = CountVectorizer(vocabulary=word_vectorizer.vocabulary_, dtype=count_dtype)
     count_tax = count_vectorizer.transform(tax_df["processed_desc"].tolist())
     count_prompts = count_vectorizer.transform(df["processed_text"].tolist())
     
@@ -343,7 +354,7 @@ def run_hybrid_discovery():
         tracker_thread.daemon = True
         tracker_thread.start()
 
-        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=0)
+        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=CPU_CORES, verbose=0)
         clf.fit(X_ml[official_indices], best_tax_idx[official_indices])
 
         stop_event.set()

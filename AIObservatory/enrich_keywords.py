@@ -6,6 +6,15 @@ import re
 import time
 import threading
 
+# ==========================================
+# RESOURCE CONFIGURATION (Edit for Server)
+# ==========================================
+CPU_CORES = 8             # Set to 1 for low-resource server
+USE_FLOAT32 = False       # Set to True to cut RAM usage by 50%
+MAX_FEATURES_LIMIT = 20000 # Drop to 10000 for server
+# ==========================================
+
+
 print("Loading mapped dataset...")
 df = pd.read_csv('data/fully_categorized_dataset.csv')
 tax_df = pd.read_csv('data/optimized_taxonomy.csv')
@@ -17,7 +26,8 @@ print(f"Training SGD Classifier on {len(mapped_df)} mapped prompts...")
 start_time = time.time()
 print("  -> Phase 1/3: Vectorizing text with TF-IDF (This may take a few minutes)...")
 # OPTIMIZATION: Dropped max_features to 10k and forced float32 to cut RAM usage by 70%
-vectorizer = TfidfVectorizer(max_features=10000, stop_words=list(ENGLISH_STOP_WORDS), ngram_range=(1, 2), sublinear_tf=True, dtype=np.float32)
+dtype_val = np.float32 if USE_FLOAT32 else np.float64
+vectorizer = TfidfVectorizer(max_features=MAX_FEATURES_LIMIT, stop_words=list(ENGLISH_STOP_WORDS), ngram_range=(1, 2), sublinear_tf=True, dtype=dtype_val)
 X = vectorizer.fit_transform(mapped_df["raw_text"].fillna(""))
 y = mapped_df["subcategory_id"].values
 print(f"  -> TF-IDF Vectorization completed in {time.time() - start_time:.2f} seconds.")
@@ -37,7 +47,7 @@ tracker_thread = threading.Thread(target=progress_tracker, args=(stop_event, fit
 tracker_thread.daemon = True
 tracker_thread.start()
 
-clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=0)
+clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=CPU_CORES, verbose=0)
 clf.fit(X, y)
 
 stop_event.set()
