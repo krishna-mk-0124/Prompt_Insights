@@ -19,32 +19,32 @@ graph TD
     RAW[Raw Daily Prompts<br/>cleaned_prompts_YYYY-MM-DD.txt]:::file
     TAX[optimized_taxonomy.csv]:::file
     
-    subgraph Phase 1: Language Filtering
+    subgraph phase1 [Phase 1: Language Filtering]
         LANG[language_router.py]:::script
         UNI{Unicode > 15%?}:::filter
         DET{langdetect == 'en'?}:::filter
         RES{<150 chars + TECH_WORDS?}:::filter
     end
 
-    subgraph Phase 2: Zero-Shot Mathematical Routing
+    subgraph phase2 [Phase 2: Zero-Shot Mathematical Routing]
         DISC[discovery.py]:::script
         TFIDF[TF-IDF Vectorization<br/>Word + Char N-Grams]:::ml
         COS[Cosine Similarity Score]:::ml
         MASK{Strict Overlap Mask<br/>>= 2 Keywords Match?}:::filter
     end
 
-    subgraph Phase 3: ML Rescue Sweep
+    subgraph phase3 [Phase 3: ML Rescue Sweep]
         SGD[SGD Classifier<br/>ElasticNet Penalty]:::ml
         PRED[Predict Outliers based on<br/>Hidden Word Correlations]:::ml
     end
     
-    subgraph Phase 4: Data Export & Storage
+    subgraph phase4 [Phase 4: Data Export & Storage]
         EXPORT[export_to_db.py]:::script
         PANDAS[Pandas Aggregation<br/>Group By Category]:::ml
         PG[(Postgres Database<br/>prompt_insights Table)]:::db
     end
     
-    subgraph Keyword Enrichment Loop (Run Periodically)
+    subgraph enrich_loop [Keyword Enrichment Loop - Run Periodically]
         ENRICH[enrich_keywords.py]:::script
         WEIGHTS[Extract Top 15<br/>SGD Mathematical Weights]:::ml
         DEDUPE[dedupe_keywords.py]:::script
