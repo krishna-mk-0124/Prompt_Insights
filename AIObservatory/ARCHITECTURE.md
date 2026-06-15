@@ -7,6 +7,7 @@ To achieve our strict 99% accuracy target on ultra-low-resource hardware (1 CPU 
 ## High-Level Architecture Flow
 
 ```mermaid
+%% Cache Buster: v2 - Forces GitHub to re-render the absolute AIObservatory URLs
 graph TD
     %% Styling Definitions
     classDef file fill:#f9f2f4,stroke:#c7254e,stroke-width:2px,color:#c7254e;
