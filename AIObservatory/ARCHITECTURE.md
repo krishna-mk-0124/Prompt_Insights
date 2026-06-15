@@ -85,6 +85,28 @@ graph TD
     ENRICH -.-> WEIGHTS
     WEIGHTS -.-> DEDUPE
     DEDUPE -.-> |Overwrites| TAX
+
+    %% Clickable Links to Documentation Anchors below
+    click LANG "#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click UNI "#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click DET "#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    click RES "#phase-1-data-ingestion--language-filtering" "View Details & Examples"
+    
+    click DISC "#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click TFIDF "#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click COS "#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+    click MASK "#phase-2-the-zero-shot-router-cosine-similarity" "View Details & Examples"
+
+    click SGD "#phase-3-the-ml-rescue-sweep" "View Details & Examples"
+    click PRED "#phase-3-the-ml-rescue-sweep" "View Details & Examples"
+    
+    click EXPORT "#phase-4-data-export--storage" "View Details & Examples"
+    click PANDAS "#phase-4-data-export--storage" "View Details & Examples"
+    click PG "#phase-4-data-export--storage" "View Details & Examples"
+    
+    click ENRICH "#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
+    click WEIGHTS "#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
+    click DEDUPE "#phase-5-the-keyword-enrichment-loop" "View Details & Examples"
 ```
 
 ---
@@ -153,7 +175,23 @@ Prompts that fail the Strict Overlap Mask in Phase 2 are dumped into an "Other/M
 
 ---
 
-## Phase 4: The Keyword Enrichment Loop
+## Phase 4: Data Export & Storage
+
+**Script:** `export_to_db.py`
+
+Once `discovery.py` mathematically routes the 300,000 daily prompts into 236 subcategories, the raw data must be aggregated and exported to a database so it can be queried by Business Intelligence (BI) dashboards.
+
+### Mechanisms & Algorithms:
+1.  **Regex Date Extraction:** The script uses Regular Expressions (`re`) to automatically extract the `YYYY-MM-DD` date from the incoming daily filename (e.g., `cleaned_prompts_2026-06-15.txt`).
+2.  **Pandas Aggregation:** Rather than looping through 300,000 rows slowly, it uses `pandas.groupby()` to instantly collapse the raw rows down into 236 aggregated totals (Count per Category/Subcategory).
+3.  **Secure Postgres Bulk-Insert:** It automatically builds the schema table (`prompt_insights`) and utilizes `psycopg2`'s `execute_values` to securely and optimally bulk-insert all the aggregated metrics into the Postgres Database in a single network transaction.
+
+**Example:**
+*   **Action:** 24,000 employees asked about setting up Kubernetes today. The script reads `cleaned_prompts_2026-06-15.txt`, aggregates the 24,000 rows into a single metric, and inserts `(2026-06-15, Cloud Infrastructure, Kubernetes, 24000)` into the Postgres database.
+
+---
+
+## Phase 5: The Keyword Enrichment Loop
 
 **Script:** `enrich_keywords.py`
 
