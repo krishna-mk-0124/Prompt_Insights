@@ -329,7 +329,7 @@ def run_hybrid_discovery():
         other_indices = np.where(other_mask)[0]
         
         # Train SGD Classifier with ElasticNet Regularization
-                def progress_tracker(stop_event, start_time):
+        def progress_tracker(stop_event, start_time):
             while not stop_event.is_set():
                 time.sleep(60)
                 if not stop_event.is_set():
