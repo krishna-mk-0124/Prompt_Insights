@@ -4,6 +4,89 @@ This document provides a comprehensive, Confluence-style overview of the Prompt 
 
 To achieve our strict 99% accuracy target on ultra-low-resource hardware (1 CPU core, <3GB RAM), the architecture utilizes a multi-phase cascade of heavily optimized Scikit-Learn algorithms, custom Unicode heuristic filters, and a self-healing Machine Learning keyword enrichment loop.
 
+## High-Level Architecture Flow
+
+```mermaid
+graph TD
+    %% Styling Definitions
+    classDef file fill:#f9f2f4,stroke:#c7254e,stroke-width:2px,color:#c7254e;
+    classDef script fill:#dff0d8,stroke:#3c763d,stroke-width:2px,color:#3c763d;
+    classDef ml fill:#d9edf7,stroke:#31708f,stroke-width:2px,color:#31708f;
+    classDef db fill:#fcf8e3,stroke:#8a6d3b,stroke-width:2px,color:#8a6d3b;
+    classDef filter fill:#f5f5f5,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5;
+
+    %% Nodes
+    RAW[Raw Daily Prompts<br/>cleaned_prompts_YYYY-MM-DD.txt]:::file
+    TAX[optimized_taxonomy.csv]:::file
+    
+    subgraph Phase 1: Language Filtering
+        LANG[language_router.py]:::script
+        UNI{Unicode > 15%?}:::filter
+        DET{langdetect == 'en'?}:::filter
+        RES{<150 chars + TECH_WORDS?}:::filter
+    end
+
+    subgraph Phase 2: Zero-Shot Mathematical Routing
+        DISC[discovery.py]:::script
+        TFIDF[TF-IDF Vectorization<br/>Word + Char N-Grams]:::ml
+        COS[Cosine Similarity Score]:::ml
+        MASK{Strict Overlap Mask<br/>>= 2 Keywords Match?}:::filter
+    end
+
+    subgraph Phase 3: ML Rescue Sweep
+        SGD[SGD Classifier<br/>ElasticNet Penalty]:::ml
+        PRED[Predict Outliers based on<br/>Hidden Word Correlations]:::ml
+    end
+    
+    subgraph Phase 4: Data Export & Storage
+        EXPORT[export_to_db.py]:::script
+        PANDAS[Pandas Aggregation<br/>Group By Category]:::ml
+        PG[(Postgres Database<br/>prompt_insights Table)]:::db
+    end
+    
+    subgraph Keyword Enrichment Loop (Run Periodically)
+        ENRICH[enrich_keywords.py]:::script
+        WEIGHTS[Extract Top 15<br/>SGD Mathematical Weights]:::ml
+        DEDUPE[dedupe_keywords.py]:::script
+    end
+
+    %% Flow Execution
+    RAW --> LANG
+    LANG --> UNI
+    UNI -- Yes --> DROP1((Drop: Foreign Language))
+    UNI -- No --> DET
+    DET -- Yes --> DISC
+    DET -- No --> RES
+    RES -- Yes --> DISC
+    RES -- No --> DROP2((Drop: Foreign Language))
+
+    DISC --> |Reads Keywords| TAX
+    DISC --> TFIDF
+    TFIDF --> COS
+    COS --> MASK
+    
+    MASK -- Passed --> GROUND[Officially Categorized<br/>Ground Truth Dataset]:::file
+    MASK -- Failed --> OUTLIERS[Outliers<br/>Other/Misc]:::file
+    
+    GROUND --> |Trains Model| SGD
+    OUTLIERS --> |Feeds into| PRED
+    SGD --> PRED
+    
+    PRED -- Rescued --> GROUND
+    PRED -- Unrescued --> GARBAGE((Drop: Garbage))
+    
+    GROUND --> |Outputs| FINAL[fully_categorized_dataset.csv]:::file
+    
+    FINAL --> EXPORT
+    EXPORT --> PANDAS
+    PANDAS --> PG
+    
+    FINAL -.-> |If updating taxonomy| ENRICH
+    ENRICH -.-> WEIGHTS
+    WEIGHTS -.-> DEDUPE
+    DEDUPE -.-> |Overwrites| TAX
+```
+
 ---
 
 ## Phase 1: Data Ingestion & Language Filtering
