@@ -2,6 +2,7 @@ import os
 import sys
 import re
 import pandas as pd
+import time
 import numpy as np
 import string
 import warnings
@@ -229,6 +230,7 @@ def run_hybrid_discovery():
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
     print("\n[Phase 2/4] Zero-Shot Vectorization (TF-IDF with Sublinear TF & Char N-Grams)")
+    start_time_p2 = time.time()
     
     from sklearn.feature_extraction.text import CountVectorizer
     
@@ -278,6 +280,7 @@ def run_hybrid_discovery():
         # Apply mask
         batch_sim[~valid_overlap_mask] = 0.0
         sim_matrix[start_idx:end_idx] = batch_sim
+        print(f"    -> Processed {end_idx:,} / {num_prompts:,} prompts ({end_idx/num_prompts*100:.1f}%) | Time Elapsed: {time.time() - start_time_p2:.2f}s")
     
     max_sims = sim_matrix.max(axis=1)
     best_tax_idx = sim_matrix.argmax(axis=1)
@@ -325,7 +328,8 @@ def run_hybrid_discovery():
         other_indices = np.where(other_mask)[0]
         
         # Train SGD Classifier with ElasticNet Regularization
-        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1)
+        print("  -> Fitting SGD Classifier (Watch live epochs below)...")
+        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=1, verbose=1)
         clf.fit(X_ml[official_indices], best_tax_idx[official_indices])
         
         # Predict probabilities
