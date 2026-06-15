@@ -1,0 +1,21 @@
+prompt,category_name,subcategory_name,"is_correct_mapping (1=Yes, 0=No)"
+Can you help me pull the latest transaction report for merchant Amazon? Thanks in advance.,American Express & Payments,American Express Amex,1
+"Por favor, explique los nuevos beneficios de American Express Platinum para el tercer trimestre. Urgent.",American Express & Payments,American Express Amex,1
+Where can I find the compliance guidelines for cross-border payments? Please advise.,American Express & Payments,American Express Amex,1
+Can you help me pull the latest transaction report for merchant Delta? Help.,American Express & Payments,American Express Amex,1
+Please explain the new American Express platinum benefits for Q3. Thanks in advance.,American Express & Payments,American Express Amex,1
+I need to file a dispute for a charge of $3675.11 on my corporate account. Thanks.,Cyber Security & Identity,Amex Card Risk,1
+Necesito presentar una disputa por un cargo de $1470.19 en mi cuenta corporativa. Help.,Cyber Security & Identity,Amex Card Risk,1
+I need to file a dispute for a charge of $4289.85 on my corporate account. ASAP.,Cyber Security & Identity,Amex Card Risk,1
+Necesito presentar una disputa por un cargo de $3442.88 en mi cuenta corporativa.,Cyber Security & Identity,Amex Card Risk,1
+I need to file a dispute for a charge of $582.47 on my corporate account. Thanks in advance.,Cyber Security & Identity,Amex Card Risk,1
+Is the API endpoint for real-time authorizations down today? Thanks in advance.,Software Engineering & Development,Api Rest Graphql,1
+Is the API endpoint for real-time authorizations down today? Pls.,Software Engineering & Development,Api Rest Graphql,1
+Is the API endpoint for real-time authorizations down today? Urgent.,Software Engineering & Development,Api Rest Graphql,1
+Is the API endpoint for real-time authorizations down today? ASAP.,Software Engineering & Development,Api Rest Graphql,1
+Is the API endpoint for real-time authorizations down today?,Software Engineering & Development,Api Rest Graphql,1
+What are the limits for Centurion lounge access this year? ASAP.,Production Support & Debugging,Error Code Exception,0
+What are the limits for Centurion lounge access this year? ASAP.,Production Support & Debugging,Error Code Exception,0
+I am getting an error code 403 when trying to access the internal Amex risk dashboard. Please advise.,Production Support & Debugging,Error Code Exception,1
+What are the limits for Centurion lounge access this year? Please advise.,Production Support & Debugging,Error Code Exception,0
+What are the limits for Centurion lounge access this year? Urgent.,Production Support & Debugging,Error Code Exception,0
