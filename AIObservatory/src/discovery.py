@@ -246,15 +246,18 @@ def run_hybrid_discovery():
     
     from sklearn.feature_extraction.text import CountVectorizer
     
+    dtype_val = np.float32 if USE_FLOAT32 else np.float64
+    count_dtype = np.int16 if USE_FLOAT32 else np.int64
+
     # Word Vectorizer (Sublinear TF enabled)
-    word_vectorizer = TfidfVectorizer(max_features=20000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True, dtype=np.float32)
+    word_vectorizer = TfidfVectorizer(max_features=MAX_FEATURES_P2_WORD, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True, dtype=dtype_val)
     word_vectorizer.fit(tax_df["processed_desc"].tolist())
     
     C_tax_word = word_vectorizer.transform(tax_df["processed_desc"].tolist())
     C_prompts_word = word_vectorizer.transform(df["processed_text"].tolist())
     
     # Char Vectorizer (Sublinear TF enabled, char_wb)
-    char_vectorizer = TfidfVectorizer(max_features=20000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True, dtype=np.float32)
+    char_vectorizer = TfidfVectorizer(max_features=MAX_FEATURES_P2_CHAR, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True, dtype=dtype_val)
     char_vectorizer.fit(tax_df["processed_desc"].tolist())
     
     C_tax_char = char_vectorizer.transform(tax_df["processed_desc"].tolist())
