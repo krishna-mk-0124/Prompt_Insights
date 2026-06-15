@@ -228,23 +228,40 @@ def run_hybrid_discovery():
 
     extended_stop_words = list(ENGLISH_STOP_WORDS) + custom_noise
     
-    # We fit TFIDF ONLY on the taxonomy for classification to preserve IDF weights
-    class_vectorizer = TfidfVectorizer(stop_words=extended_stop_words, ngram_range=(1, 2))
-    X_tax = class_vectorizer.fit_transform(tax_df["processed_desc"].tolist())
-    X_prompts_class = class_vectorizer.transform(df["processed_text"].tolist())
+    print("\n[Phase 2/4] Zero-Shot Vectorization (TF-IDF with Sublinear TF & Char N-Grams)")
+    
+    from sklearn.feature_extraction.text import CountVectorizer
+    
+    # Word Vectorizer (Sublinear TF enabled)
+    word_vectorizer = TfidfVectorizer(max_features=50000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True)
+    word_vectorizer.fit(tax_df["processed_desc"].tolist())
+    
+    C_tax_word = word_vectorizer.transform(tax_df["processed_desc"].tolist())
+    C_prompts_word = word_vectorizer.transform(df["processed_text"].tolist())
+    
+    # Char Vectorizer (Sublinear TF enabled, char_wb)
+    char_vectorizer = TfidfVectorizer(max_features=50000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True)
+    char_vectorizer.fit(tax_df["processed_desc"].tolist())
+    
+    C_tax_char = char_vectorizer.transform(tax_df["processed_desc"].tolist())
+    C_prompts_char = char_vectorizer.transform(df["processed_text"].tolist())
+    
+    # Strict Overlap Masking ONLY uses the word vectorizer to prevent char-level noise from bypassing the mask
+    count_vectorizer = CountVectorizer(vocabulary=word_vectorizer.vocabulary_)
+    count_tax = count_vectorizer.transform(tax_df["processed_desc"].tolist())
+    count_prompts = count_vectorizer.transform(df["processed_text"].tolist())
     
     print("\n[Phase 3/4] Mathematical Routing (Cosine Similarity with Overlap Enforcement)")
     print("  -> Computing cosine distances against the official taxonomies...")
-    sim_matrix = cosine_similarity(X_prompts_class, X_tax)
+    
+    # Blended Cosine Similarity (50% Word, 50% Char)
+    sim_matrix_word = C_prompts_word.dot(C_tax_word.T).toarray()
+    sim_matrix_char = C_prompts_char.dot(C_tax_char.T).toarray()
+    sim_matrix = (sim_matrix_word + sim_matrix_char) / 2.0
     
     # ENFORCE MINIMUM OVERLAP (to kill single-word hallucination black holes)
-    from sklearn.feature_extraction.text import CountVectorizer
-    count_vectorizer = CountVectorizer(vocabulary=class_vectorizer.vocabulary_)
-    C_tax = count_vectorizer.transform(tax_df["processed_desc"].tolist())
-    C_prompts = count_vectorizer.transform(df["processed_text"].tolist())
-    
-    overlap_matrix = C_prompts.dot(C_tax.T).toarray()
-    tax_term_counts = np.asarray(C_tax.sum(axis=1)).flatten()
+    overlap_matrix = count_prompts.dot(count_tax.T).toarray()
+    tax_term_counts = np.asarray(count_tax.sum(axis=1)).flatten()
     min_overlap_required = np.minimum(2, tax_term_counts) # Require at least 2 matching words if category has >= 2 words
     
     valid_overlap_mask = overlap_matrix >= min_overlap_required
@@ -283,16 +300,20 @@ def run_hybrid_discovery():
     
     if other_count > 0 and official_count > 0:
         from sklearn.linear_model import SGDClassifier
+        from sklearn.pipeline import FeatureUnion
         
-        # We need a robust vectorizer for ML training
-        ml_vectorizer = TfidfVectorizer(max_features=50000, stop_words=extended_stop_words, ngram_range=(1, 2))
+        # Combine Word and Char for the ML model to maximize accuracy
+        ml_word_vec = TfidfVectorizer(max_features=30000, stop_words=extended_stop_words, ngram_range=(1, 2), sublinear_tf=True)
+        ml_char_vec = TfidfVectorizer(max_features=30000, analyzer='char_wb', ngram_range=(3, 5), sublinear_tf=True)
+        
+        ml_vectorizer = FeatureUnion([("word", ml_word_vec), ("char", ml_char_vec)])
         X_ml = ml_vectorizer.fit_transform(df["processed_text"].tolist())
         
         official_indices = np.where(official_mask)[0]
         other_indices = np.where(other_mask)[0]
         
-        # Train SGD Classifier (Logistic Regression)
-        clf = SGDClassifier(loss='log_loss', max_iter=1000, random_state=42, n_jobs=-1)
+        # Train SGD Classifier with ElasticNet Regularization
+        clf = SGDClassifier(loss='log_loss', penalty='elasticnet', l1_ratio=0.15, max_iter=1000, random_state=42, n_jobs=-1)
         clf.fit(X_ml[official_indices], best_tax_idx[official_indices])
         
         # Predict probabilities
