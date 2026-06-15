@@ -1,0 +1,21 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data Files (Do not commit massive datasets)
+data/english_prompts.txt
+data/prompt_sample
+data/fully_categorized_dataset.csv
+data/golden_set_review.csv
+data/discovered_topics.csv
+data/hybrid_taxonomy_mapping.csv
+data/optimized_taxonomy_dedup.csv
+
+# Scratch & Tests
+scratch/
+test_*.py
+fix_*.py
+rewrite_*.py
+patch_*.py
+generate_mock.py
