@@ -61,28 +61,21 @@ def export_to_postgres(original_filename):
         )
         cursor = conn.cursor()
         
-        # Create table if it doesn't exist yet
-        create_table_query = """
-        CREATE TABLE IF NOT EXISTS prompt_insights (
-            id SERIAL PRIMARY KEY,
-            date DATE NOT NULL,
-            category VARCHAR(255) NOT NULL,
-            subcategory VARCHAR(255) NOT NULL,
-            prompt_count INTEGER NOT NULL
-        );
-        """
-        cursor.execute(create_table_query)
+        # Note: Table creation logic has been moved to dbqueries.sh
         
-        # Insert the records securely using execute_values
+        # Insert the records securely using execute_values.
+        # We use ON CONFLICT to make this script idempotent (can be run multiple times safely).
         insert_query = """
-        INSERT INTO prompt_insights (date, category, subcategory, prompt_count)
+        INSERT INTO ai.prompts (date, category, sub_category, count)
         VALUES %s
+        ON CONFLICT (date, category, sub_category) 
+        DO UPDATE SET count = EXCLUDED.count;
         """
         
         execute_values(cursor, insert_query, records_to_insert)
         
         conn.commit()
-        print(f"Successfully inserted {len(records_to_insert)} rows into Postgres table 'prompt_insights' for Date: {extracted_date}")
+        print(f"Successfully inserted/updated {len(records_to_insert)} rows into Postgres table 'ai.prompts' for Date: {extracted_date}")
         
     except Exception as e:
         print(f"Database Error: {e}")
