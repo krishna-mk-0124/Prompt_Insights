@@ -23,25 +23,59 @@ FILENAME=$(basename "$DAILY_FILE") # Extracts just 'cleaned_prompts_YYYY-MM-DD.t
 
 echo "=========================================="
 echo "Starting AI Pipeline for: $FILENAME"
+echo "Overall Pipeline Start: $(date)"
 echo "=========================================="
+PIPELINE_START=$(date +%s)
+
+# Helper function to track execution time
+run_with_timer() {
+    local phase_name="$1"
+    local cmd="$2"
+    
+    echo ""
+    echo ">> $phase_name"
+    echo "   Start Time: $(date '+%Y-%m-%d %H:%M:%S')"
+    local start_time=$(date +%s)
+    
+    # Execute the command
+    eval "$cmd"
+    local exit_code=$?
+    
+    local end_time=$(date +%s)
+    local duration=$((end_time - start_time))
+    echo "   End Time: $(date '+%Y-%m-%d %H:%M:%S')"
+    
+    local min=$((duration / 60))
+    local sec=$((duration % 60))
+    echo "   Phase Duration: ${min}m ${sec}s"
+    
+    if [ $exit_code -ne 0 ]; then
+        echo "   ERROR: Phase failed!"
+        exit $exit_code
+    fi
+}
 
 # 1. Stage the Data
 # Copy the daily file from your shared drive into the 'data/' folder so the python scripts can find it
 cp "$DAILY_FILE" "data/prompt_sample.txt"
 
 # 2. Phase 1: Filter Languages
-echo "[1/3] Running Language Router..."
-python3.9 -u src/language_router.py
+run_with_timer "[1/3] Running Language Router..." "python3.9 -u src/language_router.py"
 
 # 3. Phase 2 & 3: Run the ML Engine (Zero-Shot + SGD Rescue)
-echo "[2/3] Running Machine Learning Discovery..."
-python3.9 -u src/discovery.py
+run_with_timer "[2/3] Running Machine Learning Discovery..." "python3.9 -u src/discovery.py"
 
 # 4. Phase 4: Push to Postgres
-echo "[3/3] Exporting to Database..."
 # Pass the original filename so export_to_db.py can extract the Date
-python3.9 -u export_to_db.py "$FILENAME"
+run_with_timer "[3/3] Exporting to Database..." "python3.9 -u export_to_db.py \"$FILENAME\""
 
+echo ""
 echo "=========================================="
 echo "Pipeline Complete! Data is now in Postgres."
+PIPELINE_END=$(date +%s)
+TOTAL_DURATION=$((PIPELINE_END - PIPELINE_START))
+T_MIN=$((TOTAL_DURATION / 60))
+T_SEC=$((TOTAL_DURATION % 60))
+echo "Total Pipeline Duration: ${T_MIN}m ${T_SEC}s"
+echo "Overall Pipeline End: $(date)"
 echo "=========================================="
