@@ -1,13 +1,25 @@
 #!/bin/bash
 
-# Ensure a filename was provided
+# If no argument is provided, automatically find today's file
 if [ -z "$1" ]; then
-    echo "Usage: ./run_daily_pipeline.sh <path_to_daily_file>"
-    exit 1
+    TODAY=$(date +%Y-%m-%d)
+    DAILY_FILE="/abc/desre-shared/contexts/cleaned_prompts_${TODAY}.txt"
+    
+    # Check if today's file has actually been generated yet
+    if [ ! -f "$DAILY_FILE" ]; then
+        echo "Error: Auto-detect failed. Today's file ($DAILY_FILE) does not exist yet."
+        exit 1
+    fi
+else
+    # If a file was manually passed as an argument, use that instead (useful for backfilling old dates)
+    DAILY_FILE=$1
+    if [ ! -f "$DAILY_FILE" ]; then
+        echo "Error: Provided file ($DAILY_FILE) does not exist."
+        exit 1
+    fi
 fi
 
-DAILY_FILE=$1
-FILENAME=$(basename "$DAILY_FILE") # Extracts just 'cleaned_prompts_2026-06-15.txt'
+FILENAME=$(basename "$DAILY_FILE") # Extracts just 'cleaned_prompts_YYYY-MM-DD.txt'
 
 echo "=========================================="
 echo "Starting AI Pipeline for: $FILENAME"
