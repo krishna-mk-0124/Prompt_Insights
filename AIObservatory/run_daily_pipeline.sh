@@ -19,16 +19,16 @@ cp "$DAILY_FILE" "data/prompt_sample.txt"
 
 # 2. Phase 1: Filter Languages
 echo "[1/3] Running Language Router..."
-python src/language_router.py
+python3.9 src/language_router.py
 
 # 3. Phase 2 & 3: Run the ML Engine (Zero-Shot + SGD Rescue)
 echo "[2/3] Running Machine Learning Discovery..."
-python src/discovery.py
+python3.9 src/discovery.py
 
 # 4. Phase 4: Push to Postgres
 echo "[3/3] Exporting to Database..."
 # Pass the original filename so export_to_db.py can extract the Date
-python export_to_db.py "$FILENAME"
+python3.9 export_to_db.py "$FILENAME"
 
 echo "=========================================="
 echo "Pipeline Complete! Data is now in Postgres."
