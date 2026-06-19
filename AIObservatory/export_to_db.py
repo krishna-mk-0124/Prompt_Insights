@@ -4,6 +4,11 @@ from psycopg2.extras import execute_values
 import sys
 import re
 import os
+import json
+try:
+    from cryptography.fernet import Fernet
+except ImportError:
+    pass
 
 def export_to_postgres(original_filename):
     # 1. Extract date from filename (e.g., cleaned_prompts_2026-06-15.txt)
@@ -41,13 +46,30 @@ def export_to_postgres(original_filename):
         
     print(f"Prepared {len(records_to_insert)} aggregated rows for Database insertion.")
 
-    # 5. Postgres connection parameters from environment variables
-    # Modify these default values or set them as environment variables on your server
-    DB_HOST = os.environ.get("DB_HOST", "localhost")
-    DB_NAME = os.environ.get("DB_NAME", "postgres")
-    DB_USER = os.environ.get("DB_USER", "postgres")
-    DB_PASS = os.environ.get("DB_PASS", "password")
-    DB_PORT = os.environ.get("DB_PORT", "5432")
+    # 5. Secure Postgres Connection
+    # Read encrypted credentials using the disguised key
+    data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+    key_path = os.path.join(data_dir, "model_config.bin")
+    secrets_path = os.path.join(data_dir, "model_weights.enc")
+
+    if not os.path.exists(key_path) or not os.path.exists(secrets_path):
+        print(f"Error: Missing encrypted DB credentials in {data_dir}. Run manage_secrets.py first!")
+        sys.exit(1)
+
+    with open(key_path, "rb") as key_file:
+        master_key = key_file.read()
+    with open(secrets_path, "rb") as secrets_file:
+        encrypted_payload = secrets_file.read()
+
+    fernet = Fernet(master_key)
+    decrypted_payload = fernet.decrypt(encrypted_payload)
+    db_config = json.loads(decrypted_payload.decode('utf-8'))
+
+    DB_HOST = db_config.get("DB_HOST", "localhost")
+    DB_NAME = db_config.get("DB_NAME", "postgres")
+    DB_USER = db_config.get("DB_USER", "postgres")
+    DB_PASS = db_config.get("DB_PASS", "password")
+    DB_PORT = db_config.get("DB_PORT", "5432")
 
     print(f"Connecting to Postgres DB '{DB_NAME}' at {DB_HOST}:{DB_PORT}...")
     

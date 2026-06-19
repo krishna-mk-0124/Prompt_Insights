@@ -3,3 +3,4 @@ scikit-learn==1.4.2
 
 langdetect==1.0.90
 psycopg2-binary==2.9.9
+cryptography==42.0.5
