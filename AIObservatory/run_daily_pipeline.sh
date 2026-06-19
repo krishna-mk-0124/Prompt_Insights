@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# If no argument is provided, automatically find today's file
+# If no argument is provided, automatically find yesterday's file
 if [ -z "$1" ]; then
-    TODAY=$(date +%Y-%m-%d)
-    DAILY_FILE="/abc/desre-shared/contexts/cleaned_prompts_${TODAY}.txt"
+    YESTERDAY=$(date -d "yesterday" +%Y-%m-%d)
+    DAILY_FILE="/abc/desre-shared/contexts/cleaned_prompts_${YESTERDAY}.txt"
     
-    # Check if today's file has actually been generated yet
+    # Check if yesterday's file has actually been generated yet
     if [ ! -f "$DAILY_FILE" ]; then
-        echo "Error: Auto-detect failed. Today's file ($DAILY_FILE) does not exist yet."
+        echo "Error: Auto-detect failed. Yesterday's file ($DAILY_FILE) does not exist yet."
         exit 1
     fi
 else
