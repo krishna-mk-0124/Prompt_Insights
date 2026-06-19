@@ -1,5 +1,5 @@
 pandas==2.2.2
 scikit-learn==1.4.2
-hdbscan==0.8.33
+
 langdetect==1.0.90
 psycopg2-binary==2.9.9
