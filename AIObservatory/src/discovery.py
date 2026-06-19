@@ -28,10 +28,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.decomposition import TruncatedSVD
 from sklearn.cluster import MiniBatchKMeans
-try:
-    from .preprocess import preprocess_prompt
-except ImportError:
-    from preprocess import preprocess_prompt
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from preprocess import preprocess_prompt
 
 def clean_and_truncate(text):
     text = str(text)
