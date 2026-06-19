@@ -9,7 +9,7 @@ def setup_secure_credentials():
     print("==========================================")
     print("This tool will securely encrypt your Postgres credentials.")
     print("The encryption key will be disguised as 'data/model_config.bin'.")
-    print("The encrypted secrets will be disguised as 'data/model_weights.enc'.")
+    print("The encrypted secrets will be saved as 'data/connect.enc'.")
     print("==========================================\n")
 
     # Gather credentials
@@ -43,7 +43,7 @@ def setup_secure_credentials():
     os.makedirs(data_dir, exist_ok=True)
     
     key_path = os.path.join(data_dir, "model_config.bin")
-    secrets_path = os.path.join(data_dir, "model_weights.enc")
+    secrets_path = os.path.join(data_dir, "connect.enc")
 
     # Write the key to disk (disguised)
     with open(key_path, "wb") as key_file:

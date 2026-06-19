@@ -50,7 +50,7 @@ def export_to_postgres(original_filename):
     # Read encrypted credentials using the disguised key
     data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
     key_path = os.path.join(data_dir, "model_config.bin")
-    secrets_path = os.path.join(data_dir, "model_weights.enc")
+    secrets_path = os.path.join(data_dir, "connect.enc")
 
     if not os.path.exists(key_path) or not os.path.exists(secrets_path):
         print(f"Error: Missing encrypted DB credentials in {data_dir}. Run manage_secrets.py first!")
