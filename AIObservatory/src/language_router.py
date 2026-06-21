@@ -1,7 +1,17 @@
 import pandas as pd
 import os
+import multiprocessing
 from langdetect import detect, DetectorFactory
 from langdetect.lang_detect_exception import LangDetectException
+
+# ==========================================
+# RESOURCE CONFIGURATION
+# ==========================================
+# Number of CPU cores to use for language routing.
+# Set to 1 for low-memory servers (current 13-min baseline). 
+# Set to 4 to speed up execution by roughly 4x.
+CPU_CORES = 1
+# ==========================================
 
 # Seed the detector to ensure deterministic language detection
 DetectorFactory.seed = 0
@@ -86,13 +96,24 @@ def route_languages():
         print(f"Error reading {input_file}: {e}")
         return
 
-    print("Detecting languages (this may take several minutes)...")
+    print(f"Detecting languages using {CPU_CORES} CPU core(s) (this may take several minutes)...")
     languages = []
     total = len(df)
-    for i, text in enumerate(df["prompt_text"]):
-        if i % 10000 == 0 and i > 0:
-            print(f"  -> Routed {i:,} / {total:,} prompts ({(i/total)*100:.1f}%)")
-        languages.append(detect_language(text))
+    
+    if CPU_CORES > 1:
+        # Multiprocessing for speed
+        with multiprocessing.Pool(processes=CPU_CORES) as pool:
+            # chunksize=1000 optimizes inter-process memory passing
+            for i, lang in enumerate(pool.imap(detect_language, df["prompt_text"], chunksize=1000)):
+                if i % 10000 == 0 and i > 0:
+                    print(f"  -> Routed {i:,} / {total:,} prompts ({(i/total)*100:.1f}%)")
+                languages.append(lang)
+    else:
+        # Single-threaded for restricted servers
+        for i, text in enumerate(df["prompt_text"]):
+            if i % 10000 == 0 and i > 0:
+                print(f"  -> Routed {i:,} / {total:,} prompts ({(i/total)*100:.1f}%)")
+            languages.append(detect_language(text))
     
     df["language"] = languages
     print(f"  -> Routed {total:,} / {total:,} prompts (100.0%)")
